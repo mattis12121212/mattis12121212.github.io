@@ -11,35 +11,35 @@
 const QUIZ = [
   /* ============ 1. VIROSES ============ */
   {
-    img: "herpes.jpg", theme: "Viroses",
+    img: "herpes.jpg", imgs: ["herpes.jpg", "herpes-2.jpg"], theme: "Viroses",
     question: "Vésicules groupées « en bouquet » sur fond érythémateux, brûlure (pas de prurit), récidivantes au même endroit. Diagnostic ?",
     options: ["Herpès simplex (HSV)", "Zona", "Impétigo", "Dermatite herpétiforme"],
     answer: 0,
     explanation: "HSV : bouquet de vésicules récidivant au même site, brûlure. HSV-1 buccal, HSV-2 génital. R/ : le moins possible (désinfection) ; si ≥ 1×/mois → antiviral PO (aciclovir 200 mg 5×/j ou valaciclovir). Éviter les antiviraux topiques OTC (inutiles, allergisants)."
   },
   {
-    img: "zona.jpg", theme: "Viroses",
+    img: "zona.jpg", imgs: ["zona.jpg", "zona-2.jpg"], theme: "Viroses",
     question: "Éruption vésiculeuse douloureuse, unilatérale, en bande, s'arrêtant à la ligne médiane, douleur précédant l'éruption. Diagnostic ?",
     options: ["Zona (VZV)", "Herpès simplex", "Eczéma de contact", "Érysipèle"],
     answer: 0,
     explanation: "Zona = réactivation du VZV, topographie métamérique unilatérale. R/ ≥ 50 ans / ophtalmique / Ramsay-Hunt : ACICLOVIR 800 mg 5×/j 7 j (valaciclovir 1 g 3×/j) pour prévenir les algies post-zostériennes. ⚠️ Piège : 200 mg = herpès, PAS le zona. Zona ophtalmique (V1) → contrôle ophtalmo."
   },
   {
-    img: "varicelle.jpg", theme: "Viroses",
+    img: "varicelle.jpg", imgs: ["varicelle.jpg", "varicelle-2.jpg"], theme: "Viroses",
     question: "Enfant fébrile, lésions d'âges différents (macules, vésicules « goutte de rosée », croûtes), débutant au cuir chevelu. Diagnostic ?",
     options: ["Varicelle", "Zona", "Molluscum contagiosum", "Prurigo"],
     answer: 0,
     explanation: "Varicelle (primo-infection VZV) : éruption polymorphe, 3 stades simultanés, débute au scalp. R/ : antiseptiques, soins asséchants, antiH1, paracétamol — JAMAIS d'aspirine (syndrome de Reye). Aciclovir IV si forme grave/immunodéprimé."
   },
   {
-    img: "pityriasis-rose.jpg", theme: "Viroses",
+    img: "pityriasis-rose.jpg", imgs: ["pityriasis-rose.jpg", "pityriasis-rose-2.jpg"], theme: "Viroses",
     question: "Médaillon initial puis macules ovalaires en « sapin de Noël » sur le tronc d'un jeune adulte. Diagnostic ?",
     options: ["Pityriasis rosé de Gibert", "Psoriasis en gouttes", "Pityriasis versicolor", "Syphilis secondaire"],
     answer: 0,
     explanation: "PRG (réactivation HHV-6/7) : médaillon initial > lésions secondaires en lignes de clivage, durée 6-8 semaines, résolution spontanée. R/ : AUCUN (« au moins on en fait, au mieux ») ; antiH1/cortico si prurit. ⚠️ Faux : « HHV-8 » (= Kaposi) ou « 1-2 semaines »."
   },
   {
-    img: "molluscum.jpg", theme: "Viroses",
+    img: "molluscum.jpg", imgs: ["molluscum.jpg", "molluscum-2.jpg"], theme: "Viroses",
     question: "Papules hémisphériques translucides en semis, à ombilication centrale, chez un enfant. Diagnostic ?",
     options: ["Molluscum contagiosum", "Verrues planes", "Varicelle", "Milium"],
     answer: 0,
@@ -69,14 +69,14 @@ const QUIZ = [
 
   /* ============ 2. BACTÉRIENNES ============ */
   {
-    img: "impetigo.jpg", theme: "Bactériennes",
+    img: "impetigo.jpg", imgs: ["impetigo.jpg", "impetigo-2.jpg"], theme: "Bactériennes",
     question: "Croûtes jaunâtres « mélicériques » (couleur miel) péri-orificielles chez un enfant, contagieux. Diagnostic ?",
     options: ["Impétigo", "Herpès", "Eczéma surinfecté", "Dermatite séborrhéique"],
     answer: 0,
     explanation: "Impétigo (S. aureus 80 % = bulleux ; strepto A = croûteux), infection cutanée la plus superficielle. 1er réflexe : frottis bactérien. R/ : nettoyage + acide fusidique (Fucidin®) ou mupirocine ; si étendu → flucloxacilline PO. Germe le + probable en QCM photo = staphylocoque doré."
   },
   {
-    img: "ssss.jpg", theme: "Bactériennes",
+    img: "ssss.jpg", imgs: ["ssss.jpg", "ssss-2.jpg"], theme: "Bactériennes",
     question: "Nourrisson fébrile, décollement superficiel « ébouillanté », croûtes péri-orificielles (tête de clown), Nikolski +, muqueuses respectées. Diagnostic ?",
     options: ["SSSS (épidermolyse staphylococcique)", "Nécrolyse épidermique toxique (Lyell)", "Pemphigus", "Brûlure"],
     answer: 0,
@@ -106,7 +106,7 @@ const QUIZ = [
 
   /* ============ 3. MYCOSES & PARASITES ============ */
   {
-    img: "tinea.jpg", theme: "Mycoses & parasites",
+    img: "tinea.jpg", imgs: ["tinea.jpg", "tinea-2.jpg"], theme: "Mycoses & parasites",
     question: "Plaque annulaire prurigineuse, bordure active vésiculo-squameuse, guérison centrale, après contact animal. Diagnostic ?",
     options: ["Dermatophytie (roue de Ste-Catherine)", "Eczéma nummulaire", "Psoriasis", "Pityriasis rosé"],
     answer: 0,
@@ -120,7 +120,7 @@ const QUIZ = [
     explanation: "Teigne : cheveux cassés courts, contagieux (éviction scolaire). Prélever les squames. R/ : imidazolé local ET terbinafine/itraconazole PO 1-2 mois. ⚠️ « Topique seul » = FAUX pour la teigne. DD pelade : peau lisse non cassée, non contagieuse."
   },
   {
-    img: "pityriasis-versicolor.jpg", theme: "Mycoses & parasites",
+    img: "pityriasis-versicolor.jpg", imgs: ["pityriasis-versicolor.jpg", "pityriasis-versicolor-2.jpg"], theme: "Mycoses & parasites",
     question: "Macules finement squameuses du tronc, jaune chamois/brunâtres, signe du « copeau » au grattage. Diagnostic ?",
     options: ["Pityriasis versicolor", "Vitiligo", "Pityriasis rosé", "Dermatite séborrhéique"],
     answer: 0,
@@ -134,7 +134,7 @@ const QUIZ = [
     explanation: "Candidose (Candida albicans) : plis macérés, fond rouge vernissé, lésions satellites, perlèche, muguet. Favorisée par diabète, ATB, grossesse, corticoïdes. R/ : antifongique imidazolé topique (± PO), correction des facteurs favorisants."
   },
   {
-    img: "gale.jpg", theme: "Mycoses & parasites",
+    img: "gale.jpg", imgs: ["gale.jpg", "gale-2.jpg"], theme: "Mycoses & parasites",
     question: "Prurit à recrudescence nocturne, sillons interdigitaux, épargne du visage, contage familial. Diagnostic ?",
     options: ["Gale (sarcoptes)", "Eczéma de contact", "Dermatite atopique", "Prurigo"],
     answer: 0,
@@ -143,7 +143,7 @@ const QUIZ = [
 
   /* ============ 4. DERMATOSES INFLAMMATOIRES ============ */
   {
-    img: "eczema.jpg", theme: "Inflammatoires",
+    img: "eczema.jpg", imgs: ["eczema.jpg", "eczema-2.jpg"], theme: "Inflammatoires",
     question: "Plaques érythémato-vésiculeuses suintantes, MAL limitées, très prurigineuses, sur peau sèche (plis). Diagnostic ?",
     options: ["Eczéma / dermatite atopique", "Psoriasis", "Lichen plan", "Urticaire"],
     answer: 0,
@@ -157,14 +157,14 @@ const QUIZ = [
     explanation: "Dermite séborrhéique (Malassezia) : zones séborrhéiques, homme > femme. Favorisée par stress, Parkinson, alcool, VIH (forme aiguë étendue → penser primo-infection VIH). R/ : imidazolés topiques (≠ dermocorticoïdes sur le visage)."
   },
   {
-    img: "psoriasis.jpg", theme: "Inflammatoires",
+    img: "psoriasis.jpg", imgs: ["psoriasis.jpg", "psoriasis-2.jpg", "psoriasis-3.jpg"], theme: "Inflammatoires",
     question: "Plaques érythémateuses BIEN limitées, squames épaisses argentées des faces d'extension (coudes, genoux), NON prurigineuses. Diagnostic ?",
     options: ["Psoriasis", "Eczéma", "Lichen plan", "Dermatophytie"],
     answer: 0,
     explanation: "Psoriasis : plaques bien limitées, squames argentées, faces d'EXTENSION, ongles « en dé à coudre », Koebner +, amélioré au soleil. R/ progressif : topiques (corticoïdes + analogues vit. D) → photothérapie (UVB/PUVA) → systémiques (MTX 1×/sem, acitrétine, ciclosporine) → biologiques (anti-TNF/IL17/23 ; bilan néo + infectieux + vaccins). ⚠️ UV non contre-indiqués."
   },
   {
-    img: "lichen-plan.jpg", theme: "Inflammatoires",
+    img: "lichen-plan.jpg", imgs: ["lichen-plan.jpg", "lichen-plan-2.jpg"], theme: "Inflammatoires",
     question: "Papules planes polygonales violines, prurigineuses, des poignets, avec stries blanchâtres (Wickham). Diagnostic ?",
     options: ["Lichen plan", "Psoriasis", "Lupus", "Verrues planes"],
     answer: 0,
@@ -185,14 +185,14 @@ const QUIZ = [
     explanation: "Acné : rétentionnel (comédons, microkystes) + inflammatoire. R/ : rétinoïdes topiques (tératogènes), ATB locaux ; systémique = cyclines (doxycycline) ; isotrétinoïne = SEUL curatif (tératogène, dose 120-150 mg/kg, jamais avec les cyclines). ⚠️ Corticoïdes formellement CI sur le visage."
   },
   {
-    img: "rosacee.jpg", theme: "Inflammatoires",
+    img: "rosacee.jpg", imgs: ["rosacee.jpg", "rosacee-2.jpg"], theme: "Inflammatoires",
     question: "Femme de 45 ans : papules et pustules sur fond de couperose (érythème centrofacial), SANS comédon. Diagnostic ?",
     options: ["Rosacée", "Acné vulgaire", "Lupus", "Dermatite séborrhéique"],
     answer: 0,
     explanation: "Rosacée (acné de l'adulte) : couperose + papulo-pustules, PAS de comédon ni microkyste, composante Demodex. 3 stades (vasculaire → papulopustuleux → rhinophyma). R/ : métronidazole/ivermectine topique, cyclines ; laser pour la couperose. ⚠️ Pustules du visage chez l'adulte = rosacée, PAS acné vulgaire. Dermocorticoïdes CI."
   },
   {
-    img: "urticaire.jpg", theme: "Inflammatoires",
+    img: "urticaire.jpg", imgs: ["urticaire.jpg", "urticaire-2.jpg"], theme: "Inflammatoires",
     question: "Papules/plaques œdémateuses rosées « ortiées », FUGACES (< 24 h), migratrices, très prurigineuses. Diagnostic ?",
     options: ["Urticaire", "Érythème polymorphe", "Eczéma", "Vascularite"],
     answer: 0,
@@ -229,7 +229,7 @@ const QUIZ = [
     explanation: "Pemphigoïde bulleuse (MBAI la + fréquente, sujet âgé) : bulles TENDUES sous-épidermiques, Nikolski −, anti-BP180/BP230. Confirmation = IFD péri-lésionnelle (IgG + C3 LINÉAIRE, milieu de Michel). R/ : dermocorticoïdes puissants (clobétasol) ± cortico générale ; immunosuppresseurs ; rituximab si résistance."
   },
   {
-    img: "pemphigus.jpg", theme: "Bulleuses",
+    img: "pemphigus.jpg", imgs: ["pemphigus.jpg", "pemphigus-2.jpg"], theme: "Bulleuses",
     question: "Bulles FLASQUES, érosions buccales douloureuses traînantes, Nikolski POSITIF, acantholyse. Diagnostic ?",
     options: ["Pemphigus vulgaire", "Pemphigoïde bulleuse", "Impétigo", "SSSS"],
     answer: 0,
@@ -296,14 +296,14 @@ const QUIZ = [
     explanation: "Hémangiome infantile : tumeur vasculaire bénigne, ABSENTE à la naissance puis prolifère (3-9 mois) → régression. R/ : abstention + surveillance ; propranolol PO UNIQUEMENT si gêne fonctionnelle (péri-orificiel), ulcération ou risque vital (bilan cardiaque). ⚠️ ≠ angiome plan (malformation congénitale, plane, Sturge-Weber si V1)."
   },
   {
-    img: "bcc.jpg", theme: "Tumeurs",
+    img: "bcc.jpg", imgs: ["bcc.jpg", "bcc-2.jpg"], theme: "Tumeurs",
     question: "Papule perlée translucide, télangiectasies, parfois ulcérée (ulcus rodens), zone photo-exposée du sujet âgé. Diagnostic ?",
     options: ["Carcinome basocellulaire", "Carcinome spinocellulaire", "Mélanome", "Naevus"],
     answer: 0,
     explanation: "CBC : perle translucide + télangiectasies, malignité LOCALE (pas/peu de métastases), cancer le + fréquent. R/ : CHIRURGIE en 1ʳᵉ intention (marges contrôlées). CBC superficiel du tronc : imiquimod 5×/sem ou PDT. ⚠️ Un CBC du visage → chirurgie, PAS imiquimod."
   },
   {
-    img: "scc.jpg", theme: "Tumeurs",
+    img: "scc.jpg", imgs: ["scc.jpg", "scc-2.jpg"], theme: "Tumeurs",
     question: "Lésion kératosique ulcéro-bourgeonnante, indurée, à croissance rapide, sur zone photo-exposée. Diagnostic ?",
     options: ["Carcinome spinocellulaire (épidermoïde)", "Carcinome basocellulaire", "Kératose séborrhéique", "Verrue"],
     answer: 0,
@@ -317,7 +317,7 @@ const QUIZ = [
     explanation: "Kératose actinique : lésion PRÉCANCÉREUSE, marqueur d'UV cumulés, peut évoluer vers un CSC. R/ ponctuel : cryothérapie ; multiple (« traitement de champ ») : PDT, imiquimod, 5-fluorouracile. ⚠️ La PUVAthérapie n'est PAS un traitement de la KA."
   },
   {
-    img: "melanome.jpg", theme: "Tumeurs",
+    img: "melanome.jpg", imgs: ["melanome.jpg", "melanome-2.jpg"], theme: "Tumeurs",
     question: "Lésion pigmentée asymétrique, bords irréguliers, polychrome, > 6 mm, évolutive. Diagnostic ?",
     options: ["Mélanome", "Naevus banal", "Kératose séborrhéique", "Carcinome basocellulaire pigmenté"],
     answer: 0,
@@ -347,7 +347,7 @@ const QUIZ = [
     explanation: "Pelade : alopécie NON cicatricielle (réversible), auto-immune + génétique + psychogène, cheveux peladiques en point d'exclamation. Associée au vitiligo/thyroïde. R/ : dermocorticoïdes puissants/injections, minoxidil, bolus cortico ± MTX, anti-JAK. ⚠️ Alopécies CICATRICIELLES = lichen plan, lupus chronique, pseudo-pelade de Brocq, teigne — PAS la pelade."
   },
   {
-    img: "vitiligo.jpg", theme: "Annexes & pigmentation",
+    img: "vitiligo.jpg", imgs: ["vitiligo.jpg", "vitiligo-2.jpg"], theme: "Annexes & pigmentation",
     question: "Macules ACHROMIQUES (blanc laiteux) bien limitées, symétriques, sans squame. Diagnostic ?",
     options: ["Vitiligo", "Pityriasis versicolor", "Pityriasis alba", "Lèpre"],
     answer: 0,
@@ -363,7 +363,7 @@ const QUIZ = [
     explanation: "Sarcoïdose (Besnier-Boeck-Schaumann) : granulome épithélioïde SANS nécrose, vitropression lupoïde. Toujours biopsier + bilan pulmonaire. Bio : anergie tuberculinique, ↑ lysozyme + ECA, hypercalcémie. Lupus pernio (nez/oreilles). Löfgren = adénopathies médiastinales + érythème noueux. R/ cutané : antipaludéens ± thalidomide/MTX."
   },
   {
-    img: "granulome-annulaire.jpg", theme: "Granulomateuses & neutrophiliques",
+    img: "granulome-annulaire.jpg", imgs: ["granulome-annulaire.jpg", "granulome-annulaire-2.jpg"], theme: "Granulomateuses & neutrophiliques",
     question: "Papules fermes en relief disposées en anneau, SANS squame, dos des mains/pieds, asymptomatique. Diagnostic ?",
     options: ["Granulome annulaire", "Dermatophytie", "Érythème migrant", "Sarcoïdose"],
     answer: 0,
@@ -377,21 +377,21 @@ const QUIZ = [
     explanation: "Nécrobiose lipoïdique : plaques jaunâtres atrophiques prétibiales. Associée au DIABÈTE (80-90 %) → rechercher un diabète. R/ : dermocorticoïdes occlusifs + tacrolimus (difficile). ⚠️ Le contrôle du diabète n'améliore pas les lésions cutanées."
   },
   {
-    img: "erytheme-noueux.jpg", theme: "Granulomateuses & neutrophiliques",
+    img: "erytheme-noueux.jpg", imgs: ["erytheme-noueux.jpg", "erytheme-noueux-2.jpg"], theme: "Granulomateuses & neutrophiliques",
     question: "Nouures inflammatoires chaudes, douloureuses, des faces d'extension des jambes, évoluant comme une ecchymose, sans ulcération. Diagnostic ?",
     options: ["Érythème noueux", "Pyoderma gangrenosum", "Érysipèle", "Vascularite nodulaire"],
     answer: 0,
     explanation: "Érythème noueux : hypodermite nodulaire des jambes, douloureuse, JAMAIS d'ulcération/cicatrice. Cause #1 = streptocoque β-hémolytique ; aussi sarcoïdose (Löfgren), MICI, Yersinia, médicaments. R/ : repos en décubitus + R/ étiologique, AINS, colchicine/dapsone. ⚠️ « Étiologie fausse » : gammapathie (= Sweet/PG)."
   },
   {
-    img: "pyoderma.jpg", theme: "Granulomateuses & neutrophiliques",
+    img: "pyoderma.jpg", imgs: ["pyoderma.jpg", "pyoderma-2.jpg"], theme: "Granulomateuses & neutrophiliques",
     question: "Ulcération à bordure violacée décollée « tracée au compas », à extension rapide, très DOULOUREUSE, pathergie +. Diagnostic ?",
     options: ["Pyoderma gangrenosum", "Ulcère veineux", "Carcinome", "Ecthyma"],
     answer: 0,
     explanation: "Pyoderma gangrenosum : ulcère DOULOUREUX (⚠️ « indolore » = faux), bordure inflammatoire, pathergie (ne pas débrider !), NON infectieux. Associé : MICI, polyarthrite rhumatoïde, hémopathies (gammapathie IgA). R/ : traiter la maladie associée + dermocorticoïdes/tacrolimus, cortico générale, ciclosporine, anti-TNF."
   },
   {
-    img: "sweet.jpg", theme: "Granulomateuses & neutrophiliques",
+    img: "sweet.jpg", imgs: ["sweet.jpg", "sweet-2.jpg"], theme: "Granulomateuses & neutrophiliques",
     question: "Plaques/nodules érythémateux œdémateux « juteux », fièvre élevée, hyperleucocytose à neutrophiles. Diagnostic ?",
     options: ["Syndrome de Sweet", "Érysipèle", "Urticaire", "Lupus aigu"],
     answer: 0,

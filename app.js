@@ -121,7 +121,9 @@ function renderQuestion() {
 
   els.progressBar.style.width = `${(current / session.length) * 100}%`;
   els.qCounter.textContent = `Question ${current + 1} / ${session.length}`;
-  els.qImage.src = `images/${q.img}`;
+  const imgList = (q.imgs && q.imgs.length) ? q.imgs : [q.img];
+  const chosenImg = imgList[Math.floor(Math.random() * imgList.length)];
+  els.qImage.src = `images/${chosenImg}`;
   els.qImage.alt = "Image clinique — " + q.theme;
   els.qText.textContent = photoOnly ? "Quel est le diagnostic ?" : q.question;
 
