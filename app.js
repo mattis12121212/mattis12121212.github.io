@@ -14,6 +14,7 @@ const els = {
   themeSelect:  $("theme-select"),
   countSelect:  $("count-select"),
   shuffleCheck: $("shuffle-check"),
+  photoOnlyCheck: $("photoonly-check"),
   bankInfo:     $("bank-info"),
   topStats:     $("topbar-stats"),
 
@@ -40,6 +41,7 @@ let session = [];      // questions de la partie en cours (avec options mélang�
 let current = 0;       // index de la question courante
 let answers = [];      // réponses données (index choisi)
 let answered = false;  // la question courante a-t-elle été répondue ?
+let photoOnly = false; // mode « photo seule » (description cachée)
 
 // ---- Utilitaires ----
 function shuffle(arr) {
@@ -49,6 +51,23 @@ function shuffle(arr) {
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
+}
+
+// Découpe une explication en sections : clinique / traitement (R/) / à retenir (⚠️)
+function splitExplanation(text) {
+  let clues = text.trim(), tt = "", trap = "";
+  const r = clues.indexOf("R/");
+  if (r !== -1) {
+    let after = clues.slice(r + 2).replace(/^\s*:?\s*/, "").trim();
+    clues = clues.slice(0, r).trim();
+    const w = after.indexOf("⚠️");
+    if (w !== -1) { trap = after.slice(w + 2).trim(); after = after.slice(0, w).trim(); }
+    tt = after;
+  } else {
+    const w = clues.indexOf("⚠️");
+    if (w !== -1) { trap = clues.slice(w + 2).trim(); clues = clues.slice(0, w).trim(); }
+  }
+  return { clues, tt, trap };
 }
 
 function showScreen(name) {
@@ -73,6 +92,7 @@ function initStart() {
 
 // ---- Démarrer une partie ----
 function startQuiz() {
+  photoOnly = els.photoOnlyCheck.checked;
   const theme = els.themeSelect.value;
   let pool = theme === "__all" ? QUIZ.slice() : QUIZ.filter((q) => q.theme === theme);
 
@@ -103,7 +123,7 @@ function renderQuestion() {
   els.qCounter.textContent = `Question ${current + 1} / ${session.length}`;
   els.qImage.src = `images/${q.img}`;
   els.qImage.alt = "Image clinique — " + q.theme;
-  els.qText.textContent = q.question;
+  els.qText.textContent = photoOnly ? "Quel est le diagnostic ?" : q.question;
 
   els.feedback.className = "feedback hidden";
   els.btnNext.classList.add("hidden");
@@ -139,14 +159,16 @@ function selectOption(i) {
   });
 
   els.feedback.classList.remove("hidden");
-  if (chosen.correct) {
-    els.feedback.className = "feedback ok";
-    els.feedbackTitle.textContent = "✅ Bonne réponse !";
-  } else {
-    els.feedback.className = "feedback no";
-    els.feedbackTitle.textContent = `❌ Faux — réponse : ${opts[correctIdx].text}`;
-  }
-  els.feedbackText.textContent = q.explanation;
+  const dx = opts[correctIdx].text;
+  els.feedback.className = "feedback " + (chosen.correct ? "ok" : "no");
+  els.feedbackTitle.textContent = chosen.correct ? "✅ Bonne réponse" : "❌ Mauvaise réponse";
+
+  const parts = splitExplanation(q.explanation);
+  let html = `<div class="fb-dx">Diagnostic : ${dx}</div>`;
+  if (parts.clues) html += `<div class="fb-sec"><span class="fb-label">Clinique</span>${parts.clues}</div>`;
+  if (parts.tt)    html += `<div class="fb-sec fb-tt"><span class="fb-label">💊 Traitement</span>${parts.tt}</div>`;
+  if (parts.trap)  html += `<div class="fb-sec fb-trap"><span class="fb-label">⚠️ À retenir</span>${parts.trap}</div>`;
+  els.feedbackText.innerHTML = html;
 
   els.btnNext.textContent = current === session.length - 1 ? "Voir le résultat →" : "Suivant →";
   els.btnNext.classList.remove("hidden");
