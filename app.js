@@ -19,7 +19,6 @@ const els = {
 
   progressBar:  $("progress-bar"),
   qCounter:     $("q-counter"),
-  qTheme:       $("q-theme"),
   qImage:       $("q-image"),
   qText:        $("q-text"),
   qOptions:     $("q-options"),
@@ -102,7 +101,6 @@ function renderQuestion() {
 
   els.progressBar.style.width = `${(current / session.length) * 100}%`;
   els.qCounter.textContent = `Question ${current + 1} / ${session.length}`;
-  els.qTheme.textContent = q.theme;
   els.qImage.src = `images/${q.img}`;
   els.qImage.alt = "Image clinique — " + q.theme;
   els.qText.textContent = q.question;
