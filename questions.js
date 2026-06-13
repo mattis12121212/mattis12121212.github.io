@@ -396,5 +396,115 @@ const QUIZ = [
     options: ["Syndrome de Sweet", "Érysipèle", "Urticaire", "Lupus aigu"],
     answer: 0,
     explanation: "Syndrome de Sweet (dermatose neutrophilique aiguë fébrile) : plaques infiltrées « pseudo-vésiculeuses », fièvre 40 °C, neutrophilie ; histo = infiltrat neutrophilique SANS vascularite. Para-inflammatoire (MICI), paranéoplasique (hémopathies myéloïdes → suivi/6 mois), médicamenteux. R/ : corticostéroïdes systémiques (effet spectaculaire), colchicine."
+  },
+
+  /* ============ VARIANTES / SOUS-TYPES (diagnostics précis) ============ */
+
+  /* --- Psoriasis : formes cliniques --- */
+  {
+    img: "psoriasis-gouttes.jpg", theme: "Inflammatoires",
+    question: "Multiples petites papules érythémato-squameuses « en gouttes » disséminées sur le tronc d'un enfant/ado, au décours d'une angine. Diagnostic ?",
+    options: ["Psoriasis en gouttes", "Psoriasis en plaques", "Pityriasis rosé", "Syphilis secondaire"],
+    answer: 0,
+    explanation: "Psoriasis en gouttes (guttata) : semis de petites papules, déclenché par une angine à streptocoque. R/ : dermocorticoïdes + analogues vit. D, photothérapie ; traiter le foyer ORL (amoxicilline ; amygdalectomie si récidives). ⚠️ Peut évoluer vers un psoriasis en plaques."
+  },
+  {
+    img: "psoriasis-pustuleux.jpg", theme: "Inflammatoires",
+    question: "Pustules jaunâtres stériles sur fond érythémato-squameux des paumes et des plantes. Diagnostic ?",
+    options: ["Psoriasis pustuleux palmo-plantaire", "Dyshidrose", "Candidose", "Eczéma de contact"],
+    answer: 0,
+    explanation: "Psoriasis pustuleux palmo-plantaire : pustules AMICROBIENNES sur fond psoriasique. R/ : dermocorticoïdes puissants ± analogues vit. D ; acitrétine = choix #1 des formes pustuleuses (tératogène 2 ans) ; sinon MTX/biologiques. ⚠️ Tabac = facteur aggravant majeur."
+  },
+  {
+    img: "psoriasis-inverse.jpg", theme: "Inflammatoires",
+    question: "Plaque rouge BIEN limitée, lisse et brillante (SANS squame), au fond d'un pli (axillaire/inguinal). Diagnostic ?",
+    options: ["Psoriasis inversé (des plis)", "Candidose des plis", "Dermatophytie des plis", "Eczéma de contact"],
+    answer: 0,
+    explanation: "Psoriasis inversé : atteinte des plis, rouge vernissé SANS squames (macération). ⚠️ DD candidose / intertrigo mycosique → prélèvement si doute. R/ : dermocorticoïdes modérés (peau fine des plis) ± analogues vit. D, tacrolimus."
+  },
+  {
+    img: "psoriasis-ongle.jpg", theme: "Inflammatoires",
+    question: "Ongles présentant des dépressions ponctuées « en dé à coudre », des taches d'huile et une onycholyse. Diagnostic ?",
+    options: ["Psoriasis unguéal", "Onychomycose", "Lichen plan unguéal", "Pelade (ongles grésés)"],
+    answer: 0,
+    explanation: "Psoriasis unguéal : ponctuations « en dé à coudre », taches saumonées « tache d'huile », onycholyse, hyperkératose sous-unguéale. Associé au rhumatisme psoriasique. R/ : dermocorticoïdes/analogues vit. D ± injections ; systémique si psoriasis sévère/articulaire. ⚠️ DD : onychomycose (prélèvement), lichen plan (ptérygion), pelade (ongles grésés)."
+  },
+
+  /* --- Eczéma : formes cliniques --- */
+  {
+    img: "eczema-dyshidrose.jpg", theme: "Inflammatoires",
+    question: "Vésicules profondes très prurigineuses « en grains de tapioca » des faces latérales des doigts et des paumes. Diagnostic ?",
+    options: ["Eczéma dyshidrosique (dyshidrose)", "Psoriasis pustuleux", "Gale", "Candidose"],
+    answer: 0,
+    explanation: "Dyshidrose : vésicules/bulles très prurigineuses des paumes/plantes et bords des doigts (variante de DA). Favorisée par été, tabac, café, stress. R/ : dermocorticoïdes puissants, émollients, éviction des irritants."
+  },
+  {
+    img: "eczema-nummulaire.jpg", theme: "Inflammatoires",
+    question: "Plaques eczémateuses arrondies « en pièce de monnaie », bien limitées, suintantes et prurigineuses. Diagnostic ?",
+    options: ["Eczéma nummulaire (discoïde)", "Psoriasis", "Dermatophytie", "Pityriasis rosé"],
+    answer: 0,
+    explanation: "Eczéma nummulaire : plaques rondes « en pièce de monnaie », suintantes, prurigineuses (variante de DA), souvent résistant. R/ : dermocorticoïdes puissants ± systémique. ⚠️ DD dermatophytie (bordure active, centre clair) → grattage si doute."
+  },
+  {
+    img: "eczema-contact.jpg", theme: "Inflammatoires",
+    question: "Eczéma prurigineux d'abord limité à la zone de contact (bijou, cosmétique), apparu 2-3 j après, pouvant s'étendre à distance. Diagnostic ?",
+    options: ["Eczéma de contact allergique", "Dermite d'irritation", "Dermatite atopique", "Urticaire de contact"],
+    answer: 0,
+    explanation: "Eczéma de contact allergique : hypersensibilité RETARDÉE (2-3 j), débute à la zone de contact puis diffuse. Diagnostic : tests épicutanés (patch) POSITIFS (≠ prick). R/ : éviction de l'allergène + dermocorticoïdes. ⚠️ Dermite d'irritation = non allergique, patch négatif, limitée à la zone de contact."
+  },
+
+  /* --- Mélanome / nævus : formes --- */
+  {
+    img: "melanome-dubreuilh.jpg", theme: "Tumeurs",
+    question: "Macule pigmentée asymétrique à contours irréguliers, à croissance LENTE, sur peau photo-vieillie du visage/de l'oreille d'un sujet âgé. Diagnostic ?",
+    options: ["Mélanome de Dubreuilh (lentigo malin)", "Lentigo solaire bénin", "Kératose séborrhéique", "Naevus"],
+    answer: 0,
+    explanation: "Mélanome de Dubreuilh (lentigo maligna) : forme à croissance lente, intra-épidermique, des zones photo-exposées du sujet âgé. Risque d'évolution invasive (lentigo maligna melanoma). R/ : exérèse avec marges (imiquimod/radiothérapie si chirurgie impossible). ⚠️ Toute zone qui s'épaissit/fonce = suspecte."
+  },
+  {
+    img: "melanome-ongle.jpg", theme: "Tumeurs",
+    question: "Bande pigmentée brun-noir LONGITUDINALE d'un ongle, qui s'élargit et déborde sur le repli cutané. Diagnostic ?",
+    options: ["Mélanome de l'appareil unguéal", "Hématome sous-unguéal", "Mélanonychie ethnique bénigne", "Onychomycose"],
+    answer: 0,
+    explanation: "Mélanome unguéal : mélanonychie LONGITUDINALE qui s'élargit (> 3 mm), débordant sur le repli = signe de Hutchinson. ⚠️ Mélanome « caché » (ongle, plante, génital) = mauvais pronostic (retard diagnostique). R/ : biopsie matricielle → exérèse. DD hématome (migre avec la pousse de l'ongle)."
+  },
+  {
+    img: "naevus-bleu.jpg", theme: "Tumeurs",
+    question: "Petite lésion gris-bleuté, ferme, bien limitée, stable depuis des années. Diagnostic ?",
+    options: ["Naevus bleu (bénin)", "Mélanome", "Carcinome basocellulaire pigmenté", "Angiokératome"],
+    answer: 0,
+    explanation: "Naevus bleu : lésion bénigne gris-bleutée (mélanocytes dermiques profonds → effet Tyndall), stable, fréquente chez les sujets méditerranéens. Bénin si stable et typique. ⚠️ Toute modification → exérèse + anapath."
+  },
+
+  /* --- Pemphigus : forme superficielle --- */
+  {
+    img: "pemphigus-foliace.jpg", theme: "Bulleuses",
+    question: "Lésions squamo-croûteuses superficielles des zones séborrhéiques (tronc, visage), SANS atteinte muqueuse. Diagnostic ?",
+    options: ["Pemphigus superficiel (foliacé)", "Pemphigus vulgaire", "Dermatite séborrhéique", "Impétigo"],
+    answer: 0,
+    explanation: "Pemphigus superficiel (foliacé/séborrhéique) : clivage sous-corné (couche granuleuse), lésions squamo-croûteuses, JAMAIS d'atteinte muqueuse (anti-Dsg1 seul). R/ : dermocorticoïdes ± dapsone. ⚠️ ≠ pemphigus vulgaire (débute aux muqueuses, anti-Dsg3, rituximab)."
+  },
+
+  /* --- Toxidermies : sous-types --- */
+  {
+    img: "exantheme-mp.jpg", theme: "Inflammatoires",
+    question: "Éruption maculo-papuleuse symétrique et prurigineuse du tronc, dans le mois suivant l'introduction d'un médicament, état général conservé. Diagnostic ?",
+    options: ["Exanthème maculo-papuleux médicamenteux", "DRESS", "Stevens-Johnson", "Exanthème viral"],
+    answer: 0,
+    explanation: "Exanthème maculo-papuleux = toxidermie BÉNIGNE la plus fréquente. Symétrique, tronc/racines, évolution favorable (proche d'un exanthème viral, ex. EBV + amoxicilline). R/ : arrêt non systématique, antiH1, surveillance. ⚠️ Signes de gravité (→ DRESS / SJS) : œdème du visage, atteinte muqueuse, Nikolski +, fièvre élevée, éosinophilie, décollement."
+  },
+  {
+    img: "peag.jpg", theme: "Inflammatoires",
+    question: "Érythème diffus parsemé de NOMBREUSES petites pustules stériles, fièvre et hyperleucocytose neutrophile, après un médicament. Diagnostic ?",
+    options: ["PEAG (pustulose exanthématique aiguë généralisée)", "Psoriasis pustuleux", "SSSS", "Folliculite"],
+    answer: 0,
+    explanation: "PEAG : toxidermie pustuleuse aiguë (érythème + multitude de pustules amicrobiennes), neutrophilie, début rapide après le médicament, évolution favorable à l'arrêt. R/ : arrêt du médicament, dermocorticoïdes. ⚠️ DD psoriasis pustuleux (histo proche) ; souvent aggravée par l'amoxicilline."
+  },
+  {
+    img: "epf.jpg", theme: "Inflammatoires",
+    question: "Macule(s) arrondie(s) rouge-violine bien limitée(s) réapparaissant TOUJOURS AU MÊME ENDROIT à chaque prise d'un médicament. Diagnostic ?",
+    options: ["Érythème pigmenté fixe", "Érythème polymorphe", "Vascularite", "Eczéma nummulaire"],
+    answer: 0,
+    explanation: "Érythème pigmenté fixe (EPF) : toxidermie caractéristique → lésion(s) ronde(s) « dusky » qui récidive(nt) au MÊME site à chaque réintroduction du médicament, laissant une pigmentation résiduelle. R/ : identifier et éviter le médicament responsable (test de réintroduction prudent si besoin)."
   }
 ];
