@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Dermato — QCM photos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🩺</span>
+      <h1>Quiz Dermato</h1>
+    </div>
+    <div class="topbar-right" id="topbar-stats"></div>
+  </header>
+
+  <main class="container">
+
+    <!-- ÉCRAN D'ACCUEIL -->
+    <section id="screen-start" class="card screen">
+      <h2>Entraînement QCM — reconnaissance photo</h2>
+      <p class="lead">
+        Une image dermatologique s'affiche : choisis le bon diagnostic.
+        Réponse immédiate + explication tirée du cours.
+      </p>
+
+      <div class="field">
+        <label for="theme-select">Thème</label>
+        <select id="theme-select"></select>
+      </div>
+
+      <div class="field">
+        <label for="count-select">Nombre de questions</label>
+        <select id="count-select">
+          <option value="10">10 questions</option>
+          <option value="20">20 questions</option>
+          <option value="0" selected>Toutes</option>
+        </select>
+      </div>
+
+      <label class="checkbox">
+        <input type="checkbox" id="shuffle-check" checked />
+        Mélanger l'ordre des questions
+      </label>
+
+      <button class="btn btn-primary btn-lg" id="btn-start">Commencer ▶</button>
+      <p class="muted small" id="bank-info"></p>
+    </section>
+
+    <!-- ÉCRAN QUIZ -->
+    <section id="screen-quiz" class="card screen hidden">
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="quiz-meta">
+        <span id="q-counter"></span>
+        <span class="badge" id="q-theme"></span>
+      </div>
+
+      <div class="image-wrap">
+        <img id="q-image" alt="Image clinique dermatologique" />
+      </div>
+
+      <h2 class="question" id="q-text"></h2>
+      <div class="options" id="q-options"></div>
+
+      <div class="feedback hidden" id="feedback">
+        <p id="feedback-title" class="feedback-title"></p>
+        <p id="feedback-text" class="feedback-text"></p>
+      </div>
+
+      <div class="quiz-actions">
+        <button class="btn btn-ghost" id="btn-quit">Quitter</button>
+        <button class="btn btn-primary hidden" id="btn-next">Suivant →</button>
+      </div>
+    </section>
+
+    <!-- ÉCRAN RÉSULTATS -->
+    <section id="screen-result" class="card screen hidden">
+      <h2>Résultat</h2>
+      <div class="score-circle" id="score-circle">
+        <span id="score-pct">0%</span>
+      </div>
+      <p class="lead center" id="score-text"></p>
+      <div id="review" class="review"></div>
+      <div class="quiz-actions center">
+        <button class="btn btn-ghost" id="btn-home">Accueil</button>
+        <button class="btn btn-primary" id="btn-retry">Recommencer</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <p>Images : <a href="https://dermnetnz.org/" target="_blank" rel="noopener">DermNet NZ</a> — usage d'étude personnelle. Contenu QCM basé sur le cours de dermatologie.</p>
+  </footer>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
