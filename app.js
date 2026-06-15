@@ -22,22 +22,50 @@ let session = [], current = 0, answered = false;
 let scoreA = [], scoreB = [], givenA = [], givenB = [];
 let lastEntryId = null;
 
-/* ---- Classement (localStorage, persistant sur l'appareil) ---- */
-const LB_KEY = "dermato_lb_v1", PS_KEY = "dermato_pseudo";
-function lbLoad(){ try{ return JSON.parse(localStorage.getItem(LB_KEY)) || []; }catch(e){ return []; } }
-function lbSave(arr){ try{ localStorage.setItem(LB_KEY, JSON.stringify(arr)); }catch(e){} }
+/* ---- Classement PARTAGÉ (kvdb.io, visible par tous) + repli local ----
+   Chaque score = une clé unique s_<id> dans le bucket → pas d'écrasement.
+   Affichage = scores du serveur fusionnés avec mes scores locaux (latence ~2 s). */
+const PS_KEY = "dermato_pseudo", MINE_KEY = "dermato_mine_v1";
+const LB_BUCKET = "Rvoz2uRrTnRiKJf6cy6xpo";
+const LB_BASE = `https://kvdb.io/${LB_BUCKET}`;
+const myIds = new Set();
+
+function mineLoad(){ try{ return JSON.parse(localStorage.getItem(MINE_KEY)) || []; }catch(e){ return []; } }
+function mineSave(a){ try{ localStorage.setItem(MINE_KEY, JSON.stringify(a)); }catch(e){} }
 function lbRank(arr){ return arr.slice().sort((a,b)=> b.pct-a.pct || b.pts-a.pts || a.date-b.date); }
-function lbAdd(entry){ const arr=lbLoad(); arr.push(entry); lbSave(arr); }
 function fmtDate(ts){ const d=new Date(ts); return `${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}`; }
-function renderLB(el){
+
+async function lbFetchServer(){
+  try{
+    const r = await fetch(`${LB_BASE}/?format=json&values=true&prefix=s_`, {cache:"no-store"});
+    if(!r.ok) return [];
+    const rows = await r.json();
+    return rows.map(([k,v])=>{ try{ const o=JSON.parse(v); o._k=k; return o; }catch(e){ return null; } }).filter(Boolean);
+  }catch(e){ return []; }
+}
+function mergeEntries(server){
+  const mine = mineLoad();
+  const byId = {};
+  for(const e of server){ if(e && e.id) byId[e.id]=e; }
+  for(const e of mine){ if(e && e.id && !byId[e.id]) byId[e.id]=e; } // mes scores récents pas encore indexés
+  return Object.values(byId);
+}
+async function lbSubmit(entry){
+  const mine = mineLoad(); mine.push(entry); mineSave(mine); myIds.add(entry.id);
+  try{
+    await fetch(`${LB_BASE}/s_${entry.id}`, {method:"POST", headers:{"Content-Type":"text/plain"}, body:JSON.stringify(entry)});
+  }catch(e){ /* repli local déjà fait */ }
+}
+async function renderLB(el){
   if(!el) return;
-  const ranked = lbRank(lbLoad()).slice(0,15);
-  if(!ranked.length){ el.innerHTML = `<li class="lb-empty">Aucun score enregistré pour l'instant — termine une série !</li>`; return; }
+  el.innerHTML = `<li class="lb-empty">Chargement du classement…</li>`;
+  const ranked = lbRank(mergeEntries(await lbFetchServer())).slice(0,20);
+  if(!ranked.length){ el.innerHTML = `<li class="lb-empty">Aucun score pour l'instant — sois le premier !</li>`; return; }
   el.innerHTML = ranked.map((e,i)=>{
-    const me = e.id===lastEntryId ? " me" : "";
+    const me = (e.id && (myIds.has(e.id) || e.id===lastEntryId)) ? " me" : "";
     const medal = i===0?"🥇":i===1?"🥈":i===2?"🥉":`${i+1}.`;
     return `<li class="lb-row${me}"><span class="lb-rank">${medal}</span>`+
-      `<span class="lb-name">${escapeHtml(e.pseudo)}</span>`+
+      `<span class="lb-name">${escapeHtml(e.pseudo||"Anonyme")}</span>`+
       `<span class="lb-score">${e.pts}/${e.max} · ${e.pct}%</span>`+
       `<span class="lb-meta">${e.n} cas · ${fmtDate(e.date)}</span></li>`;
   }).join("");
@@ -165,8 +193,8 @@ function finish(){
   els.scoreText.textContent = `${pct}% · ${session.length} cas (a:2 pts + b:1 pt)`;
   // enregistrer au classement
   const pseudo = ((els.pseudo.value||"").trim()) || "Anonyme";
-  lastEntryId = "e"+Date.now()+Math.floor(Math.random()*1000);
-  lbAdd({ id:lastEntryId, pseudo, pts:tot, max, pct, n:session.length, date:Date.now() });
+  lastEntryId = "e"+Date.now()+Math.floor(Math.random()*100000);
+  lbSubmit({ id:lastEntryId, pseudo, pts:tot, max, pct, n:session.length, date:Date.now() });
   renderLB(els.lbResult);
   els.review.innerHTML = session.map((q,i)=>{
     const sa=scoreA[i]||0, sb=scoreB[i]||0;
@@ -191,9 +219,7 @@ els.btnNext.addEventListener("click",next);
 $("btn-restart").addEventListener("click",()=>{ renderLB(els.lbStart); show("start"); });
 els.gradeA.addEventListener("click",e=>{if(e.target.classList.contains("gbtn"))gradeClick(els.gradeA,e.target);});
 els.gradeB.addEventListener("click",e=>{if(e.target.classList.contains("gbtn"))gradeClick(els.gradeB,e.target);});
-els.lbClear.addEventListener("click",()=>{
-  if(confirm("Effacer tout le classement enregistré sur cet appareil ?")){ lbSave([]); lastEntryId=null; renderLB(els.lbStart); }
-});
+els.lbClear.addEventListener("click",()=>{ renderLB(els.lbStart); });
 document.addEventListener("keydown",e=>{
   if(screens.quiz.classList.contains("hidden"))return;
   if(e.key==="Enter"){
