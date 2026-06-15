@@ -3,101 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz Dermato — QCM photos</title>
+  <title>Dermato — Entraînement examen (photos)</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">
-      <span class="logo">🩺</span>
-      <h1>Quiz Dermato</h1>
-    </div>
+    <div class="brand"><span class="logo">🩺</span><h1>Dermato — Examen photos</h1></div>
     <div class="topbar-right" id="topbar-stats"></div>
   </header>
 
   <main class="container">
 
-    <!-- ÉCRAN D'ACCUEIL -->
+    <!-- ACCUEIL -->
     <section id="screen-start" class="card screen">
-      <h2>Entraînement QCM — reconnaissance photo</h2>
+      <h2>Entraînement format examen</h2>
       <p class="lead">
-        Une image dermatologique s'affiche : choisis le bon diagnostic.
-        Réponse immédiate + explication tirée du cours.
+        Une photo clinique + une courte description s'affichent. Pour chaque cas :<br>
+        <strong>a.</strong> ta première hypothèse diagnostique <span class="pts">2 pts</span> &nbsp;·&nbsp;
+        <strong>b.</strong> une question de sémiologie / étiologie / examen / prise en charge <span class="pts">1 pt</span>.
       </p>
+      <p class="muted">Tu réponds librement, puis tu révèles la correction et tu t'auto-évalues. Score sur 3 par cas.</p>
 
       <div class="field">
         <label for="theme-select">Thème</label>
         <select id="theme-select"></select>
       </div>
-
       <div class="field">
-        <label for="count-select">Nombre de questions</label>
+        <label for="count-select">Nombre de cas</label>
         <select id="count-select">
-          <option value="10">10 questions</option>
-          <option value="20">20 questions</option>
-          <option value="0" selected>Toutes</option>
+          <option value="10">10</option>
+          <option value="20" selected>20 (format examen)</option>
+          <option value="40">40</option>
+          <option value="0">Tous</option>
         </select>
       </div>
+      <label class="check"><input type="checkbox" id="shuffle-check" checked /> Mélanger</label>
 
-      <label class="checkbox">
-        <input type="checkbox" id="shuffle-check" checked />
-        Mélanger l'ordre des questions
-      </label>
-
-      <label class="checkbox">
-        <input type="checkbox" id="photoonly-check" />
-        Mode photo seule (cacher la description clinique)
-      </label>
-
-      <button class="btn btn-primary btn-lg" id="btn-start">Commencer ▶</button>
-      <p class="muted small" id="bank-info"></p>
+      <button class="btn primary big" id="btn-start">Commencer</button>
+      <p class="bank-info" id="bank-info"></p>
     </section>
 
-    <!-- ÉCRAN QUIZ -->
+    <!-- QUIZ -->
     <section id="screen-quiz" class="card screen hidden">
-      <div class="progress">
-        <div class="progress-bar" id="progress-bar"></div>
-      </div>
-      <div class="quiz-meta">
-        <span id="q-counter"></span>
+      <div class="quiz-head">
+        <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+        <span class="q-counter" id="q-counter"></span>
       </div>
 
-      <div class="image-wrap">
-        <img id="q-image" alt="Image clinique dermatologique" />
+      <figure class="photo-wrap">
+        <img id="q-image" alt="photo clinique" />
+      </figure>
+
+      <p class="vignette" id="q-descr"></p>
+
+      <!-- sous-question a -->
+      <div class="subq" id="block-a">
+        <label class="subq-label"><span class="tag">a</span> Première hypothèse diagnostique ? <span class="pts">2 pts</span></label>
+        <input type="text" id="ans-a" class="answer-input" placeholder="ta réponse…" autocomplete="off" />
+        <div class="reveal" id="reveal-a">
+          <div class="correct-line"><span class="ck">Réponse&nbsp;:</span> <strong id="sol-a"></strong></div>
+          <div class="selfgrade" id="grade-a">
+            <span>Tu t'attribues :</span>
+            <button data-pts="2" class="gbtn">✔ Juste (2)</button>
+            <button data-pts="1" class="gbtn">~ Proche (1)</button>
+            <button data-pts="0" class="gbtn">✗ Faux (0)</button>
+          </div>
+        </div>
       </div>
 
-      <h2 class="question" id="q-text"></h2>
-      <div class="options" id="q-options"></div>
-
-      <div class="feedback hidden" id="feedback">
-        <p id="feedback-title" class="feedback-title"></p>
-        <p id="feedback-text" class="feedback-text"></p>
+      <!-- sous-question b -->
+      <div class="subq" id="block-b">
+        <label class="subq-label"><span class="tag">b</span> <span id="qb-text"></span> <span class="pts">1 pt</span></label>
+        <input type="text" id="ans-b" class="answer-input" placeholder="ta réponse…" autocomplete="off" />
+        <div class="reveal" id="reveal-b">
+          <div class="correct-line"><span class="ck">Réponse&nbsp;:</span> <strong id="sol-b"></strong></div>
+          <div class="pearl" id="pearl-b"></div>
+          <div class="selfgrade" id="grade-b">
+            <span>Tu t'attribues :</span>
+            <button data-pts="1" class="gbtn">✔ Juste (1)</button>
+            <button data-pts="0" class="gbtn">✗ Faux (0)</button>
+          </div>
+        </div>
       </div>
 
       <div class="quiz-actions">
-        <button class="btn btn-ghost" id="btn-quit">Quitter</button>
-        <button class="btn btn-primary hidden" id="btn-next">Suivant →</button>
+        <button class="btn" id="btn-reveal">Révéler la correction</button>
+        <button class="btn primary hidden" id="btn-next">Cas suivant →</button>
       </div>
     </section>
 
-    <!-- ÉCRAN RÉSULTATS -->
+    <!-- RÉSULTAT -->
     <section id="screen-result" class="card screen hidden">
       <h2>Résultat</h2>
       <div class="score-circle" id="score-circle">
-        <span id="score-pct">0%</span>
+        <span id="score-pts"></span>
       </div>
-      <p class="lead center" id="score-text"></p>
+      <p class="score-text" id="score-text"></p>
       <div id="review" class="review"></div>
-      <div class="quiz-actions center">
-        <button class="btn btn-ghost" id="btn-home">Accueil</button>
-        <button class="btn btn-primary" id="btn-retry">Recommencer</button>
-      </div>
+      <button class="btn primary big" id="btn-restart">Recommencer</button>
     </section>
 
   </main>
 
   <footer class="foot">
-    <p>Images : <a href="https://dermnetnz.org/" target="_blank" rel="noopener">DermNet NZ</a> — usage d'étude personnelle. Contenu QCM basé sur le cours de dermatologie.</p>
+    <span id="foot-count"></span> · Images extraites du cours (syllabus C. Sonck) · usage d'étude personnelle ·
+    format inspiré des consignes d'examen (Pr M. Baeck, juin 2026).
   </footer>
 
   <script src="questions.js"></script>

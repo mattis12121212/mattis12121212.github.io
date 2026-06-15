@@ -1,251 +1,165 @@
 /* ============================================================
-   Quiz Dermato — logique de l'application
+   Dermato — Entraînement format examen (réponses ouvertes a/b)
+   Données : questions.js → const BANK = [{img,dx,theme,descr,qb,ab,pearl}]
    ============================================================ */
-
-// ---- Éléments du DOM ----
 const $ = (id) => document.getElementById(id);
-const screens = {
-  start:  $("screen-start"),
-  quiz:   $("screen-quiz"),
-  result: $("screen-result"),
-};
-
+const screens = { start:$("screen-start"), quiz:$("screen-quiz"), result:$("screen-result") };
 const els = {
-  themeSelect:  $("theme-select"),
-  countSelect:  $("count-select"),
-  shuffleCheck: $("shuffle-check"),
-  photoOnlyCheck: $("photoonly-check"),
-  bankInfo:     $("bank-info"),
-  topStats:     $("topbar-stats"),
-
-  progressBar:  $("progress-bar"),
-  qCounter:     $("q-counter"),
-  qImage:       $("q-image"),
-  qText:        $("q-text"),
-  qOptions:     $("q-options"),
-  feedback:     $("feedback"),
-  feedbackTitle:$("feedback-title"),
-  feedbackText: $("feedback-text"),
-  btnNext:      $("btn-next"),
-
-  scoreCircle:  $("score-circle"),
-  scorePct:     $("score-pct"),
-  scoreText:    $("score-text"),
-  review:       $("review"),
+  theme:$("theme-select"), count:$("count-select"), shuffle:$("shuffle-check"),
+  bank:$("bank-info"), top:$("topbar-stats"), foot:$("foot-count"),
+  bar:$("progress-bar"), counter:$("q-counter"),
+  img:$("q-image"), descr:$("q-descr"),
+  ansA:$("ans-a"), revealA:$("reveal-a"), solA:$("sol-a"), gradeA:$("grade-a"),
+  qb:$("qb-text"), ansB:$("ans-b"), revealB:$("reveal-b"), solB:$("sol-b"),
+  pearl:$("pearl-b"), gradeB:$("grade-b"),
+  btnReveal:$("btn-reveal"), btnNext:$("btn-next"),
+  scoreCircle:$("score-circle"), scorePts:$("score-pts"), scoreText:$("score-text"),
+  review:$("review"),
 };
 
-const KEYS = ["A", "B", "C", "D", "E", "F"];
+let session = [], current = 0, answered = false;
+let scoreA = [], scoreB = [], givenA = [], givenB = [];
 
-// ---- État ----
-let session = [];      // questions de la partie en cours (avec options mélangées)
-let current = 0;       // index de la question courante
-let answers = [];      // réponses données (index choisi)
-let answered = false;  // la question courante a-t-elle été répondue ?
-let photoOnly = false; // mode « photo seule » (description cachée)
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
-// ---- Utilitaires ----
-function shuffle(arr) {
-  const a = arr.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
+/* ---- Accueil ---- */
+function initStart(){
+  const themes = [...new Set(BANK.map(q=>q.theme))].sort((a,b)=>a.localeCompare(b,'fr'));
+  els.theme.innerHTML = `<option value="__all">Tous les thèmes (${BANK.length} cas)</option>` +
+    themes.map(t=>{const n=BANK.filter(q=>q.theme===t).length;return `<option value="${t}">${t} (${n})</option>`}).join("");
+  els.bank.textContent = `${BANK.length} cas · ${themes.length} thèmes`;
+  els.foot.textContent = `${BANK.length} cas`;
+  els.top.textContent = `${BANK.length} cas`;
 }
 
-// Découpe une explication en sections : clinique / traitement (R/) / à retenir (⚠️)
-function splitExplanation(text) {
-  let clues = text.trim(), tt = "", trap = "";
-  const r = clues.indexOf("R/");
-  if (r !== -1) {
-    let after = clues.slice(r + 2).replace(/^\s*:?\s*/, "").trim();
-    clues = clues.slice(0, r).trim();
-    const w = after.indexOf("⚠️");
-    if (w !== -1) { trap = after.slice(w + 2).trim(); after = after.slice(0, w).trim(); }
-    tt = after;
-  } else {
-    const w = clues.indexOf("⚠️");
-    if (w !== -1) { trap = clues.slice(w + 2).trim(); clues = clues.slice(0, w).trim(); }
-  }
-  return { clues, tt, trap };
+function buildSession(){
+  const theme = els.theme.value;
+  let pool = theme==="__all" ? BANK.slice() : BANK.filter(q=>q.theme===theme);
+  if(els.shuffle.checked) pool = shuffle(pool);
+  let n = parseInt(els.count.value,10);
+  if(n>0) pool = pool.slice(0,n);
+  return pool;
 }
 
-function showScreen(name) {
-  Object.values(screens).forEach((s) => s.classList.add("hidden"));
-  screens[name].classList.remove("hidden");
-  window.scrollTo({ top: 0, behavior: "smooth" });
+function start(){
+  session = buildSession();
+  if(!session.length){alert("Aucun cas pour ce thème.");return;}
+  current=0; scoreA=[]; scoreB=[]; givenA=[]; givenB=[];
+  show("quiz"); renderQuestion();
 }
 
-// ---- Initialisation de l'écran d'accueil ----
-function initStart() {
-  const themes = Array.from(new Set(QUIZ.map((q) => q.theme))).sort();
-  els.themeSelect.innerHTML =
-    `<option value="__all">Tous les thèmes (${QUIZ.length})</option>` +
-    themes
-      .map((t) => {
-        const n = QUIZ.filter((q) => q.theme === t).length;
-        return `<option value="${t}">${t} (${n})</option>`;
-      })
-      .join("");
-  els.bankInfo.textContent = `Banque : ${QUIZ.length} questions, ${themes.length} thèmes.`;
-}
+function show(name){for(const k in screens)screens[k].classList.toggle("hidden",k!==name);window.scrollTo(0,0);}
 
-// ---- Démarrer une partie ----
-function startQuiz() {
-  photoOnly = els.photoOnlyCheck.checked;
-  const theme = els.themeSelect.value;
-  let pool = theme === "__all" ? QUIZ.slice() : QUIZ.filter((q) => q.theme === theme);
-
-  if (els.shuffleCheck.checked) pool = shuffle(pool);
-
-  const count = parseInt(els.countSelect.value, 10);
-  if (count > 0) pool = pool.slice(0, count);
-
-  // Pour chaque question, on mélange l'ordre des options tout en gardant la bonne réponse.
-  session = pool.map((q) => {
-    const opts = q.options.map((text, i) => ({ text, correct: i === q.answer }));
-    const shuffledOpts = els.shuffleCheck.checked ? shuffle(opts) : opts;
-    return { ...q, shuffledOpts };
-  });
-
-  current = 0;
-  answers = new Array(session.length).fill(null);
-  showScreen("quiz");
-  renderQuestion();
-}
-
-// ---- Affichage d'une question ----
-function renderQuestion() {
-  answered = false;
+/* ---- Question ---- */
+function renderQuestion(){
   const q = session[current];
-
-  els.progressBar.style.width = `${(current / session.length) * 100}%`;
-  els.qCounter.textContent = `Question ${current + 1} / ${session.length}`;
-  const imgList = (q.imgs && q.imgs.length) ? q.imgs : [q.img];
-  const chosenImg = imgList[Math.floor(Math.random() * imgList.length)];
-  els.qImage.src = `images/${chosenImg}`;
-  els.qImage.alt = "Image clinique — " + q.theme;
-  els.qText.textContent = photoOnly ? "Quel est le diagnostic ?" : q.question;
-
-  els.feedback.className = "feedback hidden";
+  answered=false;
+  els.bar.style.width = `${(current/session.length)*100}%`;
+  els.counter.textContent = `Cas ${current+1}/${session.length}`;
+  els.img.src = `images/${q.img}`;
+  els.descr.textContent = q.descr || "Décrivez la lésion et proposez un diagnostic.";
+  els.ansA.value=""; els.ansB.value="";
+  els.qb.textContent = q.qb || "Un élément clé de prise en charge ?";
+  els.solA.textContent = q.dx;
+  els.solB.textContent = q.ab || "—";
+  els.pearl.textContent = q.pearl ? `💡 ${q.pearl}` : "";
+  els.revealA.classList.remove("show"); els.revealB.classList.remove("show");
+  resetGrades();
+  els.btnReveal.classList.remove("hidden");
   els.btnNext.classList.add("hidden");
-
-  els.qOptions.innerHTML = "";
-  q.shuffledOpts.forEach((opt, i) => {
-    const btn = document.createElement("button");
-    btn.className = "option";
-    btn.innerHTML = `<span class="key">${KEYS[i]}</span><span>${opt.text}</span>`;
-    btn.addEventListener("click", () => selectOption(i));
-    els.qOptions.appendChild(btn);
-  });
-
-  updateTopStats();
+  els.ansA.focus();
 }
 
-// ---- Sélection d'une réponse ----
-function selectOption(i) {
-  if (answered) return;
-  answered = true;
+function resetGrades(){
+  [...els.gradeA.querySelectorAll(".gbtn"),...els.gradeB.querySelectorAll(".gbtn")]
+    .forEach(b=>b.classList.remove("sel","sel0"));
+}
 
-  const q = session[current];
-  const opts = q.shuffledOpts;
-  const chosen = opts[i];
-  const correctIdx = opts.findIndex((o) => o.correct);
-  answers[current] = chosen.correct;
+/* auto-suggestion de note pour aider l'auto-évaluation */
+function norm(s){return (s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9 ]/g,"").trim();}
+function looksRight(user,sol){
+  user=norm(user); sol=norm(sol);
+  if(!user) return false;
+  if(user===sol) return true;
+  // mots significatifs du solveur présents
+  const u=new Set(user.split(/\s+/));
+  const key=sol.split(/\s+/).filter(w=>w.length>3);
+  if(key.length && key.every(w=>u.has(w))) return true;
+  if(sol.length>4 && (user.includes(sol)||sol.includes(user))) return true;
+  return false;
+}
 
-  const buttons = els.qOptions.querySelectorAll(".option");
-  buttons.forEach((b, idx) => {
-    b.disabled = true;
-    if (idx === correctIdx) b.classList.add("correct");
-    if (idx === i && !chosen.correct) b.classList.add("wrong");
-  });
-
-  els.feedback.classList.remove("hidden");
-  const dx = opts[correctIdx].text;
-  els.feedback.className = "feedback " + (chosen.correct ? "ok" : "no");
-  els.feedbackTitle.textContent = chosen.correct ? "✅ Bonne réponse" : "❌ Mauvaise réponse";
-
-  const parts = splitExplanation(q.explanation);
-  let html = `<div class="fb-dx">Diagnostic : ${dx}</div>`;
-  if (parts.clues) html += `<div class="fb-sec"><span class="fb-label">Clinique</span>${parts.clues}</div>`;
-  if (parts.tt)    html += `<div class="fb-sec fb-tt"><span class="fb-label">💊 Traitement</span>${parts.tt}</div>`;
-  if (parts.trap)  html += `<div class="fb-sec fb-trap"><span class="fb-label">⚠️ À retenir</span>${parts.trap}</div>`;
-  els.feedbackText.innerHTML = html;
-
-  els.btnNext.textContent = current === session.length - 1 ? "Voir le résultat →" : "Suivant →";
+function reveal(){
+  if(answered) return;
+  answered=true;
+  els.revealA.classList.add("show");
+  els.revealB.classList.add("show");
+  els.btnReveal.classList.add("hidden");
   els.btnNext.classList.remove("hidden");
-  updateTopStats();
+  givenA[current]=els.ansA.value.trim();
+  givenB[current]=els.ansB.value.trim();
+  // pré-sélection indicative (modifiable)
+  const q=session[current];
+  if(looksRight(givenA[current],q.dx)) preselect(els.gradeA,"2"); else if(givenA[current]) preselect(els.gradeA,"1");
+  if(looksRight(givenB[current],q.ab)) preselect(els.gradeB,"1");
+  els.btnNext.focus();
+}
+function preselect(box,pts){
+  const b=box.querySelector(`.gbtn[data-pts="${pts}"]`); if(b) gradeClick(box,b);
 }
 
-// ---- Question suivante / fin ----
-function nextQuestion() {
-  if (current < session.length - 1) {
-    current++;
-    renderQuestion();
-  } else {
-    showResult();
-  }
+function gradeClick(box,btn){
+  box.querySelectorAll(".gbtn").forEach(b=>b.classList.remove("sel","sel0"));
+  btn.classList.add(btn.dataset.pts==="0"?"sel0":"sel");
+  const pts=parseInt(btn.dataset.pts,10);
+  if(box===els.gradeA) scoreA[current]=pts; else scoreB[current]=pts;
 }
 
-// ---- Stats en haut ----
-function updateTopStats() {
-  const done = answers.filter((a) => a !== null).length;
-  const good = answers.filter((a) => a === true).length;
-  els.topStats.textContent = `Score : ${good} / ${done}`;
+function next(){
+  // défaut si non noté
+  if(scoreA[current]==null) scoreA[current]=0;
+  if(scoreB[current]==null) scoreB[current]=0;
+  current++;
+  if(current>=session.length) finish();
+  else renderQuestion();
 }
 
-// ---- Écran de résultat ----
-function showResult() {
-  els.progressBar.style.width = "100%";
-  const good = answers.filter((a) => a === true).length;
-  const total = session.length;
-  const pct = Math.round((good / total) * 100);
-
-  els.scoreCircle.style.setProperty("--p", `${pct}%`);
-  els.scorePct.textContent = `${pct}%`;
-
-  let msg;
-  if (pct >= 80) msg = "Excellent — tu maîtrises la reconnaissance photo 👏";
-  else if (pct >= 60) msg = "Bien — quelques pièges à revoir.";
-  else if (pct >= 40) msg = "À consolider — relis les diagnostics ratés ci-dessous.";
-  else msg = "Reprends la synthèse puis recommence 💪";
-  els.scoreText.textContent = `${good} / ${total} bonnes réponses. ${msg}`;
-
-  els.review.innerHTML = session
-    .map((q, i) => {
-      const ok = answers[i] === true;
-      return `<div class="review-item ${ok ? "ok" : "no"}">
-        <span class="mark">${ok ? "✅" : "❌"}</span>
-        <span><strong>${q.options[q.answer]}</strong> — ${q.theme}</span>
-      </div>`;
-    })
-    .join("");
-
-  showScreen("result");
+/* ---- Résultat ---- */
+function finish(){
+  const tot = session.reduce((s,_,i)=>s+(scoreA[i]||0)+(scoreB[i]||0),0);
+  const max = session.length*3;
+  const pct = Math.round(tot/max*100);
+  els.scoreCircle.style.setProperty("--deg",`${pct*3.6}deg`);
+  els.scorePts.textContent = `${tot}/${max}`;
+  els.scoreText.textContent = `${pct}% · ${session.length} cas (a:2 pts + b:1 pt)`;
+  els.review.innerHTML = session.map((q,i)=>{
+    const sa=scoreA[i]||0, sb=scoreB[i]||0;
+    return `<div class="rev-item">
+      <img src="images/${q.img}" alt="">
+      <div class="rev-body">
+        <div class="rev-dx">${q.dx}</div>
+        <div class="muted">a (${sa}/2) : ${escapeHtml(givenA[i]||"—")}</div>
+        <div class="muted">b (${sb}/1) : ${escapeHtml(givenB[i]||"—")} <span style="color:var(--good)">→ ${escapeHtml(q.ab||"")}</span></div>
+      </div>
+      <div class="rev-tot">${sa+sb}/3</div>
+    </div>`;
+  }).join("");
+  show("result");
 }
+function escapeHtml(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
 
-// ---- Événements ----
-$("btn-start").addEventListener("click", startQuiz);
-els.btnNext.addEventListener("click", nextQuestion);
-$("btn-quit").addEventListener("click", () => showScreen("start"));
-$("btn-home").addEventListener("click", () => showScreen("start"));
-$("btn-retry").addEventListener("click", startQuiz);
-
-// Raccourcis clavier : A/B/C/D ou 1/2/3/4 pour répondre, Entrée = suivant
-document.addEventListener("keydown", (e) => {
-  if (!screens.quiz.classList.contains("hidden")) {
-    const map = { a: 0, b: 1, c: 2, d: 3, 1: 0, 2: 1, 3: 2, 4: 3 };
-    const k = e.key.toLowerCase();
-    if (!answered && k in map) {
-      const btns = els.qOptions.querySelectorAll(".option");
-      if (map[k] < btns.length) btns[map[k]].click();
-    } else if (answered && (e.key === "Enter" || e.key === " ")) {
-      e.preventDefault();
-      els.btnNext.click();
-    }
+/* ---- Événements ---- */
+$("btn-start").addEventListener("click",start);
+els.btnReveal.addEventListener("click",reveal);
+els.btnNext.addEventListener("click",next);
+$("btn-restart").addEventListener("click",()=>show("start"));
+els.gradeA.addEventListener("click",e=>{if(e.target.classList.contains("gbtn"))gradeClick(els.gradeA,e.target);});
+els.gradeB.addEventListener("click",e=>{if(e.target.classList.contains("gbtn"))gradeClick(els.gradeB,e.target);});
+document.addEventListener("keydown",e=>{
+  if(screens.quiz.classList.contains("hidden"))return;
+  if(e.key==="Enter"){
+    if(!answered){ if(document.activeElement===els.ansA){els.ansB.focus();} else {reveal();} }
+    else next();
   }
 });
-
-// ---- Go ----
 initStart();
-updateTopStats();

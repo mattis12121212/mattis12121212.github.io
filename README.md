@@ -1,50 +1,10 @@
-# Quiz Dermato 🩺
+# Dermato — Entraînement format examen (photos)
 
-Application QCM locale : une image dermatologique s'affiche → tu choisis le diagnostic → feedback immédiat + explication tirée du cours.
+Site d'entraînement basé sur **les images du cours** (syllabus C. Sonck), au format de l'examen de juin 2026 (Pr M. Baeck) :
 
-## Lancer le site
+- Une **photo clinique** + une courte **description**.
+- **a.** Première hypothèse diagnostique (2 pts).
+- **b.** Question de sémiologie / étiologie / examen complémentaire / prise en charge (1 pt).
+- Réponse libre → révélation de la correction → auto-évaluation. Score /3 par cas.
 
-**Option 1 — le plus simple :** double-clique sur `index.html` (il s'ouvre dans ton navigateur).
-
-**Option 2 — petit serveur local** (recommandé, évite tout souci de cache) :
-
-```powershell
-cd "C:\Users\matti\OneDrive\Bureau\dermato\site"
-python -m http.server 8765
-```
-
-Puis ouvre http://localhost:8765 dans ton navigateur.
-
-## Contenu
-
-- **37 questions**, 9 thèmes (viroses, bactériennes, mycoses/parasites, inflammatoires, bulleuses, connectivites, tumeurs, annexes/pigmentation, granulomateuses/neutrophiliques).
-- Filtre par thème, choix du nombre de questions, mélange aléatoire.
-- Raccourcis clavier : `A/B/C/D` (ou `1/2/3/4`) pour répondre, `Entrée` pour passer.
-- Score + récapitulatif en fin de partie.
-
-## Fichiers
-
-| Fichier | Rôle |
-|---|---|
-| `index.html` | structure de la page |
-| `style.css` | mise en forme |
-| `app.js` | logique du quiz |
-| `questions.js` | **banque de questions** (à éditer pour ajouter du contenu) |
-| `images/` | images cliniques (DermNet) |
-
-## Ajouter / modifier une question
-
-Édite `questions.js`. Chaque entrée :
-
-```js
-{
-  img: "psoriasis.jpg",        // fichier présent dans images/
-  theme: "Inflammatoires",
-  question: "Énoncé…",
-  options: ["Bonne réponse", "Distracteur", "Distracteur", "Distracteur"],
-  answer: 0,                    // index (0-3) de la bonne réponse dans options
-  explanation: "Rappel clinique / tuyau."
-}
-```
-
-> Les images proviennent de [DermNet NZ](https://dermnetnz.org/) et sont utilisées ici à des fins d'**étude personnelle**. Ne pas redistribuer publiquement sans vérifier leur licence.
+218 cas, étiquetés à partir du contexte du syllabus (légendes incrustées rognées pour ne pas révéler la réponse). Usage d'étude personnelle.
