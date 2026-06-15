@@ -25,6 +25,10 @@
       <p class="muted">Tu réponds librement, puis tu révèles la correction et tu t'auto-évalues. Score sur 3 par cas.</p>
 
       <div class="field">
+        <label for="pseudo-input">Ton pseudo</label>
+        <input type="text" id="pseudo-input" class="answer-input" placeholder="ex. Mattis" maxlength="20" autocomplete="off" />
+      </div>
+      <div class="field">
         <label for="theme-select">Thème</label>
         <select id="theme-select"></select>
       </div>
@@ -41,6 +45,14 @@
 
       <button class="btn primary big" id="btn-start">Commencer</button>
       <p class="bank-info" id="bank-info"></p>
+
+      <div class="leaderboard" id="lb-start">
+        <div class="lb-head">
+          <h3>🏆 Classement</h3>
+          <button class="lb-clear" id="lb-clear" title="Effacer le classement">Réinitialiser</button>
+        </div>
+        <ol class="lb-list" id="lb-list-start"></ol>
+      </div>
     </section>
 
     <!-- QUIZ -->
@@ -99,6 +111,12 @@
         <span id="score-pts"></span>
       </div>
       <p class="score-text" id="score-text"></p>
+
+      <div class="leaderboard" id="lb-result">
+        <div class="lb-head"><h3>🏆 Classement</h3></div>
+        <ol class="lb-list" id="lb-list-result"></ol>
+      </div>
+
       <div id="review" class="review"></div>
       <button class="btn primary big" id="btn-restart">Recommencer</button>
     </section>
@@ -106,8 +124,8 @@
   </main>
 
   <footer class="foot">
-    <span id="foot-count"></span> · Images extraites du cours (syllabus C. Sonck) · usage d'étude personnelle ·
-    format inspiré des consignes d'examen (Pr M. Baeck, juin 2026).
+    <span id="foot-count"></span> · Images du cours (syllabus C. Sonck + slides Pr M. Baeck 2025-2026) · usage d'étude personnelle ·
+    classement enregistré sur cet appareil · format inspiré des consignes d'examen (juin 2026).
   </footer>
 
   <script src="questions.js"></script>
