@@ -21,6 +21,8 @@ const els = {
 let session = [], current = 0, answered = false;
 let scoreA = [], scoreB = [], givenA = [], givenB = [];
 let lastEntryId = null;
+let sparePool = [];          // images de rechange (si une image ne charge pas)
+const brokenImgs = new Set();
 
 /* ---- Classement PARTAGÉ (kvdb.io, visible par tous) + repli local ----
    Chaque score = une clé unique s_<id> dans le bucket → pas d'écrasement.
@@ -90,12 +92,13 @@ function buildSession(){
   let pool = theme==="__all" ? BANK.slice() : BANK.filter(q=>q.theme===theme);
   // une seule variante (sous-question) par image, tirée au hasard → images distinctes par session
   const byImg = {};
-  for(const q of pool){ (byImg[q.img] = byImg[q.img] || []).push(q); }
+  for(const q of pool){ if(brokenImgs.has(q.img)) continue; (byImg[q.img] = byImg[q.img] || []).push(q); }
   let items = Object.values(byImg).map(v => v.length>1 ? v[Math.floor(Math.random()*v.length)] : v[0]);
   if(els.shuffle.checked) items = shuffle(items);
   let n = parseInt(els.count.value,10);
-  if(n>0) items = items.slice(0,n);
-  return items;
+  let sess = (n>0) ? items.slice(0,n) : items;
+  sparePool = (n>0) ? items.slice(n) : [];   // le reste sert de remplacement
+  return sess;
 }
 
 function start(){
@@ -115,6 +118,14 @@ function renderQuestion(){
   answered=false;
   els.bar.style.width = `${(current/session.length)*100}%`;
   els.counter.textContent = `Cas ${current+1}/${session.length}`;
+  // si l'image ne charge pas (cache obsolète, fichier manquant) → on la remplace par une autre
+  els.img.onerror = () => {
+    brokenImgs.add(q.img);
+    let rep = sparePool.pop();
+    while(rep && brokenImgs.has(rep.img)) rep = sparePool.pop();
+    if(rep){ session[current] = rep; renderQuestion(); }
+    else { els.img.removeAttribute("src"); els.descr.textContent = "(image indisponible — passe au cas suivant)"; }
+  };
   els.img.src = `images/${q.img}`;
   els.descr.textContent = q.descr || "Décrivez la lésion et proposez un diagnostic.";
   els.ansA.value=""; els.ansB.value="";
