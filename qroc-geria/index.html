@@ -219,20 +219,22 @@
     $("btn-restart").addEventListener("click",function(){ sRes.classList.add("hidden"); sStart.classList.remove("hidden"); window.scrollTo({top:0}); });
     Array.prototype.forEach.call(document.querySelectorAll(".gbtn"),function(b){ b.addEventListener("click",function(){ grade(parseInt(b.getAttribute("data-pts"),10)); }); });
 
-    // Entrée dans le textarea = révéler (Maj+Entrée = saut de ligne)
+    // Entrée dans le textarea = révéler (Maj+Entrée = saut de ligne).
+    // stopPropagation pour que ce même Entrée n'aille PAS déclencher une notation dans le handler global.
     $("ans-input").addEventListener("keydown",function(e){
-      if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); reveal(); }
+      if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); e.stopPropagation(); reveal(); }
     });
     // Raccourcis globaux
     document.addEventListener("keydown",function(e){
       if(sQuiz.classList.contains("hidden")) return;
       if(!revealed){
-        if(e.key==="Enter" && document.activeElement!==$("ans-input")){ e.preventDefault(); reveal(); }
+        if(e.key==="Enter"){ e.preventDefault(); reveal(); }
         return;
       }
+      // corrigé affiché : notation uniquement avec 1 / 2 / 3 (Entrée ne note PAS)
       if(e.key==="1"){ e.preventDefault(); grade(0); }
       else if(e.key==="2"){ e.preventDefault(); grade(1); }
-      else if(e.key==="3"||e.key==="Enter"){ e.preventDefault(); grade(2); }
+      else if(e.key==="3"){ e.preventDefault(); grade(2); }
     });
   })();
   </script>
