@@ -1,0 +1,1087 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Synthèse complète — Vieillissement et Médecine gériatrique (WMDS2238)</title>
+<style>
+  @page { size: A4; margin: 15mm 14mm 16mm 14mm; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Segoe UI", "Calibri", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.3pt; line-height: 1.5; color: #1a1a1a; margin: 0;
+  }
+  /* ---------- Cover ---------- */
+  .cover {
+    height: 250mm; display: flex; flex-direction: column; justify-content: center;
+    text-align: center; page-break-after: always;
+    background: linear-gradient(150deg,#0d3b66 0%,#1b5e8c 55%,#2a7fb5 100%);
+    color: #fff; padding: 0 16mm; border-radius: 4px;
+  }
+  .cover .kicker { letter-spacing: 4px; font-size: 11pt; text-transform: uppercase; opacity: .85; }
+  .cover h1 { font-size: 32pt; margin: 14px 0 6px; line-height: 1.1; }
+  .cover .sub { font-size: 13.5pt; opacity: .92; margin-bottom: 26px; }
+  .cover .meta { font-size: 10pt; opacity: .82; margin-top: 36px; line-height: 1.9; }
+  .cover .badge { display:inline-block; border:1px solid rgba(255,255,255,.45); padding:4px 11px; border-radius:18px; margin:3px; font-size:9pt;}
+  /* ---------- Headings ---------- */
+  h1.part {
+    page-break-before: always; font-size: 15pt; color:#fff; background:#0d3b66;
+    padding: 9px 14px; border-radius:6px; margin: 0 0 14px;
+  }
+  h1.course {
+    font-size: 16pt; color: #0d3b66; border-bottom: 3px solid #2a7fb5;
+    padding-bottom: 5px; margin: 22px 0 4px; page-break-after: avoid;
+  }
+  h1.course:first-of-type { page-break-before: avoid; }
+  h1.course .num {
+    background:#0d3b66; color:#fff; border-radius:6px; padding:1px 9px; margin-right:8px; font-size:13pt;
+  }
+  .course-tag { font-size: 8.8pt; color:#5a6b7b; margin: 0 0 10px; font-style: italic; }
+  h2 { font-size: 12.5pt; color: #1b5e8c; margin: 16px 0 5px; page-break-after: avoid;
+       border-left: 5px solid #2a7fb5; padding-left: 9px; }
+  h3 { font-size: 10.8pt; color: #0d3b66; margin: 11px 0 3px; page-break-after: avoid; }
+  p { margin: 5px 0; }
+  ul, ol { margin: 4px 0 8px; padding-left: 20px; }
+  li { margin: 2.5px 0; }
+  strong { color: #08263f; }
+  .k { color:#b3300c; font-weight:600; }
+  abbr { text-decoration: none; border-bottom: 1px dotted #8a9bab; cursor: help; }
+  /* ---------- Boxes ---------- */
+  .box { border-radius: 7px; padding: 8px 13px; margin: 10px 0; page-break-inside: avoid; }
+  .acquis { background:#eef6fc; border:1px solid #b9d8ee; }
+  .acquis h3 { margin-top:2px; color:#0d3b66; }
+  .piege { background:#fff4ec; border:1px solid #f3c39c; }
+  .piege h3 { color:#b3300c; margin-top:2px; }
+  .tuyau { background:#fffbe6; border:1.5px solid #e8c84d; border-left:6px solid #e8a100; }
+  .tuyau h3 { color:#9a6b00; margin-top:2px; }
+  .tuyau .qline { font-style:italic; color:#6b5200; margin-bottom:4px; }
+  .tuyau .freq { display:inline-block; background:#e8a100; color:#fff; border-radius:4px; padding:0 7px; font-size:8pt; font-weight:700; margin-left:4px; vertical-align:middle;}
+  .cle { background:#eefaf1; border:1px solid #aee0c0; }
+  .cle h3 { color:#13693b; margin-top:2px; }
+  .def { background:#f5f7f9; border-left:4px solid #8a9bab; padding:6px 12px; margin:7px 0; border-radius:0 5px 5px 0;}
+  /* ---------- Tables ---------- */
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 9.3pt; page-break-inside: avoid; }
+  th, td { border: 1px solid #c4d2de; padding: 4px 7px; text-align: left; vertical-align: top; }
+  th { background: #0d3b66; color: #fff; font-weight: 600; }
+  tr:nth-child(even) td { background: #f1f6fa; }
+  .num-cell { text-align:center; white-space:nowrap; font-weight:600; color:#08263f;}
+  /* ---------- TOC ---------- */
+  .toc { page-break-after: always; }
+  .toc h1 { font-size:20pt; color:#0d3b66; border-bottom:2px solid #2a7fb5; padding-bottom:6px;}
+  .toc .part { font-weight:700; color:#b3300c; margin:14px 0 4px; font-size:11.5pt; }
+  .toc ol { list-style:none; padding-left:0; }
+  .toc li { padding:3px 0; border-bottom:1px dotted #d4dde6; font-size:10pt;}
+  .toc li .n { display:inline-block; background:#1b5e8c; color:#fff; border-radius:4px; padding:0 7px; margin-right:8px; font-size:8.5pt;}
+  /* ---------- Glossaire ---------- */
+  .gloss { column-count: 2; column-gap: 22px; font-size: 9.2pt; }
+  .gloss div { break-inside: avoid; margin: 1.5px 0; }
+  .gloss b { color:#0d3b66; }
+  /* ---------- Quiz ---------- */
+  .qblock { page-break-inside: avoid; margin: 9px 0; }
+  .q { font-weight:600; color:#08263f; }
+  .q .qid { display:inline-block; background:#b3300c; color:#fff; border-radius:4px; padding:0 7px; margin-right:6px; font-size:8.5pt;}
+  .a { margin: 5px 0 6px; padding:5px 0 5px 11px; border-left:3px solid #aee0c0; background:#f5fcf7;}
+  .a .qid { background:#13693b; color:#fff; border-radius:4px; padding:0 7px; margin-right:6px; font-size:8.5pt;}
+  .section-divider { page-break-before: always; text-align:center; padding:70px 0 20px; }
+  .section-divider h1 { font-size:24pt; color:#b3300c; border:none; }
+  .section-divider p { color:#5a6b7b; font-size:11pt; }
+  .mnemo { font-family: "Consolas", monospace; background:#0d3b66; color:#fff; padding:1px 6px; border-radius:4px; font-size:9.3pt;}
+  .small { font-size:8.8pt; color:#5a6b7b; }
+</style>
+</head>
+<body>
+<style>@media print{.web-bar{display:none!important;}}</style>
+<div class="web-bar" style="position:sticky;top:0;z-index:9999;background:#0d3b66;color:#fff;padding:9px 16px;font-family:'Segoe UI',Arial,sans-serif;font-size:14px;display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;box-shadow:0 2px 6px rgba(0,0,0,.25);">
+  <span>📘 Synthèse Gériatrie — WMDS2238</span>
+  <a href="Synthese_Geriatrie_Complete.pdf" download style="color:#0d3b66;background:#e8c84d;padding:5px 14px;border-radius:6px;text-decoration:none;font-weight:700;">⬇ Télécharger le PDF</a>
+</div>
+
+<!-- ======================= COVER ======================= -->
+<div class="cover">
+  <div class="kicker">UCLouvain · Cliniques universitaires Saint-Luc</div>
+  <h1>Vieillissement &amp;<br>Médecine gériatrique</h1>
+  <div class="sub">Synthèse complète orientée examen — WMDS2238</div>
+  <div>
+    <span class="badge">Vieillissement &amp; démographie</span>
+    <span class="badge">Fragilité &amp; déclin fonctionnel</span>
+    <span class="badge">EGS &amp; syndromes gériatriques</span>
+    <span class="badge">Outils &amp; échelles</span>
+    <span class="badge">PSG &amp; interdisciplinarité</span>
+    <span class="badge">Réadaptation</span>
+    <span class="badge">Chutes &amp; désadaptation psychomotrice</span>
+    <span class="badge">Delirium</span>
+    <span class="badge">Démence / TNCM</span>
+    <span class="badge">Dépression &amp; psychiatrie</span>
+    <span class="badge">Déficits sensoriels</span>
+    <span class="badge">Dénutrition &amp; renutrition</span>
+    <span class="badge">Élimination</span>
+    <span class="badge">Troubles hydro-salins</span>
+    <span class="badge">Infections</span>
+    <span class="badge">Ostéoporose &amp; fractures</span>
+    <span class="badge">Cardio-gériatrie</span>
+    <span class="badge">Urgences &amp; soins intensifs</span>
+    <span class="badge">Pharmacologie &amp; déprescription</span>
+    <span class="badge">Conciliation &amp; concordance</span>
+    <span class="badge">Éthique &amp; discernement (CARE)</span>
+  </div>
+  <div class="meta">
+    Couvre l'intégralité des supports de cours + les thèmes des examens 2017–2025.<br>
+    🎯 Encadrés « TUYAU » remplis pour chaque question récurrente · Glossaire des abréviations<br>
+    Banque de questions d'examen (réelles &amp; probables) avec réponses · 2026
+  </div>
+</div>
+
+<!-- ======================= TOC ======================= -->
+<div class="toc">
+  <h1>Table des matières</h1>
+  <div class="part">PARTIE I — Fondements de la gériatrie</div>
+  <ol>
+    <li><span class="n">1</span>Vieillissement, démographie &amp; prévention</li>
+    <li><span class="n">2</span>Fragilité &amp; déclin fonctionnel</li>
+    <li><span class="n">3</span>EGS &amp; syndromes gériatriques</li>
+    <li><span class="n">4</span>Outils diagnostiques &amp; échelles</li>
+    <li><span class="n">5</span>PSG &amp; interdisciplinarité</li>
+    <li><span class="n">6</span>Réadaptation gériatrique</li>
+  </ol>
+  <div class="part">PARTIE II — Grands syndromes gériatriques</div>
+  <ol start="7">
+    <li><span class="n">7</span>Chutes &amp; syndrome de désadaptation psychomotrice</li>
+    <li><span class="n">8</span>Delirium (confusion aiguë)</li>
+    <li><span class="n">9</span>Démence / troubles neurocognitifs majeurs</li>
+    <li><span class="n">10</span>Dépression &amp; psychiatrie de la personne âgée</li>
+    <li><span class="n">11</span>Déficits sensoriels</li>
+    <li><span class="n">12</span>Dénutrition &amp; syndrome de renutrition</li>
+    <li><span class="n">13</span>Troubles de l'élimination</li>
+    <li><span class="n">14</span>Troubles hydro-salins</li>
+    <li><span class="n">15</span>Infections de la personne âgée</li>
+    <li><span class="n">16</span>Ostéoporose, fractures &amp; escarres</li>
+    <li><span class="n">17</span>Constipation &amp; diarrhée</li>
+  </ol>
+  <div class="part">PARTIE III — Cardio, urgences &amp; médicaments</div>
+  <ol start="18">
+    <li><span class="n">18</span>Cardio-gériatrie</li>
+    <li><span class="n">19</span>Urgences &amp; soins intensifs</li>
+    <li><span class="n">20</span>Pharmacologie &amp; déprescription</li>
+    <li><span class="n">21</span>Conciliation médicamenteuse &amp; concordance</li>
+  </ol>
+  <div class="part">PARTIE IV — Éthique, organisation &amp; fin de vie</div>
+  <ol start="22">
+    <li><span class="n">22</span>Capacité de discernement, projet thérapeutique, palliatif &amp; aidants</li>
+  </ol>
+  <div class="part">ANNEXES</div>
+  <ol start="23">
+    <li><span class="n">A</span>Glossaire complet des abréviations</li>
+    <li><span class="n">B</span>Banque de questions d'examen (réelles &amp; probables) + réponses</li>
+  </ol>
+  <p class="small">Légende : 🎯 <strong>TUYAU</strong> = question tombée plusieurs fois aux examens, réponse fournie · ⚠ <strong>Piège</strong> = confusion classique · 🟩 <strong>À retenir</strong> = point-clé.</p>
+</div>
+
+<!-- ======================= GLOSSAIRE ======================= -->
+<h1 class="part">Glossaire des abréviations</h1>
+<p>Chaque abréviation est aussi développée à sa première apparition dans le texte. Référence rapide :</p>
+<div class="gloss">
+<div><b>5M</b> — Mind, Mobility, Medication, Multi-complexity, Matters Most</div>
+<div><b>ADL / AVJ</b> — Activities of Daily Living / Activités de la Vie Journalière (de base)</div>
+<div><b>IADL / AVJi</b> — Instrumental ADL / Activités Instrumentales de la VJ</div>
+<div><b>EGS (CGA)</b> — Évaluation Gériatrique Standardisée (Comprehensive Geriatric Assessment)</div>
+<div><b>PSG</b> — Programme de Soins pour le patient Gériatrique</div>
+<div><b>LIG / EGL</b> — Liaison Interne Gériatrique / Équipe de Gériatrie de Liaison</div>
+<div><b>CAM</b> — Confusion Assessment Method</div>
+<div><b>TNCM</b> — Trouble NeuroCognitif Majeur (ex-« démence »)</div>
+<div><b>MCI</b> — Mild Cognitive Impairment (trouble cognitif léger)</div>
+<div><b>SPCD</b> — Symptômes Psycho-Comportementaux des Démences</div>
+<div><b>CFS</b> — Clinical Frailty Scale (Échelle Clinique de Fragilité)</div>
+<div><b>DF</b> — Déclin Fonctionnel</div>
+<div><b>HO</b> — Hypotension Orthostatique</div>
+<div><b>HTA</b> — HyperTension Artérielle</div>
+<div><b>IC</b> — Insuffisance Cardiaque ; <b>FEVG</b> — Fraction d'Éjection du VG</div>
+<div><b>HFpEF</b> — IC à fraction d'éjection préservée</div>
+<div><b>FA</b> — Fibrillation Auriculaire</div>
+<div><b>IDM</b> — Infarctus Du Myocarde</div>
+<div><b>USI</b> — Unité de Soins Intensifs</div>
+<div><b>DFG / GFR</b> — Débit de Filtration Glomérulaire</div>
+<div><b>IR</b> — Insuffisance Rénale</div>
+<div><b>CPK</b> — CréatinePhosphoKinase</div>
+<div><b>CRP</b> — C-Reactive Protein (protéine C-réactive)</div>
+<div><b>MNA(-SF)</b> — Mini Nutritional Assessment (Short Form)</div>
+<div><b>GLIM</b> — Global Leadership Initiative on Malnutrition</div>
+<div><b>SRI</b> — Syndrome de Renutrition Inappropriée</div>
+<div><b>GDS</b> — Geriatric Depression Scale</div>
+<div><b>MMSE</b> — Mini Mental State Examination (Folstein)</div>
+<div><b>MoCA</b> — Montreal Cognitive Assessment</div>
+<div><b>MIF</b> — Mesure d'Indépendance Fonctionnelle</div>
+<div><b>TUG</b> — Timed Up and Go (test)</div>
+<div><b>SPPB</b> — Short Physical Performance Battery</div>
+<div><b>G8 / ISAR / SHERPA</b> — outils de dépistage (oncogériatrie / urgences / déclin fonctionnel)</div>
+<div><b>STOPP / START</b> — Screening Tool of Older Persons' Prescriptions / to Alert to Right Treatment</div>
+<div><b>EIM</b> — Événement Iatrogène Médicamenteux</div>
+<div><b>BZD</b> — Benzodiazépine</div>
+<div><b>IEC</b> — Inhibiteur de l'Enzyme de Conversion</div>
+<div><b>ARA II / sartan</b> — Antagoniste des Récepteurs de l'Angiotensine II</div>
+<div><b>BB</b> — Bêta-Bloquant</div>
+<div><b>AINS</b> — Anti-Inflammatoire Non Stéroïdien</div>
+<div><b>IPP</b> — Inhibiteur de la Pompe à Protons</div>
+<div><b>ISRS</b> — Inhibiteur Sélectif de la Recapture de la Sérotonine</div>
+<div><b>THS</b> — Traitement Hormonal Substitutif</div>
+<div><b>SERM</b> — Selective Estrogen Receptor Modulator</div>
+<div><b>PTH</b> — ParaThormone ; <b>RAA</b> — Rénine-Angiotensine-Aldostérone</div>
+<div><b>ADH</b> — Hormone AntiDiurétique (vasopressine)</div>
+<div><b>MRSA</b> — Staphylocoque doré résistant à la méticilline</div>
+<div><b>BLSE</b> — Bêta-Lactamases à Spectre Étendu</div>
+<div><b>PNA</b> — PyéloNéphrite Aiguë</div>
+<div><b>TR / TV</b> — Toucher Rectal / Toucher Vaginal</div>
+<div><b>DMLA</b> — Dégénérescence Maculaire Liée à l'Âge</div>
+<div><b>MR / MRS</b> — Maison de Repos / et de Soins</div>
+<div><b>MG / MT</b> — Médecin Généraliste / Médecin Traitant</div>
+<div><b>ICOPE</b> — Integrated Care for Older People (OMS)</div>
+<div><b>CARE</b> — Compréhension, Appréciation, Raisonnement, Expression (discernement)</div>
+<div><b>SPLATT</b> — Symptoms, Previous falls, Location, Activity, Time, Trauma (chute)</div>
+<div><b>DIAPPERS</b> — causes réversibles d'incontinence (voir ch. 13)</div>
+<div><b>FR / FP</b> — Facteur de Risque / Facteur Protecteur</div>
+<div><b>AVC</b> — Accident Vasculaire Cérébral</div>
+<div><b>OMI</b> — Œdèmes des Membres Inférieurs</div>
+<div><b>PA</b> — Personne Âgée</div>
+<div><b>DT2</b> — Diabète de Type 2</div>
+<div><b>ACP</b> — Advance Care Planning (planification anticipée des soins)</div>
+</div>
+
+<!-- ====================================================== -->
+<h1 class="part">PARTIE I — Fondements de la gériatrie</h1>
+
+<!-- CH1 -->
+<h1 class="course"><span class="num">1</span>Vieillissement, démographie &amp; prévention</h1>
+<p class="course-tag">Schoevaerdts — Introduction, biologie du vieillissement, complexité, prévention.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Les « 5 M » de la gériatrie <span class="freq">≥ 2× (2025, 2022)</span></h3>
+<p class="qline">« Citez les 5 M de la gériatrie » / « Quel ne sera pas le rôle du gériatre du futur ? »</p>
+<p><strong>Mind</strong> (cognition, delirium, dépression) · <strong>Mobility</strong> (marche, équilibre, chutes) · <strong>Medications</strong> (polypharmacie, déprescription) · <strong>Multi-complexity</strong> (multimorbidité, bio-psycho-social) · <strong>Matters Most</strong> (préférences/projet du patient). <br>Rôles futurs du gériatre = <strong>spécialiste de la complexité</strong>, consultant, pédagogue, rééducateur, leader de système de santé — <span class="k">PAS « spécialiste d'une pathologie d'organe »</span>.</p>
+</div>
+
+<h2>1.1 Vieillissement normal (« usuel ») — physiologie</h2>
+<p>Le vieillissement est <strong>spontané, programmé, irréversible et physiologique</strong> : ↓ des réserves fonctionnelles et de la capacité à répondre au stress, <strong>variable selon les organes</strong> (« vieillissement différentiel »).</p>
+<table>
+<tr><th>Système</th><th>Modification physiologique</th></tr>
+<tr><td>Composition corporelle</td><td>↓ masse maigre (muscle, eau : 60 %→50 %) · ↑ <strong>masse grasse</strong> (+200 %, redistribution intra-abdominale)</td></tr>
+<tr><td>Rénal</td><td>↓ néphrons, ↓ DFG (<abbr title="Débit de Filtration Glomérulaire">DFG</abbr>), ↓ pouvoir de concentration, ↓ <abbr title="Rénine-Angiotensine-Aldostérone">RAA</abbr> et ↓ <abbr title="hormone antidiurétique">ADH</abbr></td></tr>
+<tr><td>Cardiovasculaire</td><td>↓ compliance (rigidité artérielle → ↑ TA systolique/pulsée), <strong>débit de repos conservé</strong>, ↓ réponse β-adrénergique (↓ adaptation à l'effort)</td></tr>
+<tr><td>Immunité</td><td><strong>Immunosénescence</strong> : ↓ LT (surtout naïfs), ↓ réponse vaccinale ; barrières épithéliales ↓</td></tr>
+<tr><td>Thermorégulation</td><td>↓ → tendance à l'<strong>hypothermie</strong> et fièvre atténuée</td></tr>
+<tr><td>Digestif</td><td>Transit ralenti ; <strong>absorption globalement conservée</strong></td></tr>
+</table>
+
+<h3>Modèle 1 + 2 + 3 de Bouchon (1984)</h3>
+<div class="def">Le seuil d'insuffisance d'une fonction est franchi par la conjonction de : <strong>(1)</strong> déclin physiologique du vieillissement (ne franchit jamais seul le seuil) ; <strong>(2)</strong> maladie chronique ; <strong>(3)</strong> facteur aigu de décompensation (réversible si traité). → explique la <strong>décompensation « en cascade »</strong>.</div>
+
+<h2>1.2 Démographie &amp; transition épidémiologique</h2>
+<ul>
+<li><strong>Espérance de vie</strong> ≠ <strong>EV sans incapacité</strong> (EVSI ≈ 12,5 ans à 65 ans) ≠ <strong>EV en bonne santé</strong>. Durée de vie moyenne ↑ mais <strong>maximale stable</strong> (≈ 122 ans).</li>
+<li><strong>3 transitions démographiques :</strong> (1) ↓ mortalité <strong>néonatale/infectieuse</strong> ; (2) ↓ mortalité des « <strong>maladies de civilisation</strong> » ; (3) recul des maladies <strong>liées à l'âge</strong>.</li>
+<li><strong>Multimorbidité</strong> (= ≥ 2 maladies actives = comorbidité/polypathologie active) : 64 % des &gt; 65 ans. <span class="k">≠ « &gt; 4 diagnostics » et ≠ antécédents.</span></li>
+</ul>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Étude Stuck (Lancet 1993) sur l'EGS <span class="freq">2017 Q4</span></h3>
+<p class="qline">« Quel outcome n'a PAS été pris en compte / amélioré ? »</p>
+<p>L'EGS améliore : <strong>maintien à domicile</strong> (OR 1,26), <strong>fonction cognitive</strong> (1,41), <strong>↓ ré-hospitalisation</strong> (0,88), <strong>↓ mortalité à 12 mois</strong> (0,86). <span class="k">La « qualité de vie » n'était pas un critère de jugement de cette méta-analyse.</span></p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Exemple pour chaque niveau de prévention <span class="freq">≥ 2× (2023, 2022)</span></h3>
+<p class="qline">« Donnez un exemple de prévention primaire / secondaire / tertiaire / quaternaire. »</p>
+<table>
+<tr><th>Niveau</th><th>But</th><th>Exemple gériatrique</th></tr>
+<tr><td><strong>Primaire</strong></td><td>↓ l'incidence (agir sur les FR)</td><td>Vaccination (grippe, pneumocoque), activité physique, hygiène bucco-dentaire</td></tr>
+<tr><td><strong>Secondaire</strong></td><td>Détection précoce</td><td>Dépistage du cancer, des FR cardiovasculaires, de la fragilité (G8, ICOPE)</td></tr>
+<tr><td><strong>Tertiaire</strong></td><td>↓ progression / complications</td><td>Calcium + vitamine D après fracture, revalidation, soins dentaires d'une parodontite</td></tr>
+<tr><td><strong>Quaternaire</strong></td><td>Éviter la <strong>surmédicalisation</strong></td><td>Arrêt des bisphosphonates/statines en fin de vie, déprescription, Advance Care Planning</td></tr>
+</table>
+</div>
+
+<div class="box piege">
+<h3>Pièges</h3>
+<ul>
+<li>Au repos, le <strong>débit cardiaque est conservé</strong> ; c'est l'<strong>adaptation à l'effort</strong> qui chute.</li>
+<li>Un <strong>DFG bas chez l'âgé</strong> peut être physiologique (≠ maladie) — modèle 1+2+3.</li>
+<li>Comorbidité = pathologies <strong>actives</strong> (pas les antécédents).</li>
+</ul>
+</div>
+
+<!-- CH2 -->
+<h1 class="course"><span class="num">2</span>Fragilité &amp; déclin fonctionnel</h1>
+<p class="course-tag">de Saint-Hubert — Healthy ageing, fragilité, sarcopénie, déclin fonctionnel.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Critères de Fried (phénotype de fragilité) <span class="freq">≥ 2× (2019, 2021…)</span></h3>
+<p class="qline">« Quels critères de Fried la patiente présente-t-elle ? » / vignette « masse pancréatique, dépendante AVJi ».</p>
+<p><strong>5 critères :</strong> ① <strong>perte de poids</strong> involontaire &gt; 4,5 kg/an · ② <strong>épuisement</strong> (fatigue) · ③ <strong>faiblesse</strong> (force de préhension, quintile inférieur) · ④ <strong>lenteur</strong> de la marche (quintile inférieur) · ⑤ <strong>activité physique faible</strong> (quartile inférieur).<br>
+<strong>0 = robuste · 1–2 = pré-fragile · ≥ 3 = fragile.</strong></p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Choisir une échelle de fragilité : sur quoi se baser ? <span class="freq">≥ 2× (2022, 2021)</span></h3>
+<p class="qline">« Sur quels 3 critères choisir la méthode d'évaluation de la fragilité ? » + « 3 qualités d'une bonne échelle ».</p>
+<p><strong>3 critères de choix :</strong> ① le <strong>but</strong> de l'évaluation (clinique / recherche / préopératoire) · ② le <strong>critère évalué</strong> (mortalité, déclin fonctionnel, prévention) · ③ la <strong>population ciblée</strong> (âge, lieu de vie). <br>
+<strong>Qualités d'une bonne échelle :</strong> validée, reproductible, faisable/rapide, valeur pronostique, multidimensionnelle.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Cas « veuf/aidant fatigué, amaigri, s'isole » : signes de fragilité <span class="freq">≥ 2× (2023, 2020)</span></h3>
+<p class="qline">« Citez 4 signes de fragilité de ce patient. »</p>
+<p><strong>Amaigrissement / perte de poids · fatigue (épuisement) · ↓ activité &amp; sorties (sédentarité) · lenteur de marche / faiblesse · isolement social</strong> (+ deuil = facteur précipitant). Ce sont les critères de Fried appliqués à la vignette.</p>
+</div>
+
+<h2>2.1 Définition &amp; modèles</h2>
+<div class="def"><strong>Fragilité</strong> = diminution des réserves multisystémiques et de la capacité à <strong>maintenir/récupérer un équilibre face à un stress</strong> → vulnérabilité accrue. <strong>Processus dynamique et réversible</strong>, distinct de la comorbidité et de l'incapacité (3 éléments de définition souvent demandés : <em>processus dynamique/réversible · ↓ réserves face au stress · risque de déclin fonctionnel et d'événements défavorables</em>).</div>
+<ul>
+<li><strong>Phénotype de Fried</strong> (modèle catégoriel, 5 critères ci-dessus) vs <strong>index de Rockwood</strong> → <abbr title="Clinical Frailty Scale">CFS</abbr> à <strong>9 niveaux</strong> (1 très en forme … 7 sévèrement fragile … 9 phase terminale &lt; 6 mois ; +21 % mortalité / échelon).</li>
+<li><strong>Sarcopénie</strong> = perte de <strong>masse ET de fonction</strong> musculaire (dépistage SARC-F). Attention à l'<strong>obésité sarcopénique</strong>.</li>
+<li><strong>Fragilité ≠ comorbidité :</strong> 75 % des fragiles sont multimorbides, mais seulement 16 % des multimorbides sont fragiles.</li>
+</ul>
+
+<h2>2.2 Déclin fonctionnel (DF) &amp; hospitalisation</h2>
+<div class="box tuyau">
+<h3>🎯 TUYAU — Conséquences du déclin fonctionnel post-hospitalisation <span class="freq">≥ 3× (2021, 2019, 2018)</span></h3>
+<p class="qline">« 4 conséquences du déclin fonctionnel après hospitalisation » + QCM « la fausse ».</p>
+<ul>
+<li>Le <abbr title="Déclin Fonctionnel">DF</abbr> touche <strong>~30 % des ≥ 75 ans</strong>, débute dans les <strong>48 h</strong>, persiste à 3 mois chez <strong>1 patient sur 3</strong>.</li>
+<li><strong>Conséquences :</strong> ↑ durée de séjour · ↑ réadmissions · ↑ <strong>institutionnalisation</strong> (placement en MRS) · ↑ mortalité · perte d'autonomie/aides accrues.</li>
+<li><span class="k">PIÈGE : le DF survient PLUS VITE chez le patient FRAGILE</strong> (réserves basses), pas chez le robuste (qui a un seuil plus élevé).</span></li>
+</ul>
+</div>
+<p>Facteurs précipitants intra-hospitaliers : immobilisation, sondes/perfusions, jeûne (timing des examens), iatrogénie, isolement. <strong>Prévention</strong> = unité de gériatrie + mobilisation précoce + EGS.</p>
+
+<div class="box piege">
+<h3>Pièges</h3>
+<ul>
+<li>La fragilité est <strong>réversible</strong> ; <strong>CFS 9 (terminal) ≠ 7 (sévère)</strong>.</li>
+<li>Sarcopénie = masse <strong>ET</strong> fonction.</li>
+<li>Facteur de <strong>mauvais</strong> pronostic de revalidation = <strong>déclin fonctionnel chronique</strong> (et non un événement aigu limité, qui est de meilleur pronostic).</li>
+</ul>
+</div>
+
+<!-- CH3 -->
+<h1 class="course"><span class="num">3</span>EGS &amp; syndromes gériatriques</h1>
+<p class="course-tag">Cornette &amp; Boland — Évaluation Gériatrique Standardisée, oncogériatrie, syndromes gériatriques.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Définition / 5 caractéristiques de l'EGS <span class="freq">TRÈS RÉCURRENT</span></h3>
+<p class="qline">« Donnez 5 caractéristiques (définition) de l'EGS. »</p>
+<p>L'<abbr title="Évaluation Gériatrique Standardisée">EGS</abbr> est un <strong>processus</strong> : ① <strong>multidimensionnel</strong> (scores validés) · ② <strong>interdisciplinaire</strong> (équipe qui communique) · ③ qui aboutit à un <strong>plan de soins individualisé, intégré et coordonné</strong> · ④ visant à <strong>améliorer la fonction et la qualité de vie</strong> · ⑤ avec <strong>suivi/réévaluation</strong> dans le temps.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Dimensions de l'EGS + test de dépistage de chacune <span class="freq">TRÈS RÉCURRENT (cas anémie ferriprive + lésion colique)</span></h3>
+<p class="qline">« Citez 5 dimensions de l'EGS et le test adéquat pour chacune. »</p>
+<table>
+<tr><th>Dimension</th><th>Outil / acronyme</th></tr>
+<tr><td>Fonctionnel — AVJ de base</td><td><strong>Katz</strong> (ADL)</td></tr>
+<tr><td>Fonctionnel — AVJ instrumentales</td><td><strong>Lawton</strong> (IADL)</td></tr>
+<tr><td>Locomoteur / équilibre</td><td><strong>Timed Up &amp; Go</strong>, Tinetti</td></tr>
+<tr><td>Cognitif</td><td><strong>MMSE</strong> / MoCA / Mini-Cog / Codex</td></tr>
+<tr><td>Thymique (humeur)</td><td><strong>GDS</strong> (mini-GDS)</td></tr>
+<tr><td>Nutritionnel</td><td><strong>MNA</strong> + poids</td></tr>
+<tr><td>Médicamenteux</td><td><strong>STOPP / START</strong></td></tr>
+<tr><td>Socio-familial / sensoriel</td><td>évaluation sociale ; audition (chuchotement), vision (acuité)</td></tr>
+</table>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — EGS « ciblée, active, de longue durée » <span class="freq">≥ 2× (2022, 2021)</span></h3>
+<p class="qline">« Expliquez chaque composante en 1 ligne. »</p>
+<ul>
+<li><strong>Ciblée :</strong> réservée aux PA à risque (dépistage préalable : G8, ISAR…), car le processus est long et coûteux.</li>
+<li><strong>Active :</strong> elle débouche sur une <strong>intervention</strong> (plan de soins), pas seulement un constat.</li>
+<li><strong>Longue durée :</strong> avec <strong>suivi</strong> et réévaluation des résultats dans le temps.</li>
+</ul>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Bénéfices de l'EGS (général &amp; oncogériatrie) <span class="freq">TRÈS RÉCURRENT</span></h3>
+<p class="qline">« 5 objectifs/bénéfices favorables de l'EGS » / « 3 bénéfices pour un patient onco ».</p>
+<p><strong>Bénéfices :</strong> ↑ maintien à domicile/autonomie · ↓ mortalité · ↓ institutionnalisation · ↓ ré-hospitalisation · ↑ qualité de vie · (↓ coûts). <strong>En oncogériatrie :</strong> ① évaluer le <strong>pronostic</strong> et la tolérance prévisible des traitements · ② <strong>adapter/dé-intensifier</strong> le traitement (↓ toxicité) · ③ <strong>détecter d'autres problèmes</strong> et y intervenir (fonction, nutrition…). <span class="k">Utile seulement si suivie d'une intervention.</span></p>
+</div>
+
+<h2>3.1 Syndromes gériatriques</h2>
+<div class="box tuyau">
+<h3>🎯 TUYAU — Caractéristiques communes des syndromes gériatriques <span class="freq">TRÈS RÉCURRENT</span></h3>
+<p class="qline">« 3 (ou 4) points communs des syndromes gériatriques. »</p>
+<p><strong>Fréquents · Multifactoriels (facteurs de risque communs) · Sévères/coûteux · Sous-diagnostiqués · Prévenables &amp; curables.</strong> Ils touchent surtout le sujet <strong>fragile</strong> ; le <strong>déclin fonctionnel en est une conséquence</strong> (et un FR partagé). <strong>FR communs :</strong> âge élevé, troubles cognitifs, troubles de la mobilité, incapacités AVJ.</p>
+</div>
+<p>Exemples (les « i ») : <strong>I</strong>nstabilité (chutes), <strong>I</strong>mmobilité, <strong>I</strong>ncontinence, <strong>I</strong>ntellect (delirium/démence), <strong>I</strong>atrogénie, + dénutrition, déficits sensoriels. Chaque syndrome = <strong>« red flag » de fragilité</strong>, jamais à banaliser → déclenche une EGS.</p>
+
+<div class="box piege">
+<h3>Pièges</h3>
+<ul>
+<li>L'EGS <strong>n'est pas</strong> centrée uniquement sur médicaments/maladies, ni un outil de 1<sup>re</sup> ligne (le <strong>dépistage</strong> la précède).</li>
+<li><strong>GDS</strong> évalue un <strong>risque</strong> de dépression, ce n'est pas un diagnostic ; <strong>Katz ≠ Lawton</strong> (pas interchangeables).</li>
+<li>En oncogériatrie, l'EGS n'est utile que <strong>si elle modifie la prise en charge</strong>.</li>
+</ul>
+</div>
+
+<!-- CH4 -->
+<h1 class="course"><span class="num">4</span>Outils diagnostiques &amp; échelles</h1>
+<p class="course-tag">Boland — Performances des tests, échelles fonctionnelles &amp; de dépistage.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — G8 : pourquoi le préférer en oncogériatrie ? <span class="freq">RÉCURRENT (2024, 2025)</span></h3>
+<p class="qline">« Pourquoi préférer le G8 à l'ISAR/SHERPA ? » + « 2 avantages d'un dépistage avant l'EGS ».</p>
+<p>Le <strong>G8</strong> est <strong>validé et conçu pour l'oncogériatrie</strong>, <strong>sensible</strong>, court et inclut un item nutritionnel — meilleur pour <strong>dépister qui adresser à l'EGS</strong>. <strong>Avantages d'un dépistage préalable</strong> (G8 &lt; 14/17 → EGS) : ① cibler/économiser l'EGS (longue) sur les patients à risque · ② éviter le sur- et le sous-traitement en objectivant la vulnérabilité.</p>
+</div>
+
+<h2>4.1 Échelles fonctionnelles &amp; de performance</h2>
+<table>
+<tr><th>Échelle</th><th>Mesure</th><th>Repère / seuil</th></tr>
+<tr><td><strong>Katz (ADL)</strong></td><td>6 AVJ de base : laver, habiller, transfert, toilette, continence, manger</td><td class="num-cell">score de dépendance (bas = autonome)</td></tr>
+<tr><td><strong>Lawton (IADL)</strong></td><td>AVJ instrumentales : téléphone, courses, repas, ménage, transports, finances, médicaments</td><td class="num-cell">score d'indépendance (haut = autonome)</td></tr>
+<tr><td><strong>MIF</strong></td><td>Mesure d'Indépendance Fonctionnelle — <strong>suivi en réadaptation</strong></td><td class="num-cell">multidimensionnelle, valide jeune + âgé</td></tr>
+<tr><td><strong>TUG</strong></td><td>se lever, marcher 3 m, demi-tour, se rasseoir → dépiste le risque de chute</td><td class="num-cell">normal &lt; 14 s (≥ 20 s = kiné)</td></tr>
+<tr><td><strong>SPPB</strong></td><td>équilibre + vitesse de marche + lever de chaise → sarcopénie/mobilité</td><td class="num-cell">/12</td></tr>
+<tr><td><strong>Tinetti / Berg</strong></td><td>équilibre &amp; marche (risque de chute)</td><td class="num-cell">Berg très spécifique</td></tr>
+<tr><td><strong>G8 / ISAR / SHERPA</strong></td><td>dépistage : oncogériatrie / urgences / risque de déclin fonctionnel</td><td class="num-cell">G8 ≤ 14/17 → EGS</td></tr>
+<tr><td><strong>MMSE / MoCA / Mini-Cog</strong></td><td>cognition</td><td class="num-cell">≤ 24/30 · ≤ 26/30 · &lt; 3/5</td></tr>
+<tr><td><strong>CAM-3M</strong></td><td>delirium</td><td class="num-cell">le plus performant (RV+ 18,6)</td></tr>
+<tr><td><strong>MNA-SF / GDS</strong></td><td>nutrition / dépression</td><td class="num-cell">≤ 7/14 dénutri · GDS-4 ≥ 2/4</td></tr>
+</table>
+
+<div class="box piege">
+<h3>Pièges</h3>
+<ul>
+<li><strong>TUG &lt; 15 s = correct</strong> ; le TUG <strong>dépiste le risque de chute</strong> (pas un diagnostic). Aucun outil de chute isolé n'est suffisant → en associer 2.</li>
+<li><strong>Katz</strong> = score de <strong>dépendance</strong> (bas = autonome) ; <strong>Lawton</strong> = score d'<strong>indépendance</strong> (haut = autonome).</li>
+<li>Remboursement de l'ergothérapeute + pharmacien : chez les &gt; 75 ans.</li>
+</ul>
+</div>
+
+<!-- CH5 -->
+<h1 class="course"><span class="num">5</span>PSG &amp; interdisciplinarité</h1>
+<p class="course-tag">van der Bruggen &amp; Marien — Programme de Soins Gériatrique, liaison, interdisciplinarité.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Les 5 axes du PSG <span class="freq">RÉCURRENT (2021, 2018…)</span></h3>
+<p class="qline">« Le PSG : vrai/faux » / « la LIG, un des 5 axes ».</p>
+<p>Le <abbr title="Programme de Soins pour le patient Gériatrique">PSG</abbr> (<strong>arrêté royal du 29/01/2007</strong>, âge cible ≥ 75 ans) organise les soins de la PA dans l'hôpital général en <strong>5 axes</strong> :</p>
+<ol>
+<li><strong>Unité de gériatrie aiguë</strong> (durée ~14 j, réunion pluri. hebdomadaire).</li>
+<li><strong>Liaison interne gériatrique (LIG/EGL)</strong> — équipe sur appel des unités non gériatriques.</li>
+<li><strong>Consultation</strong> de gériatrie.</li>
+<li><strong>Hôpital de jour gériatrique</strong> (bilan pluridisciplinaire).</li>
+<li><strong>Liaison externe</strong> (1<sup>re</sup> ligne : MRS, domicile).</li>
+</ol>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Multi- / pluri- / inter- / trans-disciplinarité <span class="freq">≥ 2× (2018, 2017)</span></h3>
+<table>
+<tr><th>Niveau</th><th>Définition</th></tr>
+<tr><td><strong>Multi</strong></td><td>savoirs <strong>juxtaposés</strong>, métiers en parallèle, sans réelle relation</td></tr>
+<tr><td><strong>Pluri</strong></td><td>usage combiné <strong>avec transmission d'infos</strong></td></tr>
+<tr><td><strong>Inter</strong></td><td>but commun, décisions par <strong>consensus</strong>, synergie (la somme &gt; addition)</td></tr>
+<tr><td><strong>Trans</strong></td><td>interactions si fortes qu'elles <strong>créent une nouvelle discipline</strong> (psycho-/onco-/cardiogériatrie)</td></tr>
+</table>
+<p><strong>Exigences de l'interdisciplinarité :</strong> composantes formelle (réunions) + informelle (communication continue), objectif commun, flexibilité/chevauchement des rôles, gestion des conflits, accepter ses limites, interdépendance. <span class="k">PIÈGE : ce n'est PAS « les autres se plient au médecin », ni un « objectif personnel ».</span></p>
+</div>
+
+<p><strong>LIG / Équipe de liaison :</strong> appelée par tout soignant (pas seulement le MG, pas seulement un spécialiste), rôle de <strong>2<sup>e</sup> ligne</strong> pour les patients fragiles hospitalisés <strong>hors gériatrie</strong> (dépistage → évaluation → recommandations de plan de soins), rôle <strong>éducatif</strong> — pas prioritairement « médical au sens prescripteur ».</p>
+
+<!-- CH6 -->
+<h1 class="course"><span class="num">6</span>Réadaptation gériatrique</h1>
+<p class="course-tag">Indications, critères d'exclusion, pronostic.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Critères d'EXCLUSION d'une réadaptation gériatrique <span class="freq">2021</span></h3>
+<p class="qline">« Citez 4 critères d'exclusion d'une réadaptation gériatrique. »</p>
+<ul>
+<li>Patient <strong>trop autonome/fit</strong> (n'en a pas besoin).</li>
+<li><strong>Démence trop sévère</strong> (incapacité à coopérer/apprendre).</li>
+<li><strong>Pathologie aiguë instable</strong> (ou delirium actif → traiter d'abord).</li>
+<li>Réadaptation <strong>réalisable à domicile</strong> / en ambulatoire.</li>
+<li><strong>Soins palliatifs</strong> indiqués (pronostic vital très limité).</li>
+</ul>
+</div>
+<ul>
+<li><strong>Facteur de MAUVAIS pronostic :</strong> <strong>absence de motivation</strong> ; déclin fonctionnel <strong>chronique</strong> (vs événement aigu limité = bon pronostic). La <strong>nutrition</strong> est indispensable au succès.</li>
+<li>L'<strong>âge n'est pas un facteur limitant</strong> en soi (ex. réadaptation après fracture du col du fémur). La masse musculaire reste <strong>gagnable même &gt; 85 ans</strong>.</li>
+<li>Possible même avec <strong>appui interdit</strong> (travail du membre sain, transferts) et en MRS.</li>
+</ul>
+
+<!-- ====================================================== -->
+<h1 class="part">PARTIE II — Grands syndromes gériatriques</h1>
+
+<!-- CH7 -->
+<h1 class="course"><span class="num">7</span>Chutes &amp; syndrome de désadaptation psychomotrice</h1>
+<p class="course-tag">THÈME MAJEUR — tombe presque chaque année.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Citez 5 facteurs de risque de chute <span class="freq">≥ 4× (chaque année)</span></h3>
+<p class="qline">« Citez 5 FR principaux de chute. »</p>
+<ol>
+<li><strong>Antécédent de chute</strong> (= FR n° 1).</li>
+<li><strong>Médicaments</strong> (psychotropes/BZD, anti-HTA, anticholinergiques, polymédication).</li>
+<li><strong>Troubles de la marche &amp; de l'équilibre</strong> (sarcopénie, désadaptation, Parkinson).</li>
+<li><strong>Troubles cognitifs</strong> (jugement, double tâche).</li>
+<li><strong>Hypotension orthostatique</strong>.</li>
+<li>+ <strong>troubles sensoriels</strong> (vue/audition), <strong>environnement inadapté</strong>, <strong>incontinence d'urgence</strong>.</li>
+</ol>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Attitude face à une chute (5 points) <span class="freq">2025</span></h3>
+<p>① évaluer les <strong>conséquences</strong> (traumatisme, station au sol prolongée → rhabdomyolyse) · ② préciser les <strong>circonstances</strong> · ③ rechercher les <strong>causes potentielles</strong> (cardio, neuro, métabolique, iatrogène) · ④ proposer une <strong>EGS multidimensionnelle</strong> · ⑤ mettre en place la <strong>prévention</strong> (interventions ciblées). Mnémo d'orientation : <span class="mnemo">SPLATT</span> (Symptoms, Previous falls, Location, Activity, Time, Trauma).</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Syndrome de désadaptation psychomotrice (SDPM) <span class="freq">TRÈS RÉCURRENT</span></h3>
+<p class="qline">« Signes cliniques » + « 2 formes (aiguë/chronique) + différences ».</p>
+<p><strong>Signes cliniques :</strong> <strong>rétropulsion du tronc</strong> (déjettement postérieur), <strong>hypertonie oppositionnelle</strong> (gegenhalten), <strong>agrippement</strong>, flexion des genoux, appui podal <strong>postérieur</strong>, <strong>peur du vide antérieur</strong>/de tomber (phobie), anxiété, réduction de la mobilité.</p>
+<table>
+<tr><th></th><th>Forme aiguë</th><th>Forme chronique</th></tr>
+<tr><td>Début</td><td>Brutal (souvent après une chute)</td><td>Progressif</td></tr>
+<tr><td>Réponse à la kiné</td><td><strong>Bonne</strong></td><td>Faible</td></tr>
+<tr><td>Réversibilité</td><td><strong>Réversible</strong> (bon pronostic)</td><td>Rarement réversible</td></tr>
+</table>
+<p><span class="k">PIÈGE : ce qui n'appartient PAS au SDPM = « souplesse du mouvement spontané » (au contraire : hypertonie/rigidité).</span></p>
+</div>
+
+<h3>Démarche parkinsonienne (4 caractéristiques)</h3>
+<p><strong>Absence de ballant des bras</strong> · <strong>petits pas</strong> (festination) · <strong>freezing</strong> (enrayage cinétique) · rigidité « roue dentée » · posture penchée en avant (≠ rétropulsion du SDPM).</p>
+
+<h3>Escarres &amp; prévention</h3>
+<div class="box tuyau">
+<h3>🎯 TUYAU — Stades des escarres &amp; causes <span class="freq">2025, 2019</span></h3>
+<table>
+<tr><th>Stade</th><th>Description</th></tr>
+<tr><td>1</td><td>Rougeur <strong>ne disparaissant pas à la vitropression</strong> (peau intacte)</td></tr>
+<tr><td>2</td><td>Atteinte épiderme/derme : phlyctène, désépidermisation</td></tr>
+<tr><td>3</td><td>Atteinte du <strong>tissu sous-cutané</strong> (graisse)</td></tr>
+<tr><td>4</td><td>Atteinte <strong>muscle/os/tendon</strong></td></tr>
+</table>
+<p><strong>4 causes :</strong> <strong>pression</strong>, <strong>cisaillement</strong>, <strong>friction</strong>, <strong>macération/humidité</strong> (+ immobilité, dénutrition). Une escarre sacrée peut apparaître en <strong>3 h</strong>. <strong>Prévention</strong> : mobilisation (couché : 2 h matelas normal / 4 h matelas dynamique), matelas adapté, nutrition, soins de peau, talons décollés.</p>
+</div>
+
+<!-- CH8 -->
+<h1 class="course"><span class="num">8</span>Delirium (confusion aiguë)</h1>
+<p class="course-tag">Boland — THÈME N° 1 des examens.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Critères CAM : signes majeurs &amp; mineurs <span class="freq">TUYAU N° 1 (quasi chaque année)</span></h3>
+<p class="qline">« Citez 5 signes (majeurs et mineurs) du delirium / les critères de la CAM. »</p>
+<p>Le diagnostic (<abbr title="Confusion Assessment Method">CAM</abbr>) requiert les <strong>2 critères majeurs</strong> + <strong>au moins 1 mineur</strong> :</p>
+<ul>
+<li><strong>MAJEUR 1 — Début aigu et évolution fluctuante</strong></li>
+<li><strong>MAJEUR 2 — Inattention</strong> (déficit attentionnel)</li>
+<li><strong>MINEUR a — Pensée désorganisée</strong> (discours incohérent)</li>
+<li><strong>MINEUR b — Altération de la vigilance/conscience</strong> (hyper- ou hypoalerte)</li>
+</ul>
+<p><strong>Diagnostic = (Majeur1 ET Majeur2) ET (Mineur a OU b).</strong></p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Cas « hallucinations, enfants dans la chambre, MRS, méfiance » <span class="freq">≥ 2× (2020, 2022)</span></h3>
+<p class="qline">« 2 hypothèses diagnostiques + 3 tests / 3 FR (pas précipitants !). »</p>
+<p><strong>Hypothèses :</strong> ① <strong>delirium hyperactif</strong> (début aigu, fluctuant, fièvre 37,8 °C → cause organique) ; ② <strong>démence à corps de Lewy</strong> (hallucinations visuelles) ou démence sous-jacente décompensée. <strong>Tests :</strong> <strong>CAM</strong>, <strong>biologie</strong> (ionogramme, CRP, glycémie), <strong>imagerie cérébrale (CT)</strong>, ± analyse d'urines/recherche de foyer. <strong>FR (prédisposants ≠ précipitants) :</strong> âge, démence/troubles cognitifs, déficits sensoriels, comorbidités, antécédent de delirium.</p>
+</div>
+
+<h2>8.1 Points-clés</h2>
+<ul>
+<li>Le diagnostic implique de <strong>chercher LA cause</strong> (médicamenteuse, infectieuse, métabolique, fécalome, globe, douleur…). La CAM est un <strong>outil diagnostique</strong>, pas un score de gravité.</li>
+<li><strong>Forme hypoactive</strong> = la plus fréquente et la <strong>moins identifiée</strong> (pronostic plus sombre). <span class="k">Le delirium n'est PAS toujours agité.</span></li>
+<li>Conséquences : ↑ mortalité (intra- ET post-hospitalière), ↑ durée de séjour, ↑ chutes, ↑ institutionnalisation, ↑ dénutrition.</li>
+<li>Prévention non pharmacologique +++ (réorientation, sommeil, hydratation, lunettes/prothèses auditives, mobilisation, éviter sondes/contention).</li>
+</ul>
+
+<div class="box piege">
+<h3>Pièges</h3>
+<ul>
+<li>La <strong>désorientation temporo-spatiale</strong> n'est pas, à elle seule, un critère CAM (l'inattention l'est).</li>
+<li>Distinguer <strong>FR prédisposants</strong> (âge, démence…) des <strong>facteurs précipitants</strong> (médicament, infection, chirurgie).</li>
+<li>Delirium = <strong>aigu/fluctuant/réversible</strong> ; démence = chronique/progressive.</li>
+</ul>
+</div>
+
+<!-- CH9 -->
+<h1 class="course"><span class="num">9</span>Démence / troubles neurocognitifs majeurs</h1>
+<p class="course-tag">Boland — THÈME MAJEUR (bilan diagnostique récurrent).</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Bilan diagnostique d'un TNCM / démence <span class="freq">TRÈS RÉCURRENT (chaque année)</span></h3>
+<p class="qline">« Quel bilan pour confirmer un TNCM ? (4-5 tirets) » / « 5 étapes de la démarche diagnostique ».</p>
+<ol>
+<li><strong>Anamnèse + hétéro-anamnèse</strong> (entourage : caractère progressif, retentissement sur les AVJ).</li>
+<li><strong>Examen clinique</strong> (neuro, sensoriel) + revue médicamenteuse.</li>
+<li><strong>Tests cognitifs</strong> : MMSE / MoCA (± bilan neuropsychologique).</li>
+<li><strong>Biologie</strong> : ionogramme, calcémie, glycémie, <strong>TSH, B12, B9 (folates)</strong> — exclure les causes réversibles.</li>
+<li><strong>Imagerie cérébrale</strong> (CT/IRM). ± ponction lombaire (biomarqueurs).</li>
+</ol>
+<p>But : <strong>exclure delirium et dépression</strong>, écarter les causes curables, puis typer la démence.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Les 5 fonctions cognitives <span class="freq">2022</span></h3>
+<p><strong>Mémoire · Attention · Langage · Fonctions exécutives · Fonctions perceptivo-motrices / visuo-spatiales</strong> (+ cognition sociale dans le DSM-5).</p>
+</div>
+
+<div class="def"><strong>TNCM (ex-démence)</strong> = déclin acquis d'<strong>≥ 1 domaine cognitif</strong>, <strong>persistant (&gt; 6 mois)</strong>, avec <strong>retentissement sur l'autonomie (AVJ)</strong>. Le <strong>MCI</strong> (trouble cognitif léger) = déclin SANS retentissement sur l'autonomie.</div>
+
+<table>
+<tr><th>Type</th><th>Particularité</th></tr>
+<tr><td><strong>Alzheimer</strong> (la + fréquente)</td><td>Trouble mnésique progressif d'abord ; désorientation temporelle ; atteinte corticale</td></tr>
+<tr><td><strong>Vasculaire</strong> / mixte</td><td>Évolution en marches d'escalier ; FR cardiovasculaires</td></tr>
+<tr><td><strong>Corps de Lewy</strong></td><td>Hallucinations visuelles, fluctuations, parkinsonisme ; <span class="k">hypersensibilité aux neuroleptiques</span></td></tr>
+<tr><td><strong>Fronto-temporale</strong></td><td>Troubles du comportement/langage d'abord ; <strong>mémoire longtemps préservée</strong></td></tr>
+</table>
+
+<div class="box piege">
+<h3>Pièges</h3>
+<ul>
+<li>Pour diagnostiquer une démence : <strong>exclure delirium et dépression</strong> au préalable.</li>
+<li>Démence à corps de Lewy : <strong>éviter les neuroleptiques</strong> (hallucinations) — danger.</li>
+<li>Démence fronto-temporale : <strong>mémoire préservée</strong> au début (≠ Alzheimer).</li>
+</ul>
+</div>
+
+<!-- CH10 -->
+<h1 class="course"><span class="num">10</span>Dépression &amp; psychiatrie de la personne âgée</h1>
+<p class="course-tag">Deschietere.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Particularités de la dépression de la PA (vs adulte) <span class="freq">2025, 2022</span></h3>
+<p class="qline">« 6 différences de la dépression et de son traitement chez la PA. »</p>
+<ul>
+<li><strong>Présentation atypique :</strong> plaintes somatiques, « masque » (hostile, conatif/apragmatique), <strong>masque cognitif</strong> (« pseudo-démence dépressive »).</li>
+<li>Risque <strong>suicidaire élevé</strong> (létalité ++ : ~1 suicide réussi pour 3 tentatives, vs bien plus de tentatives chez le jeune).</li>
+<li>Souvent <strong>sous-diagnostiquée</strong> (banalisée, attribuée à l'âge).</li>
+<li><strong>Traitement :</strong> ISRS en 1<sup>re</sup> intention, <strong>« start low, go slow »</strong>, délai d'action <strong>plus long</strong> ; <span class="k">vigilance aux effets anticholinergiques</strong> (éviter les tricycliques)</span>.</li>
+<li>Comorbidités/iatrogénie fréquentes ; importance du contexte (deuil, isolement, pertes).</li>
+<li>Électroconvulsivothérapie : <strong>pas en 1<sup>re</sup> intention</strong> (réservée aux formes sévères/résistantes).</li>
+</ul>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — SPCD chez un TNCM (nouveaux troubles du comportement) <span class="freq">2025</span></h3>
+<p>Devant des <abbr title="Symptômes Psycho-Comportementaux des Démences">SPCD</abbr> : ① <strong>chercher une cause</strong> (douleur, fécalome, globe, infection, delirium, médicament) · ② approche <strong>non pharmacologique en 1<sup>re</sup> intention</strong> (environnement, routine, occupation) · ③ traiter la cause organique · ④ adapter la communication · ⑤ <strong>éviter benzodiazépines/neuroleptiques</strong> au long cours (réserver aux situations dangereuses, à dose minimale et courte) · ⑥ soutien de l'aidant.</p>
+</div>
+
+<p><strong>Particularités de la psychiatrie de la PA :</strong> capacités d'adaptation diminuées, intrication somatique/cognitive/sociale, présentation atypique, nécessité d'écarter une cause organique (delirium), accès aux soins psychologiques moindre que chez le jeune. Une anxiété de novo chez une PA doit faire chercher : <strong>dépression, delirium, déclin cognitif débutant, SPCD</strong> (et non une schizophrénie de novo).</p>
+
+<!-- CH11 -->
+<h1 class="course"><span class="num">11</span>Déficits sensoriels</h1>
+<p class="course-tag">Boland &amp; Gouget.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Bien communiquer avec un déficit auditif (5 mesures) <span class="freq">2022</span></h3>
+<ol>
+<li>Bon <strong>éclairage</strong>, <strong>sans bruit de fond</strong> ; se mettre <strong>face</strong> au patient (lecture labiale).</li>
+<li>Se <strong>rapprocher</strong> (0,5–1,5 m), se présenter.</li>
+<li>Parler <strong>distinctement, lentement, sans crier</strong> ; phrases courtes.</li>
+<li><strong>Reformuler</strong> et <strong>valider</strong> la compréhension réciproque.</li>
+<li>Vérifier l'<strong>appareillage</strong> ; contact tactile, support écrit.</li>
+</ol>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — AVJ impactées par les déficits sensoriels <span class="freq">2024</span></h3>
+<p>« 5 activités à risque d'incident » : <strong>alimentation</strong> (inappétence, intoxication), <strong>gestion des médicaments</strong> (erreurs de pilulier), <strong>déplacements/chutes</strong>, <strong>cuisine/brûlures-incendies</strong>, <strong>conduite automobile</strong>, communication/vie sociale.</p>
+</div>
+
+<ul>
+<li><strong>Presbyacousie :</strong> perte neurosensorielle, bilatérale, symétrique, progressive, touchant les <strong>fréquences AIGUËS d'abord</strong> → « j'entends mais je ne comprends pas » (les aigus portent l'intelligibilité). Lien avec <strong>isolement, dépression, déclin cognitif</strong> ; appareiller = prévention. Déficits sensoriels = FR de <strong>delirium</strong>.</li>
+<li><strong>Goût/odorat :</strong> leur baisse favorise <strong>inappétence → dénutrition</strong>.</li>
+<li><strong>Vue :</strong> déficit fréquent chez la majorité des 75+ ; ↑ risque de chutes et de delirium. Scotome <strong>central = DMLA</strong> ; perte <strong>périphérique = glaucome</strong>.</li>
+</ul>
+<div class="box piege"><h3>Piège</h3><p>L'intelligibilité dépend des <strong>fréquences aiguës</strong> (pas graves) ; la perte de l'odorat n'est <strong>pas</strong> rare ; la presbyacousie se traduit par « ne pas comprendre » plus que « ne pas entendre ».</p></div>
+
+<!-- CH12 -->
+<h1 class="course"><span class="num">12</span>Dénutrition &amp; syndrome de renutrition</h1>
+<p class="course-tag">Marien &amp; Etienne — THÈME MAJEUR.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Diagnostic de dénutrition : les « 3 piliers » <span class="freq">≥ 2× (2024, 2023)</span></h3>
+<p class="qline">« Donnez les 3 éléments / 3 pieds pour poser le diagnostic de dénutrition. »</p>
+<p>Critères <strong>GLIM = ≥ 1 phénotypique + ≥ 1 étiologique.</strong> Les 3 axes phénotypiques :</p>
+<ol>
+<li><strong>Perte de poids involontaire</strong> (&gt; 5 % en 1 mois ou &gt; 10 % en 6 mois ; ≥ 5 kg/6 mois).</li>
+<li><strong>IMC bas</strong> (&lt; 22 si ≥ 70 ans ; &lt; 21 selon le cours).</li>
+<li><strong>↓ masse/force musculaire</strong> (sarcopénie, ex. quadriceps 4/5).</li>
+</ol>
+<p>+ critère <strong>étiologique</strong> : ↓ des apports (&gt; 2 semaines) ou inflammation/maladie. Repères bio : <strong>albumine &lt; 3,5 g/dl</strong> (dénutrition ancienne), <strong>MNA-SF ≤ 7/14</strong>.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — 5 causes de dénutrition + prise en charge <span class="freq">RÉCURRENT</span></h3>
+<p class="qline">« Citez en 5 mots 5 causes de dénutrition » + « 3 mesures avec 1 exemple ».</p>
+<p><strong>Causes (↓ apports / ↑ besoins) :</strong> troubles bucco-dentaires/déglutition · isolement/dépression · troubles cognitifs · iatrogénie (anorexie, dysgueusie) · maladie/inflammation/hypercatabolisme · troubles sensoriels (goût/odorat) · difficultés socio-économiques.<br>
+<strong>Prise en charge (par paliers) :</strong> ① <strong>adapter l'alimentation</strong> (texture, fractionnement, aide au repas) · ② <strong>enrichir</strong> (poudres protéinées) · ③ <strong>compléments nutritionnels oraux (CNO)</strong> en collation · ④ <strong>nutrition entérale</strong> (sonde) si échec.</p>
+</div>
+
+<h2>12.1 Conséquences &amp; besoins</h2>
+<p><strong>Conséquences :</strong> sarcopénie/chutes, déclin fonctionnel, infections, retard de cicatrisation/escarres, ↑ toxicité médicamenteuse, troubles thymiques, ↑ mortalité. <strong>Besoins :</strong> énergie <strong>30–40 kcal/kg/j</strong>, protéines <strong>1,2–1,5 g/kg/j</strong>, eau ≈ 40 ml/kg/j.</p>
+
+<h2>12.2 Syndrome de renutrition inappropriée (SRI)</h2>
+<div class="def">Apport brusque de <strong>glucides</strong> chez un dénutri → pic d'<strong>insuline</strong> → transfert intracellulaire massif de <strong>phosphore, potassium, magnésium</strong> + consommation de <strong>thiamine (B1)</strong>. Marqueur central = <strong>hypophosphatémie</strong>. Survient quelle que soit la voie (orale/entérale/parentérale), <strong>même si la biologie initiale est normale</strong>.</div>
+<p><strong>Prévention :</strong> renutrition <strong>progressive</strong> + supplémenter P/K/Mg + <strong>thiamine AVANT</strong> (prévention de l'encéphalopathie de Wernicke) + contrôle biologique J1–J3.</p>
+
+<div class="box piege"><h3>Pièges</h3><ul>
+<li>Diagnostic GLIM = <strong>2 types</strong> de critères (phénotypique + étiologique), pas un seul.</li>
+<li>Dénutrition possible chez l'<strong>obèse</strong> ; albumine/préalbumine ↓ aussi en <strong>inflammation</strong> (lire avec la CRP).</li>
+<li>Ne PAS donner de suppléments oraux « systématiquement à tous » ; dépister la déglutition, peser 1×/sem, soigner l'état buccal.</li>
+</ul></div>
+
+<!-- CH13 -->
+<h1 class="course"><span class="num">13</span>Troubles de l'élimination</h1>
+<p class="course-tag">de Saint-Hubert — incontinence, rétention/globe, fécalome.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Bilan diagnostique de l'incontinence : 3 premières étapes <span class="freq">≥ 3× (2024, 2023, 2020)</span></h3>
+<p class="qline">« 3 étapes pour avancer dans le diagnostic » / « 4 éléments du bilan ».</p>
+<ol>
+<li><strong>Anamnèse</strong> ciblée (type : effort/urgence/mixte ; ancienneté ; fréquence ; <strong>calendrier mictionnel 48–72 h</strong>) — chez la femme : « perte à l'effort/toux/rire ? » et « besoin urgent irrépressible ? ».</li>
+<li><strong>Examen clinique &amp; fonctionnel</strong> (abdomen, <strong>TR/TV</strong>, neuro, mobilité).</li>
+<li><strong>Analyse d'urines</strong> (exclure infection) + <strong>bladder-scan</strong> (résidu post-mictionnel ; normal &lt; 50 ml).</li>
+</ol>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Causes d'incontinence transitoire/réversible (mnémo DIAPPERS) <span class="freq">2021</span></h3>
+<p class="qline">« 5 causes d'incontinence urinaire transitoire à l'hôpital. »</p>
+<p><span class="mnemo">DIAPPERS</span> : <strong>D</strong>elirium · <strong>I</strong>nfection urinaire · <strong>A</strong>trophie vaginale · <strong>P</strong>harmacie (anticholinergiques, diurétiques) · <strong>P</strong>sychologique (dépression) · <strong>E</strong>xcès de diurèse (hyperglycémie) · <strong>R</strong>estriction de mobilité/contention · <strong>S</strong>tase stercorale (<strong>fécalome</strong>) + globe vésical.</p>
+</div>
+
+<table>
+<tr><th>Type d'incontinence</th><th>Mécanisme · sexe</th><th>Résidu</th></tr>
+<tr><td><strong>Urgence</strong> (la + fréquente)</td><td>Hyperactivité du détrusor</td><td class="num-cell">normal ou ↑</td></tr>
+<tr><td><strong>Effort</strong></td><td>Insuffisance sphinctérienne ; ♀ (rééducation périnéale → niveau A)</td><td class="num-cell">0/faible</td></tr>
+<tr><td><strong>Regorgement</strong></td><td>Trop-plein (obstacle prostatique / détrusor hypocontractile) ; ♂</td><td class="num-cell"><strong>important</strong></td></tr>
+<tr><td><strong>Fonctionnelle</strong></td><td>Mobilité/cognition/environnement</td><td class="num-cell">—</td></tr>
+</table>
+
+<p><strong>Causes fréquentes chez la femme :</strong> incontinence d'<strong>effort</strong> (insuffisance sphinctérienne post-obstétricale/ménopause, atrophie) et d'<strong>urgence</strong> (hyperactivité vésicale). <strong>Modifications anatomiques :</strong> ↓ tonus du plancher pelvien, atrophie vaginale/urétrale, ↓ capacité vésicale, prolapsus.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Rétention (globe) + fécalome : prise en charge aiguë <span class="freq">2021</span></h3>
+<p><strong>Globe :</strong> drainage par <strong>sondage in-out / bladder-scan</strong>, puis traiter la cause (obstacle, médicaments anticholinergiques/opioïdes). <strong>Fécalome :</strong> <strong>toucher rectal</strong>, <strong>lavement + macrogol (4–6 sachets)</strong>, extraction manuelle si besoin. Le fécalome peut donner de <strong>fausses diarrhées</strong>, un globe, une IRA, un delirium.</p>
+</div>
+
+<p><strong>Conséquences de l'incontinence :</strong> ↓ qualité de vie, ↑ delirium, escarres, chutes, épuisement de l'aidant, institutionnalisation.</p>
+
+<!-- CH14 -->
+<h1 class="course"><span class="num">14</span>Troubles hydro-salins</h1>
+<p class="course-tag">Boland — THÈME MAJEUR (bio-type récurrent : Na 154, urée 80…).</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Hypernatrémie / déshydratation : traitement (3 points) <span class="freq">TRÈS RÉCURRENT (2025, 2024, 2023, 2020)</span></h3>
+<p class="qline">Bio type : Na⁺ 154, urée 80, acide urique 10, créat 1,2, Hb ↑ → « 3 points du traitement du trouble hydro-salin ».</p>
+<ul>
+<li><strong>Diagnostic :</strong> <strong>déshydratation hypernatrémique</strong> (déficit en eau pure) — Na↑, urée↑, acide urique↑, hémoconcentration (Hb↑).</li>
+<li>① <strong>Réhydrater par eau libre</strong> (per os si possible, sinon <strong>G5 % IV</strong>) ; ② <strong>correction LENTE</strong> (max ≈ 1 L/12 h ; ne pas baisser la natrémie de &gt; 10 mmol/L par 24 h → risque d'œdème cérébral) ; ③ <strong>traiter la cause</strong> (apports insuffisants, fièvre, diabète) et <strong>surveiller</strong> iono + diurèse.</li>
+<li>Calcul du déficit hydrique ≈ eau corporelle × (Na/140 − 1) ≈ 3 L.</li>
+</ul>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Hyponatrémie (ex. Na 126, sous ISRS) <span class="freq">2021</span></h3>
+<p>Base du traitement = <strong>restriction hydrique</strong> (~750 ml/j) + <strong>arrêt/réduction de l'ISRS</strong> (cause fréquente de SIADH chez la PA). Une hyponatrémie peut refléter le capital sodé, les apports, le DFG, ou un <strong>excès d'eau</strong>.</p>
+</div>
+
+<p><strong>Régulation hydro-saline chez la PA (fragilisée) :</strong> ↓ sensation de soif, ↓ néphrons, ↓ pouvoir de concentration (gradient cortico-médullaire), ↓ RAA, sécrétion d'ADH plutôt augmentée/dérégulée. <strong>Conséquences d'un déficit en eau de 10 % :</strong> ↑ natrémie, ↑ Hb (hémoconcentration), hypotension, ↓ volume cellulaire (hypertonicité), <strong>↓ performances cognitives</strong>.</p>
+
+<!-- CH15 -->
+<h1 class="course"><span class="num">15</span>Infections de la personne âgée</h1>
+<p class="course-tag">Schoevaerdts — bactériurie asymptomatique, BLSE/MRSA, pneumonie d'inhalation.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Pourquoi plus d'infections chez la PA : les 4 groupes de causes <span class="freq">≥ 2× (2025, 2022)</span></h3>
+<p class="qline">« 4 grands groupes de causes favorisant les infections + exemples. »</p>
+<table>
+<tr><th>Groupe</th><th>Exemples</th></tr>
+<tr><td><strong>Liés au patient</strong></td><td>Immunosénescence, vieillissement des organes, fragilité, comorbidités, dénutrition, déclin fonctionnel</td></tr>
+<tr><td><strong>Liés aux pathogènes</strong></td><td>Clones virulents, <strong>résistances</strong> (BLSE, MRSA)</td></tr>
+<tr><td><strong>Liés aux procédures/dispositifs</strong></td><td>Sondes urinaires, cathéters, corps étrangers, chirurgie</td></tr>
+<tr><td><strong>Liés à l'environnement</strong></td><td>Promiscuité (MRS/hôpital), transferts, hygiène des mains, charge de travail</td></tr>
+</table>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Bactériurie asymptomatique : NE PAS traiter <span class="freq">≥ 2× (2022, 2021)</span></h3>
+<p class="qline">Cas : 10⁵ germes + leucocytes, <strong>sans symptôme</strong>.</p>
+<p>Une <strong>bactériurie asymptomatique ne se traite PAS</strong> par antibiotique (même chez le diabétique, même sur sonde), car elle est très fréquente chez la PA institutionnalisée. <strong>Seule exception :</strong> avant un <strong>geste urologique invasif</strong> (ex. cystoscopie/RTUP avec effraction muqueuse). Diagnostic d'infection urinaire = bactériurie <strong>+ symptômes</strong>.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Pneumonie d'inhalation : 5 interventions <span class="freq">2025</span></h3>
+<p>① <strong>antibiothérapie</strong> couvrant les anaérobies/germes oro-pharyngés · ② <strong>évaluation de la déglutition</strong> (logopède) + adaptation des textures · ③ <strong>positionnement</strong> (assis aux repas, demi-assis) · ④ <strong>soins bucco-dentaires</strong> · ⑤ <strong>kiné respiratoire</strong> + révision des médicaments sédatifs/anticholinergiques (qui altèrent la déglutition).</p>
+</div>
+
+<p><strong>BLSE</strong> (bêta-lactamases à spectre étendu) : portage favorisé par les <strong>antibiothérapies répétées</strong>. <strong>MRSA</strong> : portage nasal, plaies chroniques, dépistage et plan de décolonisation. Infections nosocomiales : les <strong>respiratoires</strong> ont la mortalité la plus élevée. Présentation souvent <strong>atypique/peu fébrile</strong> (37,5 °C, voire hypothermie = gravité).</p>
+
+<!-- CH16 -->
+<h1 class="course"><span class="num">16</span>Ostéoporose, fractures &amp; escarres</h1>
+<p class="course-tag">Schoevaerdts — métabolisme osseux, Garden, traitement.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Traitement de l'ostéoporose + conseils <span class="freq">≥ 2× (2025, 2017)</span></h3>
+<p class="qline">Ostéodensitométrie T −3 (hanche) / −2,8 (colonne) → « 2 médicaments + 5 conseils ».</p>
+<p><strong>Médicaments :</strong> <strong>bisphosphonate</strong> (1<sup>re</sup> intention, ex. alendronate) + <strong>calcium &amp; vitamine D</strong> (socle). Alternatives : dénosumab, SERM, analogue de la PTH (tériparatide).<br>
+<strong>5 conseils (bisphosphonate oral) :</strong> ① <strong>à jeun le matin</strong>, avec un <strong>grand verre d'eau</strong> · ② rester en <strong>position debout/assise ≥ 30 min</strong> (éviter l'œsophagite) · ③ pas d'autre prise (Ca, café) dans l'heure · ④ <strong>soins/bilan dentaire</strong> (risque d'ostéonécrose de la mâchoire) · ⑤ assurer un statut vitaminique D correct + activité physique + prévention des chutes.</p>
+</div>
+
+<table>
+<tr><th>Thème</th><th>À retenir</th></tr>
+<tr><td><strong>T-score</strong></td><td>&lt; −2,5 DS = ostéoporose ; −2,8 au col → risque de fracture &gt; 20 % à 10 ans</td></tr>
+<tr><td><strong>Classification de Garden</strong> (col du fémur)</td><td>I (incomplète, engrenée) → IV (complète, déplacée). Trait complet + coxa vara + déplacement = <strong>Garden III–IV</strong></td></tr>
+<tr><td><strong>Métabolisme osseux</strong></td><td>Avec l'âge : ↑ PTH, ↓ vitamine D, balance résorption &gt; formation ; apports Ca ≈ <strong>1200 mg/j</strong></td></tr>
+</table>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — 5 facteurs de l'évolution de la masse osseuse <span class="freq">2025</span></h3>
+<p>Âge · <strong>statut hormonal</strong> (ménopause, ↓ œstrogènes) · apports <strong>calcium &amp; vitamine D</strong> · <strong>activité physique</strong> (charge mécanique) · génétique/pic de masse osseuse · médicaments (corticoïdes), tabac/alcool.</p>
+</div>
+
+<!-- CH17 -->
+<h1 class="course"><span class="num">17</span>Constipation &amp; diarrhée</h1>
+<p class="course-tag">Troubles digestifs fréquents (vignettes Parkinson).</p>
+<ul>
+<li><strong>Constipation (hypothèses) :</strong> iatrogène (<strong>opioïdes/tramadol</strong>, anticholinergiques, fer), dysautonomie (Parkinson), déshydratation, immobilité, <strong>fécalome</strong>, hypokaliémie/hypothyroïdie, obstacle (cancer colique). <strong>Soulager :</strong> hydratation + fibres, <strong>macrogol</strong>, mobilisation, revoir les médicaments constipants.</li>
+<li><strong>Diarrhée (causes) :</strong> <strong>fausses diarrhées sur fécalome</strong>, <strong>colite à <em>C. difficile</em></strong> (post-antibiotique, ex. quinolone), iatrogène (laxatifs, L-dopa, ISRS), infectieuse, cause organique. <strong>Actions prioritaires :</strong> TR (fécalome ?), examen des selles/coproculture + <em>C. difficile</em>, ionogramme/hydratation, revue médicamenteuse.</li>
+</ul>
+
+<!-- ====================================================== -->
+<h1 class="part">PARTIE III — Cardio, urgences &amp; médicaments</h1>
+
+<!-- CH18 -->
+<h1 class="course"><span class="num">18</span>Cardio-gériatrie</h1>
+<p class="course-tag">HTA, hypotension orthostatique &amp; syncope, insuffisance cardiaque, FA.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Syncope post-prandiale / mécanismes de l'HO <span class="freq">TRÈS RÉCURRENT (2025, 2022, 2020/21)</span></h3>
+<p class="qline">Cas : chute avec perte de connaissance ~45 min après le repas, sous anti-HTA → « cause la plus probable + 4 autres causes » / « 3 mécanismes d'HO ».</p>
+<p><strong>Cause la plus probable = hypotension orthostatique POST-PRANDIALE</strong> (séquestration sanguine splanchnique après le repas + anti-HTA + dysautonomie).<br>
+<strong>4 autres causes de syncope :</strong> médicamenteuse (anti-HTA, diurétiques) · cardiaque/arythmie · vaso-vagale (réflexe) · neurologique/mécanique ou indéterminée.<br>
+<strong>3 mécanismes d'HO chez la PA :</strong> ① hypovolémie (diurétique) · ② <strong>vasoconstriction émoussée</strong> (α-bloquant, ↓ barorécepteurs) · ③ dysautonomie (diabète, Parkinson) / ↓ RAA (IEC).</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Éviter l'HO SANS ajouter de médicament (4 mesures) <span class="freq">2021</span></h3>
+<p>① <strong>Réviser/réduire les médicaments hypotenseurs</strong> · ② <strong>lever en 2 temps</strong>, dormir tête surélevée, bas de contention · ③ <strong>régime riche en sel et en eau</strong>, repas fractionnés (éviter les gros repas) · ④ éviter chaleur/alcool, exercice doux des mollets.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Conséquences de l'IC à FE préservée (HFpEF) <span class="freq">2021, 2019, 2018</span></h3>
+<p class="qline">« 3 conséquences d'une IC à FE préservée chez la PA. »</p>
+<p>Cœur « rigide » à remplissage diastolique altéré → <strong>mauvaise tolérance ① de la fibrillation auriculaire</strong> (perte de la contraction auriculaire), <strong>② de la tachycardie</strong> (↓ temps de remplissage), <strong>③ des poussées de TA</strong>. <abbr title="IC à fraction d'éjection préservée">HFpEF</abbr> = forme dominante chez la PA (&gt; 50 % des décompensations) ; pronostic réservé (~50 % à 5 ans).</p>
+</div>
+
+<h2>18.1 HTA &amp; insuffisance cardiaque — points-clés</h2>
+<ul>
+<li><strong>HTA :</strong> présente chez &gt; 50 % des PA ; « <strong>start slow, go slow</strong> » ; cible souvent &lt; 140 (≤ 130/80 selon les recommandations) ; ne pas sur-traiter (chute/HO → STOPP).</li>
+<li><strong>IC :</strong> diagnostic par <strong>échocardiographie</strong> ; ↑ réhospitalisations ; traitement globalement <strong>identique au jeune</strong> mais <strong>monitoré</strong> (souvent sous-utilisé).</li>
+<li><strong>Médicament précipitant une IC :</strong> <strong>AINS (diclofénac)</strong>, corticoïdes, apports sodés (≠ IPP, ≠ spironolactone).</li>
+<li><strong>FA :</strong> anticoaguler selon le risque (la chute n'est pas une CI).</li>
+</ul>
+
+<!-- CH19 -->
+<h1 class="course"><span class="num">19</span>Urgences &amp; soins intensifs</h1>
+<p class="course-tag">Sibille — (absent de l'examen 2025, mais récurrent avant).</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Admission d'une PA aux soins intensifs <span class="freq">≥ 2× (2023, 2022)</span></h3>
+<p class="qline">« 2 questions à se poser » + « 3 critères d'admission en USI ».</p>
+<p><strong>2 questions (Vincent &amp; Creteur) :</strong> ① l'admission peut-elle <strong>améliorer/assurer la qualité de vie</strong> après les <abbr title="Unité de Soins Intensifs">USI</abbr> ? ② le patient a-t-il une <strong>chance raisonnable de récupérer</strong> une vie de qualité ?<br>
+<strong>3 critères d'admission :</strong> ① <strong>instabilité hémodynamique</strong> (choc) · ② <strong>détresse respiratoire</strong> · ③ <strong>bénéfice médical</strong> (potentiel de récupération).<br>
+<span class="k">L'ÂGE seul n'est PAS un critère</strong> : ce sont la <strong>fragilité et la fonctionnalité</strong> qui priment.</span> Décideur = médecin intensiviste.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Définir l'acharnement thérapeutique <span class="freq">2022</span></h3>
+<p>= poursuite de traitements (diagnostiques/curatifs) <strong>disproportionnés</strong>, sans bénéfice raisonnable pour le patient (pas d'amélioration ni de récupération attendue), prolongeant la vie sans qualité = <strong>obstination déraisonnable</strong>. « Un médecin ne peut être contraint à un traitement inutile » ; « permettre de mourir n'est pas donner la mort ».</p>
+</div>
+
+<p><strong>Signes de sévérité chez la PA :</strong> TAS &lt; 110–120 mmHg ; FC &lt; 50 ou &gt; 100/min ; <strong>apyrexie/hypothermie</strong> ; défaillance d'organe (dont delirium). <strong>Aux SI :</strong> bundle ABCDEF, <strong>éviter les benzodiazépines</strong> (préférer dexmédétomidine), <strong>mobilisation précoce</strong> (mesure multi-bénéfice). <strong>Syndrome d'immobilisation :</strong> HO après quelques jours d'alitement, escarre sacrée possible en 3 h, constipation, déformations, ↓ capacité à l'effort (pas uniquement musculaire).</p>
+
+<!-- CH20 -->
+<h1 class="course"><span class="num">20</span>Pharmacologie &amp; déprescription</h1>
+<p class="course-tag">Spinewine / Dalleur — THÈME MAJEUR.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Cascade médicamenteuse oxybutynine → donépézil <span class="freq">TRÈS RÉCURRENT (2023 ×2, 2018)</span></h3>
+<p class="qline">Dame HTA/incontinence/démente/insomnie : amlodipine, <strong>oxybutynine</strong>, donépézil, zolpidem, tramadol → « cascade + quel médicament déprescrire en priorité, comment, alternative ».</p>
+<ul>
+<li><strong>Cascade :</strong> l'<strong>oxybutynine (anticholinergique)</strong> aggrave les troubles cognitifs → on ajoute du <strong>donépézil</strong> (anticholinestérasique) = duo <strong>antagoniste</strong> absurde.</li>
+<li><strong>À déprescrire en priorité : l'oxybutynine</strong> (anticholinergique : confusion, rétention, chute) — <strong>comment :</strong> arrêt (sevrage progressif), <strong>alternative :</strong> mirabégron (β-3) ou, mieux, mesures non pharmacologiques (rééducation, mictions programmées).</li>
+<li>Déprescrire aussi le <strong>zolpidem</strong> (chutes ; sevrage progressif, alternative = mélatonine/hygiène du sommeil).</li>
+</ul>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Cascade chute → tramadol → … <span class="freq">TRÈS RÉCURRENT (2025, 2022)</span></h3>
+<p class="qline">Tableau à compléter : pathologie → traitement → nouvelle patho → nouveau traitement.</p>
+<p><strong>Chute/fracture → tramadol</strong> (douleur) → <strong>constipation + troubles cognitifs/delirium</strong> → on ajoute <strong>halopéridol + diazépam</strong> → <strong>sédation/aggravation cognitive + immobilité → escarre</strong>. Bonne attitude : traiter la cause, antalgie par paracétamol, laxatif, éviter d'empiler les psychotropes.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Anticholinergiques : reconnaître + effets <span class="freq">2024</span></h3>
+<p class="qline">Médocs : amlodipine, furosémide, IPP, aspirine, <strong>fésotérodine (Toviaz)</strong> → « prend-il des anticholinergiques ? effets SNC + périphérique ? ».</p>
+<p>Anticholinergique ici = <strong>fésotérodine/oxybutynine</strong> (anti-muscariniques vésicaux), + tricycliques, certains anti-H1, neuroleptiques. <strong>Effet central (SNC) :</strong> confusion/delirium, troubles cognitifs, somnolence. <strong>Effets périphériques :</strong> bouche sèche, constipation, <strong>rétention urinaire</strong>, vision floue, tachycardie. → calculer la <strong>charge anticholinergique</strong>.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — 5 médicaments à diminuer/arrêter (cas Mr C / De St-Hubert) <span class="freq">TRÈS RÉCURRENT</span></h3>
+<p class="qline">HTA, prostatisme, DT2, chute (hypoTA), bouche sèche ; IEC, tamsulosine, lormétazépam/BZD, BB, metformine, diurétique, aspirine.</p>
+<ul>
+<li><strong>Lormétazépam (BZD)</strong> → chutes/confusion (à arrêter, sevrage progressif).</li>
+<li><strong>Tamsulosine</strong> (α-bloquant) → <strong>HO</strong>/chute.</li>
+<li><strong>Diurétique (± IEC)</strong> → hypovolémie/HO.</li>
+<li><strong>Metformine</strong> → si <strong>IR sévère</strong> (DFG bas) : contre-indiquée.</li>
+<li><strong>Aspirine</strong> en prévention <strong>primaire</strong> → bénéfice/risque défavorable.</li>
+</ul>
+</div>
+
+<h2>20.1 Cadres à connaître</h2>
+<table>
+<tr><th>Notion</th><th>Contenu</th></tr>
+<tr><td><strong>PK liées à l'âge</strong></td><td>↑ fraction libre (↓ albumine) · ↑ Vd des lipophiles · ↓ <strong>clairance rénale</strong> (adaptation des doses)</td></tr>
+<tr><td><strong>3 prescriptions inappropriées</strong></td><td><strong>OVER</strong> (pas/plus d'indication) · <strong>MIS</strong> (mauvaise dose/choix/interaction) · <strong>UNDER</strong> (omission — âgisme)</td></tr>
+<tr><td><strong>STOPP / START</strong></td><td>médicaments à arrêter / à introduire</td></tr>
+<tr><td><strong>Déprescription</strong></td><td>1 médicament à la fois, sevrage progressif, décision partagée, suivi</td></tr>
+<tr><td><strong>EIM</strong></td><td>5–20 % des hospitalisations, 40–50 % évitables</td></tr>
+</table>
+<p><strong>Exemples de prescription inappropriée :</strong> aspirine en prévention primaire, AINS + anticoagulant, fentanyl/opiacé sans laxatif, IPP &gt; 8 sem sans indication, neuroleptique pour anxiété. <strong>Sous-prescription (underuse) :</strong> pas d'anticoagulant en FA, pas de Ca+vit D après chute, START aide à la corriger ; <span class="k">ne PAS donner d'aspirine en prévention primaire n'est PAS une sous-prescription</span>.</p>
+
+<!-- CH21 -->
+<h1 class="course"><span class="num">21</span>Conciliation médicamenteuse &amp; concordance</h1>
+<p class="course-tag">Marien / Dalleur.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Vignette « endocardite » : la cascade conciliation + concordance <span class="freq">TRÈS RÉCURRENT (2024, 2023, 2022)</span></h3>
+<p class="qline">« 2 transitions à risque · nom du processus · question pour l'exhaustivité · 3 choses à discuter pour le suivi ».</p>
+<ul>
+<li><strong>Transitions à risque :</strong> admission/sortie d'hôpital, admission/sortie de MRS, transferts (+ « contacts à risque » : spécialistes, pharmacie/OTC, dentiste).</li>
+<li><strong>Processus = conciliation (réconciliation) médicamenteuse</strong>, en 4 mots-clés : <strong>Comparer → Identifier → Décider → Communiquer</strong> (la <strong>communication</strong> est la plus importante : transmettre la liste réconciliée).</li>
+<li><strong>Question d'exhaustivité :</strong> « Prenez-vous <strong>autre chose</strong> : gouttes, inhalateurs, patchs, médicaments sans ordonnance, plantes, médicaments d'une amie ? » (= reconstituer le BPMH).</li>
+<li><strong>Concordance/adhésion à la sortie (3 points) :</strong> simplifier le schéma (pilulier), expliquer indication/effets, tenir compte des préférences/coût (décision partagée).</li>
+</ul>
+</div>
+
+<table>
+<tr><th>Terme</th><th>Sens</th></tr>
+<tr><td>Compliance / observance</td><td>Le patient « obéit » (modèle paternaliste)</td></tr>
+<tr><td>Adhésion</td><td>Le patient suit la prescription (plus actif)</td></tr>
+<tr><td><strong>Concordance</strong></td><td><strong>Décision partagée</strong>, négociée (shared agreement)</td></tr>
+</table>
+<p>Non-adhésion chez la PA : 30–50 %. <strong>Causes de non-compliance + solutions :</strong> schéma complexe (→ simplifier/pilulier), troubles cognitifs (→ aide de l'entourage), effets indésirables (→ revoir le traitement), coût (→ adapter), mauvaise compréhension (→ éducation).</p>
+
+<!-- ====================================================== -->
+<h1 class="part">PARTIE IV — Éthique, organisation &amp; fin de vie</h1>
+
+<!-- CH22 -->
+<h1 class="course"><span class="num">22</span>Discernement, projet thérapeutique, palliatif &amp; aidants</h1>
+<p class="course-tag">Schoevaerdts / Cornette.</p>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Capacité de discernement : acronyme CARE <span class="freq">TRÈS RÉCURRENT (2025, 2024, 2023)</span></h3>
+<p class="qline">« Que regarde-t-on pour apprécier la capacité de discernement ? » / « Un patient Alzheimer est-il incapable de discerner ? »</p>
+<p><span class="mnemo">CARE</span> — 4 éléments :</p>
+<ul>
+<li><strong>C — Compréhension</strong> de l'information (maladie, options).</li>
+<li><strong>A — Appréciation</strong> de la situation et de ses conséquences pour soi.</li>
+<li><strong>R — Raisonnement</strong> (capacité à comparer les options de façon logique).</li>
+<li><strong>E — Expression</strong> d'un choix clair et stable.</li>
+</ul>
+<p><strong>Alzheimer ⇒ incapable de discerner ? NON :</strong> ① le discernement s'évalue <strong>au cas par cas et pour une décision donnée</strong> (capacité graduée, fluctuante) ; ② un trouble cognitif léger/modéré peut conserver le discernement pour des décisions simples → ne pas présumer l'incapacité.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — Les 5 étapes d'ICOPE <span class="freq">2023</span></h3>
+<p><abbr title="Integrated Care for Older People (OMS)">ICOPE</abbr> : ① <strong>dépistage</strong> des capacités intrinsèques · ② <strong>évaluation</strong> approfondie · ③ élaboration du <strong>plan de soins personnalisé</strong> · ④ <strong>suivi/monitoring</strong> · ⑤ mobilisation des <strong>ressources communautaires/territoriales</strong>.</p>
+</div>
+
+<div class="box tuyau">
+<h3>🎯 TUYAU — 3 besoins de l'aidant proche <span class="freq">≥ 2× (2025, 2024)</span></h3>
+<p>① <strong>Information/formation</strong> (sur la maladie, les aides) · ② <strong>soutien &amp; répit</strong> (prévenir l'épuisement : gardes-malades, centres de jour, court séjour) · ③ <strong>reconnaissance &amp; soutien psychologique/social</strong> (être écouté, associé aux décisions). L'aidant est un acteur incontournable, à risque d'<strong>épuisement</strong>.</p>
+</div>
+
+<p><strong>Soins palliatifs / projet thérapeutique :</strong> <strong>parler de la fin de vie améliore le vécu</strong> de la famille ; les soins palliatifs ne commencent pas seulement « quand le curatif est terminé » (approche précoce/mixte) ; il s'agit d'une <strong>compréhension partagée médecin-patient</strong> (advance care planning, directives anticipées). Devant une demande d'arrêt de vie : écouter, explorer la demande, associer l'équipe et les proches (cadre légal belge).</p>
+
+<!-- ====================================================== -->
+<div class="section-divider">
+<h1>ANNEXE B — Banque de questions d'examen</h1>
+<p>Questions <strong>réelles récurrentes</strong> (compil 2017–2025) et questions <strong>« que le prof pourrait poser »</strong> (inventées dans le même esprit), avec réponses.<br>Entraîne-toi à répondre avant de lire le corrigé vert.</p>
+</div>
+
+<h2>Vieillissement, fragilité, EGS</h2>
+<div class="qblock"><p class="q"><span class="qid">Q1</span> Citez les 5 M de la gériatrie.</p>
+<p class="a"><span class="qid">R1</span> <strong>Mind</strong> · <strong>Mobility</strong> · <strong>Medications</strong> · <strong>Multi-complexity</strong> · <strong>Matters Most</strong>.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q2</span> <em>(inventée)</em> Expliquez le modèle 1+2+3 de Bouchon avec un exemple.</p>
+<p class="a"><span class="qid">R2</span> (1) déclin physiologique du vieillissement, (2) maladie chronique, (3) facteur aigu décompensant. Ex. : DFG qui chute sous le seuil d'insuffisance rénale lors d'une déshydratation (3) chez un diabétique âgé (1+2).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q3</span> Donnez un exemple de chacun des 4 niveaux de prévention.</p>
+<p class="a"><span class="qid">R3</span> Primaire = vaccination ; Secondaire = dépistage (cancer, fragilité) ; Tertiaire = Ca+vit D après fracture/revalidation ; Quaternaire = arrêt des bisphosphonates/statines en fin de vie.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q4</span> Vignette : femme dépendante pour les AVJi, aide-toilette 2×/sem, sténose aortique serrée. Quelle échelle de fragilité, quel grade, pourquoi ?</p>
+<p class="a"><span class="qid">R4</span> <strong>Clinical Frailty Scale (CFS)</strong> — patiente <strong>« modérément fragile » (≈ 6/9)</strong> : aide pour les AVJ instrumentales et une partie des AVJ de base. Justification : échelle validée, pronostique, intégrant fonction + cognition + comorbidité ; adaptée au bilan pré-TAVI.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q5</span> Quels critères de Fried + cotation ?</p>
+<p class="a"><span class="qid">R5</span> Perte de poids, épuisement, faiblesse, lenteur de marche, faible activité physique. 0 = robuste, 1–2 = pré-fragile, ≥ 3 = fragile.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q6</span> Donnez 5 caractéristiques (définition) de l'EGS + 5 de ses dimensions avec le test associé.</p>
+<p class="a"><span class="qid">R6</span> Processus multidimensionnel, interdisciplinaire, → plan de soins individualisé/coordonné, visant fonction &amp; qualité de vie, avec suivi. Dimensions/tests : fonctionnel (Katz/Lawton), locomoteur (TUG), cognitif (MMSE), thymique (GDS), nutritionnel (MNA), médicamenteux (STOPP/START).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q7</span> 3 (ou 4) caractéristiques communes des syndromes gériatriques.</p>
+<p class="a"><span class="qid">R7</span> Fréquents, multifactoriels (FR communs), sévères, sous-diagnostiqués, prévenables/curables, touchant le fragile.</p></div>
+
+<h2>Chutes, delirium, démence, dépression</h2>
+<div class="qblock"><p class="q"><span class="qid">Q8</span> Citez 5 facteurs de risque de chute.</p>
+<p class="a"><span class="qid">R8</span> Antécédent de chute (n° 1), médicaments, troubles de la marche/équilibre, troubles cognitifs, hypotension orthostatique (+ sensoriels, environnement, incontinence d'urgence).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q9</span> Syndrome de désadaptation psychomotrice : 4 signes + 2 formes et leurs différences.</p>
+<p class="a"><span class="qid">R9</span> Rétropulsion du tronc, hypertonie oppositionnelle, agrippement, peur du vide antérieur (+ flexion genoux, appui podal postérieur). Forme <strong>aiguë</strong> (brutale, répond à la kiné, réversible) vs <strong>chronique</strong> (progressive, peu réversible).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q10</span> Citez 5 signes du delirium (majeurs/mineurs).</p>
+<p class="a"><span class="qid">R10</span> Majeurs : début aigu/fluctuant + inattention. Mineurs : pensée désorganisée, altération de la vigilance. Diagnostic = 2 majeurs + ≥ 1 mineur (CAM).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q11</span> <em>(inventée)</em> Quelle est la forme de delirium la plus fréquente et pourquoi est-elle dangereuse ?</p>
+<p class="a"><span class="qid">R11</span> La forme <strong>hypoactive</strong> : la plus fréquente, souvent <strong>non identifiée</strong> (confondue avec une dépression/fatigue), de moins bon pronostic.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q12</span> Quel bilan pour confirmer un TNCM ? (5 étapes)</p>
+<p class="a"><span class="qid">R12</span> Anamnèse + hétéro-anamnèse ; examen clinique + revue médicamenteuse ; tests cognitifs (MMSE/MoCA, neuropsy) ; biologie (TSH, B12, B9, iono, calcémie) ; imagerie cérébrale. Exclure delirium et dépression.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q13</span> Citez les 5 fonctions cognitives.</p>
+<p class="a"><span class="qid">R13</span> Mémoire, attention, langage, fonctions exécutives, fonctions perceptivo-motrices/visuo-spatiales (+ cognition sociale).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q14</span> <em>(inventée)</em> Devant des hallucinations visuelles chez un parkinsonien dément, quel médicament faut-il éviter et pourquoi ?</p>
+<p class="a"><span class="qid">R14</span> Les <strong>neuroleptiques classiques</strong> : hypersensibilité dans la <strong>démence à corps de Lewy</strong> (risque de syndrome malin, aggravation). Privilégier la recherche/correction des causes et le non pharmacologique.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q15</span> 6 particularités de la dépression de la PA.</p>
+<p class="a"><span class="qid">R15</span> Présentation atypique/masquée, masque cognitif (pseudo-démence), risque suicidaire létal, sous-diagnostic, ISRS « start low go slow » à délai long, prudence anticholinergique.</p></div>
+
+<h2>Nutrition, élimination, hydro-salin, infections, os</h2>
+<div class="qblock"><p class="q"><span class="qid">Q16</span> Les 3 « piliers » du diagnostic de dénutrition.</p>
+<p class="a"><span class="qid">R16</span> Perte de poids ; IMC bas ; ↓ masse/force musculaire (+ critère étiologique : ↓ apports ou inflammation). GLIM = ≥ 1 phénotypique + ≥ 1 étiologique.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q17</span> <em>(inventée)</em> Pourquoi un syndrome de renutrition peut-il survenir malgré une biologie normale, et quelle vitamine donner avant de renourrir ?</p>
+<p class="a"><span class="qid">R17</span> Les stocks intracellulaires (P, K, Mg) sont vides malgré une biologie sanguine normale ; la renutrition glucidique provoque leur transfert intracellulaire (hypophosphatémie). Donner la <strong>thiamine (B1) AVANT</strong> (prévention de l'encéphalopathie de Wernicke).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q18</span> Incontinence : 3 premières étapes du bilan.</p>
+<p class="a"><span class="qid">R18</span> Anamnèse (+ calendrier mictionnel 48–72 h), examen clinique/fonctionnel (TR/TV), analyse d'urines + bladder-scan (résidu).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q19</span> 5 causes d'incontinence transitoire (mnémo).</p>
+<p class="a"><span class="qid">R19</span> DIAPPERS : Delirium, Infection, Atrophie, Pharmacie, Psychologique, Excès de diurèse, Restriction de mobilité, Stase stercorale (fécalome).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q20</span> Bio : Na 154, urée 80, acide urique 10, créat 1,2. Diagnostic + 3 points du traitement.</p>
+<p class="a"><span class="qid">R20</span> Déshydratation hypernatrémique (déficit en eau pure). Réhydrater (eau po / G5 % IV), <strong>lentement</strong> (≤ ~1 L/12 h, ↓ Na &lt; 10 mmol/L/24 h), traiter la cause + surveiller iono/diurèse.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q21</span> Femme en MRS, urines troubles, 10⁵ Klebsiella + leucocytes, asymptomatique. Faut-il traiter ?</p>
+<p class="a"><span class="qid">R21</span> <strong>Non</strong> : bactériurie asymptomatique → pas d'antibiotique (sauf avant geste urologique invasif). Traiter seulement si symptômes.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q22</span> Ostéoporose (T −3) : 2 médicaments + 3 conseils de prise du bisphosphonate oral.</p>
+<p class="a"><span class="qid">R22</span> Bisphosphonate + calcium/vitamine D. Conseils : à jeun avec grand verre d'eau, rester debout ≥ 30 min, bilan dentaire (ostéonécrose).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q23</span> <em>(inventée)</em> Fracture du col : trait complet, coxa vara, déplacée → classification ?</p>
+<p class="a"><span class="qid">R23</span> Garden <strong>III–IV</strong> (complète déplacée).</p></div>
+
+<h2>Cardio, USI, médicaments, éthique</h2>
+<div class="qblock"><p class="q"><span class="qid">Q24</span> Chute avec perte de connaissance 45 min après le repas, sous anti-HTA : cause la plus probable + 4 autres causes de syncope.</p>
+<p class="a"><span class="qid">R24</span> <strong>HO post-prandiale</strong>. Autres : médicamenteuse, arythmie/cardiaque, vaso-vagale, neuro/indéterminée.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q25</span> 3 conséquences d'une IC à FE préservée chez la PA.</p>
+<p class="a"><span class="qid">R25</span> Mauvaise tolérance de la FA, de la tachycardie, des poussées de TA.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q26</span> <em>(inventée)</em> Quel antalgique/anti-inflammatoire peut précipiter une décompensation cardiaque ?</p>
+<p class="a"><span class="qid">R26</span> Les <strong>AINS</strong> (ex. diclofénac) : rétention hydrosodée + néphrotoxicité.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q27</span> 3 critères d'admission d'une PA en USI + 2 questions à se poser.</p>
+<p class="a"><span class="qid">R27</span> Instabilité hémodynamique, détresse respiratoire, bénéfice médical. Questions : peut-on améliorer/assurer la qualité de vie après ? a-t-il une chance raisonnable de récupérer ? (l'âge seul n'est pas un critère).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q28</span> Identifiez la cascade : incontinence traitée par oxybutynine, puis donépézil. Que déprescrire en priorité, comment, alternative ?</p>
+<p class="a"><span class="qid">R28</span> Cascade anticholinergique (oxybutynine) → aggravation cognitive → donépézil (antagonisme). Déprescrire l'<strong>oxybutynine</strong> (sevrage progressif) ; alternative : mirabégron ou mictions programmées/rééducation.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q29</span> 4 mots-clés de la conciliation médicamenteuse ; lequel est le plus important ?</p>
+<p class="a"><span class="qid">R29</span> Comparer, Identifier, Décider, <strong>Communiquer</strong> (le plus important : transmettre la liste réconciliée évite les erreurs aux transitions).</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q30</span> Que regarde-t-on pour apprécier la capacité de discernement (acronyme) ? Un patient Alzheimer en est-il forcément privé ?</p>
+<p class="a"><span class="qid">R30</span> <strong>CARE</strong> : Compréhension, Appréciation, Raisonnement, Expression. Non : le discernement s'évalue par décision, de façon graduée — un Alzheimer léger/modéré peut décider pour des choix simples.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q31</span> 3 besoins de l'aidant proche.</p>
+<p class="a"><span class="qid">R31</span> Information/formation ; soutien &amp; répit (anti-épuisement) ; reconnaissance &amp; soutien psycho-social.</p></div>
+<div class="qblock"><p class="q"><span class="qid">Q32</span> Les 5 étapes d'ICOPE.</p>
+<p class="a"><span class="qid">R32</span> Dépistage → évaluation → plan de soins personnalisé → suivi → ressources communautaires.</p></div>
+
+<p class="small" style="margin-top:22px; text-align:center;">Synthèse réalisée à partir des supports WMDS2238 (UCLouvain / Cliniques universitaires Saint-Luc) et vérifiée contre la compilation d'examens 2017–2025. Document de révision — confirme toujours les seuils litigieux sur les diapositives originales. Les corrigés s'appuient sur les réponses-types de la compil et les recommandations gériatriques standard.</p>
+
+</body>
+</html>
+
