@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gériatrie — Entraînement QROC (rapide)</title>
+<style>
+  :root{
+    --bg:#0d3b66; --bg2:#1b5e8c; --accent:#2a7fb5; --gold:#e8a100;
+    --ok:#13693b; --okbg:#eefaf1; --mid:#9a6b00; --midbg:#fffbe6;
+    --ink:#10212e; --muted:#5a6b7b; --line:#d4dde6; --card:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; font-family:"Segoe UI","Calibri",system-ui,Arial,sans-serif; color:var(--ink); background:#eef3f7; line-height:1.55;}
+  .topbar{background:linear-gradient(120deg,var(--bg),var(--accent)); color:#fff; padding:12px 18px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; box-shadow:0 2px 8px rgba(0,0,0,.18);}
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand .logo{font-size:23px;}
+  .brand h1{font-size:17px; margin:0; font-weight:700;}
+  .topbar .stats{font-size:13px; opacity:.95;}
+  .container{max-width:760px; margin:22px auto; padding:0 16px;}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px; margin-bottom:20px; box-shadow:0 4px 18px rgba(13,59,102,.07);}
+  .hidden{display:none !important;}
+  h2{color:var(--bg); margin:0 0 10px; font-size:21px;}
+  .lead{font-size:15px;} .muted{color:var(--muted); font-size:13.5px;}
+  .field{margin:15px 0;}
+  label{display:block; font-weight:600; margin-bottom:6px; font-size:14px; color:var(--bg2);}
+  select, textarea{width:100%; padding:11px 13px; border:1.5px solid var(--line); border-radius:10px; font-size:15px; font-family:inherit; background:#fafcfe;}
+  textarea{min-height:80px; resize:vertical;}
+  select:focus, textarea:focus{outline:none; border-color:var(--accent); background:#fff; box-shadow:0 0 0 3px rgba(42,127,181,.15);}
+  .check{display:flex; align-items:center; gap:8px; font-weight:500; cursor:pointer; margin-top:8px;}
+  .check input{width:auto;}
+  .btn{appearance:none; border:none; border-radius:10px; padding:11px 18px; font-size:15px; font-weight:600; cursor:pointer; background:#e7eef4; color:var(--bg); transition:.12s; font-family:inherit;}
+  .btn:hover{filter:brightness(.97);}
+  .btn.primary{background:var(--bg); color:#fff;} .btn.primary:hover{background:var(--bg2);}
+  .btn.big{width:100%; padding:14px; font-size:16px; margin-top:10px;}
+  .pill{display:inline-block; background:#eaf2f8; color:var(--bg2); border-radius:20px; padding:2px 11px; font-size:12px; font-weight:600;}
+  .star-pill{background:#fff3cf; color:var(--mid);}
+  .quiz-head{display:flex; align-items:center; gap:12px; margin-bottom:14px;}
+  .progress{flex:1; height:9px; background:#e3ebf1; border-radius:6px; overflow:hidden;}
+  .progress-bar{height:100%; width:0; background:linear-gradient(90deg,var(--accent),var(--gold)); transition:width .2s;}
+  .q-counter{font-size:13px; color:var(--muted); white-space:nowrap; font-weight:600;}
+  .q-theme{margin-bottom:6px;}
+  .question{font-size:19px; font-weight:700; margin:6px 0 12px; line-height:1.4;}
+  .reveal{margin-top:12px; border-radius:12px; border:1px solid #aee0c0; background:var(--okbg); padding:14px 16px; animation:fade .15s ease;}
+  .reveal h3{margin:0 0 8px; font-size:12.5px; text-transform:uppercase; letter-spacing:.5px; color:var(--ok);}
+  .answer-text{white-space:pre-wrap; font-size:15px; line-height:1.6;}
+  @keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;}}
+  .grade-row{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;}
+  .gbtn{flex:1; min-width:120px; border:1.5px solid var(--line); background:#fff; border-radius:10px; padding:12px 10px; cursor:pointer; font-size:15px; font-weight:700; font-family:inherit; display:flex; flex-direction:column; align-items:center; gap:2px; transition:.12s;}
+  .gbtn .kbd{font-size:11px; font-weight:600; opacity:.7;}
+  .gbtn.g2{color:var(--ok); border-color:#aee0c0;} .gbtn.g2:hover{background:var(--okbg);}
+  .gbtn.g1{color:var(--mid); border-color:#e8c84d;} .gbtn.g1:hover{background:var(--midbg);}
+  .gbtn.g0{color:#b3300c; border-color:#f3c39c;} .gbtn.g0:hover{background:#fff4ec;}
+  .hint{font-size:12.5px; color:var(--muted); margin-top:10px; text-align:center;}
+  .hint kbd{background:#e3ebf1; border-radius:4px; padding:1px 6px; font-family:Consolas,monospace; font-size:12px;}
+  .quiz-actions{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;}
+  .score-circle{width:140px; height:140px; border-radius:50%; margin:10px auto 16px; display:flex; align-items:center; justify-content:center; background:conic-gradient(var(--accent) var(--pct,0%), #e3ebf1 0);}
+  .score-circle .inner{width:108px; height:108px; border-radius:50%; background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center;}
+  .score-circle .pts{font-size:30px; font-weight:800; color:var(--bg);} .score-circle .lbl{font-size:12px; color:var(--muted);}
+  .review-item{border-bottom:1px solid var(--line); padding:11px 0;}
+  .review-item .ra{white-space:pre-wrap; color:var(--muted); font-size:14px; margin-top:4px;}
+  .tag{display:inline-block; border-radius:6px; padding:1px 8px; font-size:12px; font-weight:700; margin-right:6px;}
+  .tag.t2{background:var(--okbg); color:var(--ok);} .tag.t1{background:var(--midbg); color:var(--mid);} .tag.t0{background:#fff4ec; color:#b3300c;}
+  .foot{text-align:center; color:var(--muted); font-size:12.5px; padding:18px; line-height:1.7;} .foot a{color:var(--bg2);}
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">🧠</span><h1>Gériatrie — QROC</h1></div>
+    <div class="stats" id="topstats"></div>
+  </header>
+
+  <main class="container">
+
+    <section id="screen-start" class="card">
+      <h2>Entraînement QROC — mode rapide</h2>
+      <p class="lead">Une question s'affiche, tu réponds, tu valides et tu passes à la suivante en 1 geste.</p>
+      <p class="hint" style="text-align:left;"><kbd>Entrée</kbd> révèle le corrigé · puis <kbd>1</kbd> Faux · <kbd>2</kbd> Proche · <kbd>3</kbd> Juste (enregistre + question suivante). ⭐ = déjà tombé.</p>
+      <div class="field">
+        <label for="theme-select">Thème</label>
+        <select id="theme-select"></select>
+      </div>
+      <div class="field">
+        <label for="count-select">Nombre de questions</label>
+        <select id="count-select">
+          <option value="10">10</option>
+          <option value="20" selected>20 (format examen)</option>
+          <option value="40">40</option>
+          <option value="0">Toutes</option>
+        </select>
+      </div>
+      <label class="check"><input type="checkbox" id="shuffle-check" checked /> Mélanger les questions</label>
+      <label class="check"><input type="checkbox" id="star-check" /> ⭐ Uniquement les questions déjà tombées</label>
+      <button class="btn primary big" id="btn-start">Commencer</button>
+      <p class="muted" id="bank-info" style="margin-top:12px;"></p>
+    </section>
+
+    <section id="screen-quiz" class="card hidden">
+      <div class="quiz-head">
+        <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+        <span class="q-counter" id="q-counter"></span>
+      </div>
+      <div class="q-theme"><span class="pill" id="q-theme"></span> <span class="pill star-pill hidden" id="q-star">⭐ déjà tombé</span></div>
+      <div class="question" id="q-text"></div>
+      <textarea id="ans-input" placeholder="Ta réponse… (Entrée pour révéler · Maj+Entrée = saut de ligne)" autocomplete="off"></textarea>
+
+      <div class="reveal hidden" id="reveal">
+        <h3>✅ Corrigé</h3>
+        <div class="answer-text" id="sol-text"></div>
+        <div class="grade-row">
+          <button class="gbtn g0" data-pts="0">✗ Faux<span class="kbd">touche 1</span></button>
+          <button class="gbtn g1" data-pts="1">~ Proche<span class="kbd">touche 2</span></button>
+          <button class="gbtn g2" data-pts="2">✔ Juste<span class="kbd">touche 3</span></button>
+        </div>
+      </div>
+
+      <div class="quiz-actions">
+        <button class="btn primary" id="btn-reveal">Révéler le corrigé (Entrée)</button>
+        <button class="btn" id="btn-skip">Passer</button>
+        <button class="btn" id="btn-quit" style="margin-left:auto;">Terminer</button>
+      </div>
+    </section>
+
+    <section id="screen-result" class="card hidden">
+      <h2>Résultat</h2>
+      <div class="score-circle" id="score-circle"><div class="inner"><span class="pts" id="score-pts"></span><span class="lbl">de réussite</span></div></div>
+      <p class="lead" id="score-text" style="text-align:center;"></p>
+      <button class="btn primary big" id="btn-restart">Recommencer</button>
+      <div id="review" style="margin-top:20px;"></div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    Banque QROC d'après <em>listes-qroc-geriatrie</em> (WMDS2238, UCLouvain / Saint-Luc) · usage d'étude personnelle ·
+    <a href="../synthese-geria/">Voir la synthèse complète →</a>
+  </footer>
+
+  <script src="qroc-data.js"></script>
+  <script>
+  (function(){
+    var $=function(id){return document.getElementById(id);};
+    var sStart=$("screen-start"), sQuiz=$("screen-quiz"), sRes=$("screen-result");
+    var pool=[], idx=0, score=0, maxScore=0, results=[], revealed=false;
+
+    var sections=[];
+    (typeof QROC!=="undefined"?QROC:[]).forEach(function(it){ if(sections.indexOf(it.s)===-1) sections.push(it.s); });
+    var sel=$("theme-select");
+    var o0=document.createElement("option"); o0.value="__all__"; o0.textContent="Toutes les questions ("+(QROC?QROC.length:0)+")"; sel.appendChild(o0);
+    sections.forEach(function(s){ var n=QROC.filter(function(x){return x.s===s;}).length; var o=document.createElement("option"); o.value=s; o.textContent=s+"  ("+n+")"; sel.appendChild(o); });
+    $("topstats").textContent=(QROC?QROC.length:0)+" questions · "+sections.length+" thèmes";
+    $("bank-info").textContent="Banque : "+(QROC?QROC.length:0)+" questions, "+sections.length+" thèmes.";
+
+    function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+
+    function start(){
+      var theme=sel.value, onlyStar=$("star-check").checked;
+      pool=QROC.filter(function(x){ if(theme!=="__all__"&&x.s!==theme) return false; if(onlyStar&&!x.star) return false; return true; });
+      if($("shuffle-check").checked) shuffle(pool);
+      var cnt=parseInt($("count-select").value,10); if(cnt>0) pool=pool.slice(0,cnt);
+      if(pool.length===0){ alert("Aucune question pour ce filtre."); return; }
+      idx=0; score=0; maxScore=0; results=[];
+      sStart.classList.add("hidden"); sRes.classList.add("hidden"); sQuiz.classList.remove("hidden");
+      render();
+    }
+
+    function render(){
+      var it=pool[idx]; revealed=false;
+      $("progress-bar").style.width=(idx/pool.length*100)+"%";
+      $("q-counter").textContent=(idx+1)+" / "+pool.length;
+      $("q-theme").textContent=it.s;
+      $("q-star").classList.toggle("hidden", !it.star);
+      $("q-text").textContent=it.q+" ?";
+      $("ans-input").value=""; $("sol-text").textContent=it.a;
+      $("reveal").classList.add("hidden");
+      $("btn-reveal").classList.remove("hidden");
+      window.scrollTo({top:0,behavior:"smooth"});
+      setTimeout(function(){ $("ans-input").focus(); },50);
+    }
+
+    function reveal(){ if(revealed) return; revealed=true; $("reveal").classList.remove("hidden"); $("btn-reveal").classList.add("hidden"); $("ans-input").blur(); }
+
+    function grade(pts){
+      if(!revealed) return;
+      score+=pts; maxScore+=2;
+      results.push({q:pool[idx].q, a:pool[idx].a, pts:pts});
+      if(idx<pool.length-1){ idx++; render(); } else finish();
+    }
+    function skip(){ // passer sans noter
+      results.push({q:pool[idx].q, a:pool[idx].a, pts:0}); maxScore+=2;
+      if(idx<pool.length-1){ idx++; render(); } else finish();
+    }
+
+    function finish(){
+      sQuiz.classList.add("hidden"); sRes.classList.remove("hidden");
+      var pct=maxScore>0?Math.round(score/maxScore*100):0;
+      $("score-circle").style.setProperty("--pct",pct+"%");
+      $("score-pts").textContent=pct+"%";
+      var nJ=results.filter(function(r){return r.pts===2;}).length;
+      var nP=results.filter(function(r){return r.pts===1;}).length;
+      var nF=results.filter(function(r){return r.pts===0;}).length;
+      $("score-text").innerHTML="<strong>"+nJ+"</strong> juste · <strong>"+nP+"</strong> proche · <strong>"+nF+"</strong> faux<br><span class='muted'>sur "+results.length+" questions</span>";
+      var rev=$("review"); rev.innerHTML="<h2 style='font-size:17px;'>Revue (revois surtout les faux)</h2>";
+      results.forEach(function(r){
+        var tag=r.pts===2?"<span class='tag t2'>Juste</span>":(r.pts===1?"<span class='tag t1'>Proche</span>":"<span class='tag t0'>À revoir</span>");
+        var d=document.createElement("div"); d.className="review-item";
+        d.innerHTML="<div>"+tag+"<strong>"+esc(r.q)+" ?</strong></div><div class='ra'>"+esc(r.a)+"</div>";
+        rev.appendChild(d);
+      });
+      window.scrollTo({top:0,behavior:"smooth"});
+    }
+    function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+    // events
+    $("btn-start").addEventListener("click",start);
+    $("btn-reveal").addEventListener("click",reveal);
+    $("btn-skip").addEventListener("click",skip);
+    $("btn-quit").addEventListener("click",finish);
+    $("btn-restart").addEventListener("click",function(){ sRes.classList.add("hidden"); sStart.classList.remove("hidden"); window.scrollTo({top:0}); });
+    Array.prototype.forEach.call(document.querySelectorAll(".gbtn"),function(b){ b.addEventListener("click",function(){ grade(parseInt(b.getAttribute("data-pts"),10)); }); });
+
+    // Entrée dans le textarea = révéler (Maj+Entrée = saut de ligne)
+    $("ans-input").addEventListener("keydown",function(e){
+      if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); reveal(); }
+    });
+    // Raccourcis globaux
+    document.addEventListener("keydown",function(e){
+      if(sQuiz.classList.contains("hidden")) return;
+      if(!revealed){
+        if(e.key==="Enter" && document.activeElement!==$("ans-input")){ e.preventDefault(); reveal(); }
+        return;
+      }
+      if(e.key==="1"){ e.preventDefault(); grade(0); }
+      else if(e.key==="2"){ e.preventDefault(); grade(1); }
+      else if(e.key==="3"||e.key==="Enter"){ e.preventDefault(); grade(2); }
+    });
+  })();
+  </script>
+</body>
+</html>
