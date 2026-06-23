@@ -1,7 +1,8 @@
 /* ============================================================
-   Médecine Générale (WMDS 2257) — Banque de QCM
-   Format examen : 4 propositions, 1 seule réponse correcte.
-   Source : synthèses de cours 2025-2026 + anciens examens 2016-2025.
+   Médecine Générale (WMDS 2257) — Banque de QCM (niveau examen difficile)
+   Format : 4 propositions plausibles, 1 seule réponse correcte.
+   Conçu pour piéger : chiffres proches, faits vrais mais hors-sujet,
+   négations, vignettes cliniques.
    ============================================================ */
 const MEGE_CHAPTERS = [
   { id: "assuetudes", nom: "Assuétudes : quel accompagnement ?", icone: "🫂" },
@@ -20,1982 +21,1899 @@ function Q(chapitre, question, options, correcte, explication) {
   MEGE_QUESTIONS.push({ c: chapitre, q: question, o: options, a: correcte, e: explication });
 }
 
-// ========== ASSUÉTUDES (WMDS 2257 — D. Lamy) ==========
+// ========== ASSUÉTUDES — niveau difficile ==========
 Q("assuetudes",
- "Une substance psychoactive est définie comme :",
- ["Une substance qui altère les processus mentaux (cognition, affect) une fois ingérée ou administrée",
-  "Une substance qui crée systématiquement une dépendance physique",
-  "Une substance uniquement d'origine illicite",
-  "Une substance qui agit exclusivement sur le système nerveux périphérique"],
- 0,
- "Substance psychoactive = substance qui, ingérée/administrée, altère les processus mentaux (fonctions cognitives, affect). La dépendance n'est pas systématique.");
+ "Parmi ces déterminants de la qualité de l'accompagnement, lequel le cours désigne comme le facteur dont dépend AVANT TOUT le résultat thérapeutique ?",
+ ["La technique utilisée par le soignant",
+  "La qualité de la relation et les facteurs extra-thérapeutiques",
+  "Le type de substance consommée",
+  "La sévérité de la dépendance à l'inclusion"],
+ 1,
+ "Le cours insiste : la qualité de l'accompagnement dépend d'abord de la qualité de la relation et des facteurs extra-thérapeutiques (puis des attentes/motivations, et enfin de la technique). La technique vient en dernier.");
 
 Q("assuetudes",
- "Selon la classification présentée (Drugs Wheel / Snider), comment classer le cannabis ?",
- ["Dépresseur", "Stimulant", "Perturbateur / hallucinogène", "Opioïde"],
+ "Une patiente de 52 ans (douleurs épigastriques, γ-GT élevées) revient pour la 1re fois aborder sa consommation d'alcool. Parmi ces attitudes, laquelle est À PROSCRIRE car elle nuit au lien ?",
+ ["Quantifier la consommation et restituer les résultats",
+  "Mettre en avant les qualités d'une vie sans alcool",
+  "Adopter une écoute active sans jugement",
+  "Reconnaître l'ambivalence de la patiente"],
+ 1,
+ "Pièges de 1re consultation : vanter la vie sans substance et proposer d'emblée une analyse d'urines compliquent le lien. Quantifier/restituer, l'écoute active et le respect de l'ambivalence sont, eux, recommandés.");
+
+Q("assuetudes",
+ "Le triangle d'Olivenstein (Produit – Individu – Environnement) est présenté comme un outil de toutes ces fonctions SAUF une. Laquelle ?",
+ ["Prévention", "Dépistage", "Réduction des risques infectieux", "Diagnostic et consultation"],
  2,
- "Les 3 grandes catégories : dépresseurs (alcool, opioïdes, BZD), stimulants (cocaïne, amphétamines, nicotine, caféine) et perturbateurs/hallucinogènes (cannabis, LSD).");
+ "Olivenstein est un outil de prévention, dépistage, diagnostic et consultation. La réduction des risques est un cadre distinct (prévention des dommages liés à l'usage), pas une fonction du triangle.");
 
 Q("assuetudes",
- "Parmi ces substances, laquelle est un STIMULANT ?",
- ["Alcool", "Benzodiazépine", "Nicotine", "Héroïne"],
- 2,
- "Stimulants : cocaïne, amphétamines, nicotine, caféine. Alcool, BZD et opioïdes (héroïne) sont des dépresseurs.");
+ "Concernant l'imprégnation et le manque aux opioïdes, quelle association signe-pupille est CORRECTE ?",
+ ["Imprégnation → mydriase ; manque → myosis",
+  "Imprégnation → myosis ; manque → mydriase",
+  "Imprégnation et manque → myosis",
+  "Imprégnation et manque → mydriase"],
+ 1,
+ "Imprégnation opioïde = myosis (+ « pique du nez », ↓ FR). Manque = mydriase (+ agitation, « tout coule »). C'est l'inversion myosis/mydriase qui est piégée.");
 
 Q("assuetudes",
- "Quelle voie de consommation impose un passage hépatique (cytochrome P450) avant d'atteindre la circulation ?",
- ["Voie injectable (IV)", "Voie respiratoire (inhalation)", "Voie orale (ingestion)", "Voie nasale"],
- 2,
- "La voie orale impose le premier passage hépatique. L'inhalation et l'IV donnent un effet rapide en contournant le foie.");
+ "Dans le modèle des stades de changement (Prochaska & Di Clemente), un patient qui reconnaît un problème mais hésite encore à agir se situe au stade de :",
+ ["Précontemplation", "Contemplation", "Action", "Maintien"],
+ 1,
+ "Contemplation = le patient envisage le changement mais reste ambivalent (≠ précontemplation, où le problème n'est pas reconnu ; ≠ action, où il modifie son comportement).");
 
 Q("assuetudes",
- "Le triangle d'Olivenstein décrit l'interaction de trois pôles. Lesquels ?",
- ["Produit – Individu – Environnement",
-  "Médecin – Patient – Famille",
-  "Tolérance – Dépendance – Sevrage",
-  "Bio – Psycho – Social uniquement"],
- 0,
- "Triangle d'Olivenstein : Produit, Individu, Environnement (contexte socio-familial). Outil de prévention, dépistage, diagnostic et consultation.");
-
-Q("assuetudes",
- "Le cycle de Prochaska et Di Clemente comporte les stades suivants, SAUF :",
- ["Précontemplation", "Contemplation", "Stabilisation définitive sans rechute possible", "Action et maintien"],
- 2,
- "Les stades : précontemplation, contemplation, décision, action, maintien, rechute. La rechute fait partie du processus — il n'y a pas de 'stabilisation définitive sans rechute'.");
-
-Q("assuetudes",
- "Quelles sont les 3 attitudes fondamentales de la relation d'aide selon Carl Rogers ?",
- ["Empathie, regard positif inconditionnel, congruence",
-  "Autorité, distance, neutralité",
-  "Diagnostic, traitement, suivi",
-  "Écoute, confrontation, persuasion"],
- 0,
- "Carl Rogers : empathie, regard positif inconditionnel, congruence.");
-
-Q("assuetudes",
- "Concernant le langage utilisé avec un patient, quelle attitude est RECOMMANDÉE ?",
- ["Utiliser des mots comme « tox » ou « alcoolique » pour être direct",
-  "Utiliser un langage centré sur la personne (« personne avec un trouble de l'usage de substances »)",
-  "Éviter toute terminologie diagnostique",
-  "Adapter son vocabulaire uniquement en milieu spécialisé"],
- 1,
- "Bannir les mots stigmatisants (tox, junkie, alcoolique, bourré). Privilégier un langage centré sur la personne : le langage est un déterminant majeur du lien.");
-
-Q("assuetudes",
- "L'intervention brève (RPIB) selon l'OMS :",
- ["Dure 1 à 2 heures et nécessite un cadre spécialisé",
-  "Dure 5 à 20 min, suit le repérage d'un usage problématique et peut être répétée",
-  "Remplace l'entretien motivationnel",
-  "Ne s'adresse qu'aux patients dépendants"],
- 1,
- "L'intervention brève dure 5 à 20 min, suit le repérage, repose sur l'empathie, peut être répétée. L'OMS définit 4 étapes (modèle FRAMES).");
-
-Q("assuetudes",
- "Dans l'entretien motivationnel, quelle affirmation est correcte ?",
- ["Le praticien dirige et impose les objectifs",
-  "Le praticien guide plus qu'il ne dirige ; c'est le patient qui décide",
-  "On ne tient pas compte du stade de changement",
-  "Il vise à augmenter l'ambivalence du patient"],
- 1,
- "Entretien motivationnel : le praticien guide plus qu'il ne dirige, danse plus qu'il ne lutte, écoute plus qu'il ne parle. C'est le patient qui décide. Il réduit l'ambivalence.");
-
-Q("assuetudes",
- "Parmi ces éléments, lequel est le MOINS important pour la relation thérapeutique ?",
- ["Les mots utilisés", "L'entretien motivationnel", "Évaluer les doses consommées", "Le triangle d'Olivenstein"],
- 2,
- "Piège classique : « évaluer les doses » est le moins important pour le LIEN. Les mots, l'entretien motivationnel, Olivenstein et le cercle de Di Clemente sont, eux, importants pour la relation.");
-
-Q("assuetudes",
- "Lors d'une 1re consultation, quelle attitude COMPLIQUE l'établissement du lien ?",
- ["Aborder le sujet sans jugement",
-  "Proposer d'emblée une analyse d'urines",
-  "Écouter activement",
-  "Restituer les résultats du repérage"],
- 1,
- "À éviter en 1re consultation : proposer d'emblée une analyse d'urines et mettre en avant les qualités de la vie sans substance. Cela complique le lien.");
-
-Q("assuetudes",
- "Concernant le lien thérapeutique, quelle action est À ÉVITER ?",
- ["Réorienter en gardant le lien et le suivi",
-  "Référer directement en milieu spécialisé sans maintien du suivi",
-  "Pratiquer l'écoute active",
-  "Utiliser l'entretien motivationnel"],
- 1,
- "Référer directement en milieu spécialisé (en se déchargeant) est à éviter : il faut garder le lien, rester en 1re ligne et réorienter en maintenant le suivi.");
-
-Q("assuetudes",
- "Signes d'IMPRÉGNATION aux opioïdes :",
- ["Mydriase, agitation, « tout coule »",
-  "Myosis, « pique du nez », diminution de la fréquence respiratoire",
-  "Tachycardie, hypertension, sueurs",
-  "Tremblements, hallucinations, convulsions"],
- 1,
- "Imprégnation opioïde : myosis (pupille en pointe), « pique du nez », baisse de la fréquence respiratoire. Le MANQUE (sevrage) donne mydriase, agitation, « tout coule ».");
-
-Q("assuetudes",
- "La réduction des risques (RdR) s'adresse à :",
- ["Uniquement aux patients dépendants",
-  "Uniquement aux usagers en sevrage",
-  "Tous les usagers (expérimentaux, récréatifs, ponctuels, abusifs ou dépendants)",
-  "Uniquement aux usagers de drogues injectables"],
- 2,
- "La RdR s'adresse à TOUS les usagers, sans tabou ni jugement. Elle est complémentaire de la prévention de l'usage.");
-
-Q("assuetudes",
- "Après une prise de risque, jusqu'à quand conseille-t-on un dépistage (fenêtre sérologique) ?",
- ["Jusqu'à 24 h après", "Jusqu'à 1 semaine après", "Jusqu'à 3 mois après", "Jusqu'à 1 an après"],
- 2,
- "Conseil de RdR : se faire dépister jusqu'à 3 mois après une prise de risque (fenêtre sérologique).");
-
-Q("assuetudes",
- "La métaphore de l'Himalaya illustre le sevrage. Que signifie-t-elle concernant la rechute ?",
- ["La rechute signe l'échec définitif du projet",
-  "La chute fait partie du projet (camps de base sécurisés, anticiper les rechutes)",
-  "Il faut éviter toute préparation",
-  "Le sevrage doit être immédiat et total"],
- 1,
- "Métaphore de l'Himalaya : préparation, montée pas à pas, la chute fait partie du projet, camps de base sécurisés (cure), dernière ascension (anticiper les rechutes).");
-
-Q("assuetudes",
- "L'alliance thérapeutique repose sur un accord portant sur :",
- ["Le seul respect des horaires de consultation",
-  "Un lien de confiance, la compréhension du problème, les objectifs et les modalités",
-  "La prescription d'un traitement de substitution uniquement",
-  "Le contrôle régulier des analyses biologiques"],
- 1,
- "Alliance thérapeutique = accord sur un lien de confiance/respect, la compréhension du problème, les objectifs et les modalités pour y arriver. Fil conducteur à entretenir.");
-
-Q("assuetudes",
- "Le « cadre de travail » dans l'accompagnement :",
- ["Vise uniquement à sanctionner le patient",
-  "Est un espace qui protège le patient ET le soignant (le refus structurant permet la rencontre)",
-  "Interdit tout suivi psycho-social",
-  "Doit fixer des objectifs maximalistes"],
- 1,
- "Le cadre de travail protège patient et soignant (règles, mode de délivrance du R/, suivi psycho-social, objectifs réalistes, secret médical). Le refus structurant permet la rencontre plutôt que la répétition.");
-
-Q("assuetudes",
- "Quand débuter la détection précoce d'une assuétude ?",
- ["Seulement quand le patient se plaint",
-  "Au moins 1×/an, sans attendre les signes d'appel",
-  "Uniquement chez les patients à risque connu",
-  "Jamais en salle d'attente, c'est inapproprié"],
- 1,
- "Détection précoce : au moins 1×/an, sans attendre les signes d'appel, systématiquement dans certaines situations. On peut aborder le sujet dès la salle d'attente, sans tabou.");
-
-Q("assuetudes",
- "Quel outil est cité pour le repérage d'un usage problématique d'alcool ?",
- ["Score de Glasgow", "Questionnaire AUDIT et notion de verre standard", "Échelle de Tinetti", "Score FARES"],
- 1,
- "Outils de détection : verre standard, questionnaire AUDIT, triangle d'Olivenstein, brochures.");
-
-Q("assuetudes",
- "Dans le cas « J'ai mal à l'estomac » (femme 52 ans, vomissements de sang, γ-GT élevées), que suspecter ?",
- ["Une infection à H. pylori isolée",
-  "Une consommation excessive d'alcool (support de l'entretien motivationnel)",
-  "Un cancer gastrique d'emblée",
-  "Une intoxication aux opioïdes"],
- 1,
- "Cas du cours : γ-GT élevées + vomissements de sang → suspicion de consommation excessive d'alcool, point de départ d'un entretien motivationnel.");
-
-Q("assuetudes",
- "Concernant les 4 étapes de l'intervention brève (OMS/FRAMES), laquelle est exacte ?",
- ["Restituer les résultats, informer, conseiller, encourager",
-  "Diagnostiquer, traiter, référer, clore",
-  "Sevrer, substituer, hospitaliser, suivre",
-  "Interdire, contrôler, sanctionner, surveiller"],
- 0,
- "Les 4 étapes : Restituer les résultats (quantifier, expliquer), Informer (risque, verre standard), Conseiller (limites, objectif de changement), Encourager (soutien, garder le lien, suivi).");
-
-Q("assuetudes",
- "Le travail en réseau dans l'accompagnement des assuétudes :",
- ["Vise à se débarrasser du patient",
-  "Repose sur l'interdépendance et la valeur ajoutée collective, en gardant le lien",
-  "Exclut la 1re ligne",
-  "Est réservé aux cas d'overdose"],
- 1,
- "Travail en réseau : interdépendance, valeur ajoutée collective. Réorienter oui, mais en gardant le lien et le suivi.");
-
-// ========== COLLABORATION MÉDECIN–PHARMACIEN (D. Lamy & M. Roucour) ==========
-Q("pharmacien",
- "Les « soins pharmaceutiques » désignent :",
- ["La simple délivrance du médicament prescrit",
-  "L'ensemble des conseils du pharmacien pour un usage effectif, sûr et efficace du médicament, afin de maintenir/améliorer la qualité de vie",
-  "La fabrication industrielle des médicaments",
-  "Le contrôle de la prescription par le médecin conseil"],
- 1,
- "Soins pharmaceutiques = conseils pour que le patient prenne ses médicaments de manière effective, sûre et efficace, afin de conserver/améliorer sa qualité de vie.");
-
-Q("pharmacien",
- "En quelle année la rémunération du pharmacien (médicaments remboursés) a-t-elle été dissociée du prix du médicament ?",
- ["2006", "2009", "2010", "2026"],
- 2,
- "2010 : la rémunération est dissociée du prix → le pharmacien est rémunéré pour la PRESTATION de soins pharmaceutiques. (2006 : rôle inscrit dans la loi ; 2009 : AR + Guide des Bonnes Pratiques.)");
-
-Q("pharmacien",
- "Dans la démarche QUIDAM – ANALYSE – DÉCISION – INFORMATION, l'étape « ANALYSE » correspond à :",
- ["L'identification du patient et de sa vulnérabilité",
-  "La validation de la prescription (indication, CI, posologie, durée, interactions, doublons)",
-  "Le choix de délivrer ou non",
-  "L'explication des modalités de prise au patient"],
- 1,
- "QUIDAM = qui/vulnérabilité ; ANALYSE = validation de la prescription (problème médical, indication, CI, posologie, durée, interactions, cascade, doublons) ; DÉCISION = délivrance ; INFORMATION = explications au patient.");
-
-Q("pharmacien",
- "Le Dossier Pharmaceutique Partagé (DPP) couvre :",
- ["Uniquement les médicaments sur prescription",
-  "Les médicaments prescrits ou non, les compléments alimentaires (si encodés) et les préparations magistrales",
-  "Uniquement les médicaments remboursés",
-  "Les seuls médicaments à marge thérapeutique étroite"],
- 1,
- "Le DPP couvre médicaments prescrits OU non, compléments alimentaires encodés au nom du patient et préparations magistrales. Accès soumis au consentement du patient.");
-
-Q("pharmacien",
- "Pour qu'un patient soit remboursé dans une officine inhabituelle, le pharmacien doit :",
- ["Disposer de la carte d'identité uniquement",
-  "Pouvoir accéder à ses données / avoir un lien thérapeutique (DPP avec consentement)",
-  "Appeler systématiquement le médecin traitant",
-  "Refuser la délivrance"],
- 1,
- "Il faut l'accès au DPP avec consentement (lien thérapeutique). La carte eID donne le statut d'assurabilité (BIM/AO) et la mutuelle, mais pas l'historique pharmaceutique.");
-
-Q("pharmacien",
- "Le pharmacien de référence :",
- ["Tient à jour le schéma de médication du patient et a accès obligatoire au DPP",
-  "Remplace le médecin traitant",
-  "Ne peut pas communiquer avec le médecin",
-  "Est désigné par la mutuelle"],
- 0,
- "Le pharmacien de référence tient à jour le schéma de médication, a accès obligatoire au DPP (avec consentement) et peut transmettre une note dans le DMI du médecin.");
-
-Q("pharmacien",
- "Les entretiens « Bon Usage du Médicament » (BUM) ciblent actuellement quelles pathologies ?",
- ["Diabète et HTA", "Asthme et BPCO", "Dépression et anxiété", "Insuffisance cardiaque et FA"],
- 1,
- "Les entretiens BUM ciblent l'asthme et la BPCO (technique d'inhalation, observance), dans une logique d'éducation thérapeutique (empowerment).");
-
-Q("pharmacien",
- "Quel est un critère d'éligibilité au bilan / revue de médication ?",
- ["Au moins 3 médicaments aigus",
-  "Au moins 5 médicaments chroniques remboursés (+ pharmacien de référence et DPP)",
-  "Être âgé de plus de 75 ans",
-  "Être hospitalisé"],
- 1,
- "Critères : patient ambulatoire, besoin de suivi particulier, ≥ 5 médicaments chroniques remboursés, pharmacien de référence + DPP. Encodage dans un e-Form envoyé au médecin.");
-
-Q("pharmacien",
- "Concernant la vaccination antigrippale en officine (nouveauté 2026) :",
- ["Elle est interdite aux pharmaciens",
-  "Le pharmacien formé peut prescrire, délivrer et administrer le vaccin grippe aux > 11 ans, sans ordonnance préalable",
-  "Elle nécessite obligatoirement une ordonnance du médecin",
-  "Elle est réservée aux > 65 ans"],
- 1,
- "Depuis fin 2025, la vaccination antigrippale en officine est permanente : le pharmacien formé (min. 8 h, renouvelée tous les 3 ans) peut prescrire, délivrer et administrer le vaccin grippe aux > 11 ans, sans ordonnance.");
-
-Q("pharmacien",
- "Le sevrage des benzodiazépines (BZDA) en pharmacie :",
- ["Se fait par arrêt brutal du jour au lendemain",
-  "Se fait par arrêt progressif (entre 50 et 360 jours), patient ≥ 18 ans, sous prescription du médecin",
-  "Est interdit en ambulatoire",
-  "Ne nécessite aucun consentement"],
- 1,
- "Sevrage progressif (50 à 360 jours), patient ambulatoire ≥ 18 ans, consentement eHealth, ≥ 1 BZDA/jour depuis ≥ 3 mois, préparation magistrale sous prescription. JAMAIS d'arrêt brutal après prise prolongée.");
-
-Q("pharmacien",
- "Une benzodiazépine prescrite de façon prolongée :",
- ["Peut être arrêtée du jour au lendemain sans risque",
-  "Doit faire l'objet d'un sevrage progressif (au besoin via une BZD à longue durée d'action)",
-  "Ne pose aucun problème de dépendance",
-  "Peut être prescrite sans limite de durée"],
- 1,
- "Piège classique : « on peut arrêter du jour au lendemain » = FAUX. Sevrage progressif, au besoin via une BZD à longue durée d'action. Prescription limitée (~28 jours).");
-
-Q("pharmacien",
- "La cascade médicamenteuse débute lorsque :",
- ["Deux médicaments interagissent par voie pharmacocinétique",
-  "Un effet indésirable d'un médicament est interprété à tort comme un nouveau problème médical → 2e médicament",
-  "On prescrit plus de 6 médicaments par jour",
-  "Le patient oublie une prise"],
- 1,
- "Cascade médicamenteuse : un EI d'un médicament est pris à tort pour un nouveau problème, conduisant à prescrire un 2e médicament, etc. Ex. oxybutynine → constipation → laxatif.");
-
-Q("pharmacien",
- "Quelle association illustre une CASCADE médicamenteuse (et non une simple interaction) ?",
- ["Statine + ibuprofène", "IEC + furosémide", "Oxybutynine → laxatif (pour la constipation induite)", "Statine + AINS"],
- 2,
- "Oxybutynine (anticholinergique) → constipation (EI) → laxatif = cascade. Les autres sont des interactions/associations, pas des cascades.");
-
-Q("pharmacien",
- "Une interaction PHARMACOCINÉTIQUE (PK) se définit par :",
- ["Des effets qui s'additionnent (ex. allongement du QT)",
-  "Une modification de l'ADME (ex. un inhibiteur du CYP3A4 qui réduit l'élimination d'un AOD)",
-  "Une réaction allergique croisée",
-  "Un surdosage volontaire"],
- 1,
- "PK = modification de l'absorption/distribution/métabolisme/élimination (ex. inhibiteur CYP3A4/PgP ↓ élimination d'un AOD → risque de saignement). PD = effets qui s'additionnent (ex. QT).");
-
-Q("pharmacien",
- "La durée approximative d'une interaction pharmacocinétique est de :",
- ["1 jour", "Environ 5 × la demi-vie de l'inhibiteur", "1 semaine fixe", "Variable mais toujours < 24 h"],
- 1,
- "Durée ≈ 5 × T1/2 de l'inhibiteur. Ex. l'amiodarone (T1/2 très longue, 25-100 j) interagit plusieurs mois après l'arrêt.");
-
-Q("pharmacien",
- "Un médicament est considéré comme quasi totalement éliminé après :",
- ["2 demi-vies", "5 à 7 demi-vies", "10 demi-vies", "1 demi-vie"],
- 1,
- "Demi-vie (T1/2) = temps pour que la concentration plasmatique diminue de moitié ; élimination quasi totale après 5 à 7 T1/2.");
-
-Q("pharmacien",
- "Parmi les facteurs de risque d'allongement du QT, lequel figure dans le cours ?",
- ["Homme jeune sportif", "Hyperkaliémie", "Femme, > 65 ans, hypokaliémie/hypoMg/hypoCa, bradycardie", "Hyperthyroïdie"],
- 2,
- "Facteurs de risque de QT long / torsade : femme, > 65 ans, hypoK/hypoMg/hypoCa, bradycardie, hypothyroïdie, QT long préexistant.");
-
-Q("pharmacien",
- "Concernant la pharmacovigilance, quelle proposition est VRAIE ?",
- ["Elle sert à dénoncer le médecin qui a mal prescrit",
-  "Elle peut être notifiée par le médecin, le pharmacien, l'infirmier ou le patient ; on signale même un EI déjà connu",
-  "Seuls les médecins peuvent notifier",
-  "On ne signale que les effets indésirables avérés"],
- 1,
- "Pharmacovigilance : notifiable par médecin/pharmacien/infirmier/patient ; bases EMA/OMS alimentées par les EI suspectés ET avérés ; signaler même un EI connu. Ce n'est pas un outil de dénonciation.");
-
-Q("pharmacien",
- "Le « triangle noir inversé » sur la notice d'un médicament signifie :",
- ["Médicament dangereux interdit", "Médicament récent (< 5 ans) sous surveillance accrue", "Médicament remboursé à 100 %", "Médicament à éviter chez la personne âgée"],
- 1,
- "Le triangle noir inversé = médicament récent (< 5 ans) faisant l'objet d'une surveillance accrue.");
-
-Q("pharmacien",
- "Quels outils sont pertinents pour la déprescription chez la personne âgée ?",
- ["Échelles Katz et Fried",
-  "Start & Stopp et GheOP3S",
-  "Score de Glasgow",
-  "La règle « maximum 6 médicaments par jour »"],
- 1,
- "Déprescription/polymédication : Start & Stopp, GheOP3S. Piège : « max 6 médicaments/jour » n'est PAS un outil (seuil arbitraire). Katz/Fried évaluent autonomie/fragilité, pas la polymédication.");
-
-Q("pharmacien",
- "La pharmacocinétique (ADME) correspond à :",
- ["Affinité – Distribution – Métabolisme – Effet",
-  "Absorption – Distribution – Métabolisme (foie) – Élimination (reins/bile)",
-  "Action – Dose – Marge – Efficacité",
-  "Absorption – Diffusion – Mécanisme – Excrétion neuronale"],
- 1,
- "ADME = Absorption, Distribution, Métabolisme (foie), Élimination (reins/bile).");
-
-Q("pharmacien",
- "La biodisponibilité est définie comme :",
- ["La dose totale prescrite",
-  "La fraction de la dose qui atteint la circulation systémique sous forme inchangée (et sa vitesse)",
-  "La quantité métabolisée par le foie",
-  "La demi-vie du médicament"],
- 1,
- "Biodisponibilité = fraction de la dose atteignant la circulation systémique sous forme inchangée (et sa vitesse).");
-
-Q("pharmacien",
- "Comment formaliser au mieux une collaboration médecin–patient–pharmacien face à un patient difficile (ex. surconsommation) ?",
- ["Par un signalement à la police",
-  "Par une « convention » écrite médecin–patient–pharmacien, signée par chacun",
-  "Par un arrêt unilatéral de toute délivrance",
-  "Par une note dans le seul dossier du médecin"],
- 1,
- "Convention écrite médecin–patient–pharmacien, signée par chacun : outil thérapeutique et référence face à un comportement difficile. Autres outils : CMP, RPIB, décision partagée.");
-
-Q("pharmacien",
- "À molécule de marge thérapeutique étroite équivalente, le pharmacien doit être particulièrement vigilant chez :",
- ["Le patient jeune en bonne santé",
-  "Le patient âgé / insuffisant rénal / polymédiqué",
-  "Le patient sportif",
-  "Le patient ne prenant qu'un seul médicament"],
- 1,
- "Index thérapeutique étroit : adaptation de dose si insuffisance rénale, vigilance aux erreurs de prise, nombreuses interactions, attention au patient âgé/IR/polymédiqué.");
-
-Q("pharmacien",
- "Recip-e (prescription électronique) :",
- ["Est envoyée directement dans une officine précise désignée par le médecin",
-  "Est récupérée par la pharmacie choisie par le patient (message non adressé, crypté)",
-  "Supprime tout risque de fraude",
-  "Ne transite pas par la plateforme eHealth"],
- 1,
- "Recip-e : message non adressé, crypté, via eHealth ; récupéré par le prestataire CHOISI par le patient. Piège : elle n'est PAS « envoyée directement » dans une officine précise.");
-
-Q("pharmacien",
- "Détectable via le DPP, un exemple de SURCONSOMMATION cité est :",
- ["L'abus d'antalgiques/antimigraineux entraînant des céphalées (céphalées par abus médicamenteux)",
-  "La prise d'une statine le soir",
-  "L'usage d'un IEC chez l'hypertendu",
-  "La vaccination antigrippale"],
- 0,
- "Le DPP détecte la surconsommation : céphalées par abus d'antalgiques/antimigraineux, abus de laxatifs (déshydratation, hypoK, atteinte rénale). Usage détourné possible (codéine + antihistaminique + soda).");
-
-// ========== LA RECHERCHE EN MÉDECINE GÉNÉRALE (M. Boullé & V. Letocart) ==========
-Q("recherche",
- "Selon la définition WONCA (2002), la médecine générale est :",
- ["Une simple pratique de soins sans fondements scientifiques",
-  "Une discipline scientifique et universitaire à part entière, orientée vers les soins primaires",
-  "Une spécialité hospitalière de 3e ligne",
-  "Une branche de la santé publique uniquement"],
- 1,
- "WONCA 2002 : la MG est une discipline scientifique et universitaire, avec son contenu de formation, de recherche, de pratique clinique et ses propres fondements ; spécialité clinique orientée vers les soins primaires.");
-
-Q("recherche",
- "Quelles sont les 3 dimensions fondamentales de la MG (au-delà des compétences) ?",
- ["Diagnostique, thérapeutique, préventive",
-  "Contextuelle, comportementale, scientifique",
-  "Biologique, psychologique, sociale",
-  "Clinique, technique, administrative"],
- 1,
- "Les 3 dimensions : contextuelle (contexte de la personne/famille/communauté), comportementale (valeurs et éthique), scientifique (approche critique fondée sur la recherche).");
-
-Q("recherche",
- "Parmi les 6 compétences fondamentales du médecin généraliste (arbre WONCA), laquelle figure ?",
- ["Gestion des soins de santé primaires",
-  "Maîtrise de la chirurgie",
-  "Gestion administrative hospitalière",
-  "Recherche fondamentale en laboratoire"],
- 0,
- "Les 6 compétences WONCA : gestion des soins primaires, soins centrés sur la personne, aptitude à la résolution de problèmes, approche globale, orientation communautaire, modèle holistique.");
-
-Q("recherche",
- "Selon Ian McWhinney, la médecine générale se distingue car elle est la seule discipline qui :",
- ["Se définit en termes de relations (médecin-malade) et pense en termes de patients individuels",
-  "S'occupe d'un seul organe",
-  "Refuse l'incertitude",
-  "Ne repose sur aucune métaphore"],
- 0,
- "McWhinney : la MG se définit en termes de relations, pense en termes de patients individuels, repose sur une métaphore organismique, transcende le dualisme corps-esprit, opère au plus haut niveau de complexité et d'incertitude.");
-
-Q("recherche",
- "Qui est considéré comme le « père de l'Evidence-Based Medicine » et promoteur de l'essai clinique randomisé ?",
- ["Robert Koch", "James Herrick", "Archie Cochrane", "Edgar Hope-Simpson"],
- 2,
- "Archie Cochrane (médecin de camp) = père de l'EBM et promoteur de l'essai clinique randomisé.");
-
-Q("recherche",
- "Edgar Hope-Simpson, généraliste, a contribué à la science par :",
- ["La découverte de l'anémie falciforme",
-  "L'étude de la nature du zona via un suivi longitudinal de 16 ans (épidémiologie clinique)",
-  "La naissance de la microbiologie clinique",
-  "Le premier essai randomisé"],
- 1,
- "Hope-Simpson : nature du zona, cohorte/suivi longitudinal de 16 ans → épidémiologie clinique. (Koch = microbiologie ; Herrick = anémie falciforme ; Cochrane = essai randomisé.)");
-
-Q("recherche",
- "La méthode expérimentale (hypothético-déductive) débute par :",
- ["Une conclusion", "Une observation", "Une expérience", "Une hypothèse"],
- 1,
- "Les 8 étapes : Observation → Problème → Hypothèse → Conséquence → Expérience → Résultat → Interprétation → Conclusion.");
-
-Q("recherche",
- "L'approche épistémologique POSITIVISTE correspond à :",
- ["La recherche qualitative (construction du sens)",
-  "La recherche quantitative (réalité décrite par des propriétés mesurables, variables quantifiables)",
-  "Une absence de méthode",
-  "La seule analyse documentaire"],
- 1,
- "Positiviste = la réalité est décrite par des propriétés mesurables → recherche quantitative. Interprétatif = compréhension par les constructions sociales → recherche qualitative.");
-
-Q("recherche",
- "Concernant l'association statistique et la causalité :",
- ["Une association statistique implique toujours un lien de cause à effet",
-  "Une association statistique n'implique pas un lien de cause à effet",
-  "La causalité ne s'évalue jamais",
-  "Toute corrélation est causale en MG"],
- 1,
- "Attention : une association statistique n'implique PAS un lien de cause à effet.");
-
-Q("recherche",
- "Quelle est la différence entre étude de COHORTE et étude CAS-TÉMOINS ?",
- ["La cohorte part de l'exposition et suit la survenue (prospective) ; le cas-témoins part de la maladie et regarde l'exposition (souvent rétrospective)",
-  "Elles sont identiques",
-  "La cohorte est toujours rétrospective",
-  "Le cas-témoins est une étude interventionnelle"],
- 0,
- "Cohorte : part de l'exposition → suit la survenue (prospectif). Cas-témoins : part de la maladie → regarde l'exposition (souvent rétrospectif). Toutes deux sont analytiques.");
-
-Q("recherche",
- "Quel type d'étude se situe au sommet du niveau de preuve ?",
- ["L'étude de cas",
-  "La revue systématique / méta-analyse (recherche secondaire)",
-  "L'opinion d'expert",
-  "L'étude transversale"],
- 1,
- "Revue systématique / méta-analyse = recherche secondaire, au sommet du niveau de preuve.");
-
-Q("recherche",
- "L'essai clinique randomisé appartient à la catégorie des études :",
- ["Qualitatives", "Quantitatives descriptives", "Quantitatives analytiques", "Quantitatives interventionnelles"],
+ "L'intervention brève (RPIB) selon l'OMS. Laquelle de ces affirmations est FAUSSE ?",
+ ["Elle dure de 5 à 20 minutes et peut être répétée",
+  "Elle fait suite au repérage d'un usage problématique",
+  "Elle s'organise selon 4 étapes (modèle FRAMES)",
+  "Elle ne s'adresse qu'aux patients déjà dépendants"],
  3,
- "L'ECR (conventionnel, adaptatif, pragmatique) est une étude quantitative INTERVENTIONNELLE.");
+ "FAUX : l'intervention brève vise justement les usages problématiques AVANT la dépendance installée. Les 3 autres propositions sont exactes (5-20 min, répétable, après repérage, 4 étapes FRAMES).");
 
-Q("recherche",
- "Lequel de ces outils sert à formuler une question de recherche ?",
- ["ADME", "PICO (Population, Intervention, Comparateur, Outcome)", "FRAMES", "ICPC-3"],
+Q("assuetudes",
+ "Dans l'entretien motivationnel, le « discours-changement » désigne :",
+ ["Les arguments du patient en faveur du statu quo",
+  "Les propos du patient qui expriment sa propre motivation à changer",
+  "Les conseils directifs donnés par le soignant",
+  "La reformulation systématique par le médecin"],
  1,
- "Pour formuler la question de recherche : QQOQCCP et PICO (Population, Intervention, Comparateur, Outcome).");
+ "Le discours-changement = les propos par lesquels le patient exprime lui-même sa motivation au changement (à faire émerger et renforcer), par opposition au discours-maintien (en faveur du statu quo).");
 
-Q("recherche",
- "La méthode Delphi et le groupe nominal sont des méthodes :",
- ["Qualitatives pures", "Semi-quantitatives", "Interventionnelles", "Médico-économiques"],
+Q("assuetudes",
+ "Quel terme privilégier pour respecter un langage « centré sur la personne » ?",
+ ["« Toxicomane »",
+  "« Personne avec un trouble de l'usage de substances »",
+  "« Alcoolique »",
+  "« Usager dépendant »"],
  1,
- "Delphi et groupe nominal = méthodes semi-quantitatives.");
+ "Langage centré sur la personne : « personne avec un trouble de l'usage de substances ». À bannir : tox, junkie, alcoolique, bourré — termes qui stigmatisent et figent l'identité dans la maladie.");
+
+Q("assuetudes",
+ "Concernant la réduction des risques (RdR), une seule affirmation est EXACTE :",
+ ["Elle s'oppose à la prévention de l'usage",
+  "Elle est réservée aux usagers dépendants",
+  "Elle s'adresse à tous les usagers et est complémentaire de la prévention de l'usage",
+  "Elle impose l'abstinence comme objectif préalable"],
+ 2,
+ "La RdR s'adresse à TOUS les usagers (expérimentaux à dépendants), sans jugement, et complète (ne s'oppose pas à) la prévention de l'usage. Elle ne pose pas l'abstinence comme préalable.");
+
+Q("assuetudes",
+ "Un usager demande conseil avant une consommation festive. Quel conseil de RdR est INCORRECT ?",
+ ["Tester de petites quantités et éviter les mélanges",
+  "Manger et boire (eau) avant et pendant",
+  "Privilégier la consommation seul pour limiter l'influence du groupe",
+  "Utiliser du matériel neuf et prévoir le 112 / une SCMR"],
+ 2,
+ "Conseil clé : rester ACCOMPAGNÉ (jamais seul) pour pouvoir réagir en cas de problème. Les autres conseils (petites quantités, manger/boire, matériel neuf, 112/SCMR) sont corrects.");
+
+Q("assuetudes",
+ "La métaphore de l'Himalaya (sevrage) transmet surtout l'idée que :",
+ ["Le sevrage doit être total et immédiat pour réussir",
+  "La rechute (« la chute ») fait partie intégrante du projet et doit être anticipée",
+  "Seul un milieu spécialisé permet le sevrage",
+  "La préparation est secondaire si la motivation est forte"],
+ 1,
+ "Himalaya : préparation, montée pas à pas, camps de base (cure), et surtout la chute fait partie du projet → anticiper les rechutes plutôt que les vivre comme un échec.");
+
+Q("assuetudes",
+ "Quelle substance appartient à la même catégorie pharmacologique que l'alcool selon la classification du cours ?",
+ ["La cocaïne", "Les benzodiazépines", "Le cannabis", "Les amphétamines"],
+ 1,
+ "Alcool et benzodiazépines sont des DÉPRESSEURS (avec les opioïdes). Cocaïne/amphétamines = stimulants ; cannabis = perturbateur/hallucinogène.");
+
+Q("assuetudes",
+ "Le « cadre de travail » est défini comme l'espace qui protège patient et soignant. Le cours souligne qu'un refus posé par le soignant :",
+ ["Rompt nécessairement l'alliance thérapeutique",
+  "Est structurant et permet la rencontre plutôt que la répétition",
+  "Doit être évité pour ne pas frustrer le patient",
+  "Relève uniquement du milieu spécialisé"],
+ 1,
+ "Le refus structurant fait partie du cadre : il protège la relation et permet la rencontre, au lieu de rejouer la répétition (passage à l'acte, demande sans limite).");
+
+Q("assuetudes",
+ "Parmi ces propositions concernant le LIEN thérapeutique, laquelle est la moins favorable à son maintien ?",
+ ["Pratiquer l'entretien motivationnel",
+  "Référer directement et définitivement en milieu spécialisé",
+  "Soigner les mots employés",
+  "Mobiliser le cercle de Di Clemente"],
+ 1,
+ "Référer directement en se déchargeant nuit au lien : il faut garder le lien, rester en 1re ligne et réorienter en maintenant le suivi. Les 3 autres soutiennent la relation.");
+
+Q("assuetudes",
+ "Les 4 étapes de l'intervention brève sont, dans l'ordre :",
+ ["Conseiller – informer – restituer – encourager",
+  "Restituer les résultats – informer – conseiller – encourager",
+  "Informer – restituer – encourager – conseiller",
+  "Restituer – encourager – informer – conseiller"],
+ 1,
+ "Ordre OMS/FRAMES : Restituer les résultats → Informer (risques, verre standard) → Conseiller (objectif de changement) → Encourager (soutien, suivi).");
+
+Q("assuetudes",
+ "Une seule de ces attitudes définit correctement l'entretien motivationnel :",
+ ["Confronter le patient à ses contradictions",
+  "Guider plus que diriger, et laisser le patient décider",
+  "Prescrire un objectif d'abstinence précis",
+  "Donner un maximum d'informations pour convaincre"],
+ 1,
+ "Entretien motivationnel : guider > diriger, danser > lutter, écouter > parler ; c'est le patient qui décide. La confrontation et la persuasion directive sont contre-productives.");
+
+Q("assuetudes",
+ "Concernant la détection précoce des assuétudes, quelle proposition est FAUSSE ?",
+ ["Elle se fait au moins une fois par an, sans attendre les signes d'appel",
+  "Elle peut s'amorcer dès la salle d'attente",
+  "Elle doit être réservée aux situations où le patient l'évoque spontanément",
+  "Elle s'appuie sur des outils comme le verre standard et l'AUDIT"],
+ 2,
+ "FAUX : il ne faut PAS attendre que le patient évoque le sujet. La détection est proactive (≥ 1×/an, dès la salle d'attente), avec verre standard, AUDIT, Olivenstein.");
+
+Q("assuetudes",
+ "Le travail en réseau dans l'accompagnement repose sur l'idée d'interdépendance. Quelle conséquence pratique en découle ?",
+ ["On transfère la responsabilité au service spécialisé",
+  "On réoriente tout en conservant le lien et le suivi",
+  "On évite de multiplier les intervenants",
+  "On confie la coordination au seul patient"],
+ 1,
+ "Réseau = interdépendance et valeur ajoutée collective : réorienter oui, mais en gardant le lien et le suivi (pas de transfert de responsabilité ni de désengagement).");
+
+Q("assuetudes",
+ "Les attitudes rogériennes fondamentales sont l'empathie, la congruence et :",
+ ["La neutralité bienveillante", "Le regard positif inconditionnel", "La distance thérapeutique", "L'interprétation"],
+ 1,
+ "Carl Rogers : empathie, congruence et regard positif inconditionnel. La « neutralité » et la « distance » relèvent d'autres cadres.");
+
+Q("assuetudes",
+ "Concernant les modes de consommation et leur pharmacocinétique, quelle proposition est EXACTE ?",
+ ["La voie orale donne l'effet le plus rapide",
+  "La voie injectable contourne le premier passage hépatique",
+  "La voie respiratoire impose un passage hépatique avant la circulation",
+  "La voie nasale est toujours plus lente que la voie orale"],
+ 1,
+ "La voie IV contourne le foie → effet immédiat. La voie orale impose le 1er passage hépatique (effet plus lent) ; l'inhalation passe directement dans le sang.");
+
+Q("assuetudes",
+ "L'alliance thérapeutique suppose un accord sur plusieurs éléments. Lequel n'en fait PAS partie ?",
+ ["Un lien de confiance et de respect",
+  "Une compréhension partagée du problème",
+  "Le résultat d'une analyse d'urines à chaque visite",
+  "Les objectifs et les modalités pour y parvenir"],
+ 2,
+ "L'alliance porte sur le lien de confiance, la compréhension du problème, les objectifs et les modalités. L'analyse d'urines systématique n'en est pas une composante (et est même un piège du lien).");
+
+Q("assuetudes",
+ "Quelques repères épidémiologiques belges. Laquelle de ces données correspond au cours ?",
+ ["~50 % de fumeurs en Belgique",
+  "~27 % de fumeurs, davantage à Bruxelles",
+  "Usage de cannabis maximal chez les > 50 ans",
+  "~10 % de consommation de drogues illicites dures sur 12 mois"],
+ 1,
+ "Repères du cours : ~27 % de fumeurs (plus à Bruxelles) ; cannabis maximal chez les 25-34 ans ; autres drogues illicites ~1,5 % sur 12 mois.");
+// ========== COLLABORATION MÉDECIN–PHARMACIEN — niveau difficile ==========
+Q("pharmacien",
+ "Patiente de 70 ans sous amiodarone, rivaroxaban, périndopril et rosuvastatine. On lui prescrit de la clarithromycine. Quelle est l'analyse la plus complète ?",
+ ["Interaction purement pharmacodynamique (addition sur le QT)",
+  "Interaction purement pharmacocinétique (↓ élimination du rivaroxaban)",
+  "Interaction PD (QT) ET PK (↓ élimination du rivaroxaban → saignement)",
+  "Aucune interaction cliniquement significative"],
+ 2,
+ "Amiodarone + clarithromycine allongent toutes deux le QT (PD, addition) ET inhibent le CYP3A4/PgP → ↓ élimination du rivaroxaban (PK) → risque hémorragique. Les deux mécanismes coexistent.");
+
+Q("pharmacien",
+ "Dans le cas précédent, l'amiodarone ayant une demi-vie de 25 à 100 jours, son effet inhibiteur sur le rivaroxaban :",
+ ["Disparaît immédiatement à l'arrêt",
+  "Persiste environ 24-48 h",
+  "Persiste plusieurs mois (≈ 5 × T½)",
+  "Ne dépend pas de la demi-vie"],
+ 2,
+ "La durée d'une interaction PK ≈ 5 × T½ de l'inhibiteur. Avec une T½ de 25-100 j, l'amiodarone interagit encore PLUSIEURS MOIS après son arrêt → vigilance prolongée.");
+
+Q("pharmacien",
+ "Laquelle de ces associations constitue une véritable CASCADE médicamenteuse ?",
+ ["IEC + furosémide",
+  "Statine + ibuprofène",
+  "Oxybutynine puis laxatif (pour la constipation induite)",
+  "Sertraline + métoclopramide"],
+ 2,
+ "Cascade = un EI pris pour un nouveau problème → 2e médicament. Oxybutynine (anticholinergique) → constipation → laxatif. Les autres sont des interactions ou associations, pas des cascades.");
+
+Q("pharmacien",
+ "Concernant le rythme d'élimination d'un médicament, quelle affirmation est CORRECTE ?",
+ ["Il est quasi totalement éliminé après 2 demi-vies",
+  "Il est quasi totalement éliminé après 5 à 7 demi-vies",
+  "La demi-vie est le temps nécessaire à son élimination complète",
+  "La biodisponibilité détermine sa demi-vie"],
+ 1,
+ "Élimination quasi totale après 5 à 7 T½. La T½ = temps pour réduire la concentration de moitié (pas l'élimination complète). Biodisponibilité ≠ demi-vie.");
+
+Q("pharmacien",
+ "Un patient présente des céphalées chroniques quotidiennes. Le DPP révèle une consommation importante d'antimigraineux. Le mécanisme le plus probable est :",
+ ["Une interaction pharmacocinétique",
+  "Une céphalée par abus médicamenteux (surconsommation)",
+  "Une cascade médicamenteuse",
+  "Un effet de tolérance pharmacodynamique isolé"],
+ 1,
+ "Le DPP détecte la surconsommation : céphalées par abus d'antalgiques/antimigraineux. Distinct d'une cascade (EI → 2e médicament) et d'une interaction.");
+
+Q("pharmacien",
+ "Quel patient est éligible à un BILAN DE MÉDICATION en officine ?",
+ ["Patient hospitalisé sous 8 médicaments",
+  "Patient ambulatoire prenant ≥ 5 médicaments chroniques remboursés, avec pharmacien de référence",
+  "Tout patient de plus de 65 ans",
+  "Patient prenant 3 médicaments aigus depuis 1 semaine"],
+ 1,
+ "Critères : patient AMBULATOIRE, suivi particulier, ≥ 5 médicaments CHRONIQUES REMBOURSÉS, pharmacien de référence + DPP. Résultat encodé dans un e-Form envoyé au médecin.");
+
+Q("pharmacien",
+ "Concernant la vaccination antigrippale en officine (cadre 2026), quelle proposition est FAUSSE ?",
+ ["Le pharmacien formé peut l'administrer aux > 11 ans sans ordonnance",
+  "La formation dure au minimum 8 heures et se renouvelle tous les 3 ans",
+  "Le pharmacien peut administrer de l'adrénaline en cas de choc anaphylactique",
+  "Elle reste limitée à une campagne saisonnière temporaire"],
+ 3,
+ "FAUX : depuis fin 2025, la vaccination grippe en officine est PERMANENTE (loi fédérale). Les 3 autres sont exactes (> 11 ans sans ordonnance, formation 8 h/3 ans, adrénaline si choc).");
+
+Q("pharmacien",
+ "Un patient sous benzodiazépine depuis 8 mois souhaite arrêter. Quelle conduite est correcte ?",
+ ["Arrêt immédiat, sans risque après ce délai",
+  "Arrêt progressif, au besoin via une BZD à longue durée d'action",
+  "Doublement de la dose avant l'arrêt",
+  "Relais systématique par un Z-drug au long cours"],
+ 1,
+ "Jamais d'arrêt brutal après une prise prolongée : sevrage PROGRESSIF (50 à 360 j), au besoin via une BZD à longue durée d'action. Piège classique : « on peut arrêter du jour au lendemain » = FAUX.");
+
+Q("pharmacien",
+ "Quel outil/dispositif est pertinent pour la déprescription chez la personne âgée polymédiquée ?",
+ ["L'échelle de Katz",
+  "La règle « maximum 6 médicaments par jour »",
+  "Les critères START & STOPP et GheOP3S",
+  "Le score de Fried"],
+ 2,
+ "Déprescription : START & STOPP, GheOP3S, conseils pluridisciplinaires. Piège : « max 6/jour » n'est PAS un outil. Katz (autonomie) et Fried (fragilité) n'évaluent pas la polymédication.");
+
+Q("pharmacien",
+ "Concernant la pharmacovigilance, une seule proposition est FAUSSE :",
+ ["Elle peut être notifiée par le patient lui-même",
+  "On signale aussi un effet indésirable déjà connu",
+  "Elle ne sert qu'à signaler des effets indésirables avérés (jamais suspectés)",
+  "Le triangle noir inversé désigne un médicament récent sous surveillance"],
+ 2,
+ "FAUX : les bases EMA/OMS sont alimentées par les EI suspectés ET avérés. Notifiable par médecin/pharmacien/infirmier/patient ; on signale même un EI connu. Triangle noir = médicament < 5 ans surveillé.");
+
+Q("pharmacien",
+ "Quels facteurs de risque d'allongement du QT figurent dans le cours ?",
+ ["Homme jeune, hyperkaliémie, tachycardie",
+  "Femme, > 65 ans, hypokaliémie, bradycardie, hypothyroïdie",
+  "Hyperthyroïdie, hypermagnésémie, exercice physique",
+  "Âge < 40 ans, hypercalcémie, fièvre"],
+ 1,
+ "QT long / torsade : femme, > 65 ans, hypoK/hypoMg/hypoCa, bradycardie, hypothyroïdie, QT long préexistant. Attention quand 2 médicaments « liste 1 » sont associés.");
+
+Q("pharmacien",
+ "La rémunération du pharmacien pour les médicaments remboursés a été dissociée du prix du médicament en 2010. Que signifie ce changement ?",
+ ["Le pharmacien gagne plus sur les médicaments chers",
+  "Le pharmacien est rémunéré pour la prestation de soins pharmaceutiques, pas selon le prix",
+  "Le médicament est devenu gratuit",
+  "La marge est désormais proportionnelle au prix"],
+ 1,
+ "2010 : rémunération dissociée du prix → le pharmacien est payé pour la PRESTATION de soins pharmaceutiques (conseil, sécurité), indépendamment du prix du médicament.");
+
+Q("pharmacien",
+ "Dans la démarche QUIDAM – ANALYSE – DÉCISION – INFORMATION, à quelle étape vérifie-t-on indication, contre-indications, posologie, interactions et doublons ?",
+ ["QUIDAM", "ANALYSE", "DÉCISION", "INFORMATION"],
+ 1,
+ "ANALYSE = validation de la prescription (indication, CI, posologie/modalités, durée, interactions, cascade, doublons). QUIDAM = identifier patient/vulnérabilité ; DÉCISION = délivrer ou non ; INFORMATION = expliquer.");
+
+Q("pharmacien",
+ "Le Dossier Pharmaceutique Partagé (DPP). Quelle proposition est EXACTE ?",
+ ["Il ne couvre que les médicaments remboursés sur prescription",
+  "Il couvre médicaments (prescrits ou non), compléments encodés et magistrales, sous consentement",
+  "Il est accessible sans le consentement du patient",
+  "Il remplace le schéma de médication du pharmacien de référence"],
+ 1,
+ "Le DPP couvre médicaments prescrits OU non, compléments encodés au nom du patient et magistrales ; accès soumis au CONSENTEMENT. Il aide à détecter doublons, cascades, surconsommation.");
+
+Q("pharmacien",
+ "Une « interaction pharmacodynamique » se distingue d'une interaction pharmacocinétique car :",
+ ["Elle modifie l'absorption ou le métabolisme du médicament",
+  "Elle correspond à des effets qui s'additionnent (ex. allongement du QT)",
+  "Elle dure environ 5 × la demi-vie de l'inhibiteur",
+  "Elle concerne uniquement les inhibiteurs du CYP3A4"],
+ 1,
+ "PD = effets qui s'additionnent (ex. 2 médicaments allongeant le QT). PK = modification de l'ADME (absorption, métabolisme, élimination) — c'est elle qui dure ≈ 5 × T½ de l'inhibiteur.");
+
+Q("pharmacien",
+ "Un index thérapeutique étroit (ex. AOD, certains anticoagulants) impose une vigilance particulière chez :",
+ ["Le sujet jeune sans comorbidité",
+  "Le patient âgé, insuffisant rénal ou polymédiqué",
+  "Le patient prenant un seul médicament",
+  "Le sportif de haut niveau"],
+ 1,
+ "Index étroit : adapter la dose si insuffisance rénale, surveiller les erreurs de prise et les nombreuses interactions — surtout chez le patient âgé / IR / polymédiqué.");
+
+Q("pharmacien",
+ "Concernant Recip-e (prescription électronique), une seule affirmation est VRAIE :",
+ ["Elle est envoyée directement dans l'officine désignée par le médecin",
+  "C'est un message non adressé, crypté, récupéré par le prestataire choisi par le patient",
+  "Elle supprime tout risque de fraude",
+  "Elle transite par MyCareNet et non par eHealth"],
+ 1,
+ "Recip-e : message NON adressé, crypté, via eHealth ; récupéré par la pharmacie CHOISIE par le patient. Elle n'est pas « envoyée » dans une officine précise et ne supprime pas tout risque de fraude.");
+
+Q("pharmacien",
+ "Un patient présente un usage détourné associant codéine, antihistaminique et soda. Cette pratique vise :",
+ ["Un effet stimulant et anorexigène",
+  "Un effet euphorisant/sédatif",
+  "Un effet antalgique pur",
+  "Une amélioration des performances sportives"],
+ 1,
+ "Usage détourné cité : codéine (paracodine) + antihistaminique + soda → effet euphorisant/sédatif. Le DPP aide à repérer ce type de surconsommation/détournement.");
+
+Q("pharmacien",
+ "Le « pharmacien de référence » a notamment pour mission de :",
+ ["Délivrer sans accéder au DPP",
+  "Tenir à jour le schéma de médication, avec accès obligatoire au DPP",
+  "Remplacer le médecin pour le renouvellement des chroniques",
+  "Gérer la facturation du tiers payant à la place de la mutuelle"],
+ 1,
+ "Le pharmacien de référence tient à jour le schéma de médication et a accès OBLIGATOIRE au DPP (avec consentement) ; il peut transmettre une note dans le DMI du médecin.");
+
+Q("pharmacien",
+ "Les entretiens BUM (Bon Usage du Médicament) ciblent actuellement :",
+ ["Le diabète et l'hypertension",
+  "L'asthme et la BPCO (technique d'inhalation, observance)",
+  "L'anticoagulation et la FA",
+  "La dépression et l'anxiété"],
+ 1,
+ "BUM : asthme et BPCO, centrés sur la technique d'inhalation et l'observance, dans une logique d'éducation thérapeutique (empowerment).");
+
+Q("pharmacien",
+ "À la sortie d'hôpital, une voisine récupère une prescription d'énoxaparine 120 mg pour un patient mince et âgé. Le réflexe pharmaceutique attendu est :",
+ ["Délivrer sans vérification, la prescription faisant foi",
+  "Vérifier l'adéquation de la dose au poids et à l'indication, et au besoin contacter le médecin",
+  "Refuser toute délivrance par principe",
+  "Diviser la dose de sa propre initiative"],
+ 1,
+ "Réflexe : vérifier la dose selon le poids et l'indication (énoxaparine 120 chez un patient mince = drapeau) → contacter/proposer au médecin. Ni délivrance aveugle, ni modification unilatérale.");
+
+Q("pharmacien",
+ "L'interprofessionnalité médecin–pharmacien est présentée comme :",
+ ["Une relation de concurrence à réguler",
+  "Une complémentarité au sein de la 1re ligne, centrée sur le patient",
+  "Une subordination du pharmacien au médecin",
+  "Un dispositif réservé au milieu hospitalier"],
+ 1,
+ "La pharmacie est un maillon de la 1re ligne : complémentarité (pas concurrence), objectifs centrés patient, cadre éthique et légal (attention au RGPD pour les échanges).");
+
+Q("pharmacien",
+ "Pour gérer un patient au comportement difficile (ex. surconsommation), l'outil de collaboration le plus adapté est :",
+ ["Une note unilatérale dans le dossier du médecin",
+  "Une convention écrite médecin–patient–pharmacien, signée par chacun",
+  "Le signalement systématique à la mutuelle",
+  "La limitation à 6 médicaments par jour"],
+ 1,
+ "La convention écrite tripartite (médecin–patient–pharmacien), signée, sert d'outil thérapeutique et de référence face à un comportement difficile.");
+// ========== LA RECHERCHE EN MÉDECINE GÉNÉRALE — niveau difficile ==========
+Q("recherche",
+ "On souhaite étudier si l'exposition à un pesticide augmente l'incidence d'un cancer rare. On part de sujets exposés et non exposés, suivis dans le temps. Quel type d'étude ?",
+ ["Étude cas-témoins", "Étude de cohorte", "Étude transversale", "Essai contrôlé randomisé"],
+ 1,
+ "Partir de l'EXPOSITION et suivre la survenue = cohorte (prospective). Le cas-témoins partirait de la maladie (cas vs témoins) pour regarder l'exposition en arrière.");
 
 Q("recherche",
- "Le « carré de White » illustre que :",
- ["La majorité des problèmes de santé se gèrent en ambulatoire / 1re ligne, alors que les moyens de recherche n'y sont pas proportionnels",
-  "La majorité des soins sont hospitaliers",
-  "La recherche en MG est inutile",
-  "Tous les patients consultent un spécialiste"],
+ "Pour une maladie RARE, quel devis est le plus efficient car il part des malades pour rechercher l'exposition ?",
+ ["Étude de cohorte prospective", "Étude cas-témoins", "Essai randomisé", "Étude écologique"],
+ 1,
+ "Pour une maladie rare, le cas-témoins est efficient : on part des cas (malades) et de témoins, puis on recherche rétrospectivement l'exposition. Une cohorte exigerait un suivi énorme pour observer assez de cas.");
+
+Q("recherche",
+ "Classez par niveau de preuve CROISSANT :",
+ ["Méta-analyse < cohorte < série de cas",
+  "Série de cas < cohorte < méta-analyse / revue systématique",
+  "Cohorte < série de cas < méta-analyse",
+  "Revue systématique < cohorte < essai randomisé"],
+ 1,
+ "Niveau de preuve croissant : série de cas (descriptif) < études analytiques (cohorte) < recherche secondaire (revue systématique / méta-analyse), au sommet.");
+
+Q("recherche",
+ "La prévention QUATERNAIRE (M. Jamoulle) vise à protéger le patient :",
+ ["Du sous-diagnostic et du retard de prise en charge",
+  "De la surmédicalisation et des interventions invasives inutiles",
+  "Des maladies transmissibles par la vaccination",
+  "Des complications d'une maladie déjà installée"],
+ 1,
+ "Prévention quaternaire = lutter contre la surmédicalisation/le surdiagnostic. À ne pas confondre : primaire (éviter la maladie), secondaire (dépistage), tertiaire (limiter les complications).");
+
+Q("recherche",
+ "Lequel de ces gestes relève de la prévention QUATERNAIRE ?",
+ ["Réaliser une coloscopie de dépistage à 55 ans",
+  "Éviter un scanner pour une lombalgie commune sans red flags",
+  "Vacciner contre la grippe un patient BPCO",
+  "Prescrire une statine en prévention secondaire"],
+ 1,
+ "Éviter un examen inutile (scanner pour lombalgie banale) = prévention quaternaire. Le dépistage (coloscopie) = secondaire ; la vaccination = primaire ; la statine post-IDM = prévention/traitement, pas quaternaire.");
+
+Q("recherche",
+ "Une association statistique forte entre deux variables :",
+ ["Démontre nécessairement un lien de causalité",
+  "N'implique pas à elle seule un lien de cause à effet",
+  "Exclut tout facteur de confusion",
+  "Suffit à valider une hypothèse interventionnelle"],
+ 1,
+ "Une association n'implique pas la causalité (facteurs de confusion, biais, hasard possibles). Établir la causalité nécessite d'autres critères et idéalement une démarche expérimentale.");
+
+Q("recherche",
+ "Selon le « carré de White », quel constat sous-tend l'intérêt de la recherche EN médecine générale ?",
+ ["La majorité des problèmes se règlent à l'hôpital",
+  "La majorité des problèmes se gèrent en 1re ligne, mais les moyens de recherche y sont sous-proportionnés",
+  "Les soins primaires ne se prêtent pas à la recherche",
+  "Tous les patients consultent au moins un spécialiste par an"],
+ 1,
+ "Carré de White : l'essentiel des problèmes de santé se gère en ambulatoire/1re ligne, alors que les moyens de recherche se concentrent à l'hôpital → déséquilibre que la recherche en MG cherche à corriger.");
+
+Q("recherche",
+ "L'approche épistémologique INTERPRÉTATIVE débouche typiquement sur :",
+ ["Une recherche quantitative à variables mesurables",
+  "Une recherche qualitative axée sur la construction du sens",
+  "Un essai randomisé",
+  "Une méta-analyse"],
+ 1,
+ "Interprétatif → la réalité se comprend via les constructions sociales (sens, contexte) → recherche QUALITATIVE. Le positivisme (propriétés mesurables) débouche, lui, sur le quantitatif.");
+
+Q("recherche",
+ "Parmi ces médecins « curieux », lequel est associé à l'épidémiologie clinique via un suivi longitudinal de 16 ans sur le zona ?",
+ ["Robert Koch", "James Herrick", "Edgar Hope-Simpson", "Archie Cochrane"],
+ 2,
+ "Hope-Simpson → zona, cohorte de 16 ans (épidémiologie clinique). Koch → microbiologie ; Herrick → anémie falciforme (recherche clinique) ; Cochrane → essai randomisé / EBM.");
+
+Q("recherche",
+ "Le sigle PICO, utilisé pour formuler une question de recherche, signifie :",
+ ["Patient – Intervention – Comparateur – Outcome",
+  "Population – Incidence – Cohorte – Observation",
+  "Problème – Item – Critère – Objectif",
+  "Prévalence – Intervention – Coût – Outcome"],
  0,
- "Carré de White : la plupart des problèmes de santé se gèrent en ambulatoire/1re ligne, mais les moyens de recherche y sont sous-proportionnés.");
+ "PICO = Population, Intervention, Comparateur, Outcome (résultat). Avec QQOQCCP, c'est un outil de structuration de la question de recherche.");
 
 Q("recherche",
- "L'ICPC-3 est :",
- ["La Classification Internationale des Maladies (CIM)",
-  "Une classification des soins primaires centrée sur le patient (soutenue par la WONCA)",
-  "Un score de fragilité",
-  "Un outil de pharmacovigilance"],
+ "L'ICPC-3 se distingue de la CIM (Classification Internationale des Maladies) car :",
+ ["Elle classe uniquement les causes de décès",
+  "Elle est centrée sur le patient et adaptée à la consultation de 1re ligne",
+  "Elle est réservée au codage hospitalier",
+  "Elle ne concerne que la recherche fondamentale"],
  1,
- "ICPC-3 (International Classification of Primary Care, WONCA) : nomenclature centrée sur le patient, adaptée à la consultation de MG, distincte de la CIM.");
+ "ICPC-3 (soutenue par la WONCA) : nomenclature centrée sur le PATIENT et le motif de consultation, adaptée aux soins primaires — distincte de la CIM, centrée sur la maladie.");
 
 Q("recherche",
- "La prévention QUATERNAIRE (M. Jamoulle, 1995) consiste à :",
- ["Vacciner la population",
-  "Identifier un patient à risque de surmédicalisation et le protéger d'interventions invasives inutiles",
-  "Dépister précocement les cancers",
-  "Réadapter après une maladie"],
+ "La méthode Delphi et la technique du groupe nominal sont classées parmi les méthodes :",
+ ["Qualitatives pures", "Quantitatives analytiques", "Semi-quantitatives", "Médico-économiques"],
+ 2,
+ "Delphi et groupe nominal = méthodes SEMI-quantitatives (recherche de consensus structuré).");
+
+Q("recherche",
+ "Parmi les critères de validité d'un programme de dépistage, lequel est INDISPENSABLE ?",
+ ["La maladie doit être rare pour limiter les coûts",
+  "Un traitement d'efficacité démontrée doit être disponible",
+  "Le test doit être invasif pour être fiable",
+  "La maladie ne doit pas avoir de phase latente détectable"],
  1,
- "Prévention quaternaire = identifier un patient/population à risque de SURMÉDICALISATION, le protéger d'interventions invasives et proposer des soins éthiquement acceptables. Ex. éviter un scanner pour une lombalgie sans red flags.");
+ "Un dépistage utile suppose : maladie fréquente ET grave, TRAITEMENT EFFICACE disponible, test acceptable/fiable, coût acceptable, phase latente détectable. Dépister sans traitement efficace est inutile, voire nuisible.");
 
 Q("recherche",
- "Un exemple de prévention quaternaire est :",
- ["Prescrire un scanner pour toute lombalgie",
-  "Déprescrire chez la personne âgée / éviter un dépistage non ciblé",
-  "Augmenter le nombre de consultations",
-  "Multiplier les examens de routine"],
+ "La définition WONCA (2002) de la médecine générale insiste sur le fait qu'elle est :",
+ ["Une sur-spécialité d'organe",
+  "Une discipline scientifique et universitaire avec ses propres fondements",
+  "Une pratique sans contenu de recherche propre",
+  "Une activité strictement administrative de tri"],
  1,
- "Exemples : éviter un scanner pour une lombalgie commune sans red flags, déprescrire chez la personne âgée, éviter un dépistage non ciblé. La prévention quaternaire lutte contre la surmédicalisation.");
+ "WONCA 2002 : discipline scientifique ET universitaire, avec son contenu de formation, de recherche, de pratique clinique et ses fondements propres ; spécialité clinique orientée soins primaires.");
 
 Q("recherche",
- "Parmi les critères d'un dépistage utile, lequel figure ?",
- ["Maladie rare et bénigne",
-  "Maladie fréquente et grave, avec traitement d'efficacité démontrée disponible",
-  "Test coûteux et invasif obligatoire",
-  "Absence de phase latente détectable"],
+ "Les 3 dimensions fondamentales de la MG (au-delà des compétences) sont :",
+ ["Préventive, curative, palliative",
+  "Contextuelle, comportementale, scientifique",
+  "Diagnostique, thérapeutique, relationnelle",
+  "Biologique, psychologique, sociale"],
  1,
- "Critères : maladie fréquente ET grave, traitement efficace disponible, moyens de diagnostic/traitement disponibles, coût acceptable, test acceptable/fiable, phase latente détectable.");
+ "Trois dimensions : CONTEXTUELLE (personne/famille/communauté/culture), COMPORTEMENTALE (valeurs, éthique), SCIENTIFIQUE (approche critique fondée sur la recherche).");
 
 Q("recherche",
- "Les trois orientations de la recherche en MG sont :",
- ["Recherche EN, PAR et SUR la médecine générale",
-  "Recherche fondamentale, clinique et translationnelle",
-  "Recherche publique, privée et mixte",
-  "Recherche locale, nationale et internationale"],
- 0,
- "Trois orientations : recherche EN médecine générale, PAR les médecins généralistes, et SUR la médecine générale.");
-
-Q("recherche",
- "L'Observatoire de la médecine générale permet :",
- ["Le contrôle des prescriptions par l'INAMI",
-  "Le recueil informatisé et longitudinal des données d'exercice (portrait quantitatif/qualitatif)",
-  "La gestion des pensions des médecins",
-  "L'accréditation des hôpitaux"],
+ "Selon Ian McWhinney, une caractéristique propre de la MG est qu'elle :",
+ ["Se définit par un organe ou une technique",
+  "Se définit en termes de relations et pense en termes de patients individuels",
+  "Cherche à éliminer toute incertitude",
+  "Refuse la métaphore organismique"],
  1,
- "Observatoire de la MG : recueil informatisé et longitudinal des données d'exercice → portrait quantitatif/qualitatif et théorisation de l'exercice.");
+ "McWhinney : seule discipline se définissant en termes de relations (médecin-malade), pensant en patients individuels, reposant sur une métaphore organismique, transcendant le dualisme corps-esprit, au plus haut niveau de complexité et d'incertitude.");
 
 Q("recherche",
- "Quel jalon historique de la MG en Belgique est correct ?",
- ["1952 : création de l'INAMI",
-  "1968 : création de la Société Scientifique de Médecine Générale (SSMG)",
-  "2009 : interdiction de la recherche en MG",
-  "2018 : suppression du Collège de Médecine Générale"],
+ "La méthode expérimentale (hypothético-déductive) s'ordonne ainsi :",
+ ["Hypothèse → observation → conclusion → expérience",
+  "Observation → problème → hypothèse → … → conclusion",
+  "Expérience → hypothèse → observation → résultat",
+  "Conclusion → hypothèse → observation → problème"],
  1,
- "1968 : SSMG. 1952 : College of General Practitioners (UK). Depuis 2009 : intégration académique (CAMG). 2018 : Collège de Médecine Générale.");
+ "Ordre : Observation → Problème → Hypothèse → Conséquence → Expérience → Résultat → Interprétation → Conclusion. Elle part toujours de l'observation, jamais de la conclusion.");
 
 Q("recherche",
- "Le « point-of-care testing » désigne :",
- ["Un test réalisé uniquement en laboratoire hospitalier",
-  "Des technologies de test ambulatoires intégrées au trajet de soins",
-  "Un type de méta-analyse",
-  "Une classification des maladies"],
+ "Les 6 compétences fondamentales de l'« arbre WONCA » comprennent toutes celles-ci SAUF :",
+ ["Gestion des soins de santé primaires",
+  "Soins centrés sur la personne",
+  "Maîtrise des actes de chirurgie spécialisée",
+  "Approche globale et orientation communautaire"],
+ 2,
+ "Les 6 compétences : soins primaires, centrés personne, résolution de problèmes, approche globale, orientation communautaire, modèle holistique. La chirurgie spécialisée n'en fait pas partie.");
+
+Q("recherche",
+ "Les trois orientations possibles de la recherche en MG sont la recherche :",
+ ["Avant, pendant et après les soins",
+  "EN, PAR et SUR la médecine générale",
+  "Locale, nationale et internationale",
+  "Fondamentale, clinique et translationnelle"],
  1,
- "Point-of-care testing : technologies ambulatoires intégrées au trajet de soins (test au plus près du patient).");
+ "Recherche EN médecine générale, PAR les médecins généralistes, SUR la médecine générale.");
 
 Q("recherche",
- "Parmi les impacts concrets de la recherche en MG (Rev Med Suisse 2025), lequel est cité ?",
- ["Le TIF bisannuel est non inférieur à la coloscopie pour le dépistage du cancer colorectal",
-  "La coloscopie annuelle obligatoire pour tous",
-  "L'aspirine systématiquement supérieure au clopidogrel",
-  "Les bêtabloquants obligatoires après tout IDM"],
- 0,
- "Exemples cités : TIF bisannuel non inférieur à la coloscopie ; clopidogrel > aspirine en prévention secondaire ; bêtabloquants après IDM sans bénéfice établi si FEVG préservée.");
+ "Un essai clinique randomisé pragmatique se classe parmi les études :",
+ ["Qualitatives", "Descriptives", "Analytiques observationnelles", "Interventionnelles"],
+ 3,
+ "L'ECR (conventionnel, adaptatif ou pragmatique) est une étude INTERVENTIONNELLE (le chercheur attribue l'intervention), distincte des études observationnelles (cohorte, cas-témoins).");
 
-// ========== LE MG ET LES PLAINTES LIÉES AU SPORT (Y. Fathallah & J.-M. Feron) ==========
+Q("recherche",
+ "Concernant l'histoire de la MG en Belgique, quelle affirmation est EXACTE ?",
+ ["L'INAMI a été créé par la SSMG en 1968",
+  "La SSMG (Société Scientifique de Médecine Générale) date de 1968",
+  "La spécialisation de la MG a favorisé sa recherche dès 1952",
+  "Le Collège de Médecine Générale a été dissous en 2018"],
+ 1,
+ "1968 : SSMG. La spécialisation (AR 1983) a longtemps RETARDÉ la recherche ; intégration académique depuis 2009 ; Collège de MG créé (pas dissous) en 2018.");
+
+Q("recherche",
+ "Parmi ces résultats issus de la recherche en MG (Rev Med Suisse 2025), lequel est correct ?",
+ ["La coloscopie est largement supérieure au test immunologique fécal (TIF)",
+  "Le TIF bisannuel est non inférieur à la coloscopie pour le dépistage colorectal",
+  "L'aspirine surpasse le clopidogrel en prévention secondaire",
+  "Les bêtabloquants sont bénéfiques après tout IDM, même à FEVG préservée"],
+ 1,
+ "Résultats cités : TIF bisannuel NON INFÉRIEUR à la coloscopie ; clopidogrel > aspirine en prévention secondaire ; bêtabloquants post-IDM sans bénéfice établi si FEVG préservée.");
+// ========== LE MG ET LES PLAINTES LIÉES AU SPORT — niveau difficile ==========
 Q("sport",
- "Concernant le dépistage cardiaque systématique du jeune sportif asymptomatique (< 35 ans) :",
- ["Il est recommandé chez tous les sportifs",
-  "Il n'est pas recommandé : la balance bénéfice-risque est négative avant 35 ans (KCE)",
-  "Il repose sur un ECG d'effort annuel obligatoire",
-  "Il réduit nettement la mortalité"],
- 1,
- "KCE 2015 : pas de dépistage cardiaque systématique chez le jeune sportif asymptomatique (< 35 ans), balance bénéfice-risque négative. Ni l'interrogatoire + examen, ni l'ECG de repos ne sont assez sensibles/spécifiques.");
-
-Q("sport",
- "La mort subite cardiaque touche surtout :",
- ["Les jeunes sportifs de moins de 20 ans",
-  "Des sujets d'âge mûr déjà cardiaques (le plus souvent un infarctus)",
-  "Les femmes de moins de 35 ans",
-  "Les enfants asthmatiques"],
- 1,
- "La mort subite cardiaque (~10 000/an en Belgique) touche surtout des sujets d'âge mûr déjà cardiaques. Chez le jeune sportif < 35 ans elle est très rare (≤ 10/million/an).");
-
-Q("sport",
- "Le dépistage cardiaque systématique du jeune sportif génère :",
- ["Aucun faux positif", "Beaucoup de faux positifs (5-30 %) → examens et traitements superflus", "Une réduction de la morbidité", "Uniquement des bénéfices"],
- 1,
- "Un tel dépistage génère 5-30 % de faux positifs → examens et traitements superflus, parfois risqués.");
-
-Q("sport",
- "Chez un patient de ≥ 40-50 ans souhaitant reprendre le sport, la conduite recommandée est :",
- ["Aucune évaluation",
-  "Évaluation globale du risque cardiovasculaire (SCORE2) ; bilan si symptômes ou risque élevé",
-  "ECG d'effort systématique pour tous",
-  "Interdiction du sport"],
- 1,
- "≥ 40-50 ans : évaluer le risque CV (SCORE2). Si faible et asymptomatique → rassurer ; si symptômes ou risque élevé → bilan cardiaque. Attention particulière à la reprise après 40 ans.");
+ "Un homme de 24 ans, asymptomatique, veut courir un semi-marathon et demande un « bilan cardiaque complet ». Que recommande le cours (KCE) ?",
+ ["Un ECG de repos systématique",
+  "Une épreuve d'effort annuelle",
+  "Pas de dépistage cardiaque systématique : rechercher seulement des symptômes d'alarme",
+  "Une échocardiographie de référence"],
+ 2,
+ "< 35 ans asymptomatique : pas de dépistage systématique (balance bénéfice-risque négative, 5-30 % de faux positifs). On recherche uniquement des symptômes d'alarme (douleur thoracique d'effort, syncope, palpitations).");
 
 Q("sport",
- "Le concept « Exercise as medicine » signifie que l'activité physique :",
- ["N'a d'effet que sur le poids",
-  "A un effet prouvé dans de nombreuses maladies chroniques (~26) et est une thérapeutique à part entière",
-  "Est dangereuse après 50 ans",
-  "Ne remplace jamais aucun traitement"],
+ "Concernant la mort subite cardiaque, quelle affirmation est EXACTE ?",
+ ["Elle est plus fréquente chez le jeune sportif que chez l'adulte d'âge mûr",
+  "Chez le jeune (< 35 ans), elle est très rare et touche davantage les garçons",
+  "Elle est principalement due à des cardiopathies congénitales chez l'adulte",
+  "Son incidence chez le jeune justifie un ECG de masse"],
  1,
- "« Exercise as medicine » : effet prouvé dans ~26 maladies chroniques. Après 50 ans, lutte contre sarcopénie, presbyataxie, isolement, baisse de VO2 max.");
+ "La mort subite est surtout le fait d'adultes d'âge mûr déjà cardiaques (souvent IDM). Chez le jeune < 35 ans elle est très rare (≤ 10/million/an), ~10× plus chez les garçons — sans justifier un dépistage de masse.");
 
 Q("sport",
- "Chez un patient atteint de cancer, l'activité physique :",
- ["Doit être évitée (repos systématique)",
-  "Réduit la fatigue liée au cancer, la mortalité et la récidive (effet dose-réponse)",
-  "Augmente le risque de récidive",
-  "N'a aucun effet démontré"],
+ "Un homme de 52 ans, sédentaire, veut reprendre le footing. SCORE2 à risque faible, asymptomatique. Conduite la plus adaptée :",
+ ["Réaliser d'emblée une épreuve d'effort",
+  "Le rassurer et l'encourager à reprendre une activité physique progressive",
+  "Lui interdire la course en raison de l'âge",
+  "Exiger une coronarographie préalable"],
  1,
- "L'AP réduit la fatigue, le risque de certains cancers (sein, côlon, endomètre : −20 à 30 %), la mortalité et la récidive (−30 à 40 % : sein, côlon, prostate).");
+ "≥ 40-50 ans : évaluer le risque CV (SCORE2). Si FAIBLE et asymptomatique → rassurer et encourager l'AP progressive. Bilan cardiaque réservé aux symptomatiques ou à risque élevé.");
 
 Q("sport",
- "Parmi les contre-indications à l'activité physique chez le patient cancéreux, laquelle est correcte ?",
- ["Hémoglobine > 12 g/dl", "Neutropénie sévère < 500/mm³", "Plaquettes > 100 000/mm³", "Température 37 °C"],
- 1,
- "CI : neutropénie sévère (< 500/mm³), anémie (Hb < 9,5 g/dl), thrombopénie (< 20 000/mm³), fièvre > 38 °C, métastases osseuses. Reporter de 24 h après signes infectieux.");
-
-Q("sport",
- "Chez le diabétique, avant un effort, si la glycémie capillaire est < 6-8 mmol/L (≈ 109-145 mg/dl), il faut :",
+ "Chez un patient diabétique de type 1, avant un effort, une glycémie capillaire de 5 mmol/L (~90 mg/dl) impose de :",
  ["Faire l'effort sans précaution",
-  "Prendre ≥ 15 g de glucides",
-  "Reporter systématiquement l'effort",
-  "Injecter de l'insuline"],
+  "Prendre au moins 15 g de glucides avant de débuter",
+  "Injecter de l'insuline rapide",
+  "Reporter définitivement toute activité physique"],
  1,
- "< 6-8 mmol/L → prendre ≥ 15 g de glucides ; 8-14 mmol/L → OK ; > 15 mmol/L → vérifier l'absence de cétonurie. On diminue aussi l'insuline (50-75 %) couvrant la période.");
+ "Avant l'effort : < 6-8 mmol/L → prendre ≥ 15 g de glucides ; 8-14 mmol/L → OK ; > 15 mmol/L → vérifier la cétonurie. À 5 mmol/L, risque d'hypoglycémie → glucides d'abord.");
 
 Q("sport",
- "Quelle est une contre-indication à l'effort chez le diabétique ?",
- ["Glycémie à 150 mg/dl",
-  "Hyperglycémie > 250 mg/dl avec cétonurie (ou > 300 sans), ou glycémie < 127 mg/dl",
-  "HbA1c à 7 %",
-  "Tension artérielle normale"],
+ "Toujours chez le diabétique, laquelle de ces situations CONTRE-INDIQUE l'effort (à reporter) ?",
+ ["Glycémie à 180 mg/dl sans cétonurie",
+  "Glycémie > 250 mg/dl AVEC cétonurie",
+  "HbA1c à 7,5 %",
+  "Pratique d'un sport d'endurance"],
  1,
- "CI : reporter si hyperglycémie > 250 mg/dl + cétonurie (ou > 300 sans) ou glycémie < 127 mg/dl. Prudence si HTA non contrôlée, rétinopathie proliférative, neuropathie.");
+ "CI : reporter si hyperglycémie > 250 mg/dl + cétonurie (ou > 300 sans), ou glycémie < 127 mg/dl. Une glycémie de 180 sans cétonurie n'est pas une CI ; l'endurance est même recommandée.");
 
 Q("sport",
- "Un enfant asthmatique souhaite s'inscrire dans un club sportif. Que conseiller ?",
- ["Lui interdire le sport",
-  "L'autoriser : l'AP améliore le contrôle de l'asthme, la qualité de vie et la fonction pulmonaire",
-  "Limiter le sport à 10 min/semaine",
-  "Exiger un bilan cardiaque annuel"],
+ "Parmi ces seuils, lequel constitue une CONTRE-INDICATION à l'activité physique chez un patient en cours de chimiothérapie ?",
+ ["Hémoglobine à 11 g/dl",
+  "Plaquettes à 80 000/mm³",
+  "Neutrophiles < 500/mm³ (neutropénie sévère)",
+  "Température à 37,5 °C"],
+ 2,
+ "CI : neutropénie < 500/mm³, anémie Hb < 9,5 g/dl, thrombopénie < 20 000/mm³, fièvre > 38 °C, métastases osseuses. Les valeurs proposées (Hb 11, plaq 80 000, 37,5 °C) restent au-dessus des seuils.");
+
+Q("sport",
+ "Un coureur enchaîne les tendinopathies. Le facteur de risque MODIFIABLE majeur, selon le cours, est :",
+ ["La morphologie des membres inférieurs",
+  "La mauvaise gestion de la charge d'entraînement",
+  "L'âge du coureur",
+  "Le type de chaussures uniquement"],
  1,
- "L'asthme n'est pas une CI au sport : l'AP améliore le contrôle de l'asthme, la qualité de vie et la fonction pulmonaire. Aucune étude ne montre d'aggravation.");
+ "La gestion de la charge est le facteur de risque majeur ET modifiable. Règle : augmentation < 10 %/semaine (ratio charge aiguë:chronique 0,8-1,3) + renforcement hanche/core.");
 
 Q("sport",
- "L'activité physique régulière sur les infections respiratoires :",
- ["Les augmente toujours",
-  "Les réduit (−40 %), mais attention à la « courbe en J » (l'excès d'intensité affaiblit l'immunité)",
-  "N'a aucun effet",
-  "Doit être évitée en cas d'infections fréquentes"],
+ "Une adolescente se plaint de douleurs ANTÉRIEURES du genou en montant les escaliers, sans épanchement. Diagnostic le plus probable :",
+ ["Syndrome de l'essuie-glace (bandelette ilio-tibiale)",
+  "Syndrome fémoropatellaire",
+  "Maladie d'Osgood-Schlatter",
+  "Gonarthrose débutante"],
  1,
- "L'AP régulière réduit les infections respiratoires (−40 %), mais la « courbe en J » montre qu'un excès d'intensité affaiblit l'immunité.");
+ "Douleur ANTÉRIEURE (escaliers, squats) chez l'adolescente = syndrome fémoropatellaire (imagerie peu utile, rééducation/quadriceps). L'essuie-glace donne une douleur LATÉRALE ; Osgood-Schlatter siège sur la tubérosité tibiale.");
 
 Q("sport",
- "Pour prévenir les blessures de surcharge, l'augmentation de la charge d'entraînement doit être limitée à :",
- ["< 50 % par semaine", "< 10 % par semaine (ratio charge aiguë:chronique 0,8-1,3)", "Aucune limite", "< 30 % par jour"],
+ "Un coureur a une douleur de la face LATÉRALE du genou apparaissant à l'effort et cédant au repos. Le diagnostic évoqué est :",
+ ["Syndrome fémoropatellaire",
+  "Syndrome de l'essuie-glace (bandelette ilio-tibiale)",
+  "Entorse du ligament latéral interne",
+  "Apophysite tibiale"],
  1,
- "Gestion de la charge : limiter l'augmentation à < 10 %/semaine (ou ratio charge aiguë:chronique entre 0,8 et 1,3). Facteur de risque majeur et modifiable.");
+ "Douleur LATÉRALE du genou à l'effort chez le coureur = syndrome de l'essuie-glace (friction de la bandelette ilio-tibiale) ; diagnostic clinique, traitement conservateur.");
 
 Q("sport",
- "Le « syndrome de l'essuie-glace » (bandelette ilio-tibiale) se caractérise par :",
- ["Une douleur antérieure du genou dans les escaliers",
-  "Une douleur de la face LATÉRALE du genou à l'effort (pathologie du coureur, diagnostic clinique)",
-  "Une douleur du tendon d'Achille",
-  "Une instabilité de cheville"],
+ "La maladie d'Osgood-Schlatter. Laquelle de ces propositions est FAUSSE ?",
+ ["C'est une apophysite de surmenage de l'enfant sportif",
+  "La reprise se décide sur la disparition de la douleur, pas sur l'imagerie",
+  "Le repos sportif sélectif dure typiquement 3 à 6 mois",
+  "Elle nécessite une chirurgie dans la majorité des cas"],
+ 3,
+ "FAUX : le traitement est conservateur (repos sélectif 3-6 mois, reprise sur l'absence de douleur). La chirurgie n'est pas la règle.");
+
+Q("sport",
+ "Chez un adolescent déconditionné qui « ne sait pas courir », l'ordre de fréquence des causes de dyspnée d'effort est :",
+ ["Asthme > déconditionnement > anxiété",
+  "Déconditionnement > anxiété > asthme d'effort > obstruction laryngée",
+  "Obstruction laryngée > asthme > déconditionnement",
+  "Cardiopathie > asthme > anxiété"],
  1,
- "Syndrome de l'essuie-glace : douleur face LATÉRALE du genou à l'effort, pathologie du coureur, diagnostic clinique, traitement conservateur.");
+ "Par fréquence : déconditionnement > anxiété > asthme d'effort > obstruction laryngée induite par l'effort. L'asthme n'est pas la 1re cause.");
 
 Q("sport",
- "Le syndrome fémoropatellaire se manifeste par :",
- ["Une douleur ANTÉRIEURE du genou (escaliers, squats), fréquent chez l'adolescente",
-  "Une douleur latérale du genou",
-  "Une rougeur et un épanchement aigus",
-  "Une douleur nocturne du mollet"],
- 0,
- "Syndrome fémoropatellaire : douleur antérieure du genou (escaliers, squats), fréquent chez l'adolescente ; imagerie peu utile ; rééducation / renforcement du quadriceps.");
+ "Pour la gonarthrose du sportif (stade léger à modéré), quelle option n'est PAS proposée par le cours ?",
+ ["Exercice thérapeutique",
+  "Viscosupplémentation (acide hyaluronique)",
+  "PRP (plasma riche en plaquettes)",
+  "Prothèse totale du genou d'emblée"],
+ 3,
+ "Stades légers-modérés : exercice thérapeutique, viscosupplémentation, PRP. La prothèse d'emblée n'est pas indiquée à ce stade.");
 
 Q("sport",
- "Pour la gonarthrose du sportif (stades légers-modérés), le cours cite comme options :",
- ["Le repos strict et l'arrêt définitif du sport",
-  "L'exercice thérapeutique, la viscosupplémentation (acide hyaluronique) et le PRP",
-  "Une prothèse d'emblée",
-  "Des corticoïdes oraux au long cours"],
+ "En matière de dopage, les glucocorticoïdes (classe S9). Quelle affirmation est EXACTE ?",
+ ["Ils sont interdits en permanence (en et hors compétition)",
+  "Ils sont interdits en compétition ; une infiltration > 3 jours avant est possible",
+  "Ils sont toujours autorisés par voie injectable",
+  "Ils figurent parmi les agents masquants (S5)"],
  1,
- "Gonarthrose du sportif : exercice thérapeutique (prévient la dégénérescence, réduit la douleur) ; stades légers-modérés : viscosupplémentation (acide hyaluronique) et PRP (plasma riche en plaquettes).");
+ "Glucocorticoïdes = S9, interdits EN COMPÉTITION (oral/IV/IM/rectal). Une infiltration réalisée > 3 jours avant la compétition est possible (sinon AUT). Ce ne sont pas des agents masquants.");
 
 Q("sport",
- "Concernant l'entorse de cheville récidivante, la rééducation repose surtout sur :",
- ["L'immobilisation prolongée",
-  "La proprioception, la force et la coordination (la récupération proprioceptive est plus lente que la consolidation ligamentaire)",
-  "Le seul renforcement du quadriceps",
-  "L'arrêt définitif du sport"],
+ "Un étudiant prépare les 20 km de Bruxelles et utilise du salbutamol inhalé. Quelle est la règle antidopage ?",
+ ["Interdit en toute circonstance",
+  "Autorisé sous seuil (≈ 2 bouffées/6 h, soit ~4×/24 h)",
+  "Autorisé uniquement avec une AUT préalable",
+  "Considéré comme un anabolisant (S1)"],
  1,
- "Entorse de cheville : rééducation par proprioception, force, coordination. La récupération proprioceptive est plus lente que la consolidation ligamentaire → d'où les récidives.");
+ "Le salbutamol inhalé est autorisé SOUS SEUIL (≈ 1600 µg/24 h, soit ~2 bouffées toutes les 6 h). Au-delà → contrôle positif. C'est un bêta-2 agoniste (S3), pas un anabolisant.");
 
 Q("sport",
- "La maladie d'Osgood-Schlatter (apophysite) :",
- ["Touche surtout l'adulte de plus de 50 ans",
-  "Est une maladie de surmenage de l'enfant sportif ; repos sportif sélectif 3-6 mois, reprise sur l'absence de douleur",
-  "Nécessite une chirurgie systématique",
-  "Se traite par corticoïdes"],
+ "Un marathonien demande de l'acétazolamide (Diamox) pour un trek en altitude. Sur le plan antidopage :",
+ ["Autorisé, car non performant",
+  "Interdit en permanence (S5, diurétique/agent masquant) → AUT nécessaire",
+  "Interdit seulement en compétition (S9)",
+  "Autorisé sous seuil comme le salbutamol"],
  1,
- "Osgood-Schlatter : apophysite de l'enfant sportif (fille ~11 ans, garçon ~13 ans), maladie de surmenage ; repos sportif sélectif 3-6 mois ; reprise sur l'ABSENCE de douleur (pas sur l'imagerie).");
+ "L'acétazolamide est un diurétique/agent masquant (S5), INTERDIT EN PERMANENCE → AUT obligatoire même pour un usage médical (mal aigu des montagnes).");
 
 Q("sport",
- "Chez l'adolescent qui « ne sait pas courir », la cause la plus fréquente de dyspnée d'effort est :",
- ["L'asthme d'effort", "Le déconditionnement", "Une cardiopathie", "Une anémie sévère"],
+ "Classez correctement : substances interdites EN PERMANENCE (et hors compétition) :",
+ ["Stimulants (S6) et narcotiques (S7)",
+  "Anabolisants (S1), hormones peptidiques (S2), diurétiques/masquants (S5)",
+  "Cannabinoïdes (S8) et glucocorticoïdes (S9)",
+  "Bêta-bloquants (P1) dans tous les sports"],
  1,
- "Causes par fréquence : déconditionnement, anxiété, asthme d'effort, obstruction laryngée induite par l'effort.");
+ "Interdits en permanence : S1 anabolisants, S2 hormones (EPO, GH), S3 bêta-2, S4 modulateurs, S5 diurétiques/masquants. Interdits EN COMPÉTITION en plus : S6 stimulants, S7 narcotiques, S8 cannabinoïdes, S9 glucocorticoïdes.");
 
 Q("sport",
- "Quel outil sert à évaluer le niveau d'activité physique et doit figurer dans le DMI (AR 2024) ?",
- ["Le GPAQ (Global Physical Activity Questionnaire, OMS)",
-  "Le score de Tinetti",
-  "Le questionnaire AUDIT",
-  "L'échelle de Katz"],
- 0,
- "GPAQ (OMS), auto-administrable, 3 niveaux (faible, modéré = reco minimales, élevé). Le niveau d'AP doit figurer dans le DMI (AR du 25/05/2024).");
+ "Le concept « Exercise as medicine ». Quelle proposition est FAUSSE ?",
+ ["L'AP a un effet prouvé dans de nombreuses maladies chroniques (~26)",
+  "Chez le cancéreux, l'AP réduit la fatigue, la mortalité et la récidive",
+  "Le repos systématique est préférable après un cancer",
+  "Après 50 ans, l'AP lutte contre la sarcopénie et la baisse de VO2 max"],
+ 2,
+ "FAUX : loin du repos systématique, l'AP est une thérapeutique (réduit fatigue/mortalité/récidive). Les 3 autres propositions sont exactes.");
 
 Q("sport",
- "L'Agence Mondiale Antidopage (AMA/WADA), créée en 1999 :",
- ["Est financée à 100 % par le CIO",
-  "Coordonne la lutte antidopage (financée 50 % CIO, 50 % États) ; l'ONAD applique le Code localement",
-  "Délivre directement les AUT",
-  "Ne publie pas de liste d'interdictions"],
+ "Le dopage, au sens du Code mondial antidopage, recouvre :",
+ ["Uniquement la présence d'une substance interdite",
+  "11 types de violations (usage, possession, trafic, contrôles manqués, complicité…)",
+  "Seulement les sports de compétition officiels",
+  "Exclusivement les substances injectables"],
  1,
- "AMA/WADA (1999) coordonne la lutte antidopage, financée 50 % CIO / 50 % États. La liste des interdictions est mise à jour annuellement (1er janvier). L'ONAD applique le Code localement.");
+ "11 violations possibles (pas seulement la présence) : usage, soustraction au contrôle, contrôles manqués, falsification, possession, trafic, administration, complicité, association, représailles. Depuis 2020, le sport « libre » peut aussi être contrôlé.");
 
 Q("sport",
- "Les glucocorticoïdes (corticoïdes) sont, en dopage :",
- ["Interdits en permanence (S5)",
-  "Interdits en compétition (S9) ; une infiltration est possible si réalisée > 3 jours avant la compétition",
-  "Toujours autorisés",
-  "Des bêta-2 agonistes"],
- 1,
- "Glucocorticoïdes = S9, interdits EN COMPÉTITION. Une infiltration est possible si réalisée > 3 jours avant la compétition (sinon AUT).");
-
-Q("sport",
- "Le salbutamol (Ventolin) inhalé chez un coureur amateur :",
- ["Est totalement interdit",
-  "Est autorisé sous seuil (jusqu'à ~2 bouffées toutes les 6 h, ≈ 4×/24 h)",
-  "Nécessite toujours une AUT",
-  "Est un anabolisant interdit en permanence"],
- 1,
- "Le salbutamol inhalé est autorisé SOUS SEUIL : jusqu'à 2 bouffées/6 h (~4×/24 h, ≈ 1600 µg/24 h). Au-delà → contrôle positif.");
-
-Q("sport",
- "L'acétazolamide (Diamox), demandé contre le mal aigu des montagnes chez un sportif, est :",
- ["Autorisé sans restriction",
-  "Interdit en permanence (S5, diurétique/agent masquant) → nécessite une AUT",
-  "Un stimulant interdit seulement en compétition",
-  "Un glucocorticoïde"],
- 1,
- "L'acétazolamide est S5 (diurétique/agent masquant), INTERDIT EN PERMANENCE → il faut une AUT.");
-
-Q("sport",
- "Le dopage correspond à combien de types de violations possibles ?",
- ["Une seule (présence d'une substance)",
-  "11 violations (usage, contrôles manqués, possession, trafic, complicité...)",
-  "3 violations",
-  "Aucune depuis 2020"],
- 1,
- "Le dopage = 11 violations possibles (pas seulement la présence) : usage, soustraction au contrôle, contrôles manqués, falsification, possession, trafic, administration, complicité, association, représailles. Depuis 2020, le sport « libre » peut aussi être contrôlé.");
-
-Q("sport",
- "Que peut attester un certificat de non-contre-indication au sport ?",
+ "Un certificat de non-contre-indication au sport atteste exactement :",
  ["L'absence de tout risque cardiaque",
-  "« Pas de contre-indication apparente à la pratique d'un sport » (sans garantir l'absence de tout risque)",
-  "L'aptitude au haut niveau",
-  "La nécessité d'un ECG systématique"],
- 1,
- "Le médecin atteste « pas de contre-indication apparente à la pratique d'un sport » : il ne garantit pas l'absence de tout risque, et il n'y a pas d'ECG systématique chez le jeune asymptomatique.");
+  "L'aptitude au sport de haut niveau",
+  "L'absence de contre-indication APPARENTE à la pratique d'un sport",
+  "La nécessité d'un ECG de contrôle annuel"],
+ 2,
+ "Le certificat atteste « pas de contre-indication APPARENTE » : il ne garantit pas l'absence de tout risque et n'implique pas d'ECG systématique chez le jeune asymptomatique.");
 
-// ========== ONE HEALTH : MÉDECINE & ENVIRONNEMENT (de Rouffignac, Verstraete, Breda) ==========
-Q("onehealth",
- "Décider d'une prescription, selon le cours, c'est mettre en balance :",
- ["Uniquement l'efficacité du médicament",
-  "Le coût, les préférences du patient, l'empreinte carbone, l'écotoxicité, l'éthique, le grade de reco, les interactions et les alternatives",
-  "Seulement le prix pour la sécurité sociale",
-  "Uniquement les interactions médicamenteuses"],
+Q("sport",
+ "Pour évaluer et tracer le niveau d'activité physique (obligatoire dans le DMI selon l'AR 2024), on utilise :",
+ ["Le test de Tinetti", "Le GPAQ (OMS)", "Le questionnaire AUDIT", "Le score SCORE2"],
  1,
- "Une prescription engage bien plus que l'efficacité : coût (patient + sécurité sociale), préférences, empreinte carbone, écotoxicité, éthique, grade, interactions, alternatives (médicamenteuses ou non).");
+ "GPAQ (Global Physical Activity Questionnaire, OMS) : auto-administrable, 3 niveaux (faible/modéré/élevé). Le niveau d'AP doit figurer dans le DMI (AR du 25/05/2024).");
 
-Q("onehealth",
- "Imposer un dispositif « moins polluant » sans tenir compte du patient peut :",
- ["Améliorer systématiquement l'adhérence",
-  "Nuire (culpabilité, mauvaise utilisation, baisse de compliance, exacerbations)",
-  "Être sans conséquence",
-  "Supprimer toute exacerbation"],
+Q("sport",
+ "Un enfant asthmatique bien contrôlé veut faire du football. Le conseil correct est :",
+ ["Le déconseiller pour éviter les crises",
+  "L'autoriser : l'AP améliore le contrôle de l'asthme et la fonction pulmonaire",
+  "Le limiter aux sports aquatiques uniquement",
+  "Exiger un test d'effort préalable"],
  1,
- "Aucun type d'inhalateur ne favorise clairement l'adhérence (~1/3 non adhérents). Imposer un dispositif peut nuire → privilégier la décision partagée, pas le paternalisme.");
+ "L'asthme n'est pas une CI : l'AP améliore le contrôle, la qualité de vie et la fonction pulmonaire (aucune étude ne montre d'aggravation). L'effort modéré régulier réduit même les infections respiratoires (−40 %).");
 
-Q("onehealth",
- "Le secteur de la santé représente environ quelle part de l'empreinte carbone nationale ?",
- ["~2 %", "~8 %", "~25 %", "~50 %"],
+Q("sport",
+ "Concernant l'AMA/WADA, quelle affirmation est EXACTE ?",
+ ["Elle est financée à 100 % par le CIO",
+  "Elle est financée à parts égales par le CIO et les États ; l'ONAD applique le Code localement",
+  "Elle délivre directement les AUT aux athlètes",
+  "Elle ne met à jour sa liste que tous les 5 ans"],
  1,
- "Le secteur de la santé ≈ 8 % de l'empreinte carbone nationale (chiffre Shift Project 2021, probablement sous-estimé).");
-
+ "AMA/WADA (1999) : financée 50 % CIO / 50 % États. Liste mise à jour ANNUELLEMENT (1er janvier). L'AUT se demande à l'ONAD (qui applique le Code localement).");
+// ========== ONE HEALTH : MÉDECINE & ENVIRONNEMENT — niveau difficile ==========
 Q("onehealth",
- "Quel est le 1er poste d'émissions de gaz à effet de serre du secteur de la santé ?",
- ["Les transports des patients",
+ "Dans le secteur de la santé, quel poste représente la plus grande part des émissions de gaz à effet de serre ?",
+ ["Le chauffage et l'énergie des bâtiments hospitaliers",
+  "Les déplacements des patients et du personnel",
   "L'achat des médicaments et dispositifs médicaux (~54 %)",
-  "Le chauffage des hôpitaux",
-  "L'alimentation"],
+  "La gestion des déchets de soins"],
+ 2,
+ "Plus de 85 % des émissions sont indirectes ; l'achat de médicaments et dispositifs médicaux pèse ~54 % des GES = 1er poste. Le secteur santé ≈ 8 % de l'empreinte nationale.");
+
+Q("onehealth",
+ "Un patient asthmatique adhérent et bien équilibré sous pMDI. Au nom de l'écologie, faut-il le passer à un DPI ?",
+ ["Oui, systématiquement, car le DPI pollue moins",
+  "Pas de façon imposée : décision partagée, car imposer un dispositif peut nuire à l'observance",
+  "Non, le DPI est moins efficace que le pMDI",
+  "Oui, mais uniquement chez l'enfant de moins de 5 ans"],
  1,
- "Plus de 85 % d'émissions indirectes ; l'achat des médicaments et dispositifs médicaux représente ~54 % des GES = 1er poste.");
+ "DPI = pMDI en efficacité et pollue moins, MAIS aucun dispositif ne garantit l'adhérence : imposer un changement peut nuire (mauvaise utilisation, exacerbations). On privilégie la décision partagée. DPI à éviter < 5 ans / faible capacité inspiratoire.");
 
 Q("onehealth",
- "Concernant les inhalateurs DPI (poudre sèche) vs pMDI (aérosols-doseurs) :",
- ["Le DPI est moins efficace que le pMDI",
-  "Le DPI est aussi efficace que le pMDI mais moins polluant (à éviter chez l'enfant < 5 ans ou si capacité inspiratoire fortement diminuée)",
-  "Le pMDI est moins polluant",
-  "Le DPI est interdit en Belgique"],
+ "Les « 4R » de la santé durable, par ordre de PRIORITÉ décroissante :",
+ ["Recycler > Réduire > Remplacer",
+  "Réduire > Remplacer > Recycler (et Repenser)",
+  "Remplacer > Réduire > Recycler",
+  "Repenser > Recycler > Réduire > Remplacer"],
  1,
- "Efficacité DPI = pMDI (fond et exacerbations) ; le DPI est moins polluant, mais à éviter chez l'enfant < 5 ans ou si la capacité inspiratoire est fortement diminuée (CBIP). Remplacer un pMDI par un DPI ≈ devenir végétarien (~−420 kgCO2/an).");
+ "Ordre de priorité : RÉDUIRE (agir sur besoins/demandes/réponses) en premier, puis Remplacer, puis Recycler (et Repenser). Réduire prime sur recycler.");
 
 Q("onehealth",
- "Quelles classes de médicaments sont les plus à risque pour l'environnement (écotoxicité) ?",
- ["Vitamines et minéraux",
-  "Hormones, antalgiques, antibiotiques, anticancéreux, antidépresseurs",
-  "Sérums physiologiques",
-  "Pansements"],
- 1,
- "Classes à risque : hormones, antalgiques, antibiotiques, anticancéreux, antidépresseurs ; effets même à très faibles concentrations. Les stations d'épuration ne filtrent pas ces micropolluants.");
-
-Q("onehealth",
- "Que signifie le score PBT en écotoxicité ?",
- ["Pharmacocinétique – Biodisponibilité – Toxicité",
-  "Persistance – Bioaccumulation – Toxicité",
-  "Prévention – Bénéfice – Traitement",
-  "Pollution – Biologie – Tératogénicité"],
- 1,
- "Outils d'écotoxicité : score PBT (Persistance, Bioaccumulation, Toxicité) / HAZARD.");
-
-Q("onehealth",
- "Les 3 piliers du développement durable (« 3 P ») sont :",
- ["People, Planet, Profit",
-  "Prevention, Patient, Practice",
-  "Power, Politics, Profit",
-  "People, Pharma, Planet"],
- 0,
- "Développement durable = 3 P : People, Planet, Profit. De la RSE (responsabilité sociale des entreprises) à la RSS (responsabilité sociale en santé).");
-
-Q("onehealth",
- "La « théorie du Donut » (K. Raworth) décrit :",
- ["Un modèle de financement hospitalier",
-  "Un espace « sûr et juste » entre un plancher social et un plafond environnemental",
-  "Une classification des médicaments",
-  "Une échelle de fragilité"],
- 1,
- "Théorie du Donut (Raworth) : un espace sûr et juste entre un plancher social et un plafond environnemental.");
-
-Q("onehealth",
- "Selon la Commission Lancet (2015), lutter contre le changement climatique pourrait être :",
- ["Sans rapport avec la santé",
-  "« La plus grande opportunité du 21e siècle pour la santé mondiale »",
-  "Une menace pour la médecine",
-  "Réservé aux pays riches"],
- 1,
- "Commission Lancet (2015) : lutter contre le changement climatique pourrait être « la plus grande opportunité du 21e siècle pour la santé mondiale ».");
-
-Q("onehealth",
- "Les « 4R » de l'action en santé durable, par ordre de PRIORITÉ, sont :",
- ["Recycler – Réduire – Remplacer – Repenser",
-  "Réduire – Remplacer – Recycler (et Repenser)",
-  "Remplacer – Recycler – Réduire",
-  "Repenser – Recycler – Remplacer – Réduire"],
- 1,
- "Les 4R par ordre de priorité : Réduire (prioritaire : agir sur les besoins/demandes/réponses) – Remplacer – Recycler (et Repenser).");
-
-Q("onehealth",
- "À molécule équivalente, en termes de santé durable, on préférera :",
- ["Le diclofénac (plus écotoxique)",
+ "À indication équivalente, en termes de santé durable, on préférera prescrire :",
+ ["Le diclofénac plutôt que l'ibuprofène",
   "L'ibuprofène plutôt que le diclofénac (moins écotoxique)",
-  "L'option la moins chère uniquement",
-  "Le médicament le plus récent"],
+  "Le médicament le plus récent",
+  "Le médicament au plus grand conditionnement"],
  1,
- "À molécule équivalente, préférer l'option la moins nocive pour l'environnement : ex. ibuprofène plutôt que diclofénac (plus écotoxique).");
+ "À molécule équivalente, choisir l'option la moins nocive pour l'environnement : l'ibuprofène est moins écotoxique que le diclofénac. Question type « conséquences en santé durable ».");
 
 Q("onehealth",
- "La déprescription de médicaments inutiles (surtout chez la personne âgée) :",
- ["Augmente l'empreinte carbone",
-  "Rejoint la prévention quaternaire et la sobriété",
-  "Est contre-indiquée en santé durable",
-  "Concerne uniquement les antibiotiques"],
+ "Quelles classes de médicaments sont citées comme les plus à risque pour l'environnement ?",
+ ["Vitamines, minéraux, probiotiques",
+  "Hormones, antibiotiques, anticancéreux, antidépresseurs, antalgiques",
+  "Sérums physiologiques et pansements",
+  "Vaccins exclusivement"],
  1,
- "La déprescription rejoint la prévention quaternaire et la sobriété : « un soin qui ne consomme pas est un soin qui n'existe pas », en gardant l'adéquation.");
+ "Classes à risque : hormones, antalgiques, antibiotiques, anticancéreux, antidépresseurs — actifs même à très faibles concentrations. Les stations d'épuration ne filtrent pas ces micropolluants.");
 
 Q("onehealth",
- "Le gaz propulseur HFA-152a (innovation pour inhalateurs) :",
- ["A un pouvoir de réchauffement 10-30× MOINDRE que les propulseurs actuels",
-  "Est 10× plus polluant",
-  "Est interdit",
-  "N'a aucun intérêt environnemental"],
+ "Le score PBT utilisé en écotoxicité évalue :",
+ ["Pharmacocinétique, Biodisponibilité, Toxicité",
+  "Persistance, Bioaccumulation, Toxicité",
+  "Prévention, Bénéfice, Traitement",
+  "Pollution, Biodégradabilité, Tératogénicité"],
+ 1,
+ "PBT = Persistance, Bioaccumulation, Toxicité (avec l'indice HAZARD) : outils d'évaluation de l'écotoxicité d'un médicament.");
+
+Q("onehealth",
+ "La théorie du « Donut » (K. Raworth) propose :",
+ ["Un modèle de tarification des soins",
+  "Un espace sûr et juste entre un plancher social et un plafond environnemental",
+  "Une classification des médicaments par remboursement",
+  "Une échelle de fragilité du patient âgé"],
+ 1,
+ "Donut de Raworth : opérer dans un espace « sûr et juste », au-dessus d'un plancher social et en-dessous d'un plafond environnemental.");
+
+Q("onehealth",
+ "Les « 3 P » du développement durable sont :",
+ ["Patient, Prévention, Profit",
+  "People, Planet, Profit",
+  "Public, Privé, Partenariat",
+  "Prévention, Promotion, Protection"],
+ 1,
+ "Développement durable = 3 P : People, Planet, Profit. On passe de la RSE (responsabilité sociale des entreprises) à la RSS (responsabilité sociale en santé).");
+
+Q("onehealth",
+ "Selon la Commission Lancet (2015), agir sur le changement climatique constitue :",
+ ["Une contrainte qui nuit à la santé mondiale",
+  "La plus grande opportunité du 21e siècle pour la santé mondiale",
+  "Un enjeu sans lien avec la pratique médicale",
+  "Une priorité réservée aux pays à faibles revenus"],
+ 1,
+ "Commission Lancet 2015 : lutter contre le changement climatique = « la plus grande opportunité du 21e siècle pour la santé mondiale ».");
+
+Q("onehealth",
+ "Le nouveau gaz propulseur HFA-152a pour inhalateurs :",
+ ["Possède un pouvoir de réchauffement 10 à 30× MOINDRE",
+  "Possède un pouvoir de réchauffement 10× supérieur",
+  "Est interdit en Europe",
+  "N'a aucun impact sur l'empreinte carbone du dispositif"],
  0,
- "HFA-152a : nouveau gaz propulseur au pouvoir de réchauffement 10-30× moindre.");
+ "HFA-152a : pouvoir de réchauffement 10 à 30× moindre que les propulseurs actuels → réduit l'empreinte des pMDI.");
 
 Q("onehealth",
- "Pour une simple IVRS (rhume), une « ordonnance de confort » (~53 €) équivaut environ à :",
- ["~5 kg de CO2", "~53 kg de CO2 (≈ 10 L de diesel)", "~500 kg de CO2", "Aucune émission"],
+ "Pourquoi des résidus médicamenteux se retrouvent-ils dans les eaux de surface ?",
+ ["Parce que les stations d'épuration les éliminent volontairement",
+  "Par gaspillage (gros conditionnements, faible adhérence) et car les STEP ne filtrent pas ces micropolluants",
+  "Uniquement à cause des rejets industriels",
+  "Parce qu'ils sont entièrement biodégradables"],
  1,
- "IVRS : ordonnance de confort ≈ 53 € ≈ 53 kg CO2 ≈ 10 L de diesel. Alternatives : boissons chaudes, miel, paracétamol au besoin, sérum physiologique.");
+ "Gaspillage (conditionnements trop grands, faible adhérence, péremptions) + les STEP ne filtrent pas ces micropolluants → présence dans l'eau. ~14 % des médicaments vendus finissent à la poubelle.");
 
 Q("onehealth",
- "Que recouvre l'idée de concepts « emboîtés » en santé environnementale ?",
- ["One Health, santé planétaire, santé globale, santé publique — l'environnement et la santé sont interdépendants",
-  "Une hiérarchie des spécialités médicales",
-  "Les niveaux de soins (1re, 2e, 3e ligne)",
-  "Les régimes de sécurité sociale"],
- 0,
- "Concepts emboîtés : One Health, santé planétaire, santé globale, santé publique. L'environnement et la santé sont interdépendants.");
+ "Décider d'une prescription, selon le cours, c'est mettre en balance plusieurs enjeux. Lequel n'est PAS cité ?",
+ ["Le coût pour le patient et la sécurité sociale",
+  "L'empreinte carbone et l'écotoxicité",
+  "Le nombre de patients de la patientèle du médecin",
+  "Les préférences du patient et les alternatives non médicamenteuses"],
+ 2,
+ "Enjeux d'une prescription : coût, préférences, empreinte carbone, écotoxicité, éthique, grade de reco, interactions, alternatives. La taille de la patientèle n'en fait pas partie.");
 
 Q("onehealth",
- "Les « discours de l'inaction » regroupent des arguments-types tels que :",
- ["« On est là pour soigner », « on manque de temps/argent », « on a toujours fait comme ça »",
-  "Des recommandations de bonne pratique",
-  "Des protocoles de déprescription",
-  "Les critères de Fried"],
- 0,
- "11 arguments-types de l'inaction : « on est là pour soigner », « on manque de temps/argent », « on a toujours fait comme ça »... → à connaître pour s'en méfier.");
-
-Q("onehealth",
- "Concernant l'antibiorésistance :",
- ["C'est un problème mineur et localisé",
-  "C'est un enjeu mondial majeur (prévisions du Lancet à l'horizon 2050), se propageant jusque dans des zones reculées",
-  "Elle ne concerne pas la santé environnementale",
-  "Elle disparaît avec de nouveaux antibiotiques"],
+ "Pour une simple IVRS, une « ordonnance de confort » d'environ 53 € correspond à un coût carbone de l'ordre de :",
+ ["~5 kg de CO2", "~53 kg de CO2 (≈ 10 L de diesel)", "~530 kg de CO2", "Négligeable"],
  1,
- "Antibiorésistance : enjeu mondial majeur (prévisions du Lancet à l'horizon 2050), propagation jusque dans des zones reculées.");
+ "≈ 53 € ≈ 53 kg CO2 ≈ 10 L de diesel. Alternatives sobres : boissons chaudes, miel, paracétamol au besoin, sérum physiologique.");
 
 Q("onehealth",
- "Pourquoi des médicaments se retrouvent-ils dans l'eau (écotoxicité) ?",
- ["Uniquement par fabrication industrielle",
-  "Gaspillage : conditionnements trop grands, faible adhérence, péremption courte ; les STEP ne filtrent pas ces micropolluants",
-  "Parce qu'ils sont biodégradables",
-  "Cela n'arrive jamais"],
+ "La déprescription de médicaments inutiles chez la personne âgée s'inscrit dans :",
+ ["La prévention primaire",
+  "La prévention quaternaire et la sobriété",
+  "Le surdiagnostic organisé",
+  "Une logique de précaution maximaliste"],
  1,
- "Gaspillage (conditionnements trop grands, faible adhérence, péremption courte) ; les stations d'épuration (STEP) ne filtrent pas ces micropolluants. ~14 % des médicaments vendus finissent à la poubelle.");
+ "Déprescrire l'inutile rejoint la prévention quaternaire (éviter la surmédicalisation) et la sobriété : « un soin qui ne consomme pas est un soin qui n'existe pas », en gardant l'adéquation.");
 
 Q("onehealth",
- "L'EBP (Evidence-Based Practice) appliquée à l'environnement signifie surtout :",
- ["Multiplier les prescriptions",
-  "Proposer des alternatives non médicamenteuses quand c'est possible (autonomisation du patient)",
-  "Ignorer les recommandations",
-  "Prescrire le médicament le plus cher"],
+ "L'EBP (Evidence-Based Practice) appliquée à l'environnement implique surtout de :",
+ ["Multiplier les prescriptions de précaution",
+  "Proposer des alternatives non médicamenteuses quand c'est possible",
+  "Ignorer les recommandations pour aller plus vite",
+  "Choisir toujours le médicament le plus récent"],
  1,
- "Proposer des alternatives non médicamenteuses quand c'est possible (autonomisation du patient) — l'EBP vaut aussi pour l'environnement. Suivre les recommandations, penser les durées, oser la déprescription.");
+ "L'EBP vaut aussi pour l'environnement : suivre les recommandations, penser les durées de traitement, oser la déprescription, proposer des alternatives non médicamenteuses (autonomisation du patient).");
 
-// ========== ORGANISATION DES SOINS DE SANTÉ (V. Letocart & F. Roucoux) ==========
+Q("onehealth",
+ "Les « discours de l'inaction » regroupent des arguments-types. Lequel en est un exemple ?",
+ ["« Les recommandations imposent de déprescrire »",
+  "« On est là pour soigner, pas pour s'occuper du climat »",
+  "« Le score PBT évalue la toxicité »",
+  "« La décision partagée respecte le patient »"],
+ 1,
+ "Parmi les 11 arguments-types de l'inaction : « on est là pour soigner », « on manque de temps/d'argent », « on a toujours fait comme ça »… → à reconnaître pour s'en méfier.");
+
+Q("onehealth",
+ "Concernant l'antibiorésistance, quelle affirmation est EXACTE ?",
+ ["C'est un problème localisé aux hôpitaux",
+  "C'est un enjeu mondial majeur, avec des prévisions du Lancet à l'horizon 2050",
+  "Elle se résoudra par la mise sur le marché de nouveaux antibiotiques",
+  "Elle ne concerne pas la santé environnementale"],
+ 1,
+ "Antibiorésistance = enjeu MONDIAL majeur (prévisions Lancet 2050), se propageant jusque dans des zones reculées ; étroitement lié au One Health et à l'écotoxicité.");
+
+Q("onehealth",
+ "Les concepts « emboîtés » de la santé environnementale comprennent :",
+ ["Soins primaires, secondaires, tertiaires",
+  "One Health, santé planétaire, santé globale, santé publique",
+  "Prévention primaire à quaternaire",
+  "Bismarck, Beveridge, mixte"],
+ 1,
+ "Concepts emboîtés : One Health, santé planétaire, santé globale, santé publique — traduisant l'interdépendance entre environnement et santé.");
+
+Q("onehealth",
+ "Concernant le profil des dispositifs d'inhalation en Belgique, quelle donnée correspond au cours ?",
+ ["~90 % de pMDI, comme au Royaume-Uni",
+  "~45 % de pMDI, davantage qu'en Suède (~10 %)",
+  "~5 % de pMDI, comme la moyenne européenne",
+  "Aucun usage de SMI (soft mist)"],
+ 1,
+ "En Belgique ~45 % de pMDI (vs Suède ~10 %, R-U ~70 %). Répartition : pMDI ~45 %, DPI ~50 %, SMI ~5 %.");
+
+Q("onehealth",
+ "Remplacer un pMDI (2 inhalations/jour) par un DPI équivalent permet une réduction d'émissions comparable à :",
+ ["Renoncer à un vol long-courrier par an",
+  "Devenir végétarien (~−420 kgCO2/an)",
+  "Couvrir 1 000 km en voiture en moins",
+  "Éteindre les lumières d'un cabinet"],
+ 1,
+ "Le cours compare ce changement à devenir végétarien (~−420 kgCO2/an) — illustrant le poids carbone des pMDI (gaz propulseurs fluorés).");
+// ========== ORGANISATION DES SOINS — niveau difficile — Partie A ==========
 Q("orga",
- "Le modèle belge de protection sociale est :",
- ["Uniquement assurantiel (Bismarck)",
-  "Uniquement assistanciel (Beveridge)",
+ "Concernant les modèles de protection sociale, quelle affirmation est EXACTE ?",
+ ["Bismarck = couverture universelle financée par l'impôt",
+  "Beveridge = droits proportionnels aux cotisations de travail",
+  "Bismarck = cotisations liées au travail ; Beveridge = universel financé par l'impôt",
+  "La Belgique applique un modèle Beveridge pur"],
+ 2,
+ "Bismarck = cotisations liées au travail, droits contributifs. Beveridge = impôt, couverture universelle. L'inversion est le piège classique. La Belgique = mixte à dominante bismarckienne.");
+
+Q("orga",
+ "Le système belge est qualifié de :",
+ ["Uniquement assurantiel",
+  "Uniquement assistanciel",
   "Mixte, à dominante assurantielle (Bismarck)",
   "Mixte, à dominante assistancielle (Beveridge)"],
  2,
- "La Belgique = système MIXTE à dominante BISMARCKIENNE (cotisations liées au travail), avec une forte composante beveridgienne (soins pour tous, aides sociales).");
+ "Belgique = système MIXTE à dominante ASSURANTIELLE (Bismarck) : socle de cotisations liées au travail, avec une forte composante beveridgienne ajoutée (soins pour tous, aides sociales).");
 
 Q("orga",
- "Le modèle de BISMARCK (assurance) se caractérise par :",
- ["Un financement par l'impôt général et une couverture universelle",
-  "Un financement par cotisations sociales liées au travail, des droits liés aux cotisations",
-  "Une gestion publique centralisée par l'État",
-  "Une logique uniquement redistributive"],
- 1,
- "Bismarck = cotisations sociales (liées au travail), caisses autonomes + régulation de l'État, droits liés au travail, logique contributive. Beveridge = impôt, universel, redistributif.");
-
-Q("orga",
- "Le modèle de BEVERIDGE (assistance) repose sur :",
- ["Des cotisations liées au travail",
-  "Un financement par l'impôt général et une couverture universelle (citoyenneté/résidence)",
-  "Des caisses autonomes contributives",
-  "Une couverture limitée aux travailleurs"],
- 1,
- "Beveridge (R-U, 2e GM) : financement par l'impôt, droit universel (citoyenneté/résidence), logique uniforme et redistributive, toute la population.");
-
-Q("orga",
- "Quelle affirmation sur les modèles Bismarck/Beveridge est FAUSSE ?",
- ["Bismarck = cotisations liées au travail",
-  "Beveridge = couverture universelle financée par l'impôt",
-  "Bismarck = couverture universelle ; Beveridge = assurantiel",
-  "La Belgique est un système mixte"],
+ "Un travailleur INDÉPENDANT tombe malade. À quelle prestation N'a-t-il PAS droit ?",
+ ["Indemnités d'incapacité (mutuelle), dès le 8e jour",
+  "Soins de santé (INAMI)",
+  "Allocation de chômage",
+  "Allocations familiales et pension (SFP)"],
  2,
- "Inversion classique : « Bismarck = universel, Beveridge = assurantiel » est FAUX (c'est l'inverse).");
+ "L'indépendant n'a PAS droit au chômage, aux vacances annuelles, ni à FEDRIS (accidents/maladies prof.). Il a droit : pension (SFP), soins & indemnités (INAMI, dès le 8e jour, montant fixe), allocations familiales, maternité.");
 
 Q("orga",
- "En 1944, le Pacte social crée :",
- ["L'INAMI",
-  "L'ONSS (organisme unique de perception et de redistribution des cotisations)",
-  "FEDRIS",
-  "Les mutuelles"],
- 1,
- "28/12/1944 — Pacte social : création de l'ONSS, organisme unique de perception et de redistribution des cotisations (système obligatoire pour les salariés).");
-
-Q("orga",
- "L'INAMI a été créé en 1964 (loi Leburton) suite à :",
- ["La fusion des mutuelles",
-  "La séparation des soins de santé des autres branches de la sécurité sociale",
-  "La 6e réforme de l'État",
-  "La création de FEDRIS"],
- 1,
- "1964 (loi Leburton) : séparation des soins de santé des autres branches → création de l'INAMI. 1967 : régime des indépendants.");
-
-Q("orga",
- "Combien de branches compte la sécurité sociale belge ?",
- ["5", "6", "7", "10"],
+ "Parmi ces dispositifs, lequel N'EST PAS une aide sociale (régime résiduaire) ?",
+ ["La GRAPA", "Le RIS", "L'allocation de chômage", "Les allocations aux personnes handicapées"],
  2,
- "7 branches : pensions (SFP), chômage (ONEM), accidents du travail (FEDRIS), maladies professionnelles (FEDRIS), prestations familiales (régions), soins de santé & invalidité (INAMI), vacances annuelles (ONVA).");
+ "L'allocation de chômage est une BRANCHE de la sécurité sociale (ONEM), pas une aide sociale. Aides sociales : RIS, GRAPA, allocations handicapés, prestations familiales garanties (financées par l'État, non contributives).");
 
 Q("orga",
- "FEDRIS est l'organisme compétent pour :",
- ["Les pensions",
-  "Les accidents du travail et les maladies professionnelles",
-  "Le chômage",
-  "Les soins de santé"],
+ "Qui finance la PLUS GRANDE part de la sécurité sociale belge ?",
+ ["Les dotations de l'État",
+  "Les cotisations sociales (employeurs + travailleurs)",
+  "La TVA et le précompte mobilier (financement alternatif)",
+  "Les tickets modérateurs des patients"],
+ 1,
+ "Cotisations sociales ~57,5 % = source principale. Dotations de l'État ~19,5 %, financement alternatif (TVA + précompte) ~18 %, autres ~5 %.");
+
+Q("orga",
+ "Quel est le 1er poste de DÉPENSES de la sécurité sociale ?",
+ ["Les soins de santé (maladie)",
+  "Les pensions (vieillesse)",
+  "Les indemnités d'invalidité",
+  "Les allocations de chômage"],
+ 1,
+ "1er poste = pensions/vieillesse (~42 %), devant la maladie (~29 %) et l'invalidité (~10 %). Piège : on cite souvent l'INAMI/maladie, mais ce sont les pensions.");
+
+Q("orga",
+ "Le « principe de répartition » signifie que :",
+ ["Chaque assuré capitalise pour sa propre retraite",
+  "Les cotisations des actifs financent directement les prestations des bénéficiaires actuels",
+  "L'État rembourse a posteriori chaque dépense",
+  "Les mutuelles placent les cotisations sur les marchés"],
+ 1,
+ "Répartition = solidarité intergénérationnelle : les actifs financent les bénéficiaires d'aujourd'hui. La capitalisation (épargne pour soi) en est l'opposé.");
+
+Q("orga",
+ "FEDRIS est issu en 2017 de la fusion de deux fonds. Lesquels ?",
+ ["Pensions et chômage",
+  "Accidents du travail et maladies professionnelles",
+  "Soins de santé et invalidité",
+  "Allocations familiales et vacances annuelles"],
  1,
  "FEDRIS = fusion (2017) du Fonds des accidents du travail + Fonds des maladies professionnelles.");
 
 Q("orga",
- "L'indépendant N'A PAS droit à :",
- ["La pension (SFP)",
-  "Les soins de santé (INAMI)",
-  "Le chômage, les vacances annuelles payées et la couverture accidents/maladies prof. (FEDRIS)",
-  "Les allocations familiales"],
- 2,
- "L'indépendant n'a PAS droit au chômage, aux vacances annuelles ni à FEDRIS. Il a droit : pension (SFP), soins & indemnités (INAMI), allocations familiales, maternité. Indemnité dès le 8e jour (montant fixe).");
-
-Q("orga",
- "Le « principe de répartition » de la sécurité sociale signifie :",
- ["Chacun épargne pour sa propre retraite (capitalisation)",
-  "Les cotisations des actifs financent directement les prestations des bénéficiaires actuels (solidarité intergénérationnelle)",
-  "L'État paie l'intégralité des prestations",
-  "Les mutuelles capitalisent les cotisations"],
+ "Depuis la 6e réforme de l'État (2014), la PRÉVENTION relève de quel niveau de pouvoir ?",
+ ["Le fédéral (INAMI)",
+  "Les Communautés (AViQ, COCOM/COCOF, Agentschap Zorg en Gezondheid)",
+  "Les Régions",
+  "Les provinces"],
  1,
- "Répartition : les cotisations des actifs financent directement les prestations des bénéficiaires actuels (solidarité intergénérationnelle), à l'opposé de la capitalisation.");
-
-Q("orga",
- "Laquelle de ces prestations N'EST PAS une aide sociale (régime résiduaire) ?",
- ["RIS (revenu d'intégration sociale)", "GRAPA", "Allocation de chômage", "Allocations aux personnes handicapées"],
- 2,
- "L'allocation de chômage est une BRANCHE de la sécurité sociale (ONEM), pas une aide sociale. Aide sociale = RIS, GRAPA, allocations handicapés, prestations familiales garanties.");
-
-Q("orga",
- "Qui contribue le PLUS au financement de la sécurité sociale ?",
- ["Les impôts", "Les cotisations sociales (employeurs + travailleurs)", "La TVA", "Les dotations de l'État"],
- 1,
- "Les cotisations sociales (employeurs + travailleurs) ~57,5 % = source principale. Dotations de l'État ~19,5 %, financement alternatif (TVA + précompte) ~18 %.");
-
-Q("orga",
- "Quelle est la branche la PLUS coûteuse de la sécurité sociale ?",
- ["La maladie (soins de santé)",
-  "Les pensions (vieillesse)",
-  "Le chômage",
-  "L'invalidité"],
- 1,
- "1er poste de dépense = les pensions (vieillesse) ~42 %, devant la maladie ~29 %. Piège : on cite souvent l'INAMI/maladie, mais ce sont les pensions.");
-
-Q("orga",
- "Vieillesse + maladie + invalidité représentent ensemble environ :",
- ["~30 % des dépenses", "~50 % des dépenses", "~80 % des dépenses", "~95 % des dépenses"],
- 2,
- "Vieillesse (~42 %) + maladie (~29 %) + invalidité (~10 %) = ~80 % des dépenses de la sécurité sociale.");
-
-Q("orga",
- "Depuis la 6e réforme de l'État (2014), la PRÉVENTION est une compétence :",
- ["Du fédéral (INAMI)", "Des Communautés (AViQ, COCOM/COCOF...)", "Des Régions", "Des mutuelles"],
- 1,
- "La prévention est une compétence des COMMUNAUTÉS (AViQ, COCOM/COCOF, Agentschap Zorg en Gezondheid), pas du fédéral.");
+ "La prévention/promotion de la santé est une compétence des COMMUNAUTÉS. Le fédéral garde la sécurité sociale et le financement des soins ; les Régions, les infrastructures/planification.");
 
 Q("orga",
  "L'INAMI est placé sous l'autorité de :",
- ["La Région", "La Communauté", "Le Ministre (fédéral) des Affaires sociales et de la Santé", "Les mutuelles"],
+ ["La Communauté française",
+  "Le Ministre fédéral des Affaires sociales et de la Santé",
+  "La Région wallonne",
+  "Les unions de mutuelles"],
+ 1,
+ "L'INAMI dépend du Ministre FÉDÉRAL des Affaires sociales et de la Santé.");
+
+Q("orga",
+ "Quel service de l'INAMI assure le REMBOURSEMENT des soins et médicaments ?",
+ ["Le service Indemnités",
+  "Le service Soins de santé",
+  "Le Service d'évaluation et de contrôle médicaux (SECM)",
+  "Le Contrôle administratif"],
+ 1,
+ "Le service Soins de santé rembourse soins et médicaments (via les mutuelles). Indemnités = incapacité/invalidité/congés ; SECM = contrôle des prestataires ; Contrôle administratif = contrôle des mutuelles.");
+
+Q("orga",
+ "Parmi ces missions, laquelle N'EST PAS celle d'une mutuelle ?",
+ ["Rembourser les soins et verser les indemnités",
+  "Informer et accompagner les affiliés",
+  "Collecter les cotisations sociales des travailleurs",
+  "Représenter les patients"],
  2,
- "L'INAMI est sous l'autorité du Ministre fédéral des Affaires sociales et de la Santé.");
+ "La mutuelle ne collecte PAS les cotisations (c'est l'ONSS) et ne dispense pas les soins. Elle rembourse, verse les indemnités, informe/accompagne, propose une complémentaire, représente les patients.");
 
 Q("orga",
- "Quel service de l'INAMI se charge du REMBOURSEMENT des médicaments ?",
- ["Les Indemnités", "Le service Soins de santé", "L'Évaluation et contrôle médicaux (SECM)", "La CAAMI"],
+ "Un médecin qui ne refuse pas l'accord médico-mutualiste :",
+ ["Est non conventionné par défaut",
+  "Est automatiquement conventionné et respecte les tarifs convenus",
+  "Doit le rester obligatoirement toute sa carrière",
+  "Ne perçoit aucun avantage social"],
  1,
- "Le service « Soins de santé » de l'INAMI assure le remboursement des soins et médicaments (via les mutuelles). Les Indemnités gèrent incapacité/invalidité/congés.");
-
-Q("orga",
- "Le rôle des mutuelles (organismes assureurs) est de :",
- ["Collecter les cotisations sociales",
-  "Rembourser les soins et verser les indemnités, informer/accompagner, représenter les patients",
-  "Gérer les pensions",
-  "Dispenser elles-mêmes les soins"],
- 1,
- "Mutuelles = rembourser les soins, payer les indemnités, informer/accompagner, proposer une assurance complémentaire, représenter les patients. PAS collecter les cotisations, ni gérer pensions/dispenser les soins.");
-
-Q("orga",
- "Un médecin « conventionné » est un médecin qui :",
- ["Travaille obligatoirement toute sa carrière sous accord",
-  "Adhère à l'accord médico-mutualiste (respecte les tarifs convenus) et reçoit un avantage social INAMI",
-  "Pratique des tarifs entièrement libres",
-  "Est employé par la mutuelle"],
- 1,
- "Conventionné = adhère à l'accord médico-mutualiste (tarifs convenus). S'il ne refuse pas l'accord, il l'est automatiquement. Reçoit un statut social (~6 000 €/an). Il reste conventionné tant qu'il ne se déconventionne pas.");
+ "S'il ne refuse pas l'accord, le médecin est AUTOMATIQUEMENT conventionné (tarifs convenus) et perçoit un statut social INAMI (~6 000 €/an). Il reste conventionné tant qu'il ne se déconventionne pas (≠ obligation à vie).");
 
 Q("orga",
  "Le « ticket modérateur » désigne :",
- ["La part de l'honoraire remboursée par la mutuelle",
-  "La part de l'honoraire à charge du patient",
-  "Le supplément d'honoraire du médecin non conventionné",
-  "Le forfait d'hospitalisation"],
+ ["La part remboursée par la mutuelle",
+  "La part de l'honoraire restant à charge du patient",
+  "Le supplément d'honoraire d'un médecin non conventionné",
+  "Le forfait journalier d'hospitalisation"],
  1,
- "Ticket modérateur = part de l'honoraire à charge du patient ; le reste = intervention de l'organisme assureur. Dépend de la prestation, du statut (BIM) et de la qualification.");
+ "Ticket modérateur = part à charge du patient (le reste = intervention de l'organisme assureur). Il dépend de la prestation, du statut (BIM) et de la qualification du prestataire.");
 
 Q("orga",
- "Qui est BÉNÉFICIAIRE DE L'INTERVENTION MAJORÉE (BIM) D'OFFICE ?",
- ["Tout pensionné", "Le bénéficiaire du RIS, de la GRAPA, un MENA, un orphelin", "Tout chômeur", "Toute famille monoparentale"],
+ "Qui est bénéficiaire de l'intervention majorée (BIM) D'OFFICE (sans examen de revenus) ?",
+ ["Tout pensionné",
+  "Le bénéficiaire du RIS ou de la GRAPA, un MENA, un orphelin",
+  "Tout chômeur de longue durée",
+  "Toute famille monoparentale"],
  1,
- "BIM d'office : RIS, GRAPA, revenu pour personne handicapée, MENA, orphelins, enfant handicapé > 66 %. Les chômeurs/pensionnés/familles monoparentales sont BIM SUR DEMANDE (si revenus < plafond).");
+ "BIM d'office (« avantages ») : RIS, GRAPA, revenu pour personne handicapée, MENA, orphelins, enfant handicapé > 66 %. Chômeurs/pensionnés/familles monoparentales = BIM SUR DEMANDE (selon revenus).");
 
 Q("orga",
- "Quels avantages procure le statut BIM ?",
- ["Aucun avantage de remboursement",
-  "Meilleur remboursement des soins/médicaments et tiers payant obligatoire en consultation",
-  "La gratuité totale de tous les soins",
-  "Une pension majorée"],
+ "Le Maximum à Facturer (MAF). Quelle affirmation est EXACTE ?",
+ ["Il est réservé aux BIM",
+  "Il protège le ménage : au-delà d'un seuil de tickets modérateurs, la mutuelle rembourse 100 % jusqu'au 31/12",
+  "Il est géré par le CPAS",
+  "Il s'applique uniquement aux frais d'hospitalisation"],
  1,
- "BIM : ticket modérateur réduit, meilleur remboursement, tiers payant (social) obligatoire en consultation. Depuis 2025/2026, suppléments d'honoraires interdits pour les BIM.");
+ "MAF : protège le MÉNAGE (pas réservé aux BIM), géré par la mutuelle. 4 types : revenus, statut social (BIM, plafond 450 €), enfants < 19 ans (650 €), maladie chronique (seuils −100 €).");
 
 Q("orga",
- "Le Maximum à Facturer (MAF) :",
- ["Est réservé aux BIM",
-  "Protège le ménage : quand les tickets modérateurs dépassent un seuil annuel, la mutuelle prend en charge 100 % jusqu'au 31/12",
-  "Est géré par le CPAS",
-  "Concerne uniquement les hospitalisations"],
+ "Le statut « affection chronique » s'obtient notamment si les dépenses de santé dépassent :",
+ ["200 €/trimestre durant 4 trimestres",
+  "400 €/trimestre durant ≥ 8 trimestres consécutifs",
+  "1 000 €/an une seule année",
+  "650 € sur l'année (plafond enfants)"],
  1,
- "MAF : protège le MÉNAGE (pas réservé aux BIM), géré par la mutuelle. 4 types : revenus, statut social (BIM = 450 €), enfants < 19 ans (650 €), maladie chronique (seuils −100 €).");
+ "Affection chronique : dépenses > 400 €/trimestre durant ≥ 8 trimestres consécutifs (OU forfait maladie chronique, OU maladie rare + critère de dépenses). Effet : MAF facilité (seuil abaissé de 100 €).");
 
 Q("orga",
- "Le statut « affection chronique » est notamment accordé si :",
- ["Le patient a plus de 65 ans",
-  "Les dépenses de santé totales dépassent 400 €/trimestre durant ≥ 8 trimestres consécutifs",
-  "Le patient est hospitalisé une fois",
-  "Le patient est BIM"],
+ "Concernant le remboursement des médicaments, quelle association catégorie/exemple est CORRECTE ?",
+ ["Catégorie A = aucun remboursement",
+  "Catégorie A = remboursement total (ex. insuline)",
+  "Catégorie D = remboursement total",
+  "Catégorie B = remboursement intégral garanti"],
  1,
- "Affection chronique : dépenses > 400 €/trimestre durant ≥ 8 trimestres consécutifs (OU forfait maladie chronique, OU maladie rare + critère de dépenses). Effet : MAF facilité (seuil −100 €).");
+ "A = total (importance vitale, ex. insuline) ; B ~75 % ; C/Cs/Cx partiel décroissant (Cx = contraceptifs) ; Fa/Fb = forfait ; D = AUCUN remboursement (ex. somnifères).");
 
 Q("orga",
- "Le médicament de catégorie A est remboursé :",
- ["À ~75 %", "Totalement (importance vitale, ex. insuline)", "Pas du tout", "Au forfait"],
- 1,
- "Catégorie A = remboursement total (importance vitale, ex. insuline). B ~75 % ; C/Cs/Cx partiel décroissant ; Fa/Fb forfait ; D = aucun remboursement (somnifères).");
+ "Le tiers payant (généralisé depuis 2022). Laquelle de ces propositions est FAUSSE ?",
+ ["Le patient ne paie que le ticket modérateur (+ éventuel supplément)",
+  "Le reste est facturé directement à la mutuelle",
+  "Il implique d'être en ordre de mutuelle",
+  "Il est interdit pour les bénéficiaires de l'intervention majorée"],
+ 3,
+ "FAUX : le tiers payant SOCIAL est au contraire OBLIGATOIRE pour les BIM en consultation. Les 3 autres propositions sont exactes.");
 
 Q("orga",
- "Le tiers payant (généralisé depuis 2022) implique que :",
- ["Le patient avance la totalité puis se fait rembourser",
-  "Le patient ne paie que sa part (ticket modérateur), le reste est facturé directement à la mutuelle",
-  "La mutuelle paie le médecin une fois par an",
-  "Le médecin renonce à tout honoraire"],
+ "Le Dossier Médical Global (DMG) chez le médecin généraliste :",
+ ["Augmente le ticket modérateur du patient",
+  "Réduit le ticket modérateur et ouvre un forfait annuel au MG",
+  "Est géré par la mutuelle sans intervention du MG",
+  "Empêche tout envoi vers un spécialiste"],
  1,
- "Tiers payant : le patient ne paie que le ticket modérateur (+ éventuel supplément) ; le reste va directement à la mutuelle. Implique d'être en ordre de mutuelle. Obligatoire pour les BIM en consultation.");
+ "DMG : réduit le ticket modérateur du patient + forfait annuel au MG (38 €, 71 € si malade chronique 30-85 ans). L'envoi chez le spécialiste par le MG gestionnaire réduit aussi le ticket modérateur.");
 
 Q("orga",
- "L'INCAPACITÉ de travail (incapacité primaire) suppose une perte de capacité de gain d'au moins :",
+ "Combien de branches compte la sécurité sociale belge, et laquelle est gérée par les Régions ?",
+ ["7 branches ; les prestations familiales (depuis 2019)",
+  "5 branches ; les pensions",
+  "7 branches ; les soins de santé",
+  "6 branches ; le chômage"],
+ 0,
+ "7 branches. Les prestations familiales sont passées aux entités fédérées (Régions) en 2019. Pensions (SFP), chômage (ONEM), AT et MP (FEDRIS), soins & invalidité (INAMI), vacances annuelles (ONVA).");
+
+Q("orga",
+ "Le Pacte social du 28/12/1944 a créé :",
+ ["L'INAMI",
+  "L'ONSS, organisme unique de perception et de redistribution des cotisations",
+  "Les premières mutuelles",
+  "FEDRIS"],
+ 1,
+ "Pacte social (1944) → ONSS (perception/redistribution des cotisations). L'INAMI date de 1964 (loi Leburton, séparation des soins de santé).");
+// ========== ORGANISATION DES SOINS — niveau difficile — Partie B ==========
+Q("orga",
+ "Un salarié est en incapacité depuis 14 mois. Sur le plan administratif, il se trouve en :",
+ ["Incapacité primaire",
+  "Invalidité (incapacité > 12 mois, contrôle par le Conseil médical de l'invalidité)",
+  "Mi-temps médical d'office",
+  "Préavis pour force majeure médicale"],
+ 1,
+ "Invalidité = incapacité de travail > 12 mois (1 an), contrôlée par le Conseil médical de l'invalidité (INAMI). Avant 1 an : incapacité primaire. Ne pas confondre avec 3 ou 6 mois.");
+
+Q("orga",
+ "L'incapacité de travail (incapacité primaire) suppose une perte de capacité de gain d'au moins :",
  ["33 %", "50 %", "66 %", "80 %"],
  2,
- "Incapacité de travail = incapacité d'effectuer son travail pour raison de santé, avec une perte de capacité de gain ≥ 66 %. L'incapacité n'est PAS la maladie : on peut être malade et apte.");
+ "Perte de capacité de gain ≥ 66 %. L'incapacité n'est ni la maladie ni un diagnostic : on peut être malade et apte. Les 6 premiers mois, l'évaluation se fait par rapport au métier habituel.");
 
 Q("orga",
- "L'INVALIDITÉ correspond à une incapacité de travail qui dure :",
- ["Plus de 3 mois", "Plus de 6 mois", "Plus de 12 mois (1 an)", "Plus de 2 ans"],
+ "Quelle distinction entre INVALIDITÉ et HANDICAP est correcte ?",
+ ["Ce sont des synonymes",
+  "Invalidité = perte de capacité de gain ; handicap = impact sur les activités de la vie quotidienne",
+  "Le handicap suppose toujours une incapacité > 1 an",
+  "L'invalidité ne concerne que la vie quotidienne"],
+ 1,
+ "Invalidité ≠ handicap. Invalidité = perte de capacité de GAIN (travail) ; handicap = impact sur les activités de la vie quotidienne. On peut être handicapé et apte au travail.");
+
+Q("orga",
+ "Concernant les certificats d'incapacité, quelle affirmation est EXACTE ?",
+ ["Le certificat à l'employeur porte le diagnostic",
+  "Le certificat à la mutuelle (médecin conseil) porte le diagnostic",
+  "Aucun certificat ne comporte de diagnostic",
+  "Les deux certificats sont identiques"],
+ 1,
+ "Certificat à la MUTUELLE (médecin conseil) = AVEC diagnostic. Certificat à l'EMPLOYEUR = SANS diagnostic (secret médical).");
+
+Q("orga",
+ "Un CHÔMEUR est mis en incapacité de travail. Que doit-il faire ?",
+ ["Continuer à émarger au chômage sans démarche",
+  "Adresser un certificat à la mutuelle ; il passe des indemnités de chômage à celles de la mutuelle",
+  "Prévenir uniquement son ancien employeur",
+  "Demander d'emblée le statut d'invalidité"],
+ 1,
+ "Le chômeur en incapacité envoie un certificat à la mutuelle (et ne prévient l'ONEM que si un travail est proposé). Il bascule des indemnités de chômage vers celles de la mutuelle.");
+
+Q("orga",
+ "Réforme du retour au travail (2026). À partir de quel délai d'incapacité l'évaluation du potentiel de travail par la médecine du travail devient-elle obligatoire ?",
+ ["Dès 14 jours", "Dès 4 semaines", "Dès 8 semaines", "Dès 6 mois"],
  2,
- "Invalidité = incapacité de travail > 12 mois (1 an), contrôlée par le Conseil médical de l'invalidité (INAMI). Ne pas confondre avec 3 ou 6 mois.");
+ "Dès 8 SEMAINES d'incapacité : évaluation obligatoire du potentiel de travail (sous peine d'amendes pour l'employeur). À 14 jours, c'est le certificat Mult-eMediatt à la mutuelle qui devient obligatoire.");
 
 Q("orga",
- "Quelle distinction entre invalidité et handicap est correcte ?",
- ["Invalidité et handicap sont synonymes",
-  "Invalidité = perte de capacité de gain (travail) ; handicap = impact sur les activités de la vie quotidienne",
-  "Le handicap dure toujours plus d'un an",
-  "L'invalidité concerne uniquement la vie quotidienne"],
- 1,
- "Invalidité ≠ handicap. Invalidité = perte de capacité de gain (travail) ; handicap = impact sur les activités de la vie quotidienne. On peut être handicapé et apte au travail.");
+ "Les soins de 1re ligne. Quelle affirmation est FAUSSE ?",
+ ["Ils représentent > 90 % des contacts",
+  "Ils constituent la porte d'entrée et assurent la continuité",
+  "Ils sont centrés sur la maladie (approche par organe)",
+  "Ils filtrent l'accès vers la 2e ligne"],
+ 2,
+ "FAUX pour la 1re ligne : c'est la 2e/3e ligne qui est « axée sur la maladie ». La 1re ligne est centrée sur la PERSONNE (approche globale), porte d'entrée, > 90 % des contacts, continuité.");
 
 Q("orga",
- "Le certificat médical destiné à la MUTUELLE (médecin conseil) :",
- ["Ne porte jamais de diagnostic",
-  "Porte le diagnostic",
-  "Est interdit",
-  "Est rédigé par l'employeur"],
- 1,
- "Certificat à la mutuelle (médecin conseil) = AVEC diagnostic. Certificat à l'employeur = SANS diagnostic (secret médical).");
+ "Les « 6 C » de Starfield caractérisant la 1re ligne incluent toutes ces dimensions SAUF :",
+ ["Premier Contact et Continuité",
+  "Coordination et services Complets",
+  "Concurrence et Capitalisation",
+  "Communauté et soins Centrés sur la personne"],
+ 2,
+ "6 C de Starfield : premier Contact, Centrés personne, Continuité, Complets, Communauté, Coordination. « Concurrence » et « capitalisation » n'en font pas partie.");
 
 Q("orga",
- "Durant les 6 premiers mois d'incapacité, l'évaluation se fait par rapport :",
- ["À tous les métiers possibles",
-  "Au métier habituel (de référence)",
-  "Au métier le mieux rémunéré",
-  "À aucun métier"],
- 1,
- "6 premiers mois : évaluation par rapport au métier habituel. Au-delà : tous les métiers que l'assuré pourrait exercer (Loi 14/07/1994, art. 100§1).");
-
-Q("orga",
- "Concernant la reprise du travail des malades de longue durée (réforme 2026) :",
- ["Aucune évaluation n'est prévue",
-  "L'évaluation du potentiel de travail par la médecine du travail est obligatoire dès 8 semaines d'incapacité",
-  "La reprise est interdite avant 1 an",
-  "Seul le médecin conseil intervient"],
- 1,
- "Réforme 2026 : évaluation du potentiel de travail dès 8 semaines, responsabilisation des acteurs, certificat Mult-eMediatt dès 14 j, communication via la plateforme TRIO. Logique : d'abord réintégrer, ensuite indemniser.");
-
-Q("orga",
- "Les soins de 1re ligne représentent quelle part des contacts et quel rôle ?",
- ["< 10 %, approche par maladie",
-  "> 90 % des contacts ; porte d'entrée, centrée sur le patient, filtre vers la 2e ligne",
-  "100 % des soins hospitaliers",
-  "Très peu de contacts, soins très spécialisés"],
- 1,
- "1re ligne : > 90 % des contacts, porte d'entrée, approche globale, centrée sur le patient. « Axée sur la maladie » = FAUX pour la 1re ligne (c'est la 2e/3e).");
-
-Q("orga",
- "Les « 6 C » de Starfield (soins de 1re ligne) incluent :",
- ["Coût, Contrôle, Conformité",
-  "Premier Contact, soins Centrés sur la personne, Continuité, services Complets, Communauté, Coordination",
-  "Chirurgie, Cancérologie, Cardiologie",
-  "Concurrence, Capitalisation, Convention"],
- 1,
- "6 C de Starfield : premier Contact, soins Centrés sur la personne, Continuité, services Complets, Communauté, Coordination.");
-
-Q("orga",
- "L'objectif des réseaux hospitaliers loco-régionaux (2020) est de :",
- ["Diminuer la concurrence entre hôpitaux",
+ "L'objectif des réseaux hospitaliers loco-régionaux (depuis 2020) est de :",
+ ["Fusionner les hôpitaux en une seule entité",
   "Coordonner l'offre de soins d'une région en regroupant les compétences",
-  "Réduire l'accessibilité aux soins",
-  "Fusionner tous les hôpitaux"],
+  "Réduire l'accessibilité pour limiter les coûts",
+  "Supprimer la concurrence entre prestataires"],
  1,
- "Réseaux loco-régionaux : coordonner l'offre de soins d'une région (regrouper les compétences). « Soins de proximité là où c'est possible, soins spécialisés là où c'est nécessaire ». Réseau ≠ fusion.");
+ "Réseaux loco-régionaux : COORDONNER l'offre régionale (« proximité quand c'est possible, spécialisé quand c'est nécessaire »). Réseau ≠ fusion ; le but n'est ni de réduire l'accès ni d'éliminer la concurrence.");
 
 Q("orga",
- "Concernant le financement de la médecine générale au FORFAIT (capitation), un AVANTAGE est :",
- ["Le risque de surconsommation",
-  "Plus de prévention/dépistage, moins d'examens inutiles, meilleur suivi des chroniques",
-  "La sélection des patients",
-  "Le libre choix garanti du prestataire pour tous"],
- 1,
- "Forfait — avantages : moins de consultations inutiles, plus de prévention, moins de prescriptions/examens, meilleur suivi des chroniques, moins de burn-out. Inconvénients : surconsommation, pas de libre choix, sélection des patients.");
+ "Concernant le financement de la MG au FORFAIT (capitation), quelle proposition est un INCONVÉNIENT/risque ?",
+ ["Davantage de prévention et de dépistage",
+  "Moins de prescriptions et d'examens inutiles",
+  "Risque de sélection des patients (exclusion des cas lourds)",
+  "Meilleur suivi des patients chroniques"],
+ 2,
+ "Risques du forfait : surconsommation, pas de libre choix du prestataire, SÉLECTION des patients (exclusion des cas lourds), renvoi rapide vers la 2e ligne. Les 3 autres sont des avantages.");
 
 Q("orga",
- "Le « New deal » (depuis 2024) en médecine générale est :",
+ "Le « New deal » en médecine générale (depuis 2024) correspond à :",
  ["Un financement 100 % à l'acte",
-  "Un modèle mixte ~50/50 acte/forfait + primes, valorisant le travail hors contact",
-  "Une suppression du forfait",
-  "Un financement uniquement par l'État"],
- 1,
- "New deal : modèle mixte ~50/50 acte/forfait + primes ; valorise le travail hors contact (dossiers, coordination) et la délégation de tâches ; préserve la liberté du patient.");
+  "Un financement 100 % au forfait",
+  "Un modèle mixte (~50/50 acte/forfait) + primes, valorisant le travail hors contact",
+  "Une suppression de la liberté de choix du patient"],
+ 2,
+ "New deal : modèle MIXTE ~50/50 acte/forfait + primes ; valorise le travail hors contact (dossiers, coordination) et la délégation de tâches ; préserve la liberté du patient.");
 
 Q("orga",
- "Concernant la plateforme eHealth, quelle proposition est VRAIE ?",
- ["Elle sert aux échanges avec la mutuelle et les assurances privées",
-  "Elle permet l'échange sécurisé d'informations entre prestataires de soins ayant un lien thérapeutique",
-  "Elle est accessible au médecin du travail sans condition",
-  "Elle remplace le dossier médical"],
+ "La plateforme eHealth permet :",
+ ["Les échanges entre le médecin et la mutuelle pour le contrôle",
+  "L'échange sécurisé entre prestataires de soins ayant un lien thérapeutique",
+  "L'accès du médecin du travail au dossier de soins",
+  "Le transfert de données vers les assurances privées"],
  1,
- "Plateforme eHealth = échange sécurisé entre prestataires ayant un lien thérapeutique. Piège : elle NE sert PAS aux échanges avec la mutuelle, l'assurance privée, ni le médecin conseil/de contrôle.");
+ "Plateforme eHealth = échange sécurisé entre PRESTATAIRES DE SOINS ayant un lien thérapeutique. Elle ne sert PAS aux échanges avec la mutuelle, l'assurance privée, ni le médecin conseil/de contrôle.");
 
 Q("orga",
- "Quel système permet de vérifier l'ASSURABILITÉ d'un patient en médecine générale ?",
- ["eHealth", "MyCareNet", "Recip-e", "Hub"],
+ "Un médecin reçoit une nouvelle patiente et veut vérifier son assurabilité (BIM/AO) et son DMG. Quel outil ?",
+ ["Recip-e", "MyCareNet", "Le hub régional (Vitalink…)", "VIDIS"],
  1,
- "MyCareNet = lien avec les mutuelles : vérifier l'assurabilité (BIM/AO), DMG, chapitre IV, facturation du tiers payant.");
+ "MyCareNet = lien avec les mutuelles : vérifier l'assurabilité (BIM/AO), DMG, chapitre IV, facturer le tiers payant. Recip-e = prescription ; hub = documents partagés ; VIDIS = schéma de médication.");
 
 Q("orga",
- "Le SUMEHR est :",
- ["Un dossier médical complet",
-  "Le résumé minimal de données médicales nécessaires à la continuité des soins (une « photographie »)",
-  "Une prescription électronique",
-  "Un certificat d'incapacité"],
- 1,
- "SUMEHR (Summarized Electronic Health Record) = quantité minimale de données pour la continuité des soins. Généré par le DMI, exportable sur le coffre-fort régional. Ce n'est PAS un dossier complet.");
-
-Q("orga",
- "Le SUMEHR NE contient PAS :",
+ "Le SUMEHR. Laquelle de ces données n'y figure PAS ?",
  ["Les allergies et la médication active",
   "Les antécédents et la vaccination",
-  "Les honoraires du médecin, le nombre d'IVG ou l'orientation sexuelle",
-  "La personne de contact"],
+  "Le nombre d'IVG et l'orientation sexuelle",
+  "La personne de contact et les volontés du patient"],
  2,
- "Le SUMEHR ne contient PAS (pièges) : honoraires, nombre de partenaires sexuels, nombre d'IVG, orientation sexuelle, appartenance religieuse. Il contient : administratif, risques/allergies, vaccination, antécédents, médication active...");
+ "Le SUMEHR (résumé minimal pour la continuité des soins) ne contient PAS : honoraires, nombre de partenaires/IVG, orientation sexuelle, appartenance religieuse. Il contient allergies, médication active, antécédents, vaccination, personne de contact, volontés.");
 
 Q("orga",
- "Pour accéder aux documents partagés d'un patient, quelles sont les 3 conditions CUMULATIVES ?",
- ["Certificat eHealth + lien thérapeutique + consentement du patient",
-  "Carte eID + mutuelle + ordonnance",
-  "DMG + BIM + tiers payant",
-  "Recip-e + MyCareNet + VIDIS"],
- 0,
- "3 conditions cumulatives : (1) certificat eHealth, (2) lien thérapeutique (continuité des soins, durée limitée), (3) consentement du patient (un seul, valable partout en Belgique).");
-
-Q("orga",
- "Qui N'A PAS accès au dossier de santé partagé du patient (pas de lien thérapeutique de soins) ?",
- ["Le médecin généraliste traitant",
-  "Le médecin du travail, le médecin conseil de la mutuelle, le médecin d'assurance/de contrôle",
-  "L'infirmier à domicile",
-  "Le pharmacien de référence"],
+ "Pour accéder aux documents de santé partagés d'un patient, il faut réunir 3 conditions cumulatives. Lesquelles ?",
+ ["Carte eID + mutuelle + ordonnance",
+  "Certificat eHealth + lien thérapeutique + consentement du patient",
+  "DMG + tiers payant + BIM",
+  "Recip-e + MyCareNet + SUMEHR"],
  1,
- "N'ont PAS accès : médecin du travail, médecin conseil, médecin d'assurance, médecin de contrôle (pas de lien thérapeutique de soins). Le patient peut aussi exclure nommément un prestataire.");
+ "3 conditions cumulatives : (1) certificat eHealth (prestataire reconnu, logiciel agréé), (2) lien thérapeutique (continuité, durée limitée), (3) consentement du patient (un seul, valable partout).");
 
 Q("orga",
- "Recip-e est :",
- ["La prescription électronique (message non adressé, crypté, via eHealth), récupérée par le prestataire choisi par le patient",
-  "Un certificat d'incapacité",
-  "Le schéma de médication partagé",
-  "L'outil de vérification de l'assurabilité"],
- 0,
- "Recip-e : prescription électronique (ASBL, depuis 2014), message non adressé crypté via eHealth, statut de source authentique, récupérée par le prestataire choisi par le patient.");
-
-Q("orga",
- "Pour partager / mettre à jour le SCHÉMA DE MÉDICATION, quel outil est utilisé ?",
- ["Mult-eMediatt", "VIDIS (intègre Vitalink, Recip-e, DPP)", "MyCareNet", "B-IHR"],
+ "Lors d'un trajet de réintégration, le médecin du travail veut consulter le dossier de santé du patient. En dehors de TRIO :",
+ ["Il y a accès comme tout médecin",
+  "Il n'a pas accès (pas de lien thérapeutique de soins)",
+  "Il y accède avec la seule carte eID",
+  "Il y accède via MyCareNet"],
  1,
- "VIDIS : intégration des sources de médication (Vitalink, Recip-e, Dossier Pharmaceutique Partagé) → schéma de médication partagé.");
+ "Le médecin du travail n'a PAS de lien thérapeutique de soins → pas d'accès au réseau de santé, SAUF via la plateforme TRIO (avec consentement). Idem médecin conseil/assurance/contrôle.");
 
 Q("orga",
- "Pour envoyer un certificat d'incapacité à la mutuelle (dès 14 jours), le MG utilise :",
- ["Recip-e", "Mult-eMediatt", "VIDIS", "MetaHub"],
+ "Pour partager et tenir à jour le schéma de médication d'un patient, l'outil est :",
+ ["Mult-eMediatt", "VIDIS", "MyCareNet", "Recip-e"],
  1,
- "Mult-eMediatt = certificat électronique d'incapacité de travail (MG → mutuelle), obligatoire dès 14 jours (réforme 2026).");
+ "VIDIS intègre les sources de médication (Vitalink, Recip-e, Dossier Pharmaceutique Partagé) → schéma de médication partagé. Mult-eMediatt = certificat d'incapacité ; Recip-e = prescription.");
 
 Q("orga",
- "Parmi les enjeux/défis du système de santé belge, lequel est cité ?",
- ["La diminution des maladies chroniques",
-  "Le vieillissement de la population et la multimorbidité",
-  "L'excès de personnel soignant",
-  "La baisse des coûts technologiques"],
+ "Le Budget des Moyens Financiers (BMF) des hôpitaux finance principalement :",
+ ["Les honoraires médicaux",
+  "L'infrastructure et le fonctionnement, calculés via les APR-DRG, payés via les mutuelles",
+  "Les médicaments dispensés",
+  "Les pensions du personnel hospitalier"],
  1,
- "Enjeux : vieillissement, maladies chroniques/multimorbidité, hausse des coûts, pénurie de personnel, isolement social, inégalités sociales, santé mentale, enjeux écologiques.");
+ "BMF (~36 % du financement hospitalier) : infrastructure et fonctionnement, calculé via les APR-DRG (groupes homogènes de malades), payé via les mutuelles. Honoraires ~41 %, pharma ~17 %, forfaits/conventions ~4 %.");
 
 Q("orga",
- "Selon l'étude KCE (2022), quelle caractéristique du système belge est VRAIE ?",
- ["L'accès aux différents niveaux de soins est limité et hiérarchisé",
-  "Le financement est majoritairement à l'acte, l'approche par maladie, les pouvoirs morcelés ; l'accès aux niveaux est LIBRE",
-  "Le système est parfaitement adapté au vieillissement",
-  "Tout est financé au forfait"],
- 1,
- "KCE 2022 : accès LIBRE à tous les niveaux, hospitalocentrisme, approche par maladie, financement majoritairement à l'acte, pouvoirs morcelés — peu adapté au vieillissement/multimorbidité.");
-
-Q("orga",
- "Le Budget des Moyens Financiers (BMF) des hôpitaux finance :",
- ["Les honoraires médicaux uniquement",
-  "L'infrastructure et le fonctionnement (calculé via les APR-DRG), payé via les mutuelles",
-  "Les médicaments uniquement",
-  "Les pensions du personnel"],
- 1,
- "BMF (~36 %) : infrastructure et fonctionnement, calculé via les APR-DRG (groupes homogènes de malades), payé via les mutuelles. Honoraires ~41 %, produits pharma ~17 %, forfaits/conventions ~4 %.");
-
-Q("orga",
- "L'Aide Médicale Urgente (AMU) pour les personnes sans titre de séjour est octroyée par :",
- ["L'INAMI", "FEDASIL", "Le CPAS", "La mutuelle"],
- 2,
- "Sans titre de séjour : Aide Médicale Urgente (AMU) via le CPAS. Demandeurs d'asile : FEDASIL.");
-
-Q("orga",
- "Le Dossier Médical Global (DMG) chez le MG :",
- ["Augmente le ticket modérateur",
-  "Réduit le ticket modérateur et donne droit à un forfait annuel au MG",
-  "Est réservé aux hospitalisations",
-  "Empêche l'envoi chez le spécialiste"],
- 1,
- "DMG chez le MG de référence : réduit le ticket modérateur + forfait annuel (38 €, 71 € si malade chronique 30-85 ans). L'envoi chez le spécialiste par le MG gestionnaire réduit aussi le ticket modérateur.");
-
-// ========== LE PATIENT ÂGÉ & LA COORDINATION DES SOINS (D. Lamy & ASD Bruxelles) ==========
-Q("age",
- "La FRAGILITÉ chez la personne âgée se définit comme :",
- ["Un synonyme de l'âge avancé",
-  "Une diminution des capacités physiologiques de réserve, altérant l'adaptation au stress (processus réversible)",
-  "Une dépendance définitive",
-  "Une polypathologie"],
- 1,
- "Fragilité = diminution des réserves physiologiques, altérant l'adaptation au stress. C'est un marqueur de risque et un processus RÉVERSIBLE si repéré. Elle ≠ âge, ≠ polypathologie, ≠ dépendance.");
-
-Q("age",
- "Les 5 critères de Fried (phénotype de fragilité) incluent :",
- ["Perte de poids involontaire, épuisement, vitesse de marche ralentie, baisse de force, sédentarité",
-  "HTA, diabète, dyslipidémie, obésité, tabac",
-  "Troubles cognitifs, dépression, dénutrition, chutes, incontinence",
-  "Âge, polypathologie, polymédication, isolement, dépendance"],
- 0,
- "Critères de Fried : perte de poids involontaire (> 5 %/an), épuisement ressenti, vitesse de marche ralentie, baisse de force musculaire, activité physique réduite (sédentarité).");
-
-Q("age",
- "Lequel de ces critères de Fried est INCORRECT (piège classique) ?",
- ["Perte de poids", "Sédentarité", "Vitesse de marche ACCÉLÉRÉE", "Épuisement / fatigue"],
- 2,
- "Piège : c'est une vitesse de marche RALENTIE (et non accélérée) et une activité physique RÉDUITE.");
-
-Q("age",
- "Selon les critères de Fried, combien de critères définissent un patient FRAGILE ?",
- ["0 critère", "1 critère", "1-2 critères", "≥ 3 critères"],
+ "Selon l'étude KCE (2022), laquelle de ces caractéristiques du système belge est FAUSSE ?",
+ ["Financement majoritairement à l'acte",
+  "Approche par maladie et hospitalocentrisme",
+  "Pouvoirs morcelés entre fédéral et entités fédérées",
+  "Accès aux différents niveaux de soins limité et fortement hiérarchisé"],
  3,
- "0 = robuste ; 1-2 = pré-fragile ; ≥ 3 = fragile.");
+ "FAUSSE : l'accès aux différents niveaux est au contraire LIBRE (non limité). Le KCE relève le financement à l'acte, l'approche par maladie, l'hospitalocentrisme et le morcellement des pouvoirs.");
 
-Q("age",
- "Le dépistage de la fragilité :",
- ["N'est fiable que s'il est réalisé par un médecin",
-  "Est systématique dès 70 ans (hors maladie grave) et peut être initié par tout soignant",
-  "Ne doit jamais être systématique",
-  "Concerne uniquement les > 85 ans"],
+Q("orga",
+ "Un patient sans titre de séjour, sans ressources, a besoin de soins. Quel dispositif et quel organisme ?",
+ ["FEDASIL, qui organise l'accueil",
+  "L'Aide Médicale Urgente (AMU), octroyée par le CPAS",
+  "L'INAMI via la mutuelle",
+  "La CAAMI, mutuelle publique"],
  1,
- "Dépistage de la fragilité : systématique dès 70 ans (hors maladie grave), à l'initiative de TOUT soignant (pas réservé au médecin). Il prédit la perte d'autonomie, les chutes, l'institutionnalisation à 3 ans.");
+ "Séjour irrégulier → AMU via le CPAS (couvre curatif ET préventif). Les demandeurs d'asile (avec titre de séjour) relèvent de FEDASIL.");
 
-Q("age",
- "Quelle échelle évalue l'AUTONOMIE (activités de la vie quotidienne) et sert de référence pour la dépendance (INAMI) ?",
- ["MNA", "Katz", "MMSE", "Tinetti"],
+Q("orga",
+ "Pour envoyer un certificat électronique d'incapacité à la mutuelle (obligatoire dès 14 jours en 2026), le MG utilise :",
+ ["Recip-e", "Mult-eMediatt", "MetaHub", "B-IHR"],
  1,
- "Katz = autonomie (AVQ), référence pour la dépendance (INAMI). MNA = nutrition, MMSE = cognition, Tinetti = équilibre/marche.");
+ "Mult-eMediatt = certificat électronique d'incapacité de travail (MG → mutuelle), obligatoire dès 14 jours (réforme 2026 ; durée prescrite max 3 mois renouvelable).");
 
-Q("age",
- "Quelle échelle évalue la NUTRITION chez la personne âgée ?",
- ["MMSE", "MNA (Mini Nutritional Assessment)", "GDS", "Timed Up & Go"],
+Q("orga",
+ "Parmi ces affirmations sur la gouvernance des soins, laquelle est EXACTE ?",
+ ["Les Régions gèrent la sécurité sociale",
+  "Les Communautés gèrent la prévention et la promotion de la santé",
+  "Le fédéral agrée les hôpitaux et planifie l'offre",
+  "Les mutuelles fixent la nomenclature"],
  1,
- "MNA (Mini Nutritional Assessment) = dépistage de la dénutrition.");
+ "Communautés = les personnes (prévention, promotion, 1re ligne, santé mentale de 1re ligne). Fédéral = sécurité sociale/financement. Régions = territoires (agrément hôpitaux/MRS, planification). La nomenclature relève de l'INAMI.");
 
+Q("orga",
+ "Recip-e est une prescription électronique qui :",
+ ["Est adressée directement à une officine désignée par le médecin",
+  "Est un message non adressé, crypté via eHealth, récupéré par le prestataire choisi par le patient",
+  "Contient le diagnostic du patient",
+  "Sert à vérifier l'assurabilité"],
+ 1,
+ "Recip-e : message NON adressé, crypté, via eHealth, à statut de source authentique ; récupéré par la pharmacie CHOISIE par le patient. Elle ne contient pas le diagnostic et ne vérifie pas l'assurabilité (= MyCareNet).");
+// ========== LE PATIENT ÂGÉ & COORDINATION — niveau difficile ==========
 Q("age",
- "Parmi ces échelles, laquelle est un INTRUS (sans rapport avec la personne âgée) ?",
- ["Katz", "MMSE", "Finegan", "Tinetti"],
+ "Concernant la fragilité de la personne âgée, quelle affirmation est EXACTE ?",
+ ["C'est un synonyme de la dépendance",
+  "C'est un état irréversible lié à l'âge",
+  "C'est un processus réversible si repéré, distinct de l'âge, de la polypathologie et de la dépendance",
+  "Elle se confond avec la polypathologie"],
  2,
- "Intrus classique : « Finegan » (score de sevrage du nouveau-né). Valides chez la personne âgée : Katz, MNA, MMSE, Tinetti, Timed Up & Go.");
+ "Fragilité = diminution des réserves physiologiques altérant l'adaptation au stress ; marqueur de risque RÉVERSIBLE si repéré. Elle ≠ âge, ≠ polypathologie, ≠ dépendance.");
 
 Q("age",
- "Le test « Timed Up & Go » est considéré comme normal en dessous de :",
- ["5 secondes", "14 secondes", "30 secondes", "60 secondes"],
- 1,
- "Timed Up & Go : normal < 14 s ; au-delà, risque de chute accru. Tinetti < 20/28 = risque de chute accru.");
-
-Q("age",
- "Un trouble de la marche chez la personne âgée multiplie le risque de chute par :",
- ["1,5", "2", "3", "5"],
+ "Lequel de ces items NE fait PAS partie des 5 critères de Fried ?",
+ ["Perte de poids involontaire",
+  "Vitesse de marche ralentie",
+  "Troubles cognitifs (MMSE abaissé)",
+  "Épuisement ressenti"],
  2,
- "Un trouble de la marche multiplie par 3 le risque de chute. Vitesse de marche normale > 70 ans ≈ 1 m/s.");
+ "Critères de Fried : perte de poids involontaire, épuisement, vitesse de marche ralentie, baisse de force, sédentarité. Les troubles cognitifs (MMSE) n'en font PAS partie (autre échelle).");
 
 Q("age",
- "À partir de combien de médicaments parle-t-on de POLYMÉDICATION nécessitant une attention particulière ?",
- ["3 médicaments", "6 médicaments différents par jour", "10 médicaments", "Dès 2 médicaments"],
+ "Un patient présente 2 critères de Fried. Comment le classer ?",
+ ["Robuste", "Pré-fragile", "Fragile", "Dépendant"],
  1,
- "Polymédication : attention particulière à partir de 6 médicaments différents par jour. Révision régulière (prescrits ET OTC), indication de la durée.");
+ "0 critère = robuste ; 1-2 = PRÉ-FRAGILE ; ≥ 3 = fragile. Avec 2 critères → pré-fragile.");
 
 Q("age",
- "Le nombre de médicaments est un facteur pronostique car il est associé à :",
- ["Une amélioration de l'autonomie",
-  "Un risque accru de passage aux urgences, de perte d'autonomie et de morbi-mortalité",
-  "Une meilleure adhérence",
-  "Aucune conséquence"],
+ "Concernant le dépistage de la fragilité, quelle proposition est FAUSSE ?",
+ ["Il est systématique dès 70 ans (hors maladie grave)",
+  "Il peut être initié par tout soignant, pas seulement le médecin",
+  "Il n'est fiable que s'il est réalisé par un médecin",
+  "Il prédit perte d'autonomie, chutes et institutionnalisation à 3 ans"],
+ 2,
+ "FAUX (piège récurrent) : le dépistage n'est PAS réservé au médecin — tout soignant peut l'initier. Systématique dès 70 ans, il prédit perte d'autonomie/chutes/institutionnalisation à 3 ans.");
+
+Q("age",
+ "Quelle échelle est l'INTRUS (sans rapport avec l'évaluation gériatrique) ?",
+ ["MNA (nutrition)", "MMSE (cognition)", "Finegan", "Tinetti (équilibre/marche)"],
+ 2,
+ "Intrus : Finegan = score de sevrage du NOUVEAU-NÉ. Valides chez la personne âgée : Katz, MNA, MMSE, Tinetti, Timed Up & Go, (mini-)GDS.");
+
+Q("age",
+ "Quelle échelle est la référence INAMI pour évaluer la dépendance (autonomie dans les actes de la vie quotidienne) ?",
+ ["MMSE", "Katz", "GDS", "MNA"],
  1,
- "Le nombre de médicaments est un facteur pronostique : passage aux urgences, perte d'autonomie, hausse de la morbi-mortalité. Conséquences : mauvaise adhérence, baisse de l'alimentation.");
+ "Katz = autonomie (AVQ), référence pour la dépendance (INAMI). MMSE = cognition ; GDS = dépression ; MNA = nutrition.");
 
 Q("age",
- "Quels outils sont utiles face à la polymédication ?",
- ["START & STOPP, GheOP3S, conseils pluridisciplinaires",
-  "La règle « maximum 6 médicaments par jour »",
-  "Les échelles Katz et Fried",
-  "Le score de Glasgow"],
+ "Un patient met 20 secondes au test « Timed Up & Go ». Quelle interprétation ?",
+ ["Normal, aucun risque",
+  "Au-delà de 14 s : risque de chute accru",
+  "Normal car < 28",
+  "Score de dépression élevé"],
+ 1,
+ "Timed Up & Go : normal < 14 s ; 20 s = au-delà du seuil → risque de chute accru. (Le /28 et le seuil < 20 concernent l'échelle de TINETTI.)");
+
+Q("age",
+ "À partir de combien de médicaments le cours fixe-t-il le seuil de vigilance « polymédication » ?",
+ ["3", "6 médicaments différents par jour", "10", "Dès 2"],
+ 1,
+ "Polymédication : attention particulière à partir de 6 médicaments différents/jour. Le nombre est un facteur pronostique (urgences, perte d'autonomie, morbi-mortalité).");
+
+Q("age",
+ "Quel outil est pertinent face à la polymédication, et lequel ne l'est PAS ?",
+ ["START & STOPP est pertinent ; « max 6 médicaments/jour » ne l'est pas",
+  "« Max 6 médicaments/jour » est l'outil de référence",
+  "L'échelle de Katz mesure la polymédication",
+  "Le score de Fried quantifie le nombre de médicaments"],
  0,
- "Outils : START & STOPP, GheOP3S, conseils pluridisciplinaires (CMP), réconciliation médicamenteuse. Piège : « max 6/jour » n'est PAS un outil. Katz/Fried évaluent autonomie/fragilité.");
+ "Outils utiles : START & STOPP, GheOP3S, révision pluridisciplinaire. « Max 6/jour » n'est PAS un outil (seuil arbitraire). Katz/Fried évaluent autonomie/fragilité, pas la polymédication.");
 
 Q("age",
- "Les benzodiazépines chez la personne âgée :",
- ["Diminuent le risque de chute",
-  "Augmentent le risque de chute",
-  "N'ont aucun effet sur les chutes",
-  "Sont recommandées pour la marche"],
+ "Chez la personne âgée, quelle classe médicamenteuse augmente nettement le risque de chute ?",
+ ["Les IEC", "Les benzodiazépines", "Les statines", "Les antihistaminiques de 2e génération"],
  1,
- "Les benzodiazépines AUGMENTENT le risque de chute chez la personne âgée.");
+ "Les benzodiazépines augmentent le risque de chute chez la personne âgée (sédation, troubles de l'équilibre, allongement des temps de réaction).");
 
 Q("age",
- "Concernant la polymédication, à quoi faut-il être attentif (interactions) ?",
- ["Au jus de pamplemousse (inhibe le CYP3A4), à l'alcool et aux OTC non déclarés",
-  "Uniquement aux médicaments prescrits",
-  "Aux seuls antibiotiques",
-  "À rien de particulier"],
- 0,
- "Attention à l'alcool, aux OTC et au jus de pamplemousse (inhibe le CYP3A4/CYP450) → interactions et toxicité.");
-
-Q("age",
- "Quels acteurs interviennent à domicile autour de la personne âgée (hormis médecin/kiné/infirmier) ?",
- ["Assistant social, aide familiale, aide ménagère, ergothérapeute, livraison de repas, aidant proche",
-  "Pharmacien hospitalier et radiologue",
-  "Médecin du travail et médecin conseil",
-  "Chirurgien et anesthésiste"],
- 0,
- "À domicile : assistant social, aide familiale, aide ménagère, ergothérapeute (adaptation), livraison de repas, aidant proche/garde-malade, + domotique et matériel paramédical.");
-
-Q("age",
- "Pour la transition hôpital → domicile, quel outil de communication structurée est cité ?",
- ["FRAMES", "SBAR (Situation, Background, Assessment, Recommendation)", "PICO", "FARES"],
+ "Un patient âgé prend chaque matin un jus de pamplemousse. Quel est le risque pharmacologique ?",
+ ["Aucun, c'est inoffensif",
+  "Inhibition du CYP3A4 → surdosage de certains médicaments",
+  "Induction enzymatique → sous-dosage",
+  "Interaction uniquement avec les antibiotiques"],
  1,
- "Transition hôpital → domicile : réconciliation médicamenteuse + outil SBAR (Situation, Background, Assessment, Recommendation).");
+ "Le jus de pamplemousse inhibe le CYP3A4 → ↑ concentrations de nombreux médicaments (risque de surdosage). À surveiller avec l'alcool et les OTC non déclarés.");
 
 Q("age",
- "Dans le trajet d'aides et de soins (ASD Bruxelles), la coordinatrice est :",
- ["Un simple relais administratif",
-  "La personne de référence (analyse des besoins, contacts, plan de soutien, réévaluation à +3 mois)",
-  "Le médecin traitant",
-  "L'aidant proche"],
+ "Pour la transition hôpital → domicile, quel outil de communication structurée est recommandé ?",
+ ["FRAMES", "SBAR (Situation, Background, Assessment, Recommendation)", "PICO", "AUDIT"],
  1,
- "La coordinatrice = personne de référence : analyse des besoins, contact avec les services, plan de soutien, réévaluation à +3 mois.");
+ "SBAR (Situation, Background, Assessment, Recommendation) structure la communication interprofessionnelle, avec la réconciliation médicamenteuse, lors de la transition hôpital → domicile.");
 
 Q("age",
- "Le PICT (Palliative Care Indicators Tool) sert à :",
- ["Évaluer la nutrition",
-  "Identifier le patient palliatif",
-  "Mesurer la force musculaire",
-  "Dépister la dénutrition"],
+ "Le PICT (Palliative Care Indicators Tool) combine 3 éléments. Lequel en fait partie ?",
+ ["Un score MMSE < 18",
+  "La « question surprise » : seriez-vous surpris que le patient décède dans les 6-12 mois ?",
+  "Un Timed Up & Go > 14 s",
+  "Un score de Fried ≥ 3"],
  1,
- "PICT (Fédération des soins palliatifs) = outil d'identification du patient palliatif.");
+ "PICT = (1) question surprise (décès dans 6-12 mois ?), (2) > 2 indicateurs de fragilité, (3) ≥ 1 critère d'incurabilité d'une affection potentiellement mortelle.");
 
 Q("age",
- "Le PICT combine 3 éléments. Lequel en fait partie ?",
- ["La « question surprise » (seriez-vous surpris que le patient décède dans les 6-12 mois ?)",
-  "Le score de Glasgow",
-  "Le test Timed Up & Go",
-  "Le questionnaire AUDIT"],
- 0,
- "PICT = 1) question surprise (décès dans 6-12 mois ?), 2) > 2 indicateurs de fragilité, 3) au moins un critère d'incurabilité d'une affection potentiellement mortelle.");
-
-Q("age",
- "Si un patient est identifié comme palliatif via le PICT, il faut :",
- ["Cesser tout soin",
+ "Une fois un patient identifié comme palliatif par le PICT, la démarche est de :",
+ ["Cesser tout traitement",
   "Définir un plan de soins et un ACP (Advanced Care Planning) en concertation interdisciplinaire",
-  "Hospitaliser systématiquement",
-  "Attendre l'aggravation"],
+  "Hospitaliser sans délai en unité spécialisée",
+  "Attendre l'aggravation avant d'agir"],
  1,
- "Patient palliatif identifié → définir un plan de soins et un ACP (Advanced Care Planning), en concertation interdisciplinaire.");
+ "Patient palliatif identifié → établir un plan de soins et un Advanced Care Planning (ACP), en concertation interdisciplinaire (anticipation).");
 
 Q("age",
- "Dans l'évaluation de la personne âgée, qu'est-ce qui n'est PAS primordial (piège) ?",
+ "Dans le trajet d'aides et de soins (ASD Bruxelles), le rôle de la coordinatrice est :",
+ ["D'assurer elle-même les soins infirmiers",
+  "D'être la personne de référence : analyse des besoins, contacts, plan de soutien, réévaluation à +3 mois",
+  "De remplacer le médecin traitant",
+  "De financer les aides"],
+ 1,
+ "La coordinatrice = personne de RÉFÉRENCE : analyse des besoins, contact avec les services, plan de soutien, réévaluation à +3 mois. Elle coordonne (ne dispense pas) les soins.");
+
+Q("age",
+ "Lors d'un retour à domicile coordonné, les délais d'intervention suivent une logique. Lequel est correct ?",
+ ["L'aménagement lourd du domicile est mis en place dès J+1",
+  "Les soins infirmiers et les repas démarrent dès J+1 ; l'aménagement et le gros matériel plus tard (> J+9)",
+  "Tout est mis en place simultanément à la sortie",
+  "La kinésithérapie est toujours prioritaire sur les soins infirmiers"],
+ 1,
+ "Délais : rapide (J+1 : infirmier, repas, transport, coordination) ; intermédiaire (J+2 à J+9 : télévigilance, kiné, aides) ; long (> J+9 : aménagement, gros matériel).");
+
+Q("age",
+ "Dans l'évaluation de la personne âgée, quel élément n'est PAS prioritaire (piège classique) ?",
  ["La prévention des chutes",
-  "La nutrition",
-  "L'horaire du lever et du coucher",
+  "L'état nutritionnel",
+  "L'horaire habituel du lever et du coucher",
   "L'isolement social et le soutien aux aidants"],
  2,
- "Piège : l'horaire du lever/coucher n'est pas primordial. Les priorités : prévention des chutes, nutrition, isolement social, soutien aux aidants.");
+ "Piège : l'horaire du lever/coucher n'est pas une priorité. Priorités : prévention des chutes, nutrition, isolement social, soutien aux aidants.");
+
+Q("age",
+ "Quels acteurs interviennent à domicile autour de la personne âgée, EN PLUS du médecin, du kiné et de l'infirmier ?",
+ ["Médecin du travail, médecin conseil, médecin contrôle",
+  "Assistant social, aide familiale, aide ménagère, ergothérapeute, livraison de repas, aidant proche",
+  "Chirurgien, radiologue, anesthésiste",
+  "Pharmacien hospitalier et biologiste"],
+ 1,
+ "Équipe de services à domicile : assistant social, aide familiale, aide ménagère, ergothérapeute (adaptation), repas, aidant proche/garde-malade, + domotique et matériel paramédical.");
+
+Q("age",
+ "Un trouble de la marche chez la personne âgée multiplie le risque de chute par environ :",
+ ["1,5", "2", "3", "10"],
+ 2,
+ "Un trouble de la marche multiplie par ~3 le risque de chute. La vitesse de marche normale après 70 ans ≈ 1 m/s.");
 
 Q("age",
  "La prévalence de la fragilité est d'environ :",
  ["1 % des > 65 ans",
-  "10-20 % des > 65 ans à domicile, ~50 % des > 85 ans",
+  "10-20 % des > 65 ans à domicile et ~50 % des > 85 ans",
   "100 % des > 70 ans",
-  "5 % des > 85 ans"],
+  "Identique à tous les âges"],
  1,
- "Prévalence : ~10-20 % des > 65 ans à domicile, ~50 % des > 85 ans.");
+ "Prévalence : ~10-20 % des > 65 ans à domicile, ~50 % des > 85 ans. La fragilité augmente nettement avec l'âge sans s'y réduire.");
 
 Q("age",
- "Les interventions multimodales chez la personne âgée fragile comprennent :",
- ["Uniquement des médicaments",
-  "Activité physique adaptée, nutrition, réduction de la polymédication, mise en place du réseau",
-  "L'hospitalisation systématique",
-  "L'arrêt de toute activité physique"],
- 1,
- "Interventions multimodales : AP adaptée (vs sédentarité/sarcopénie), nutrition, réduction/optimisation de la polymédication, mise en place du réseau (environnement, aides).");
+ "Les interventions multimodales chez la personne âgée fragile comprennent toutes celles-ci SAUF :",
+ ["L'activité physique adaptée",
+  "L'optimisation/réduction de la polymédication",
+  "L'hospitalisation systématique préventive",
+  "La prise en charge nutritionnelle et la mise en place du réseau"],
+ 2,
+ "Interventions : AP adaptée, nutrition, réduction de la polymédication, mise en place du réseau. L'hospitalisation systématique n'en fait pas partie (et expose même la personne âgée à des risques).");
 
-// ========== SOINS AUX DEMANDEURS D'ASILE & PRÉCARITÉ (Kathrada, Dumontier, Feron) ==========
-Q("asile",
- "Quel organisme s'occupe de l'ENREGISTREMENT de la demande de protection internationale ?",
- ["Le CGRA", "L'Office des étrangers (OE)", "FEDASIL", "Le CCE"],
+Q("age",
+ "Concernant la polymédication, le nombre de médicaments est considéré comme :",
+ ["Sans valeur pronostique",
+  "Un facteur pronostique (urgences, perte d'autonomie, morbi-mortalité)",
+  "Un simple indicateur de bonne prise en charge",
+  "Bénéfique au-delà de 6 molécules"],
  1,
- "Office des étrangers (OE) = enregistrement de la demande. CGRA = examen/décision. CCE = recours. FEDASIL = accueil.");
-
+ "Le nombre de médicaments est un FACTEUR PRONOSTIQUE : plus il est élevé, plus le risque de passage aux urgences, de perte d'autonomie et de morbi-mortalité augmente.");
+// ========== SOINS AUX DEMANDEURS D'ASILE & PRÉCARITÉ — niveau difficile ==========
 Q("asile",
- "Quel organisme EXAMINE la demande d'asile et prend la décision (reconnaissance du statut) ?",
- ["L'Office des étrangers", "Le CGRA", "FEDASIL", "Le CPAS"],
- 1,
- "CGRA (Commissariat général aux réfugiés et apatrides) = examine la demande et prend la décision.");
-
-Q("asile",
- "FEDASIL est chargé de :",
- ["La décision sur la demande d'asile",
-  "L'organisation de l'accueil et de l'aide matérielle des demandeurs d'asile",
-  "L'enregistrement de la demande",
-  "Les recours juridiques"],
- 1,
- "FEDASIL = organise l'accueil et l'aide matérielle (loi Accueil 2017 : hébergement, repas, accompagnement, droit au travail après 4 mois).");
+ "Associez correctement acteur et rôle dans la procédure d'asile :",
+ ["Office des étrangers = décision sur la demande",
+  "CGRA = enregistrement de la demande",
+  "Office des étrangers = enregistrement ; CGRA = examen et décision",
+  "FEDASIL = instance de recours"],
+ 2,
+ "Office des étrangers = ENREGISTREMENT. CGRA = examen et DÉCISION. CCE = recours. FEDASIL = accueil/aide matérielle. Le piège inverse enregistrement et décision.");
 
 Q("asile",
- "L'Aide Médicale Urgente (AMU) :",
- ["Se limite aux situations d'urgence vitale",
-  "Couvre les soins curatifs ET préventifs et le suivi, pour les personnes en séjour irrégulier",
-  "Concerne les demandeurs d'asile (qui ont un titre de séjour)",
-  "Est octroyée par la mutuelle"],
+ "Un homme en SÉJOUR IRRÉGULIER, sans ressources, consulte pour un suivi de diabète. Quel dispositif couvre ses soins ?",
+ ["FEDASIL", "L'Aide Médicale Urgente (AMU) via le CPAS", "L'INAMI via une mutuelle", "Aucun, faute de titre de séjour"],
  1,
- "AMU = aide sociale du CPAS pour les personnes en SÉJOUR IRRÉGULIER. Malgré son nom, elle couvre le curatif ET le préventif et le suivi (pas seulement l'urgence).");
+ "Séjour irrégulier → AMU (CPAS). Malgré son nom, l'AMU couvre le curatif ET le préventif et le SUIVI (pas seulement l'urgence). FEDASIL concerne les demandeurs d'asile (qui ont un titre de séjour).");
+
+Q("asile",
+ "L'Aide Médicale Urgente (AMU). Quelle affirmation est FAUSSE ?",
+ ["Elle couvre les soins préventifs et le suivi, pas seulement l'urgence",
+  "Elle s'adresse aux personnes en séjour irrégulier sans moyens",
+  "Elle est limitée aux seules situations vitales aiguës",
+  "Elle nécessite territorialité, enquête sociale (indigence) et certificat médical"],
+ 2,
+ "FAUX : malgré son nom, l'AMU ne se limite PAS à l'urgence (curatif + préventif + suivi, ambulatoire et résidentiel). Les 3 autres propositions sont exactes.");
 
 Q("asile",
  "Quelles sont les 3 conditions d'octroi de l'AMU ?",
- ["Territorialité, enquête sociale (indigence), certificat médical d'AMU",
-  "Titre de séjour, mutuelle, ordonnance",
-  "Nationalité, domicile, emploi",
-  "Âge, revenus, nationalité belge"],
- 0,
- "3 conditions : territorialité (réside sur la commune), enquête sociale établissant l'indigence, et un certificat médical d'AMU.");
-
-Q("asile",
- "Quelle distinction entre demandeur d'asile et personne en séjour irrégulier est correcte ?",
- ["Ils relèvent du même dispositif",
-  "Le demandeur d'asile a un titre de séjour (FEDASIL) ; la personne en séjour irrégulier relève de l'AMU (CPAS)",
-  "Le demandeur d'asile relève de l'AMU",
-  "La personne en séjour irrégulier relève de FEDASIL"],
+ ["Titre de séjour, mutuelle, ordonnance médicale",
+  "Territorialité, enquête sociale établissant l'indigence, certificat médical d'AMU",
+  "Nationalité belge, domicile fixe, emploi déclaré",
+  "Inscription à FEDASIL, RIS, carte eID"],
  1,
- "Le demandeur d'asile / réfugié a un titre de séjour et relève de FEDASIL. La personne en séjour irrégulier relève de l'AMU (CPAS).");
+ "3 conditions : territorialité (réside sur la commune), enquête sociale (indigence), certificat médical d'AMU.");
 
 Q("asile",
- "La régularisation « 9ter » concerne :",
- ["La raison humanitaire", "La raison médicale", "L'asile politique", "Le regroupement familial"],
+ "Régularisation : associez correctement.",
+ ["9bis = raison médicale ; 9ter = raison humanitaire",
+  "9ter = raison médicale ; 9bis = raison humanitaire",
+  "9bis et 9ter concernent toutes deux l'asile politique",
+  "9ter = regroupement familial"],
  1,
- "9ter = régularisation pour raison MÉDICALE ; 9bis = pour raison humanitaire. (≠ asile.)");
+ "9ter = régularisation pour raison MÉDICALE ; 9bis = raison HUMANITAIRE. Distinct de la procédure d'asile (CGRA).");
 
 Q("asile",
- "La PRÉCARITÉ se définit comme :",
- ["Un synonyme de pauvreté (norme monétaire)",
-  "L'absence d'une ou plusieurs sécurités (emploi, revenus, logement, liens) ; notion subjective, processus",
-  "Une maladie chronique",
-  "Un statut administratif"],
+ "La PRÉCARITÉ se définit, selon le cours, comme :",
+ ["Un seuil monétaire de pauvreté",
+  "L'absence d'une ou plusieurs sécurités (emploi, revenus, logement, liens) — notion subjective et processus",
+  "Un statut administratif de séjour",
+  "Une maladie chronique évolutive"],
  1,
- "Précarité = absence d'une ou plusieurs sécurités permettant d'assumer ses responsabilités et de jouir de ses droits. Notion subjective, processus de précarisation. « La précarité ne touche pas que les pauvres » (≠ pauvreté monétaire).");
+ "Précarité = absence d'une ou plusieurs sécurités permettant d'assumer ses responsabilités/droits ; notion subjective, processus. « La précarité ne touche pas que les pauvres » (≠ pauvreté, définie par une norme monétaire).");
 
 Q("asile",
- "Chez un patient d'origine (sub)africaine présentant des douleurs digestives + perte de poids, que rechercher à la biologie ?",
+ "Patient de 34 ans, originaire d'Afrique centrale, douleurs abdominales depuis 3 mois et légère perte de poids, sans autre signe d'alarme. Que rechercher en priorité à la biologie ?",
  ["Une hypertriglycéridémie",
-  "Une ÉOSINOPHILIE (parasitose : schistosomiase, strongyloïdose)",
-  "Une légère augmentation des γ-GT",
+  "Une éosinophilie (parasitose : schistosomiase, strongyloïdose)",
+  "Une légère élévation des γ-GT",
   "Une hyperglycémie"],
  1,
- "Origine (sub)africaine + douleurs digestives + perte de poids → rechercher une ÉOSINOPHILIE (parasitose : schistosomiase, strongyloïdose).");
+ "Origine subsaharienne + symptômes digestifs + perte de poids → rechercher une ÉOSINOPHILIE évoquant une parasitose (schistosomiase → praziquantel ; strongyloïdose → ivermectine). Question d'examen classique.");
 
 Q("asile",
- "Concernant la tuberculose chez les demandeurs d'asile :",
- ["Aucun dépistage n'est nécessaire",
-  "Dépistage systématique chez tous (FARES, score ≥ 4 → Rx thorax)",
-  "Dépistage uniquement si toux > 3 mois",
-  "Dépistage réservé aux symptomatiques"],
+ "Le traitement de la strongyloïdose (anguillulose) repose sur :",
+ ["Le praziquantel", "L'ivermectine (prudence si immunodépression)", "Un antibiotique bêta-lactame", "La metformine"],
  1,
- "Tuberculose : dépistage systématique chez TOUS les demandeurs d'asile (FARES, score ≥ 4 → Rx thorax). En centre d'accueil, risque surtout de TB (et de rougeole).");
+ "Strongyloïdose → ivermectine (attention en cas d'immunodépression : risque de forme disséminée). La schistosomiase, elle, se traite par praziquantel.");
 
 Q("asile",
- "Concernant le VIH chez les demandeurs d'asile, le message « I = I » signifie :",
- ["Immunité = Infection",
-  "Charge virale Indétectable = virus Intransmissible",
-  "Isolement = Information",
-  "Infection = Incurable"],
+ "Concernant le dépistage de la tuberculose chez les demandeurs d'asile, quelle proposition est EXACTE ?",
+ ["Réservé aux patients symptomatiques",
+  "Systématique chez tous (score FARES ≥ 4 → radiographie thoracique)",
+  "Réalisé uniquement après 6 mois de séjour",
+  "Inutile en centre d'accueil"],
  1,
- "I = I : charge virale Indétectable = virus Intransmissible. Référer en centre de référence.");
+ "TB : dépistage SYSTÉMATIQUE chez tous les DA (FARES, score ≥ 4 → Rx thorax). En centre d'accueil (Fedasil/Croix-Rouge), le risque de TB est élevé.");
 
 Q("asile",
- "Concernant le risque infectieux en centre d'accueil (Fedasil/Croix-Rouge), quelle proposition est VRAIE ?",
- ["Le risque de rougeole est inexistant",
-  "Le risque de tuberculose y est très fréquent, et les lésions physiques de torture peuvent perdurer des années",
-  "La vaccination RRO n'est jamais nécessaire",
-  "Aucun dépistage n'y est utile"],
+ "Concernant le risque infectieux en centre d'accueil, laquelle de ces affirmations du cours est VRAIE ?",
+ ["La rougeole y est exceptionnelle",
+  "Le risque de tuberculose y est très fréquent ; les lésions de torture peuvent perdurer des années",
+  "La vaccination RRO est contre-indiquée",
+  "Le dépistage IST y est inutile"],
  1,
  "En centre d'accueil : risque de rougeole et SURTOUT de tuberculose. Les lésions physiques de torture peuvent perdurer des années. (Re)vaccination RRO systématique chez tous les DA.");
 
 Q("asile",
- "Le traitement de la schistosomiase (bilharziose) repose sur :",
- ["L'ivermectine", "Le praziquantel", "La metformine", "Un antibiotique"],
+ "Le message « I = I » utilisé pour le VIH signifie :",
+ ["Immunodépression = Infection",
+  "Charge virale Indétectable = virus Intransmissible",
+  "Isolement = Indication",
+  "Incurable = Irréversible"],
  1,
- "Schistosomiase → praziquantel. Strongyloïdose → ivermectine (attention si immunodépression).");
+ "I = I : charge virale Indétectable = virus Intransmissible (sous traitement efficace). Référer en centre de référence.");
 
 Q("asile",
- "Concernant le malaria/paludisme chez le primo-arrivant :",
- ["Dépistage systématique de tous",
-  "Pas de dépistage systématique ; si suspecté → goutte épaisse (gold standard) ou test rapide",
-  "Traitement empirique systématique",
-  "Vaccination obligatoire"],
+ "Face à un patient potentiellement victime de torture (suspicion de PTSD), l'attitude correcte est de :",
+ ["Recueillir tous les détails du traumatisme pour étayer le dossier",
+  "Ne pas demander de détails afin d'éviter une réexposition ; laisser dire à son rythme",
+  "Éviter complètement le sujet psychique",
+  "Adresser d'emblée sans aucune écoute"],
  1,
- "Malaria : pas de dépistage systématique ; si suspectée → goutte épaisse (gold standard) ou test rapide.");
+ "PTSD : NE PAS demander de détails (risque de réexposition traumatique) ; laisser la personne s'exprimer à son rythme. Travail pluridisciplinaire (psychologue, psychiatre, médiateur culturel, interprète).");
 
 Q("asile",
- "Face à un patient présentant un possible PTSD, la précaution majeure est de :",
- ["Demander tous les détails du traumatisme pour bien documenter",
-  "Ne pas demander de détails pour ne pas le réexposer à un stress ; le laisser dire ce qu'il veut, à son rythme",
-  "Éviter tout abord du sujet psychique",
-  "Référer immédiatement sans écouter"],
+ "Le rapport médical circonstancié (asbl Constats). Quelle affirmation est EXACTE ?",
+ ["Il prouve la véracité du récit du demandeur",
+  "Il établit le degré de compatibilité entre le récit et les séquelles, selon le Protocole d'Istanbul",
+  "Il remplace la décision du CGRA",
+  "Il doit être rédigé à l'affirmatif et en jargon médical"],
  1,
- "PTSD : NE PAS demander de détails (risque de réexposition) ; laisser la personne dire ce qu'elle veut, à son rythme. Travail pluridisciplinaire (psy, médiateur culturel, interprète).");
+ "Le rapport (Constats, 2009) établit la COMPATIBILITÉ entre récit et séquelles (élément de preuve), selon le Protocole d'Istanbul. Rédaction au CONDITIONNEL, langage accessible. Les incohérences ≠ mensonge (la torture altère la mémoire).");
 
 Q("asile",
- "Le rapport médical circonstancié (asbl Constats) :",
- ["Garantit la véracité du récit",
-  "Établit le degré de COMPATIBILITÉ entre le récit et les séquelles (élément de preuve), selon le Protocole d'Istanbul",
-  "Pose un diagnostic psychiatrique définitif",
-  "Remplace la décision du CGRA"],
- 1,
- "Le rapport médical (Constats, 2009) établit le degré de compatibilité entre le récit et les séquelles. Méthodologie : Protocole d'Istanbul (ONU). Rédigé au conditionnel ; incohérences ≠ mensonge.");
-
-Q("asile",
- "Dans la rédaction d'un « Constat », le rapport est rédigé :",
- ["À l'affirmatif et en langage médical technique",
-  "Au conditionnel (« il raconte que... »), en langage non médical accessible",
-  "Uniquement en latin",
-  "Sans aucune conclusion"],
- 1,
- "Rédaction au conditionnel, langage non médical accessible ; conclusions = type de séquelles, compatibilité avec les faits, précautions pour l'audition CGRA. La torture altère la mémoire et la notion de temps.");
-
-Q("asile",
- "Une fillette non excisée originaire d'un pays à haute prévalence de MGF :",
- ["Ne peut bénéficier d'aucune protection",
-  "Peut être reconnue réfugiée sur base d'un certificat médical de non-excision, à ré-attester tous les 3 ans",
-  "Doit être excisée pour des raisons culturelles",
+ "Une fillette non excisée, originaire d'un pays à haute prévalence de MGF :",
+ ["Ne peut prétendre à aucune protection",
+  "Peut être reconnue réfugiée sur base d'un certificat de non-excision, à ré-attester tous les 3 ans",
+  "Doit subir l'excision pour des motifs culturels",
   "Relève uniquement de l'AMU"],
  1,
- "Certificat médical de non-excision → reconnaissance possible comme réfugiée, à ré-attester tous les 3 ans (médecins formés par le GAMS ; centres CeMAViE, UZ Gent).");
+ "Un certificat médical de non-excision peut fonder une reconnaissance comme réfugiée, à RÉ-attester tous les 3 ans (souvent mal vécu → précautions). Médecins formés par le GAMS ; centres CeMAViE, UZ Gent.");
 
 Q("asile",
- "Une mission parfois essentielle du MG face à un primo-arrivant est de :",
- ["Multiplier les examens",
-  "DÉMÉDICALISER : revoir des « diagnostics » et traitements posés au pays d'origine",
-  "Confirmer tous les diagnostics étrangers",
-  "Prescrire les mêmes traitements qu'au pays"],
+ "Un primo-arrivant arrive avec un « diagnostic de trouble thyroïdien » sous L-thyroxine, mais un bilan normal. Quelle mission essentielle du MG cela illustre-t-il ?",
+ ["Confirmer le traitement antérieur",
+  "Démédicaliser : revoir les diagnostics et traitements posés au pays d'origine",
+  "Augmenter la dose par sécurité",
+  "Référer systématiquement à l'endocrinologue"],
  1,
- "Mission parfois essentielle : démédicaliser. Ex. Ahmad : « trouble thyroïdien » sous L-thyroxine = hyperthyroïdie iatrogène ; « trouble glycémique » sous metformine = glycémie/HbA1c normales.");
+ "Mission parfois essentielle : DÉMÉDICALISER (cas Ahmad : hyperthyroïdie iatrogène sous L-thyroxine, « diabète » sous metformine avec HbA1c normale). Revoir les diagnostics/traitements étrangers.");
+
+Q("asile",
+ "Concernant le paludisme (malaria) chez le primo-arrivant, quelle conduite est correcte ?",
+ ["Dépistage systématique de tous les arrivants",
+  "Pas de dépistage systématique ; si suspicion → goutte épaisse (gold standard) ou test rapide",
+  "Traitement présomptif systématique",
+  "Vaccination obligatoire à l'arrivée"],
+ 1,
+ "Malaria : pas de dépistage systématique ; en cas de suspicion clinique → goutte épaisse (gold standard) ou test rapide.");
 
 Q("asile",
  "Le bilan de santé du primo-arrivant ASYMPTOMATIQUE comprend notamment :",
  ["Aucun examen complémentaire",
-  "Radio thorax, biologie, dépistage IST (VIH, hépatites B/C, syphilis), sérologies parasitaires selon l'origine",
-  "Uniquement un examen dentaire",
-  "Une coloscopie systématique"],
+  "Rx thorax, biologie, dépistage IST (VIH, hépatites B/C, syphilis), sérologies parasitaires selon l'origine",
+  "Une coloscopie de dépistage",
+  "Un scanner thoraco-abdominal systématique"],
  1,
- "Bilan : anamnèse (trajet, vaccins, violences, PTSD), examen clinique, Rx thorax, biologie, IST (HIV, hépatites B/C, syphilis), sérologies schistosomiase/strongyloïdose selon l'origine.");
+ "Bilan : anamnèse (trajet, vaccins, violences, PTSD), examen clinique, Rx thorax, biologie, IST (VIH, hépatites B/C, syphilis), sérologies schistosomiase/strongyloïdose selon l'origine.");
 
 Q("asile",
- "L'accès aux soins est garanti par quel fondement ?",
- ["Une simple recommandation médicale",
-  "Un droit (Constitution, art. 23)",
+ "L'accès aux soins des personnes précaires/en demande de protection repose sur :",
+ ["Une simple tolérance administrative",
+  "Un droit fondamental (Constitution, art. 23)",
   "Le seul bon vouloir du médecin",
   "Une assurance privée obligatoire"],
  1,
- "L'accès aux soins est un DROIT (Constitution, art. 23). Le rôle du MG : soigner, dépister, accompagner et attester sans juger.");
+ "L'accès aux soins est un DROIT (Constitution, art. 23). Rôle du MG : soigner, dépister, accompagner et attester sans juger.");
 
 Q("asile",
- "Face aux publics précarisés, l'attitude recommandée est :",
- ["Le jugement et la sélection",
-  "Le non-jugement, une vision globale, l'approche pluridisciplinaire et le travail en réseau",
-  "L'isolement du patient",
-  "La standardisation des soins"],
+ "Face aux publics précarisés, quelle posture est recommandée pour le soignant (et pour éviter l'épuisement) ?",
+ ["Standardiser les soins et limiter le temps",
+  "Non-jugement, vision globale, approche pluridisciplinaire et travail en réseau",
+  "Sélectionner les patients selon leur statut",
+  "Travailler seul pour gagner du temps"],
  1,
- "Agir : non-jugement, vision globale, approche pluridisciplinaire, santé communautaire, éducation thérapeutique, travail en réseau (Médecins du Monde, CPAS, maisons médicales) pour ne pas s'épuiser.");
+ "Agir : non-jugement, vision globale, pluridisciplinarité, santé communautaire, éducation thérapeutique, travail en RÉSEAU (Médecins du Monde, CPAS, maisons médicales) pour ne pas s'épuiser.");
 
-// ========== TRIO : MG – MÉDECIN DU TRAVAIL – MÉDECIN CONSEIL (S. Ruppol & D. Lamy) ==========
-Q("trio",
- "Le médecin du TRAVAIL a pour mission d'évaluer :",
- ["L'état d'incapacité (perte de capacité de gain)",
-  "L'aptitude à exécuter un travail (médecine de prévention)",
-  "L'existence et la durée de l'incapacité (absentéisme)",
-  "Le diagnostic des maladies aiguës"],
+Q("asile",
+ "Distinguez correctement demandeur d'asile et personne en séjour irrégulier :",
+ ["Le demandeur d'asile relève de l'AMU",
+  "Le demandeur d'asile a un titre de séjour (FEDASIL) ; la personne en séjour irrégulier relève de l'AMU (CPAS)",
+  "Les deux relèvent de FEDASIL",
+  "Les deux relèvent de l'AMU"],
  1,
- "Médecin du travail = évalue l'APTITUDE (médecine de PRÉVENTION). Il ne contrôle pas l'absentéisme (médecin contrôle) ni n'évalue l'incapacité (médecin conseil).");
+ "Demandeur d'asile / réfugié = titre de séjour, accueil par FEDASIL. Personne en séjour irrégulier = pas de titre → AMU (CPAS). Distinction-clé du cours.");
 
-Q("trio",
- "Le médecin CONSEIL (mutuelle) a pour mission d'évaluer :",
- ["L'aptitude au poste de travail",
-  "L'état d'incapacité",
-  "L'absentéisme",
-  "Les risques professionnels"],
+Q("asile",
+ "L'aide matérielle de la loi Accueil (2017) comprend notamment, et de façon notable :",
+ ["L'interdiction de travailler durant toute la procédure",
+  "Le droit au travail après 4 mois, en plus de l'hébergement, des repas et de l'accompagnement",
+  "Une allocation de chômage",
+  "L'accès automatique à la nationalité"],
  1,
- "Médecin conseil (mutuelle) = évalue l'INCAPACITÉ. Il peut proposer la reprise du travail, contacter le médecin du travail, et est tenu au secret vis-à-vis de l'employeur.");
+ "Aide matérielle (loi 2017) : hébergement, repas, habillement, accompagnement social/médical/psy, aide juridique, interprétariat, scolarité, allocations, et DROIT AU TRAVAIL après 4 mois.");
 
-Q("trio",
- "Le médecin de CONTRÔLE a pour mission de :",
- ["Évaluer l'aptitude",
-  "Contrôler l'existence et la durée de l'incapacité (absentéisme), payé par l'employeur",
-  "Évaluer l'incapacité pour la mutuelle",
-  "Prodiguer des soins"],
+Q("asile",
+ "Les motifs de consultation « atypiques » des primo-arrivants imposent d'être attentif à :",
+ ["Une simulation systématique",
+  "Des somatisations exprimant une souffrance psychique (plaintes imagées/culturellement codées)",
+  "Une pathologie purement organique uniquement",
+  "Un refus de soins de principe"],
  1,
- "Médecin contrôle = vérifie l'existence/durée de l'incapacité (absentéisme), payé par l'employeur. Recours en cas de litige = médecin-arbitre.");
+ "Plaintes atypiques (imagées, culturellement codées) → attention aux SOMATISATIONS pouvant traduire une souffrance psychique. Ne pas réduire d'emblée à de l'organique ni à de la simulation.");
+// ========== TRIO : MG – MÉDECIN DU TRAVAIL – MÉDECIN CONSEIL — niveau difficile ==========
+Q("trio",
+ "Associez correctement médecin et mission :",
+ ["Médecin du travail = évalue l'incapacité ; médecin conseil = évalue l'aptitude",
+  "Médecin du travail = évalue l'aptitude ; médecin conseil = évalue l'incapacité ; médecin contrôle = vérifie l'absentéisme",
+  "Médecin contrôle = évalue l'aptitude au poste",
+  "Médecin conseil = contrôle l'absentéisme pour l'employeur"],
+ 1,
+ "Médecin du TRAVAIL = aptitude (prévention). Médecin CONSEIL (mutuelle) = incapacité. Médecin CONTRÔLE (payé par l'employeur) = existence/durée de l'incapacité (absentéisme). Distinction-clé.");
 
 Q("trio",
- "Parmi les rôles du médecin du travail, lequel est FAUX ?",
- ["Analyse et évaluation des risques professionnels",
-  "Surveillance de la santé et maintien au travail (poste adapté)",
+ "Parmi les rôles du médecin du travail, lequel est FAUX (piège classique) ?",
+ ["Analyse des risques professionnels et visite des postes",
+  "Surveillance de la santé et proposition de poste adapté",
   "Contrôle de l'absentéisme et prestation de soins curatifs",
-  "Membre du CPPT, avis et conseils"],
+  "Participation au CPPT et au retour au travail"],
  2,
- "FAUSSES propositions classiques : « contrôle de l'absentéisme », « évalue les ITT », « prodigue des soins curatifs », « travaille seul ». Le médecin du travail fait de la PRÉVENTION.");
+ "FAUX : le médecin du travail fait de la PRÉVENTION — il ne contrôle pas l'absentéisme (médecin contrôle), n'évalue pas l'incapacité (médecin conseil) et ne prodigue pas de soins curatifs.");
 
 Q("trio",
- "L'évaluation de l'APTITUDE consiste à vérifier que :",
- ["Le travailleur est le meilleur candidat pour le poste",
-  "Les risques du travail ne majorent pas la santé du travailleur, ET que sa santé ne majore pas les risques (pour lui/autrui)",
-  "Le travailleur n'a aucune maladie",
-  "Le travailleur peut faire n'importe quel poste"],
+ "L'évaluation de l'aptitude consiste à vérifier deux choses. Lesquelles ?",
+ ["Que le candidat est le meilleur pour le poste, et qu'il accepte les conditions",
+  "Que les risques du travail ne majorent pas la santé, ET que la santé ne majore pas les risques (pour lui/autrui)",
+  "Que le travailleur n'a aucune maladie chronique",
+  "Que l'employeur respecte le salaire minimum"],
  1,
- "Aptitude : (1) les risques du travail ne majorent pas les problèmes de santé du travailleur, et (2) l'état de santé du travailleur ne majore pas les risques (pour lui ou pour autrui).");
+ "Aptitude : (1) les risques du travail ne majorent pas les problèmes de santé du travailleur, et (2) l'état de santé du travailleur ne majore pas les risques (pour lui-même ou autrui).");
 
 Q("trio",
- "Le cadre légal de la médecine du travail repose sur :",
- ["Le Code du Bien-Être au Travail (loi du 4 août 1996 ; AR du 28 mai 2003)",
-  "La loi Leburton de 1964",
-  "Le Pacte social de 1944",
-  "La loi sur les mutuelles de 1894"],
- 0,
- "Cadre légal : Code du Bien-Être au Travail (loi du 4 août 1996 ; AR du 28 mai 2003 sur la surveillance de la santé des travailleurs).");
-
-Q("trio",
- "La notion de RISQUE professionnel se définit comme :",
- ["Danger × Exposition → Dommage (la prévention agit sur l'exposition)",
-  "Danger + Maladie",
-  "Exposition seule",
-  "Dommage × Gravité"],
- 0,
- "Risque = Danger × Exposition (quantité, fréquence, durée, distance) → Dommage. La prévention agit sur l'EXPOSITION.");
-
-Q("trio",
- "La VISITE DE REPRISE est obligatoire :",
- ["Dans tous les cas, dès le 1er jour de reprise",
-  "Dans les 10 jours ouvrables de la reprise, si l'incapacité a duré ≥ 4 semaines",
-  "Uniquement à la demande de l'employeur",
-  "Après 6 mois d'incapacité"],
+ "Un travailleur reprend après 5 semaines d'incapacité. Quelle obligation s'applique ?",
+ ["Aucune visite n'est requise",
+  "Une visite de reprise dans les 10 jours ouvrables suivant la reprise",
+  "Une visite de pré-reprise obligatoire avant le retour",
+  "Une visite d'embauche"],
  1,
- "Visite de reprise : obligatoire dans les 10 jours ouvrables de la reprise si l'incapacité a duré ≥ 4 semaines. Le travailleur ne reprend pas « du jour au lendemain » sans cette visite.");
+ "Visite de reprise OBLIGATOIRE dans les 10 jours ouvrables si l'incapacité a duré ≥ 4 semaines (ici 5). Le travailleur ne reprend pas « du jour au lendemain » sans cette visite.");
 
 Q("trio",
- "La VISITE DE PRÉ-REPRISE :",
- ["Est obligatoire après toute incapacité",
-  "Est facultative, à l'initiative du travailleur, pendant l'arrêt (pour anticiper la reprise)",
-  "Est décidée par l'employeur",
-  "Remplace la visite de reprise"],
+ "La visite de PRÉ-REPRISE se distingue de la visite de reprise car elle :",
+ ["Est obligatoire après toute incapacité ≥ 4 semaines",
+  "Est facultative et à l'initiative du travailleur, pendant l'arrêt",
+  "Est décidée par l'employeur après la reprise",
+  "Remplace l'examen d'embauche"],
  1,
- "Visite de pré-reprise : facultative, à l'initiative du TRAVAILLEUR, pendant l'arrêt, pour anticiper la reprise.");
+ "Pré-reprise : FACULTATIVE, à l'initiative du TRAVAILLEUR, PENDANT l'arrêt, pour anticiper la reprise. La reprise, elle, est obligatoire dans les 10 j si l'arrêt ≥ 4 semaines.");
 
 Q("trio",
- "Dans le trajet de réintégration, le médecin du travail dispose de combien de jours pour sa décision ?",
+ "Dans le trajet de réintégration, quel délai correspond au médecin du travail pour rendre sa décision ?",
  ["10 jours", "49 jours", "63 jours", "6 mois"],
  1,
- "Le médecin du travail dispose de 49 jours pour sa décision ; l'employeur répond en 63 jours (inaptitude temporaire) ou 6 mois (inaptitude définitive).");
+ "Le médecin du travail dispose de 49 jours. L'EMPLOYEUR répond en 63 jours (inaptitude temporaire) ou 6 mois (inaptitude définitive). Piège : ces chiffres voisins se confondent facilement.");
 
 Q("trio",
  "L'évaluation de l'inaptitude définitive (EID) est possible :",
  ["Dès le 1er jour d'incapacité",
-  "Après 6 mois d'ITT continue ; si refus d'un travail adapté → rupture pour force majeure médicale",
-  "Après 1 mois",
-  "Jamais"],
+  "Après 6 mois d'ITT continue ; en cas de refus d'un travail adapté → rupture pour force majeure médicale",
+  "Après 49 jours",
+  "Seulement après 1 an"],
  1,
- "EID : possible après 6 mois d'ITT continue ; si inaptitude définitive + refus d'un travail adapté → rupture pour force majeure médicale (dissociée de l'ITT depuis le 01/10/2022).");
+ "EID possible après 6 mois d'ITT continue. Si inaptitude définitive + refus d'un travail adapté → rupture pour force majeure médicale (dissociée de l'ITT depuis le 01/10/2022).");
 
 Q("trio",
- "Concernant la protection de la maternité :",
+ "Concernant la protection de la maternité, quelle affirmation est EXACTE ?",
  ["La travailleuse reçoit un certificat d'incapacité",
-  "En cas de risque : mutation vers un poste sans exposition ou écartement ; indemnité de la mutuelle (~78 % du brut)",
-  "L'employeur paie 100 % du salaire",
-  "Aucune protection n'est prévue"],
+  "En cas de risque : mutation de poste ou écartement ; indemnité de la mutuelle (~78 % du brut)",
+  "C'est l'employeur qui indemnise à 100 %",
+  "L'allaitement n'ouvre aucune protection"],
  1,
- "Maternité : mutation ou écartement (inaptitude temporaire) ; PAS de certificat d'incapacité mais une attestation ; indemnité de la mutuelle (~78 % du brut). Allaitement : écartement possible jusqu'aux 5 mois de l'enfant.");
+ "Maternité : mutation vers un poste sans exposition OU écartement (inaptitude temporaire) — PAS de certificat d'incapacité mais une attestation ; indemnité de la mutuelle (~78 % du brut). Allaitement : écartement possible jusqu'aux 5 mois de l'enfant.");
 
 Q("trio",
- "La plateforme TRIO (INAMI) permet :",
- ["De contrôler l'absentéisme des travailleurs",
-  "D'identifier et mettre en contact direct et sécurisé le médecin traitant, le médecin conseil et le médecin du travail, avec l'accord du patient",
-  "De gérer les pensions",
-  "De rembourser les médicaments"],
+ "La plateforme TRIO (INAMI) sert à :",
+ ["Contrôler l'absentéisme des salariés",
+  "Mettre en contact sécurisé médecin traitant, médecin conseil et médecin du travail, avec l'accord du patient",
+  "Gérer le paiement des indemnités",
+  "Remplacer le réseau de santé régional"],
  1,
- "TRIO (INAMI) : avec l'accord préalable du patient, met en contact médecin traitant – médecin conseil – médecin du travail (+ coordinateurs retour au travail, conseillers en prévention).");
+ "TRIO : avec l'accord PRÉALABLE du patient, identifie et met en contact direct et sécurisé médecin traitant – médecin conseil – médecin du travail (+ coordinateurs retour au travail, conseillers en prévention).");
 
 Q("trio",
- "Hors plateforme TRIO, le médecin du travail :",
- ["A un accès direct au Réseau Santé (RSW...)",
-  "N'a pas accès au Réseau Santé car il n'a pas de lien thérapeutique avec le patient",
-  "Peut consulter le dossier médical sans condition",
-  "Remplace le médecin traitant"],
+ "Pourquoi le médecin du travail n'a-t-il pas d'accès direct au réseau de santé (RSW…) ?",
+ ["Parce qu'il n'est pas médecin",
+  "Parce qu'il n'a pas de lien thérapeutique avec le patient (sauf via TRIO, avec consentement)",
+  "Parce qu'il est payé par la mutuelle",
+  "Parce que la loi le lui interdit définitivement"],
  1,
- "Le médecin du travail n'a pas de lien thérapeutique → pas d'accès direct au réseau de santé (sauf via TRIO, avec consentement).");
+ "Le médecin du travail n'a pas de LIEN THÉRAPEUTIQUE de soins → pas d'accès direct au réseau de santé, sauf via la plateforme TRIO (avec consentement du patient).");
 
 Q("trio",
- "Pourquoi le médecin généraliste s'adresse-t-il au médecin du travail ?",
- ["Pour faire contrôler l'absentéisme du patient",
-  "Pour adapter le poste, préparer la reprise, signaler un risque professionnel (en respectant le secret médical)",
-  "Pour obtenir un diagnostic",
-  "Pour prescrire un traitement"],
- 1,
- "Le MG s'adresse au médecin du travail pour adapter le poste, préparer la reprise, signaler un risque professionnel — en respectant le secret médical (le certificat à l'employeur ne porte jamais de diagnostic).");
+ "Le recours contre une décision est mal attribué dans une de ces propositions. Laquelle ?",
+ ["Médecin du travail → Direction régionale du Contrôle du Bien-Être",
+  "Médecin conseil → Tribunal du travail",
+  "Médecin contrôle → médecin-arbitre",
+  "Médecin du travail → médecin-arbitre"],
+ 3,
+ "FAUX : le recours contre le médecin du travail se fait auprès de la Direction régionale du Contrôle du Bien-Être (pas le médecin-arbitre, qui concerne le médecin CONTRÔLE). Conseil → Tribunal du travail.");
 
 Q("trio",
- "Le recours contre une décision du médecin de contrôle se fait auprès de :",
- ["La Direction régionale du Contrôle du Bien-Être",
-  "Le Tribunal du travail",
-  "Le médecin-arbitre",
-  "Le CGRA"],
- 2,
- "Recours : médecin du travail → Direction régionale du Contrôle du Bien-Être ; médecin conseil → Tribunal du travail ; médecin contrôle → médecin-arbitre.");
+ "Le cadre légal de la médecine du travail repose sur :",
+ ["La loi Leburton de 1964",
+  "Le Code du Bien-Être au Travail (loi du 4 août 1996 ; AR du 28 mai 2003)",
+  "Le Pacte social de 1944",
+  "La loi sur les mutuelles de 1894"],
+ 1,
+ "Médecine du travail : Code du Bien-Être au Travail (loi du 4 août 1996 ; AR du 28 mai 2003 sur la surveillance de la santé des travailleurs). La loi Leburton/1964 concerne l'INAMI.");
 
 Q("trio",
- "La formation du médecin du travail est :",
- ["Un master de base de 5 ans",
-  "Un master de spécialisation (4 ans) en médecine du travail + stages",
-  "Une formation de 8 heures",
-  "Identique à celle du pharmacien"],
+ "La notion de risque professionnel se modélise comme :",
+ ["Danger + Maladie = Risque",
+  "Danger × Exposition → Dommage (la prévention agit sur l'exposition)",
+  "Exposition seule = Dommage",
+  "Risque = Gravité × Diagnostic"],
  1,
- "Médecin du travail : master de spécialisation (4 ans) en médecine du travail + stages. Médecine de prévention, à l'interface santé / monde socio-économique.");
+ "Risque = Danger × Exposition (quantité, fréquence, durée, distance) → Dommage. La prévention agit prioritairement sur l'EXPOSITION.");
 
 Q("trio",
  "Le médecin du travail exerce dans le cadre d'un :",
- ["Hôpital universitaire uniquement",
+ ["Cabinet de mutuelle",
   "SEPP (service externe) ou SIPP (service interne) de prévention et de protection au travail",
-  "CPAS",
-  "Cabinet de mutuelle"],
+  "Service hospitalier universitaire",
+  "CPAS"],
  1,
- "Le médecin du travail travaille en SEPP (service externe) ou SIPP (service interne) de prévention et de protection au travail, avec une équipe (infirmiers, conseillers en prévention).");
+ "Le médecin du travail travaille en SEPP (externe) ou SIPP (interne), avec une équipe (infirmiers, conseillers en prévention : ergonomie, psychosocial, sécurité, hygiène).");
 
 Q("trio",
- "En cas d'examen d'embauche concluant à une inaptitude (poste à risque) :",
- ["Le candidat dispose d'un recours",
-  "Il n'y a pas de recours possible",
-  "L'employeur doit l'engager quand même",
-  "Le médecin conseil tranche"],
+ "Le médecin CONSEIL de la mutuelle peut légitimement :",
+ ["Communiquer le diagnostic à l'employeur",
+  "Proposer la reprise du travail et contacter le médecin du travail, tout en respectant le secret vis-à-vis de l'employeur",
+  "Contrôler l'absentéisme pour le compte de l'employeur",
+  "Délivrer un certificat sans diagnostic à la mutuelle"],
  1,
- "Examen d'embauche (postes à risque) : si inapte à l'embauche → pas de recours. (Contrairement à d'autres décisions du médecin du travail.)");
+ "Le médecin conseil peut examiner le patient, proposer la reprise, contacter le médecin du travail — mais reste tenu au SECRET vis-à-vis de l'employeur. Le certificat à la mutuelle comporte, lui, le diagnostic.");
 
 Q("trio",
- "Le certificat destiné à l'EMPLOYEUR :",
- ["Porte toujours le diagnostic",
-  "Ne porte jamais de diagnostic",
-  "Est rédigé par le médecin du travail",
-  "Est envoyé à la mutuelle"],
+ "Le certificat remis à l'EMPLOYEUR :",
+ ["Comporte toujours le diagnostic",
+  "Ne comporte jamais de diagnostic (secret médical)",
+  "Est établi par le médecin du travail",
+  "Est transmis à la mutuelle"],
  1,
- "Le certificat à l'employeur ne porte JAMAIS de diagnostic (secret médical). Seul le certificat à la mutuelle (médecin conseil) comporte le diagnostic.");
+ "Le certificat à l'employeur ne porte JAMAIS de diagnostic (secret médical) — seul le certificat à la mutuelle (médecin conseil) le mentionne.");
 
 Q("trio",
- "En cas d'absence aux rendez-vous du trajet de réintégration, le travailleur s'expose à :",
+ "Un candidat est déclaré inapte lors de l'examen d'EMBAUCHE pour un poste à risque. Quelle suite ?",
+ ["Il dispose d'un droit de recours",
+  "Il n'existe pas de recours possible dans ce cas",
+  "L'employeur doit l'engager malgré tout",
+  "Le médecin conseil réexamine la décision"],
+ 1,
+ "Examen d'embauche (poste à risque) : si inapte à l'embauche → PAS de recours (contrairement à d'autres décisions du médecin du travail).");
+
+Q("trio",
+ "En cas d'absence répétée aux rendez-vous du trajet de réintégration, le travailleur s'expose à :",
  ["Aucune conséquence",
   "Une sanction sur les indemnités de la mutuelle",
-  "Une amende pénale",
-  "Une radiation définitive"],
+  "Une peine d'emprisonnement",
+  "Une radiation de la mutuelle à vie"],
  1,
- "En cas d'absence aux rendez-vous du trajet de réintégration → sanction sur les indemnités de la mutuelle.");
+ "Absence aux rendez-vous du trajet de réintégration → sanction sur les INDEMNITÉS de la mutuelle.");
+
+Q("trio",
+ "La formation du médecin du travail est :",
+ ["Un master de base de 7 ans",
+  "Un master de spécialisation de 4 ans en médecine du travail, avec stages",
+  "Une formation continue de 8 heures",
+  "Un certificat délivré par la mutuelle"],
+ 1,
+ "Médecin du travail : master de spécialisation (4 ans) + stages. Médecine de prévention, à l'interface santé / monde socio-économique (curatif ≠ préventif).");
+
+Q("trio",
+ "Pourquoi un médecin généraliste s'adresse-t-il au médecin du travail ?",
+ ["Pour faire contrôler l'absentéisme de son patient",
+  "Pour adapter le poste, préparer la reprise et signaler un risque professionnel — dans le respect du secret",
+  "Pour obtenir un avis diagnostique",
+  "Pour prescrire un traitement adapté au poste"],
+ 1,
+ "Le MG s'adresse au médecin du travail pour ADAPTER LE POSTE, préparer la reprise, signaler un risque professionnel — toujours en respectant le secret médical (le certificat à l'employeur ne porte pas de diagnostic).");
+
+Q("trio",
+ "Une travailleuse de laboratoire enceinte est exposée à des risques. La conduite du médecin du travail est :",
+ ["Délivrer un certificat d'incapacité de travail",
+  "Mutation de poste ou écartement, avec indemnité de la mutuelle (~78 % du brut)",
+  "Maintien au poste avec surveillance renforcée",
+  "Renvoi vers le médecin conseil pour invalidité"],
+ 1,
+ "Maternité avec risque : mutation vers un poste sans exposition ou écartement (attestation, pas un certificat d'incapacité) ; indemnité couverte par la mutuelle (~78 % du brut).");
+
+Q("trio",
+ "Quel examen de santé est correctement décrit ?",
+ ["Visite de reprise : facultative, à l'initiative du travailleur",
+  "Consultation spontanée : à la demande du travailleur",
+  "Examen périodique : uniquement à l'embauche",
+  "Pré-reprise : obligatoire dans les 10 jours après la reprise"],
+ 1,
+ "Consultation spontanée = à la demande du travailleur. Reprise = obligatoire (10 j, si arrêt ≥ 4 sem.) ; pré-reprise = facultative pendant l'arrêt ; périodique = surveillance régulière selon le profil de risque.");
