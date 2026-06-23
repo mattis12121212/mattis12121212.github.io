@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Médecine Générale — QCM examen (WMDS 2257)</title>
+  <link rel="stylesheet" href="mege.css?v=1" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">🩺</span><h1>Médecine Générale — QCM</h1></div>
+    <div class="topbar-right" id="topbar-stats"></div>
+  </header>
+
+  <main class="container">
+
+    <!-- ACCUEIL -->
+    <section id="screen-start" class="card screen">
+      <h2>Entraînement format examen</h2>
+      <p class="lead">
+        Questions à choix multiple : <strong>4 propositions, 1 seule réponse correcte</strong>.
+        Après chaque réponse, la correction et une explication s'affichent.
+      </p>
+      <p class="muted">À l'examen : 80 QCM. Entraîne-toi chapitre par chapitre, ou lance un <strong>examen blanc de 80 QCM</strong> mélangés.</p>
+
+      <div class="field">
+        <label for="chapter-select">Chapitre</label>
+        <select id="chapter-select"></select>
+      </div>
+      <div class="field">
+        <label for="count-select">Nombre de questions</label>
+        <select id="count-select">
+          <option value="10">10</option>
+          <option value="20" selected>20</option>
+          <option value="40">40</option>
+          <option value="80">80 (format examen)</option>
+          <option value="0">Toutes</option>
+        </select>
+      </div>
+      <label class="check"><input type="checkbox" id="shuffle-check" checked /> Mélanger les questions et les propositions</label>
+
+      <button class="btn primary big" id="btn-start">Commencer</button>
+      <p class="bank-info" id="bank-info"></p>
+
+      <div class="bestscores" id="bestscores"></div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="screen-quiz" class="card screen hidden">
+      <div class="quiz-head">
+        <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+        <span class="q-counter" id="q-counter"></span>
+      </div>
+
+      <div class="chap-tag" id="chap-tag"></div>
+      <p class="question" id="q-text"></p>
+
+      <div class="options" id="options"></div>
+
+      <div class="explain" id="explain"></div>
+
+      <div class="quiz-actions">
+        <button class="btn primary hidden" id="btn-next">Question suivante →</button>
+        <button class="btn ghost" id="btn-quit">Quitter</button>
+      </div>
+    </section>
+
+    <!-- RÉSULTAT -->
+    <section id="screen-result" class="card screen hidden">
+      <h2>Résultat</h2>
+      <div class="score-circle" id="score-circle"><span id="score-pts"></span></div>
+      <p class="score-text" id="score-text"></p>
+      <div id="review" class="review"></div>
+      <button class="btn primary big" id="btn-restart">Recommencer</button>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <a href="../index.html">← Dermato (photos)</a> ·
+    <span id="foot-count"></span> · Synthèses de cours WMDS 2257 (2025-2026) + anciens examens · usage d'étude personnelle.
+  </footer>
+
+  <script src="mege-questions.js?v=1"></script>
+  <script src="mege-app.js?v=1"></script>
+</body>
+</html>
