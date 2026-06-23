@@ -11,6 +11,7 @@ const MEGE_CHAPTERS = [
   { id: "sport",      nom: "Le MG et les plaintes liées au sport", icone: "🏃" },
   { id: "onehealth",  nom: "One Health : médecine & environnement", icone: "🌍" },
   { id: "orga",       nom: "Organisation des soins de santé", icone: "🏛️" },
+  { id: "esante",     nom: "e-Santé (mises en situation)", icone: "💻" },
   { id: "age",        nom: "Le patient âgé & la coordination des soins", icone: "🧓" },
   { id: "asile",      nom: "Soins aux demandeurs d'asile & précarité", icone: "🕊️" },
   { id: "trio",       nom: "Trio : MG – médecin du travail – médecin conseil", icone: "🤝" }
@@ -1255,7 +1256,7 @@ Q("orga",
  2,
  "New deal : modèle MIXTE ~50/50 acte/forfait + primes ; valorise le travail hors contact (dossiers, coordination) et la délégation de tâches ; préserve la liberté du patient.");
 
-Q("orga",
+Q("esante",
  "La plateforme eHealth permet :",
  ["Les échanges entre le médecin et la mutuelle pour le contrôle",
   "L'échange sécurisé entre prestataires de soins ayant un lien thérapeutique",
@@ -1264,13 +1265,13 @@ Q("orga",
  1,
  "Plateforme eHealth = échange sécurisé entre PRESTATAIRES DE SOINS ayant un lien thérapeutique. Elle ne sert PAS aux échanges avec la mutuelle, l'assurance privée, ni le médecin conseil/de contrôle.");
 
-Q("orga",
+Q("esante",
  "Un médecin reçoit une nouvelle patiente et veut vérifier son assurabilité (BIM/AO) et son DMG. Quel outil ?",
  ["Recip-e", "MyCareNet", "Le hub régional (Vitalink…)", "VIDIS"],
  1,
  "MyCareNet = lien avec les mutuelles : vérifier l'assurabilité (BIM/AO), DMG, chapitre IV, facturer le tiers payant. Recip-e = prescription ; hub = documents partagés ; VIDIS = schéma de médication.");
 
-Q("orga",
+Q("esante",
  "Le SUMEHR. Laquelle de ces données n'y figure PAS ?",
  ["Les allergies et la médication active",
   "Les antécédents et la vaccination",
@@ -1279,7 +1280,7 @@ Q("orga",
  2,
  "Le SUMEHR (résumé minimal pour la continuité des soins) ne contient PAS : honoraires, nombre de partenaires/IVG, orientation sexuelle, appartenance religieuse. Il contient allergies, médication active, antécédents, vaccination, personne de contact, volontés.");
 
-Q("orga",
+Q("esante",
  "Pour accéder aux documents de santé partagés d'un patient, il faut réunir 3 conditions cumulatives. Lesquelles ?",
  ["Carte eID + mutuelle + ordonnance",
   "Certificat eHealth + lien thérapeutique + consentement du patient",
@@ -1288,7 +1289,7 @@ Q("orga",
  1,
  "3 conditions cumulatives : (1) certificat eHealth (prestataire reconnu, logiciel agréé), (2) lien thérapeutique (continuité, durée limitée), (3) consentement du patient (un seul, valable partout).");
 
-Q("orga",
+Q("esante",
  "Lors d'un trajet de réintégration, le médecin du travail veut consulter le dossier de santé du patient. En dehors de TRIO :",
  ["Il y a accès comme tout médecin",
   "Il n'a pas accès (pas de lien thérapeutique de soins)",
@@ -1297,7 +1298,7 @@ Q("orga",
  1,
  "Le médecin du travail n'a PAS de lien thérapeutique de soins → pas d'accès au réseau de santé, SAUF via la plateforme TRIO (avec consentement). Idem médecin conseil/assurance/contrôle.");
 
-Q("orga",
+Q("esante",
  "Pour partager et tenir à jour le schéma de médication d'un patient, l'outil est :",
  ["Mult-eMediatt", "VIDIS", "MyCareNet", "Recip-e"],
  1,
@@ -1330,7 +1331,7 @@ Q("orga",
  1,
  "Séjour irrégulier → AMU via le CPAS (couvre curatif ET préventif). Les demandeurs d'asile (avec titre de séjour) relèvent de FEDASIL.");
 
-Q("orga",
+Q("esante",
  "Pour envoyer un certificat électronique d'incapacité à la mutuelle (obligatoire dès 14 jours en 2026), le MG utilise :",
  ["Recip-e", "Mult-eMediatt", "MetaHub", "B-IHR"],
  1,
@@ -1345,7 +1346,7 @@ Q("orga",
  1,
  "Communautés = les personnes (prévention, promotion, 1re ligne, santé mentale de 1re ligne). Fédéral = sécurité sociale/financement. Régions = territoires (agrément hôpitaux/MRS, planification). La nomenclature relève de l'INAMI.");
 
-Q("orga",
+Q("esante",
  "Recip-e est une prescription électronique qui :",
  ["Est adressée directement à une officine désignée par le médecin",
   "Est un message non adressé, crypté via eHealth, récupéré par le prestataire choisi par le patient",
@@ -2443,7 +2444,7 @@ Q("orga",
  3,
  "FAUX : le MAF « enfants < 19 ans » a un plafond de 650 € (le 450 € correspond au MAF « statut social » / BIM).");
 
-Q("orga",
+Q("esante",
  "Concernant la e-Santé, laquelle est FAUSSE ?",
  ["La plateforme eHealth relie les prestataires ayant un lien thérapeutique",
   "Le médecin du travail accède au réseau de santé sans condition",
@@ -3122,7 +3123,7 @@ Q("orga",
  0,
  "6 C : premier Contact, Centrés personne, Continuité, Complets, Communauté, Coordination. Continuité en fait partie ; les 3 autres sont des intrus.");
 
-Q("orga",
+Q("esante",
  "Qui A accès au dossier de santé partagé du patient (et constitue donc l'exception parmi ces 4) ?",
  ["Le médecin généraliste traitant",
   "Le médecin du travail",
@@ -3297,3 +3298,586 @@ Q("trio",
   "Un service hospitalier de soins"],
  0,
  "Le médecin du travail exerce en SEPP (service externe) ou SIPP (service interne) de prévention et de protection au travail.");
+// ========== e-SANTÉ — MISES EN SITUATION (cas pratiques) ==========
+Q("esante",
+ "En consultation, vous recevez un patient que vous n'avez jamais vu. Vous voulez vérifier s'il est en ordre de mutuelle et bénéficiaire de l'intervention majorée. Quel outil utilisez-vous ?",
+ ["Recip-e", "MyCareNet", "Le SUMEHR", "Le hub régional (Vitalink)"],
+ 1,
+ "MyCareNet = lien avec les mutuelles : assurabilité (BIM/AO), DMG, chapitre IV, tiers payant. Ni Recip-e (prescription), ni le SUMEHR (résumé clinique), ni le hub (documents partagés).");
+
+Q("esante",
+ "Vous prescrivez un traitement à une patiente qui ira le chercher dans la pharmacie de SON choix. Quel système gère cette prescription ?",
+ ["eHealthBox", "Recip-e", "MyCareNet", "Mult-eMediatt"],
+ 1,
+ "Recip-e : prescription électronique, message NON adressé, crypté via eHealth, récupéré par la pharmacie choisie par le patient. Elle n'est pas envoyée à une officine précise.");
+
+Q("esante",
+ "Après 14 jours d'incapacité, vous devez transmettre le certificat à la mutuelle de votre patient. Quel outil ?",
+ ["Recip-e", "VIDIS", "Mult-eMediatt", "eHealthBox"],
+ 2,
+ "Mult-eMediatt = certificat électronique d'incapacité de travail (MG → mutuelle), obligatoire dès 14 jours (réforme 2026).");
+
+Q("esante",
+ "Vous avez actualisé le traitement d'un patient polymédiqué et voulez partager le schéma de médication à jour avec les autres soignants. Quel outil ?",
+ ["Recip-e", "VIDIS", "MyCareNet", "Le SUMEHR"],
+ 1,
+ "VIDIS intègre les sources de médication (Vitalink, Recip-e, Dossier Pharmaceutique Partagé) → schéma de médication partagé et mis à jour.");
+
+Q("esante",
+ "Un médecin du travail vous appelle : il souhaite consulter le dossier de santé partagé de votre patient pour préparer sa reprise. Que répondez-vous ?",
+ ["Il y a accès comme tout médecin",
+  "Il n'a pas accès (pas de lien thérapeutique), sauf via la plateforme TRIO avec le consentement du patient",
+  "Il y accède avec la carte eID du patient",
+  "Il y accède via MyCareNet"],
+ 1,
+ "Le médecin du travail n'a pas de lien thérapeutique de soins → pas d'accès au réseau de santé, sauf via TRIO (avec consentement). Idem médecin conseil/assurance/contrôle.");
+
+Q("esante",
+ "Un patient veut empêcher un médecin précis de consulter son dossier partagé. Est-ce possible ?",
+ ["Non, le consentement est global et indivisible",
+  "Oui, il peut exclure nommément un prestataire, qui ne verra qu'une page vide",
+  "Oui, mais seulement en supprimant tout son dossier",
+  "Non, seul le médecin traitant peut décider des accès"],
+ 1,
+ "Le patient peut exclure NOMMÉMENT un prestataire (qui ne verra alors qu'une page vide). L'historique des accès est par ailleurs consultable.");
+
+Q("esante",
+ "Un patient a donné son consentement eHealth chez son médecin à Bruxelles. Est-il valable chez un médecin à Liège ?",
+ ["Non, il faut un consentement par région",
+  "Non, il faut un consentement par prestataire",
+  "Oui, un seul consentement est valable partout en Belgique",
+  "Oui, mais uniquement dans le même réseau (hub)"],
+ 2,
+ "Le consentement est unique et valable PARTOUT en Belgique (une seule fois). C'est l'une des 3 conditions d'accès, avec le certificat eHealth et le lien thérapeutique.");
+
+Q("esante",
+ "Un confrère affirme que le SUMEHR de son patient mentionne le nombre d'IVG qu'elle a subies. Que lui répondez-vous ?",
+ ["C'est exact, le SUMEHR contient les antécédents gynécologiques détaillés",
+  "C'est faux : le SUMEHR ne contient pas le nombre d'IVG (ni l'orientation sexuelle, ni les honoraires)",
+  "Cela dépend du logiciel utilisé",
+  "C'est exact uniquement avec le consentement écrit"],
+ 1,
+ "Le SUMEHR (résumé minimal pour la continuité) NE contient PAS : honoraires, nombre de partenaires/IVG, orientation sexuelle, appartenance religieuse. Il contient allergies, médication active, antécédents, vaccination, volontés.");
+
+Q("esante",
+ "Une compagnie d'assurance privée demande à accéder, via eHealth, au dossier de santé d'un assuré. Réponse correcte ?",
+ ["Accès autorisé si l'assuré a signé son contrat",
+  "Accès refusé : la plateforme eHealth ne sert qu'aux échanges entre prestataires de soins",
+  "Accès autorisé via MyCareNet",
+  "Accès autorisé avec la carte eID"],
+ 1,
+ "La plateforme eHealth = échanges entre PRESTATAIRES DE SOINS (lien thérapeutique). Elle ne sert pas aux échanges avec la mutuelle, l'assurance privée, le médecin conseil ou de contrôle.");
+
+Q("esante",
+ "Vous voulez envoyer un message ADRESSÉ et sécurisé à un confrère (ex. un courrier de référence). Quelle brique d'eHealth ?",
+ ["Recip-e (message non adressé)", "eHealthBox (messages adressés)", "MetaHub", "CoBRHA"],
+ 1,
+ "eHealthBox = messagerie sécurisée pour les messages ADRESSÉS entre prestataires. Recip-e est un message NON adressé (prescription) ; MetaHub référence les documents ; CoBRHA est un répertoire d'acteurs de soins.");
+
+Q("esante",
+ "Vous cherchez à savoir DANS QUELS hubs se trouvent les documents médicaux d'un patient. Quel service vous l'indique ?",
+ ["Le SUMEHR", "Le MetaHub (métahub)", "MyCareNet", "Recip-e"],
+ 1,
+ "Le métahub (MetaHub) indique dans quels coffres-forts/hubs régionaux (Vitalink, RSW, RSB, COZO…) se trouvent les références des documents du patient. Les données ne sont pas centralisées.");
+
+Q("esante",
+ "Pour consulter les documents hospitaliers de votre patient (compte rendu de sortie), de quoi avez-vous besoin ?",
+ ["De la seule carte eID",
+  "D'un certificat eHealth, d'un lien thérapeutique et du consentement du patient",
+  "D'une demande à la mutuelle via MyCareNet",
+  "D'une autorisation du médecin du travail"],
+ 1,
+ "Les 3 conditions cumulatives d'accès aux documents partagés : certificat eHealth + lien thérapeutique + consentement du patient.");
+
+Q("esante",
+ "Le SUMEHR d'un de vos patients : laquelle de ces affirmations est correcte ?",
+ ["C'est un dossier médical complet et exhaustif",
+  "C'est un résumé minimal pour la continuité des soins, généré par le DMI et exportable sur le coffre-fort régional",
+  "Il est rédigé manuellement à chaque consultation",
+  "Il est accessible à la mutuelle pour le contrôle"],
+ 1,
+ "Le SUMEHR = quantité MINIMALE de données pour la continuité (une « photographie »), généré automatiquement par le DMI, exportable sur le coffre-fort régional (accès 24h/24). Ce n'est pas un dossier complet.");
+
+Q("esante",
+ "Un pharmacien d'une officine que votre patient ne fréquente pas habituellement veut le délivrer en tiers payant. De quoi a-t-il besoin pour accéder à son historique ?",
+ ["De rien, la carte eID suffit pour tout",
+  "De l'accès au Dossier Pharmaceutique Partagé (DPP) avec le consentement du patient",
+  "D'un appel obligatoire au médecin traitant",
+  "D'une autorisation de la mutuelle"],
+ 1,
+ "Il lui faut l'accès au DPP avec consentement (lien thérapeutique). La carte eID donne, elle, le statut d'assurabilité (BIM/AO) et la mutuelle — mais pas l'historique pharmaceutique.");
+
+Q("esante",
+ "Quel est l'objectif PRINCIPAL de la plateforme eHealth et des outils e-santé ?",
+ ["Permettre le contrôle des prescriptions par l'INAMI",
+  "Assurer la continuité des soins via la communication sécurisée entre prestataires (« soigner = communiquer »)",
+  "Centraliser toutes les données de santé dans une base unique",
+  "Remplacer le dossier médical informatisé (DMI)"],
+ 1,
+ "Objectifs e-santé : continuité des soins (communication entre prestataires), simplification administrative, recueil de données. Les documents restent décentralisés (hubs), pas dans une base unique.");
+
+Q("esante",
+ "Parmi les applications e-santé COURANTES du médecin généraliste, laquelle est l'intrus ?",
+ ["Le DMI et l'eHealthBox",
+  "La consultation de l'assurabilité et le SUMEHR",
+  "Recip-e et Mult-eMediatt",
+  "L'accès au dossier pour le médecin conseil de la mutuelle"],
+ 3,
+ "Le médecin conseil n'a pas accès au dossier de soins (pas de lien thérapeutique). Applications courantes du MG : DMI, eHealthBox, assurabilité, SUMEHR, Recip-e, DMG, Mult-eMediatt.");
+
+Q("esante",
+ "Un patient déménage de Flandre en Wallonie. Que devient son consentement eHealth précédemment donné ?",
+ ["Il est annulé et doit être redonné",
+  "Il reste valable : le consentement est unique et national",
+  "Il n'est valable que dans le hub flamand (COZO/VZN)",
+  "Il doit être validé par la nouvelle mutuelle"],
+ 1,
+ "Le consentement eHealth est unique et valable partout en Belgique : un déménagement ne l'annule pas. Le métahub permet de retrouver les documents, quel que soit le hub d'origine.");
+
+Q("esante",
+ "Vous êtes de garde et recevez un patient inconscient que vous ne connaissez pas. Concernant l'accès à ses documents de santé partagés, quelle condition reste indispensable ?",
+ ["Aucune, l'urgence lève toutes les conditions",
+  "Disposer d'un certificat eHealth et d'un lien thérapeutique (cadre de la continuité des soins)",
+  "Obtenir l'accord écrit de la famille",
+  "Passer par la mutuelle du patient"],
+ 1,
+ "L'accès suppose toujours un certificat eHealth (prestataire reconnu) et un lien thérapeutique dans le cadre de la continuité des soins. Le consentement et le lien encadrent l'accès, même en situation de soins.");
+// ========== CAS / MISES EN SITUATION — ASSUÉTUDES ==========
+Q("assuetudes",
+ "Un homme est amené aux urgences : somnolent, pupilles en pointe (myosis), fréquence respiratoire à 8/min, « pique du nez ». Quel tableau évoquez-vous ?",
+ ["Un syndrome de manque aux opioïdes",
+  "Une imprégnation (intoxication) aux opioïdes",
+  "Une intoxication aux stimulants",
+  "Un sevrage alcoolique"],
+ 1,
+ "Myosis + bradypnée + « pique du nez » = IMPRÉGNATION opioïde. Le manque donnerait au contraire mydriase, agitation et « tout coule ».");
+
+Q("assuetudes",
+ "Un patient vous dit : « Je ne suis pas accro, j'arrête quand je veux, il n'y a pas de problème. » À quel stade du changement se situe-t-il ?",
+ ["Précontemplation", "Contemplation", "Action", "Maintien"],
+ 0,
+ "Le problème n'est pas reconnu → PRÉCONTEMPLATION. En contemplation, le patient reconnaîtrait un problème mais hésiterait encore à agir.");
+
+Q("assuetudes",
+ "Une patiente fumeuse dit : « Je sais qu'il faudrait arrêter, ça me travaille, mais pas tout de suite. » Quel stade, et quelle attitude privilégier ?",
+ ["Action → prescrire un substitut nicotinique d'emblée",
+  "Contemplation → entretien motivationnel, soutenir l'émergence de sa motivation",
+  "Précontemplation → la confronter à ses contradictions",
+  "Maintien → prévenir la rechute"],
+ 1,
+ "Ambivalence reconnue = CONTEMPLATION. On adapte le discours au stade : entretien motivationnel pour faire émerger sa motivation propre (sans diriger ni confronter).");
+
+Q("assuetudes",
+ "Un usager occasionnel a eu une prise de risque (rapport non protégé après consommation). Jusqu'à quand lui conseillez-vous de se faire dépister ?",
+ ["Immédiatement, puis plus besoin", "Jusqu'à 3 mois après la prise de risque", "Seulement après 1 an", "Le dépistage est inutile s'il est asymptomatique"],
+ 1,
+ "Conseil de réduction des risques : se faire dépister jusqu'à 3 mois après une prise de risque (fenêtre sérologique).");
+
+Q("assuetudes",
+ "Un patient sous benzodiazépine depuis 6 mois souhaite « tout arrêter d'un coup ». Quelle est votre conduite ?",
+ ["Valider l'arrêt brutal, sans danger après 6 mois",
+  "Organiser un sevrage progressif, au besoin via une BZD à longue durée d'action",
+  "Doubler la dose une semaine puis arrêter",
+  "Le référer immédiatement en milieu spécialisé sans suivi"],
+ 1,
+ "Jamais d'arrêt brutal après une prise prolongée : sevrage PROGRESSIF. On garde le lien et le suivi plutôt que de référer en se déchargeant.");
+
+Q("assuetudes",
+ "Lors d'une première rencontre avec un patient consommateur, quelle attitude est la PLUS susceptible de nuire au lien ?",
+ ["Aborder le sujet sans jugement",
+  "Proposer d'emblée une analyse d'urines de contrôle",
+  "Restituer les résultats du repérage",
+  "Reconnaître l'ambivalence du patient"],
+ 1,
+ "Proposer d'emblée une analyse d'urines (comme vanter la vie sans substance) complique le lien lors d'une 1re consultation.");
+
+// ========== CAS / MISES EN SITUATION — PHARMACIEN ==========
+Q("pharmacien",
+ "Une patiente de 70 ans sous amiodarone se voit prescrire de la clarithromycine pour une infection. Quel est le risque principal à signaler au médecin ?",
+ ["Une simple inefficacité de l'antibiotique",
+  "Une addition d'effets sur le QT et une ↓ d'élimination des autres traitements (risque de torsade et de saignement)",
+  "Une cascade médicamenteuse",
+  "Aucun risque, association banale"],
+ 1,
+ "Amiodarone + clarithromycine : interaction PD (addition sur le QT) ET PK (inhibition CYP3A4/PgP). L'effet de l'amiodarone (T½ 25-100 j) persiste des mois → avis au médecin.");
+
+Q("pharmacien",
+ "Un patient âgé reçoit de l'oxybutynine pour une incontinence. Quelques semaines plus tard, on lui prescrit un laxatif pour une constipation apparue depuis. De quoi s'agit-il probablement ?",
+ ["D'une interaction pharmacocinétique",
+  "D'une cascade médicamenteuse (l'effet indésirable est traité par un 2e médicament)",
+  "D'une simple coïncidence sans lien",
+  "D'un usage détourné"],
+ 1,
+ "Oxybutynine (anticholinergique) → constipation (effet indésirable) → laxatif : c'est une CASCADE médicamenteuse. Il faudrait plutôt réévaluer l'oxybutynine.");
+
+Q("pharmacien",
+ "Une voisine vient chercher, pour un patient âgé et mince sortant d'hôpital, de l'énoxaparine (Clexane) 120 mg. Quel est le bon réflexe du pharmacien ?",
+ ["Délivrer sans vérifier, l'ordonnance fait foi",
+  "Vérifier l'adéquation de la dose au poids et à l'indication, puis contacter le médecin au besoin",
+  "Refuser toute délivrance",
+  "Réduire la dose de sa propre initiative"],
+ 1,
+ "Réflexe : vérifier la dose selon le poids et l'indication (120 mg chez un patient mince = drapeau). On contacte/propose au médecin — ni délivrance aveugle, ni modification unilatérale.");
+
+Q("pharmacien",
+ "Un patient de 60 ans, sans antécédent particulier, demande à être vacciné contre la grippe directement à l'officine, sans être passé par son médecin. En 2026, est-ce possible ?",
+ ["Non, une ordonnance préalable reste obligatoire",
+  "Oui : le pharmacien formé peut prescrire et administrer le vaccin grippe aux > 11 ans sans ordonnance",
+  "Oui, mais uniquement pour les > 65 ans",
+  "Non, seuls les médecins vaccinent"],
+ 1,
+ "Depuis fin 2025, la vaccination grippe en officine est permanente : le pharmacien formé (min. 8 h, renouvelée tous les 3 ans) peut la prescrire, délivrer et administrer aux > 11 ans, sans ordonnance.");
+
+Q("pharmacien",
+ "Un patient ambulatoire prend 6 médicaments chroniques remboursés et a un pharmacien de référence. Que peut lui proposer le pharmacien ?",
+ ["Rien de particulier",
+  "Un bilan de médication (≥ 5 médicaments chroniques remboursés), encodé dans un e-Form envoyé au médecin",
+  "Une hospitalisation pour révision",
+  "Un sevrage obligatoire"],
+ 1,
+ "Critères du bilan de médication : patient ambulatoire, ≥ 5 médicaments chroniques remboursés, pharmacien de référence + DPP. Le résultat est transmis au médecin via un e-Form.");
+
+Q("pharmacien",
+ "Le DPP d'un patient révèle des achats répétés de codéine, d'un antihistaminique sédatif et de soda. Que suspectez-vous ?",
+ ["Un traitement adapté d'une toux",
+  "Un usage détourné (recherche d'un effet euphorisant/sédatif)",
+  "Une cascade médicamenteuse",
+  "Une simple automédication banale"],
+ 1,
+ "Codéine + antihistaminique + soda = usage détourné connu (effet euphorisant/sédatif). Le DPP permet justement de repérer ces surconsommations/détournements.");
+
+// ========== CAS / MISES EN SITUATION — RECHERCHE ==========
+Q("recherche",
+ "Vous voulez étudier les facteurs d'exposition associés à une maladie RARE. Vous comparez des malades à des témoins et recherchez en arrière leurs expositions. Quel devis ?",
+ ["Étude de cohorte", "Étude cas-témoins", "Essai randomisé", "Étude transversale"],
+ 1,
+ "Maladie rare + on part des malades (cas) vs témoins pour rechercher l'exposition rétrospectivement = étude CAS-TÉMOINS (efficiente pour les maladies rares).");
+
+Q("recherche",
+ "Vous suivez dans le temps une population d'exposés et de non-exposés pour observer la survenue d'une pathologie. Quel devis ?",
+ ["Étude cas-témoins", "Étude de cohorte (prospective)", "Série de cas", "Méta-analyse"],
+ 1,
+ "Partir de l'exposition et suivre la survenue = COHORTE (prospective). Le cas-témoins ferait l'inverse (de la maladie vers l'exposition).");
+
+Q("recherche",
+ "Un patient lombalgique commun, sans signe d'alarme, réclame une IRM « pour être sûr ». En refusant un examen inutile, vous faites de la :",
+ ["Prévention primaire", "Prévention secondaire", "Prévention tertiaire", "Prévention quaternaire"],
+ 3,
+ "Éviter un examen inutile/invasif chez un patient sans red flags = prévention QUATERNAIRE (lutte contre la surmédicalisation, M. Jamoulle).");
+
+Q("recherche",
+ "Vous lisez : « les buveurs de café du matin ont une moindre mortalité ». Quelle interprétation est la plus prudente ?",
+ ["Le café réduit la mortalité, c'est démontré",
+  "Une association n'implique pas la causalité ; des facteurs de confusion sont possibles",
+  "Il faut prescrire du café à tous les patients",
+  "L'étude est forcément un essai randomisé"],
+ 1,
+ "Une association statistique n'implique pas un lien de cause à effet (biais, facteurs de confusion). Prudence dans l'interprétation.");
+
+Q("recherche",
+ "Vous voulez structurer une question de recherche sur l'effet d'un traitement. Quel outil employez-vous ?",
+ ["ADME", "PICO (Population, Intervention, Comparateur, Outcome)", "FRAMES", "SBAR"],
+ 1,
+ "PICO (avec QQOQCCP) structure la question de recherche : Population, Intervention, Comparateur, Outcome.");
+
+Q("recherche",
+ "Pour répondre de façon la plus fiable possible à une question thérapeutique, vous cherchez la source de plus haut niveau de preuve. Laquelle ?",
+ ["Une série de cas", "Un avis d'expert", "Une revue systématique / méta-analyse", "Une étude écologique"],
+ 2,
+ "La revue systématique / méta-analyse (recherche secondaire) est au sommet du niveau de preuve.");
+
+// ========== CAS / MISES EN SITUATION — SPORT ==========
+Q("sport",
+ "Un homme de 24 ans, asymptomatique, veut courir un semi-marathon et réclame un « bilan cardiaque complet ». Que faites-vous ?",
+ ["Un ECG de repos et une épreuve d'effort systématiques",
+  "Pas de dépistage systématique : vous recherchez des symptômes d'alarme et vous l'encouragez",
+  "Une échocardiographie de référence",
+  "Vous lui déconseillez la course"],
+ 1,
+ "< 35 ans asymptomatique : pas de dépistage systématique (KCE). On recherche les symptômes d'alarme (douleur thoracique d'effort, syncope, palpitations) et on encourage l'activité.");
+
+Q("sport",
+ "Un patient diabétique de type 1 mesure sa glycémie avant l'effort : 5 mmol/L (~90 mg/dl). Que lui conseillez-vous ?",
+ ["Faire l'effort tel quel", "Prendre au moins 15 g de glucides avant de débuter", "Injecter de l'insuline rapide", "Reporter tout sport définitivement"],
+ 1,
+ "Avant l'effort : < 6-8 mmol/L → prendre ≥ 15 g de glucides (risque d'hypoglycémie). On diminue aussi l'insuline couvrant la période.");
+
+Q("sport",
+ "Un footballeur amateur de 41 ans demande une infiltration de corticoïde pour un canal carpien, 2 jours avant un match. Sur le plan antidopage ?",
+ ["Autorisé sans condition",
+  "Les glucocorticoïdes (S9) sont interdits en compétition : l'infiltration doit être > 3 jours avant, sinon AUT",
+  "Interdit en permanence, AUT obligatoire dans tous les cas",
+  "C'est un agent masquant (S5)"],
+ 1,
+ "Glucocorticoïdes = S9 (interdits en compétition). Infiltration possible si > 3 jours avant la compétition ; à 2 jours, il faut une AUT.");
+
+Q("sport",
+ "Un marathonien prépare un trek en altitude et demande de l'acétazolamide (Diamox) contre le mal aigu des montagnes. Que devez-vous lui dire ?",
+ ["C'est autorisé, ce n'est pas performant",
+  "C'est un diurétique/agent masquant (S5), interdit en permanence → une AUT est nécessaire",
+  "C'est autorisé sous seuil comme le salbutamol",
+  "C'est un glucocorticoïde interdit seulement en compétition"],
+ 1,
+ "L'acétazolamide est S5 (diurétique/agent masquant), INTERDIT EN PERMANENCE → AUT obligatoire, même pour un usage médical légitime.");
+
+Q("sport",
+ "Une mère demande si son enfant asthmatique, bien contrôlé, peut s'inscrire au club de football. Votre réponse ?",
+ ["Non, le sport aggrave l'asthme",
+  "Oui : l'activité physique améliore le contrôle de l'asthme et la fonction pulmonaire",
+  "Oui, mais uniquement la natation",
+  "Seulement après un test d'effort obligatoire"],
+ 1,
+ "L'asthme n'est pas une contre-indication : l'AP améliore le contrôle, la qualité de vie et la fonction pulmonaire (aucune étude ne montre d'aggravation).");
+
+Q("sport",
+ "Un adolescent « ne sait pas courir » et présente une dyspnée d'effort. Quelle est la cause la plus probable à évoquer en premier ?",
+ ["Une cardiopathie", "Le déconditionnement", "Une BPCO", "Une embolie pulmonaire"],
+ 1,
+ "Chez l'ado, par ordre de fréquence : déconditionnement > anxiété > asthme d'effort > obstruction laryngée induite par l'effort.");
+
+// ========== CAS / MISES EN SITUATION — ONE HEALTH ==========
+Q("onehealth",
+ "Pour une simple infection virale des voies respiratoires (IVRS), un patient réclame « quelque chose d'efficace ». Quelle attitude est la plus cohérente avec la santé durable ?",
+ ["Prescrire une ordonnance de confort (décongestionnant, antitussif, etc.)",
+  "Proposer des mesures simples (boissons chaudes, miel, paracétamol au besoin, sérum physiologique)",
+  "Prescrire un antibiotique",
+  "Prescrire un sirop antibiotique + corticoïde"],
+ 1,
+ "Une ordonnance de confort (~53 € ≈ 53 kg CO2) est évitable : pour une IVRS virale, on privilégie des mesures sobres. C'est l'application du 1er R : Réduire.");
+
+Q("onehealth",
+ "Vous devez prescrire un AINS. À efficacité comparable, quel choix est le plus favorable en termes de santé durable ?",
+ ["Le diclofénac", "L'ibuprofène (moins écotoxique)", "Le plus récent sur le marché", "Le plus grand conditionnement"],
+ 1,
+ "À molécule équivalente, choisir l'option la moins écotoxique : l'ibuprofène est préférable au diclofénac.");
+
+Q("onehealth",
+ "Un patient asthmatique parfaitement équilibré sous pMDI vous demande s'il « devrait » passer à un DPI pour l'écologie. Quelle est la meilleure conduite ?",
+ ["Le changer d'office, le DPI pollue moins",
+  "Décider avec lui : ne pas imposer un changement qui pourrait nuire à l'observance",
+  "Refuser tout changement par principe",
+  "Le passer au DPI même s'il a une faible capacité inspiratoire"],
+ 1,
+ "DPI = pMDI en efficacité et pollue moins, mais aucun dispositif ne garantit l'adhérence : imposer un changement peut nuire (exacerbations). On privilégie la décision partagée.");
+
+Q("onehealth",
+ "Chez une personne âgée polymédiquée, vous arrêtez plusieurs médicaments devenus inutiles. Cette démarche relève de :",
+ ["La surmédicalisation",
+  "La prévention quaternaire et de la sobriété",
+  "La prévention primaire",
+  "Un risque inacceptable"],
+ 1,
+ "Déprescrire l'inutile rejoint la prévention quaternaire et la sobriété (« un soin qui ne consomme pas est un soin qui n'existe pas »), en gardant l'adéquation des soins.");
+
+Q("onehealth",
+ "Un confrère justifie l'inaction écologique par : « On est là pour soigner, pas pour s'occuper de l'environnement ». Comment qualifier ce propos ?",
+ ["Une recommandation de bonne pratique",
+  "Un « discours de l'inaction »",
+  "Un principe de précaution",
+  "Une donnée probante"],
+ 1,
+ "C'est un argument-type des « discours de l'inaction » (avec « on manque de temps/d'argent », « on a toujours fait comme ça »…), à reconnaître pour s'en méfier.");
+// ========== CAS / MISES EN SITUATION — ORGANISATION DES SOINS ==========
+Q("orga",
+ "Un indépendant (gérant de magasin) tombe gravement malade et ne peut plus travailler pendant plusieurs mois. À quelle prestation N'a-t-il PAS droit ?",
+ ["Aux indemnités d'incapacité de la mutuelle (dès le 8e jour)",
+  "Aux soins de santé (INAMI)",
+  "À une allocation de chômage",
+  "Aux allocations familiales"],
+ 2,
+ "L'indépendant n'a PAS droit au chômage (ni aux vacances annuelles, ni à FEDRIS). Il a droit aux indemnités (dès le 8e jour, montant fixe), aux soins, aux allocations familiales et à la pension.");
+
+Q("orga",
+ "Un chômeur vous consulte : il est désormais en incapacité de travail. Quelle est la bonne démarche ?",
+ ["Il continue à émarger au chômage sans rien faire",
+  "Il adresse un certificat à la mutuelle et passe des indemnités de chômage à celles de la mutuelle",
+  "Il doit d'abord prévenir son ancien employeur",
+  "Il demande directement le statut d'invalidité"],
+ 1,
+ "Le chômeur en incapacité envoie un certificat à la mutuelle (et ne prévient l'ONEM que si un travail lui est proposé). Il bascule vers les indemnités de la mutuelle.");
+
+Q("orga",
+ "Un salarié est en incapacité depuis 13 mois. Sur le plan administratif, dans quelle situation se trouve-t-il ?",
+ ["Toujours en incapacité primaire",
+  "En invalidité (incapacité de plus de 12 mois)",
+  "En mi-temps médical d'office",
+  "En préavis pour force majeure médicale"],
+ 1,
+ "Au-delà de 12 mois (1 an) → INVALIDITÉ, contrôlée par le Conseil médical de l'invalidité (INAMI).");
+
+Q("orga",
+ "Un patient bénéficiaire de l'intervention majorée (BIM) vient en consultation. Concernant le tiers payant :",
+ ["Il est facultatif", "Il est interdit pour les BIM", "Il est obligatoire (tiers payant social) en consultation", "Il ne s'applique qu'à l'hôpital"],
+ 2,
+ "Pour les BIM, le tiers payant social est OBLIGATOIRE en consultation : le patient ne paie que le ticket modérateur réduit.");
+
+Q("orga",
+ "Les tickets modérateurs d'un ménage atteignent un montant élevé sur l'année. Quel mécanisme prend alors le relais ?",
+ ["Le BIM", "Le Maximum à Facturer (MAF)", "Le DMG", "Le fonds des accidents médicaux"],
+ 1,
+ "Le MAF protège le ménage : au-delà d'un seuil de tickets modérateurs sur l'année, la mutuelle prend en charge 100 % jusqu'au 31/12. Il n'est pas réservé aux BIM.");
+
+Q("orga",
+ "Une personne sans titre de séjour, sans ressources, a besoin d'un suivi médical. Vers quel dispositif l'orientez-vous ?",
+ ["Vers FEDASIL", "Vers l'Aide Médicale Urgente (AMU) via le CPAS", "Vers l'INAMI via une mutuelle", "Vers la CAAMI"],
+ 1,
+ "Séjour irrégulier → AMU (CPAS), qui couvre curatif ET préventif. FEDASIL concerne les demandeurs d'asile (qui ont un titre de séjour).");
+
+// ========== CAS / MISES EN SITUATION — PATIENT ÂGÉ ==========
+Q("age",
+ "M. Y., 82 ans, diabétique, isolé, rentre à domicile après un AVC (séquelles de marche, troubles mnésiques, incontinence). Qui organise et coordonne son retour à domicile ?",
+ ["Le médecin spécialiste hospitalier seul",
+  "La coordinatrice (personne de référence) : analyse des besoins, contacts, plan de soutien, réévaluation à +3 mois",
+  "La mutuelle",
+  "L'aidant proche, seul responsable"],
+ 1,
+ "La coordinatrice (ASD) est la personne de référence : elle analyse les besoins, contacte les services (infirmier, aide familiale, ergo…), établit un plan et réévalue à +3 mois.");
+
+Q("age",
+ "Une patiente de 78 ans présente 2 des critères de Fried (marche ralentie + perte de force). Comment la classez-vous ?",
+ ["Robuste", "Pré-fragile", "Fragile", "Dépendante"],
+ 1,
+ "0 critère = robuste ; 1-2 = PRÉ-FRAGILE ; ≥ 3 = fragile. Avec 2 critères → pré-fragile (état réversible, à prendre en charge).");
+
+Q("age",
+ "Un patient âgé prend chaque matin un jus de pamplemousse avec ses médicaments. Quel risque devez-vous évoquer ?",
+ ["Aucun risque",
+  "Une inhibition du CYP3A4 pouvant entraîner un surdosage de certains médicaments",
+  "Une induction enzymatique entraînant un sous-dosage",
+  "Une interaction limitée aux antibiotiques"],
+ 1,
+ "Le jus de pamplemousse inhibe le CYP3A4 → ↑ concentrations de nombreux médicaments (risque de surdosage). À surveiller avec l'alcool et les OTC non déclarés.");
+
+Q("age",
+ "Vous faites passer un Timed Up & Go à une patiente : elle met 21 secondes. Interprétation ?",
+ ["Normal, aucun risque", "Au-delà de 14 s : risque de chute accru", "Score de dépression élevé", "Dénutrition probable"],
+ 1,
+ "Timed Up & Go normal < 14 s. À 21 s → risque de chute accru. (Le /28 et le seuil < 20 concernent l'échelle de Tinetti.)");
+
+Q("age",
+ "Pour un patient atteint d'une maladie grave évolutive, vous vous demandez : « Serais-je surpris qu'il décède dans les 6-12 mois ? ». Quel outil mobilisez-vous, et pour quoi faire ?",
+ ["Le MMSE, pour évaluer la cognition",
+  "Le PICT, pour identifier un patient palliatif et définir un plan de soins / un ACP",
+  "Le MNA, pour la nutrition",
+  "Le score de Fried, pour la fragilité"],
+ 1,
+ "La « question surprise » fait partie du PICT (Palliative Care Indicators Tool) : il identifie le patient palliatif → plan de soins et Advanced Care Planning (ACP) en concertation.");
+
+Q("age",
+ "Un patient âgé prend 7 médicaments différents par jour. Que cela impose-t-il ?",
+ ["Rien, c'est sans conséquence",
+  "Une vigilance « polymédication » (≥ 6/jour) et une révision (START & STOPP, GheOP3S)",
+  "L'arrêt immédiat de tous les traitements",
+  "Une hospitalisation systématique"],
+ 1,
+ "Au-delà de 6 médicaments/jour → vigilance polymédication (facteur pronostique). On révise avec START & STOPP, GheOP3S, en équipe (pas « max 6 » comme outil, ni arrêt brutal de tout).");
+
+// ========== CAS / MISES EN SITUATION — DEMANDEURS D'ASILE ==========
+Q("asile",
+ "Un patient de 34 ans, originaire d'Afrique centrale, en Belgique depuis 5 ans, présente des douleurs abdominales depuis 3 mois et une légère perte de poids, sans autre signe. Que recherchez-vous en priorité à la biologie ?",
+ ["Une hypertriglycéridémie",
+  "Une éosinophilie (parasitose : schistosomiase, strongyloïdose)",
+  "Une légère élévation des γ-GT",
+  "Une hyperglycémie"],
+ 1,
+ "Origine subsaharienne + symptômes digestifs + perte de poids → rechercher une ÉOSINOPHILIE (parasitose : schistosomiase → praziquantel ; strongyloïdose → ivermectine). Question d'examen classique.");
+
+Q("asile",
+ "Un homme arrive avec un « diagnostic de trouble thyroïdien » posé au pays et un traitement par L-thyroxine, mais son bilan biologique est strictement normal. Quelle est votre mission ?",
+ ["Poursuivre le traitement par prudence",
+  "Démédicaliser : revoir le diagnostic et le traitement posés au pays d'origine",
+  "Augmenter la dose de L-thyroxine",
+  "Référer d'emblée à l'endocrinologue"],
+ 1,
+ "Mission parfois essentielle : DÉMÉDICALISER (cas Ahmad : hyperthyroïdie iatrogène sous L-thyroxine, « diabète » sous metformine avec HbA1c normale). On revoit les diagnostics/traitements étrangers.");
+
+Q("asile",
+ "Une patiente, possible victime de torture, présente des signes de stress post-traumatique. Quelle attitude adoptez-vous lors de la consultation ?",
+ ["Demander un récit détaillé et chronologique des sévices",
+  "Ne pas demander de détails pour éviter une réexposition ; la laisser dire ce qu'elle veut, à son rythme",
+  "Éviter totalement d'aborder le psychisme",
+  "Adresser immédiatement sans aucune écoute"],
+ 1,
+ "PTSD : on NE force PAS le récit (risque de réexposition traumatique). On laisse la personne s'exprimer à son rythme ; prise en charge pluridisciplinaire (psy, médiateur culturel, interprète).");
+
+Q("asile",
+ "Une fillette non excisée, originaire d'un pays à très haute prévalence de MGF, consulte avec ses parents. Sur le plan de la protection :",
+ ["Aucune protection n'est envisageable",
+  "Un certificat médical de non-excision peut fonder une reconnaissance comme réfugiée, à ré-attester tous les 3 ans",
+  "L'excision est tolérée pour motif culturel",
+  "Elle relève uniquement de l'AMU"],
+ 1,
+ "Un certificat de non-excision peut fonder une reconnaissance comme réfugiée, à RÉ-attester tous les 3 ans (médecins formés par le GAMS ; centres CeMAViE, UZ Gent).");
+
+Q("asile",
+ "Vous travaillez dans un centre d'accueil (Fedasil / Croix-Rouge). Quel risque infectieux devez-vous particulièrement garder à l'esprit ?",
+ ["Le paludisme, à dépister chez tous",
+  "La tuberculose (très fréquente en collectivité) et la rougeole",
+  "Aucun risque collectif particulier",
+  "Uniquement les IST"],
+ 1,
+ "En centre d'accueil : risque de rougeole et SURTOUT de tuberculose (dépistage systématique FARES, (re)vaccination RRO). Les lésions de torture peuvent aussi perdurer des années.");
+
+Q("asile",
+ "Un homme sans papiers vous dit avoir besoin de soins mais n'avoir « droit à rien ». Que lui expliquez-vous concernant l'AMU ?",
+ ["Elle ne couvre que les urgences vitales",
+  "Elle est octroyée par le CPAS et couvre aussi le préventif et le suivi (pas seulement l'urgence)",
+  "Elle est réservée aux demandeurs d'asile",
+  "Elle est gérée par la mutuelle"],
+ 1,
+ "L'AMU (CPAS) concerne les personnes en séjour irrégulier sans moyens et couvre, malgré son nom, le curatif, le préventif et le suivi. Conditions : territorialité, enquête sociale (indigence), certificat médical.");
+
+// ========== CAS / MISES EN SITUATION — TRIO ==========
+Q("trio",
+ "Un travailleur reprend le travail après 5 semaines d'incapacité. Quelle obligation s'applique ?",
+ ["Aucune visite n'est nécessaire",
+  "Une visite de reprise auprès du médecin du travail dans les 10 jours ouvrables",
+  "Une visite de pré-reprise obligatoire avant le retour",
+  "Une visite d'embauche"],
+ 1,
+ "Incapacité ≥ 4 semaines → visite de reprise OBLIGATOIRE dans les 10 jours ouvrables suivant la reprise. Le travailleur ne reprend pas sans cette visite.");
+
+Q("trio",
+ "Une laborantine enceinte est exposée à des risques à son poste. Quelle est la conduite du médecin du travail ?",
+ ["Délivrer un certificat d'incapacité de travail",
+  "Mutation vers un poste sans exposition ou écartement, avec indemnité de la mutuelle (~78 % du brut)",
+  "Maintien au poste avec surveillance renforcée",
+  "Renvoi au médecin conseil pour invalidité"],
+ 1,
+ "Maternité avec risque : mutation ou écartement (attestation, PAS un certificat d'incapacité) ; indemnité couverte par la mutuelle (~78 % du brut). Allaitement : écartement possible jusqu'aux 5 mois de l'enfant.");
+
+Q("trio",
+ "Un candidat est déclaré INAPTE lors de l'examen d'embauche pour un poste à risque. Quelle suite ?",
+ ["Il dispose d'un droit de recours auprès du médecin-arbitre",
+  "Il n'existe pas de recours dans ce cas précis",
+  "L'employeur doit l'engager quand même",
+  "Le médecin conseil réexamine la décision"],
+ 1,
+ "Examen d'embauche (poste à risque) : si inapte à l'embauche → PAS de recours (contrairement à d'autres décisions du médecin du travail).");
+
+Q("trio",
+ "Le médecin du travail, hors plateforme TRIO, souhaite consulter le dossier de santé d'un travailleur. Que dit la règle ?",
+ ["Il y a accès comme tout médecin",
+  "Il n'y a pas accès (pas de lien thérapeutique), sauf via TRIO avec le consentement du patient",
+  "Il y accède avec la carte eID",
+  "Il y accède via la mutuelle"],
+ 1,
+ "Le médecin du travail n'a pas de lien thérapeutique de soins → pas d'accès direct au réseau de santé, sauf via la plateforme TRIO (avec consentement).");
+
+Q("trio",
+ "Un travailleur ne se présente pas, à plusieurs reprises, aux rendez-vous de son trajet de réintégration. Quelle conséquence ?",
+ ["Aucune conséquence",
+  "Une sanction sur les indemnités de la mutuelle",
+  "Une peine d'emprisonnement",
+  "Une radiation à vie de la mutuelle"],
+ 1,
+ "L'absence aux rendez-vous du trajet de réintégration entraîne une sanction sur les indemnités de la mutuelle.");
+
+Q("trio",
+ "Vous (médecin généraliste) estimez que votre patient pourrait reprendre sur un poste adapté. Pourquoi et comment vous adressez-vous au médecin du travail ?",
+ ["Pour faire contrôler son absentéisme",
+  "Pour adapter le poste / préparer la reprise / signaler un risque, dans le respect du secret médical",
+  "Pour obtenir un diagnostic",
+  "Pour qu'il prescrive le traitement"],
+ 1,
+ "Le MG s'adresse au médecin du travail pour adapter le poste, préparer la reprise, signaler un risque professionnel — en respectant le secret (le certificat à l'employeur ne porte jamais de diagnostic).");
