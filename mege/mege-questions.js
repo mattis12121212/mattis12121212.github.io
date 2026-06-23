@@ -1917,3 +1917,882 @@ Q("trio",
   "Pré-reprise : obligatoire dans les 10 jours après la reprise"],
  1,
  "Consultation spontanée = à la demande du travailleur. Reprise = obligatoire (10 j, si arrêt ≥ 4 sem.) ; pré-reprise = facultative pendant l'arrêt ; périodique = surveillance régulière selon le profil de risque.");
+// ========== "LAQUELLE EST FAUSSE" — ASSUÉTUDES ==========
+Q("assuetudes",
+ "Concernant la classification des substances psychoactives, laquelle de ces affirmations est FAUSSE ?",
+ ["Les benzodiazépines sont des dépresseurs du système nerveux central",
+  "La nicotine et la caféine sont des stimulants",
+  "Le cannabis est classé parmi les perturbateurs/hallucinogènes",
+  "La cocaïne est un dépresseur"],
+ 3,
+ "FAUX : la cocaïne est un STIMULANT (avec amphétamines, nicotine, caféine). Dépresseurs = alcool, opioïdes, benzodiazépines ; perturbateurs = cannabis, LSD.");
+
+Q("assuetudes",
+ "À propos des voies de consommation, laquelle est FAUSSE ?",
+ ["La voie injectable contourne le premier passage hépatique",
+  "La voie orale impose un passage hépatique avant la circulation",
+  "La voie respiratoire (inhalation) donne un effet plus lent que la voie orale",
+  "La voie muqueuse comprend les voies nasale et jugale"],
+ 2,
+ "FAUX : l'inhalation passe directement dans le sang → effet RAPIDE (plus rapide que la voie orale, ralentie par le 1er passage hépatique).");
+
+Q("assuetudes",
+ "À propos des outils conceptuels du cours, laquelle est FAUSSE ?",
+ ["Le triangle d'Olivenstein associe Produit, Individu et Environnement",
+  "Le triangle d'Olivenstein décrit les stades du changement",
+  "Le cycle de Prochaska et Di Clemente inclut la rechute",
+  "Le triangle d'Olivenstein est un outil de prévention et de dépistage"],
+ 1,
+ "FAUX : ce sont le cercle de Prochaska & Di Clemente qui décrit les STADES DU CHANGEMENT. Olivenstein = interaction Produit/Individu/Environnement (prévention, dépistage, diagnostic, consultation).");
+
+Q("assuetudes",
+ "Concernant l'intervention brève (RPIB), laquelle est FAUSSE ?",
+ ["Elle dure de 5 à 20 minutes et peut être répétée",
+  "Elle précède le repérage d'un usage problématique",
+  "L'OMS en définit 4 étapes (modèle FRAMES)",
+  "Elle repose sur l'empathie"],
+ 1,
+ "FAUX : l'intervention brève SUIT le repérage (elle ne le précède pas) d'un usage problématique.");
+
+Q("assuetudes",
+ "À propos de l'entretien motivationnel, laquelle est FAUSSE ?",
+ ["Le praticien guide plus qu'il ne dirige",
+  "Il vise à augmenter l'ambivalence du patient",
+  "C'est le patient qui décide",
+  "Le discours-changement exprime la motivation propre du patient"],
+ 1,
+ "FAUX : l'entretien motivationnel vise à RÉDUIRE l'ambivalence (pas à l'augmenter), en faisant émerger le discours-changement.");
+
+Q("assuetudes",
+ "Concernant les opioïdes, laquelle est FAUSSE ?",
+ ["L'imprégnation se traduit par un myosis",
+  "Le manque s'accompagne d'une mydriase et d'une agitation",
+  "L'imprégnation diminue la fréquence respiratoire",
+  "L'imprégnation provoque une mydriase"],
+ 3,
+ "FAUX : l'imprégnation donne un MYOSIS (pupille en pointe). La mydriase signe le MANQUE (sevrage).");
+
+Q("assuetudes",
+ "À propos de la réduction des risques (RdR), laquelle est FAUSSE ?",
+ ["Elle s'adresse à tous les usagers, des expérimentaux aux dépendants",
+  "Elle est complémentaire de la prévention de l'usage",
+  "Elle exige l'abstinence comme préalable",
+  "Elle conseille un dépistage jusqu'à 3 mois après une prise de risque"],
+ 2,
+ "FAUX : la RdR ne pose PAS l'abstinence comme préalable ; elle part de l'expérience de la personne, sans jugement.");
+
+Q("assuetudes",
+ "Concernant le langage et le lien thérapeutique, laquelle est FAUSSE ?",
+ ["Le langage employé peut stigmatiser le patient",
+  "On préfère « personne avec un trouble de l'usage de substances »",
+  "Évaluer les doses est l'élément le plus important pour la relation",
+  "Les mots utilisés figurent parmi les éléments importants du lien"],
+ 2,
+ "FAUX : « évaluer les doses » est au contraire le MOINS important pour la relation (piège récurrent). Les mots, l'entretien motivationnel, Olivenstein et Di Clemente comptent davantage.");
+
+Q("assuetudes",
+ "Lors d'une première consultation, laquelle de ces attitudes est mal décrite (proposition FAUSSE) ?",
+ ["Proposer d'emblée une analyse d'urines facilite le lien",
+  "Vanter la vie sans substance peut compliquer le lien",
+  "Référer directement en milieu spécialisé sans suivi est à éviter",
+  "On aborde le sujet sans tabou ni jugement"],
+ 0,
+ "FAUX : proposer d'emblée une analyse d'urines COMPLIQUE le lien (tout comme vanter la vie sans substance).");
+
+Q("assuetudes",
+ "À propos de l'alliance thérapeutique et du cadre, laquelle est FAUSSE ?",
+ ["L'alliance thérapeutique est un fil conducteur à entretenir continuellement",
+  "Le cadre de travail protège le patient et le soignant",
+  "Une fois établie, l'alliance thérapeutique ne nécessite plus d'entretien",
+  "Les attitudes de Rogers sont empathie, congruence et regard positif inconditionnel"],
+ 2,
+ "FAUX : l'alliance n'est jamais acquise une fois pour toutes — c'est un fil conducteur à entretenir CONTINUELLEMENT.");
+
+// ========== "LAQUELLE EST FAUSSE" — PHARMACIEN ==========
+Q("pharmacien",
+ "Concernant l'évolution du rôle du pharmacien, laquelle est FAUSSE ?",
+ ["Le rôle de prestataire de soins pharmaceutiques est inscrit dans la loi en 2006",
+  "En 2010, la rémunération (médicaments remboursés) est dissociée du prix",
+  "Le pharmacien est rémunéré pour la prestation de soins pharmaceutiques",
+  "La rémunération du pharmacien reste proportionnelle au prix du médicament"],
+ 3,
+ "FAUX : depuis 2010, la rémunération est justement DISSOCIÉE du prix → le pharmacien est payé pour la prestation de soins, pas selon le prix.");
+
+Q("pharmacien",
+ "À propos du Dossier Pharmaceutique Partagé (DPP), laquelle est FAUSSE ?",
+ ["Il couvre les médicaments prescrits ou non",
+  "Il inclut les compléments encodés et les préparations magistrales",
+  "Son accès ne requiert pas le consentement du patient",
+  "Il aide à détecter doublons, cascades et surconsommation"],
+ 2,
+ "FAUX : l'accès au DPP est soumis au CONSENTEMENT du patient.");
+
+Q("pharmacien",
+ "Concernant le bilan / la revue de médication, laquelle est FAUSSE ?",
+ ["Il concerne un patient ambulatoire",
+  "Il requiert au moins 5 médicaments chroniques remboursés",
+  "Le résultat est encodé dans un e-Form envoyé au médecin",
+  "Il requiert au moins 3 médicaments aigus"],
+ 3,
+ "FAUX : le critère est ≥ 5 médicaments CHRONIQUES remboursés (pas 3 aigus), avec pharmacien de référence et DPP.");
+
+Q("pharmacien",
+ "À propos de la vaccination antigrippale en officine (2026), laquelle est FAUSSE ?",
+ ["Le pharmacien formé peut vacciner les personnes de plus de 11 ans",
+  "La formation dure au moins 8 heures, renouvelée tous les 3 ans",
+  "Une ordonnance préalable du médecin reste obligatoire",
+  "Le pharmacien peut administrer de l'adrénaline en cas de choc anaphylactique"],
+ 2,
+ "FAUX : le pharmacien formé peut prescrire, délivrer et administrer le vaccin grippe SANS ordonnance préalable (loi fédérale fin 2025, vaccination permanente).");
+
+Q("pharmacien",
+ "Concernant le sevrage des benzodiazépines, laquelle est FAUSSE ?",
+ ["L'arrêt est progressif, entre 50 et 360 jours",
+  "Le patient doit être âgé d'au moins 18 ans",
+  "Après une prise prolongée, l'arrêt brutal est sans danger",
+  "La préparation magistrale est réalisée à l'officine, sous prescription"],
+ 2,
+ "FAUX : jamais d'arrêt brutal après une prise prolongée → sevrage PROGRESSIF, au besoin via une BZD à longue durée d'action.");
+
+Q("pharmacien",
+ "À propos de la pharmacocinétique, laquelle est FAUSSE ?",
+ ["Un médicament est quasi totalement éliminé après 5 à 7 demi-vies",
+  "La demi-vie est le temps pour réduire la concentration plasmatique de moitié",
+  "Une interaction pharmacocinétique dure environ 5 × la demi-vie de l'inhibiteur",
+  "L'amiodarone, à demi-vie courte, n'interagit que quelques heures après l'arrêt"],
+ 3,
+ "FAUX : l'amiodarone a une demi-vie TRÈS LONGUE (25-100 j) → elle interagit encore plusieurs MOIS après son arrêt (≈ 5 × T½).");
+
+Q("pharmacien",
+ "Concernant les interactions et l'allongement du QT, laquelle est FAUSSE ?",
+ ["Une interaction PD correspond à des effets qui s'additionnent (ex. QT)",
+  "Une interaction PK modifie l'absorption, le métabolisme ou l'élimination",
+  "L'hyperkaliémie est un facteur de risque d'allongement du QT",
+  "Femme, > 65 ans et bradycardie sont des facteurs de risque de QT long"],
+ 2,
+ "FAUX : c'est l'HYPOkaliémie (et hypoMg/hypoCa) qui favorise l'allongement du QT, pas l'hyperkaliémie.");
+
+Q("pharmacien",
+ "À propos de la pharmacovigilance, laquelle est FAUSSE ?",
+ ["Elle peut être notifiée par le patient lui-même",
+  "Les bases sont alimentées par les effets indésirables suspectés et avérés",
+  "On ne signale que les effets indésirables encore inconnus",
+  "Le triangle noir inversé désigne un médicament récent (< 5 ans) surveillé"],
+ 2,
+ "FAUX : on signale aussi un effet indésirable DÉJÀ CONNU. La pharmacovigilance n'est pas un outil de dénonciation.");
+
+Q("pharmacien",
+ "Concernant la cascade médicamenteuse et la déprescription, laquelle est FAUSSE ?",
+ ["Une cascade débute quand un effet indésirable est pris pour un nouveau problème",
+  "Oxybutynine → constipation → laxatif illustre une cascade",
+  "Start & Stopp et GheOP3S sont des outils de déprescription",
+  "« Maximum 6 médicaments par jour » est l'outil de référence de déprescription"],
+ 3,
+ "FAUX : « max 6 médicaments/jour » n'est PAS un outil (seuil arbitraire). Les outils sont Start & Stopp, GheOP3S, la révision pluridisciplinaire.");
+
+Q("pharmacien",
+ "À propos de Recip-e et des entretiens BUM, laquelle est FAUSSE ?",
+ ["Recip-e est un message non adressé, crypté, via eHealth",
+  "Recip-e est récupérée par la pharmacie choisie par le patient",
+  "Les entretiens BUM ciblent l'asthme et la BPCO",
+  "Recip-e est envoyée directement dans une officine désignée par le médecin"],
+ 3,
+ "FAUX : Recip-e n'est PAS « envoyée » dans une officine précise — c'est un message non adressé, récupéré par la pharmacie choisie par le patient.");
+
+// ========== "LAQUELLE EST FAUSSE" — RECHERCHE ==========
+Q("recherche",
+ "Concernant la définition WONCA de la médecine générale, laquelle est FAUSSE ?",
+ ["La MG est une discipline scientifique et universitaire (WONCA 2002)",
+  "Ses trois dimensions sont contextuelle, comportementale et scientifique",
+  "Elle est orientée vers les soins primaires",
+  "Elle se définit comme une sur-spécialité d'organe"],
+ 3,
+ "FAUX : la MG ne se définit PAS par un organe — c'est une discipline de soins primaires, centrée sur la personne et les relations (McWhinney).");
+
+Q("recherche",
+ "À propos des « généralistes curieux », laquelle est FAUSSE ?",
+ ["Archie Cochrane est le père de l'Evidence-Based Medicine",
+  "James Herrick a décrit l'anémie falciforme",
+  "Robert Koch est à l'origine de la microbiologie clinique",
+  "Edgar Hope-Simpson a réalisé le premier essai clinique randomisé"],
+ 3,
+ "FAUX : c'est Archie Cochrane qui a promu l'essai randomisé. Hope-Simpson a étudié la nature du zona (cohorte de 16 ans, épidémiologie clinique).");
+
+Q("recherche",
+ "Concernant les études analytiques, laquelle est FAUSSE ?",
+ ["La cohorte part de l'exposition et suit la survenue",
+  "La cohorte est généralement prospective",
+  "Le cas-témoins part de l'exposition pour observer ensuite la maladie",
+  "Le cas-témoins est souvent rétrospectif"],
+ 2,
+ "FAUX : le cas-témoins part de la MALADIE (cas vs témoins) pour rechercher l'exposition en arrière. C'est la cohorte qui part de l'exposition.");
+
+Q("recherche",
+ "À propos du niveau de preuve et des types d'études, laquelle est FAUSSE ?",
+ ["La revue systématique / méta-analyse est au sommet du niveau de preuve",
+  "L'essai randomisé est une étude interventionnelle",
+  "La méthode Delphi est une méthode semi-quantitative",
+  "L'étude de cas a un niveau de preuve supérieur à la méta-analyse"],
+ 3,
+ "FAUX : l'étude de cas est tout en bas du niveau de preuve ; la revue systématique / méta-analyse est au sommet.");
+
+Q("recherche",
+ "Concernant l'épistémologie, laquelle est FAUSSE ?",
+ ["L'approche positiviste débouche sur la recherche quantitative",
+  "L'approche interprétative débouche sur la recherche qualitative",
+  "Une association statistique implique nécessairement un lien de causalité",
+  "La méthode expérimentale part de l'observation"],
+ 2,
+ "FAUX : une association statistique n'implique PAS la causalité (biais, confusion, hasard possibles).");
+
+Q("recherche",
+ "À propos de la prévention quaternaire, laquelle est FAUSSE ?",
+ ["Elle a été proposée par Marc Jamoulle",
+  "Elle vise à lutter contre la surmédicalisation",
+  "Éviter un scanner pour une lombalgie sans red flags en est un exemple",
+  "Elle correspond au dépistage organisé des cancers"],
+ 3,
+ "FAUX : le dépistage organisé relève de la prévention SECONDAIRE. La quaternaire lutte contre la surmédicalisation/le surdiagnostic.");
+
+Q("recherche",
+ "Concernant les outils et classifications, laquelle est FAUSSE ?",
+ ["PICO structure la question de recherche",
+  "L'ICPC-3 est centrée sur le patient et adaptée aux soins primaires",
+  "L'ICPC-3 est identique à la Classification Internationale des Maladies (CIM)",
+  "QQOQCCP aide aussi à formuler la question de recherche"],
+ 2,
+ "FAUX : l'ICPC-3 est DISTINCTE de la CIM — elle est centrée sur le patient et le motif de consultation (soins primaires), tandis que la CIM est centrée sur la maladie.");
+
+Q("recherche",
+ "À propos des critères de validité d'un dépistage, laquelle est FAUSSE ?",
+ ["La maladie doit être fréquente et grave",
+  "Un traitement d'efficacité démontrée doit être disponible",
+  "Le test doit être acceptable et fiable",
+  "La maladie doit être rare pour limiter les coûts"],
+ 3,
+ "FAUX : un dépistage utile vise une maladie FRÉQUENTE et grave (pas rare), avec traitement efficace et test fiable.");
+
+Q("recherche",
+ "Concernant l'histoire de la MG en Belgique, laquelle est FAUSSE ?",
+ ["La SSMG (Société Scientifique de Médecine Générale) date de 1968",
+  "L'intégration au monde académique date de 2009 (CAMG)",
+  "La spécialisation de la MG a accéléré sa recherche dès 1952",
+  "Le Collège de Médecine Générale a été créé en 2018"],
+ 2,
+ "FAUX : le mouvement de spécialisation a au contraire longtemps RETARDÉ la recherche en MG.");
+
+Q("recherche",
+ "Concernant les 6 compétences de l'arbre WONCA, laquelle est FAUSSE ?",
+ ["La gestion des soins de santé primaires en fait partie",
+  "Les soins centrés sur la personne en font partie",
+  "La maîtrise de la chirurgie spécialisée en fait partie",
+  "L'orientation communautaire et l'approche globale en font partie"],
+ 2,
+ "FAUX : la chirurgie spécialisée ne fait pas partie des 6 compétences (soins primaires, centrés personne, résolution de problèmes, approche globale, orientation communautaire, modèle holistique).");
+// ========== "LAQUELLE EST FAUSSE" — SPORT ==========
+Q("sport",
+ "Concernant le dépistage cardiaque du jeune sportif, laquelle est FAUSSE ?",
+ ["Chez le jeune < 35 ans asymptomatique, pas de dépistage systématique",
+  "Le dépistage de masse génère 5 à 30 % de faux positifs",
+  "L'ECG de repos est suffisamment sensible et spécifique pour dépister",
+  "On recherche toujours les symptômes d'alarme"],
+ 2,
+ "FAUX : ni l'interrogatoire + examen, ni l'ECG de repos ne sont assez sensibles/spécifiques (d'où l'absence de dépistage systématique, KCE).");
+
+Q("sport",
+ "À propos de la mort subite cardiaque, laquelle est FAUSSE ?",
+ ["Elle touche surtout des adultes d'âge mûr déjà cardiaques",
+  "Chez le jeune sportif, elle est très rare (≤ 10/million/an)",
+  "Elle est plus fréquente chez les filles que chez les garçons",
+  "Chez l'adulte, elle est le plus souvent liée à un infarctus"],
+ 2,
+ "FAUX : chez le jeune, le risque est environ 10× plus élevé chez les GARÇONS.");
+
+Q("sport",
+ "Concernant l'activité physique et le cancer, laquelle est FAUSSE ?",
+ ["L'AP réduit la fatigue liée au cancer",
+  "Une neutropénie sévère (< 500/mm³) contre-indique l'effort",
+  "Le repos systématique est recommandé pendant un cancer",
+  "L'AP réduit la mortalité et le risque de récidive"],
+ 2,
+ "FAUX : loin du repos systématique, l'AP est une thérapeutique (réduit fatigue, mortalité, récidive). CI : neutropénie < 500, Hb < 9,5, plaquettes < 20 000, fièvre > 38 °C.");
+
+Q("sport",
+ "Chez le diabétique, à propos de l'activité physique, laquelle est FAUSSE ?",
+ ["Avant l'effort, une glycémie < 6-8 mmol/L impose ≥ 15 g de glucides",
+  "Une hyperglycémie > 250 mg/dl avec cétonurie contre-indique l'effort",
+  "On augmente l'insuline couvrant la période d'effort",
+  "Les sports d'endurance sont privilégiés"],
+ 2,
+ "FAUX : on DIMINUE l'insuline (de l'ordre de 50 à 75 %) couvrant la période d'effort, si la glycémie est correcte.");
+
+Q("sport",
+ "Concernant les pathologies du sport, laquelle est FAUSSE ?",
+ ["L'augmentation de la charge d'entraînement doit rester < 10 %/semaine",
+  "Le syndrome de l'essuie-glace donne une douleur de la face latérale du genou",
+  "Le syndrome fémoropatellaire donne une douleur postérieure du genou",
+  "Osgood-Schlatter impose un repos sportif sélectif de 3 à 6 mois"],
+ 2,
+ "FAUX : le syndrome fémoropatellaire donne une douleur ANTÉRIEURE du genou (escaliers, squats), pas postérieure.");
+
+Q("sport",
+ "À propos du dopage et des médicaments, laquelle est FAUSSE ?",
+ ["Les glucocorticoïdes (S9) sont interdits en compétition",
+  "Le salbutamol inhalé est autorisé sous seuil",
+  "L'acétazolamide (Diamox) est autorisé sans restriction",
+  "Une infiltration de corticoïde est possible > 3 jours avant la compétition"],
+ 2,
+ "FAUX : l'acétazolamide (Diamox) est un diurétique/agent masquant (S5), INTERDIT EN PERMANENCE → une AUT est nécessaire.");
+
+Q("sport",
+ "Concernant l'AMA et le dopage, laquelle est FAUSSE ?",
+ ["L'AMA a été créée en 1999",
+  "La liste des interdictions est mise à jour chaque 1er janvier",
+  "Le dopage se limite à la présence d'une substance interdite",
+  "Depuis 2020, le sport « libre » peut aussi être contrôlé"],
+ 2,
+ "FAUX : le dopage recouvre 11 types de violations (usage, possession, trafic, contrôles manqués, complicité…), pas seulement la présence d'une substance.");
+
+Q("sport",
+ "À propos de l'activité physique comme thérapeutique, laquelle est FAUSSE ?",
+ ["L'asthme n'est pas une contre-indication au sport",
+  "L'AP régulière réduit les infections respiratoires (−40 %)",
+  "Un excès d'intensité peut affaiblir l'immunité (courbe en J)",
+  "Le sport aggrave systématiquement l'asthme de l'enfant"],
+ 3,
+ "FAUX : le sport n'aggrave pas l'asthme — l'AP améliore le contrôle, la qualité de vie et la fonction pulmonaire.");
+
+Q("sport",
+ "Concernant le bilan cardiaque selon l'âge, laquelle est FAUSSE ?",
+ ["≥ 40-50 ans : on évalue le risque cardiovasculaire (SCORE2)",
+  "Si le risque est faible et le patient asymptomatique → rassurer",
+  "Un ECG d'effort systématique est requis chez tout jeune sportif",
+  "On est particulièrement attentif à la reprise du sport après 40 ans"],
+ 2,
+ "FAUX : pas d'ECG d'effort systématique chez le jeune asymptomatique (balance bénéfice-risque négative).");
+
+Q("sport",
+ "À propos de l'évaluation de l'AP et du certificat, laquelle est FAUSSE ?",
+ ["Le GPAQ (OMS) évalue le niveau d'activité physique",
+  "Le niveau d'AP doit figurer dans le DMI (AR 2024)",
+  "Le certificat atteste l'absence de tout risque cardiaque",
+  "Le GPAQ distingue 3 niveaux (faible, modéré, élevé)"],
+ 2,
+ "FAUX : le certificat atteste seulement « pas de contre-indication APPARENTE » — il ne garantit pas l'absence de tout risque.");
+
+// ========== "LAQUELLE EST FAUSSE" — ONE HEALTH ==========
+Q("onehealth",
+ "Concernant l'empreinte carbone de la santé, laquelle est FAUSSE ?",
+ ["Le secteur de la santé pèse environ 8 % de l'empreinte nationale",
+  "Les médicaments et dispositifs médicaux pèsent environ 54 % des GES",
+  "Plus de 85 % des émissions sont indirectes",
+  "Le chauffage des bâtiments est le 1er poste d'émissions du secteur"],
+ 3,
+ "FAUX : le 1er poste est l'achat de MÉDICAMENTS et DISPOSITIFS (~54 %), pas le chauffage.");
+
+Q("onehealth",
+ "À propos des inhalateurs, laquelle est FAUSSE ?",
+ ["Le DPI est aussi efficace que le pMDI",
+  "Le DPI est moins polluant que le pMDI",
+  "Le DPI est recommandé en première intention chez l'enfant de moins de 5 ans",
+  "Le DPI est à éviter si la capacité inspiratoire est fortement diminuée"],
+ 2,
+ "FAUX : le DPI est à ÉVITER chez l'enfant < 5 ans (et si capacité inspiratoire fortement réduite) — il exige un débit inspiratoire suffisant.");
+
+Q("onehealth",
+ "Concernant les 4R de la santé durable, laquelle est FAUSSE ?",
+ ["Réduire est la priorité absolue",
+  "L'ordre de priorité est Réduire > Remplacer > Recycler",
+  "Recycler prime sur Réduire",
+  "« Repenser » fait partie de la démarche"],
+ 2,
+ "FAUX : RÉDUIRE prime (agir sur les besoins/demandes/réponses) ; recycler vient en dernier.");
+
+Q("onehealth",
+ "À propos de l'écotoxicité, laquelle est FAUSSE ?",
+ ["Hormones et antibiotiques sont des classes à risque pour l'environnement",
+  "Les stations d'épuration filtrent efficacement ces micropolluants",
+  "Le score PBT évalue Persistance, Bioaccumulation, Toxicité",
+  "Anticancéreux et antidépresseurs sont également à risque"],
+ 1,
+ "FAUX : les stations d'épuration NE filtrent PAS ces micropolluants → ils se retrouvent dans l'eau (~50 t de médicaments dans le lac Léman).");
+
+Q("onehealth",
+ "Concernant la prescription durable, laquelle est FAUSSE ?",
+ ["À indication égale, on préfère l'ibuprofène au diclofénac",
+  "Le diclofénac est plus écotoxique que l'ibuprofène",
+  "La déprescription rejoint la prévention quaternaire",
+  "Le diclofénac est moins écotoxique que l'ibuprofène"],
+ 3,
+ "FAUX : le diclofénac est PLUS écotoxique que l'ibuprofène → on préfère l'ibuprofène à indication équivalente.");
+
+Q("onehealth",
+ "À propos des cadres éthiques, laquelle est FAUSSE ?",
+ ["Les 3 P sont People, Planet, Profit",
+  "La théorie du Donut situe un espace « sûr et juste »",
+  "La Commission Lancet 2015 considère le climat comme une menace sans lien avec la santé",
+  "On passe de la RSE (entreprises) à la RSS (santé)"],
+ 2,
+ "FAUX : la Commission Lancet 2015 voit la lutte contre le changement climatique comme « la plus grande OPPORTUNITÉ du 21e siècle pour la santé mondiale ».");
+
+Q("onehealth",
+ "Concernant la décision de prescription, laquelle est FAUSSE ?",
+ ["Elle met en balance coût, préférences et empreinte carbone",
+  "Imposer un dispositif moins polluant peut nuire à l'observance",
+  "La décision partagée est préférée au paternalisme",
+  "Le seul critère pertinent est l'efficacité du médicament"],
+ 3,
+ "FAUX : l'efficacité n'est PAS le seul critère — on intègre coût, préférences, empreinte, écotoxicité, éthique, interactions, alternatives.");
+
+Q("onehealth",
+ "À propos des innovations et du gaspillage, laquelle est FAUSSE ?",
+ ["Le HFA-152a a un pouvoir de réchauffement 10 à 30× moindre",
+  "Environ 14 % des médicaments vendus finissent à la poubelle",
+  "Le HFA-152a est 10× plus polluant que les propulseurs actuels",
+  "Remplacer un pMDI par un DPI réduit fortement les émissions"],
+ 2,
+ "FAUX : le HFA-152a est MOINS polluant (pouvoir de réchauffement 10-30× moindre), c'est une innovation favorable.");
+
+Q("onehealth",
+ "Concernant l'antibiorésistance, laquelle est FAUSSE ?",
+ ["C'est un enjeu mondial majeur",
+  "Le Lancet projette ses effets à l'horizon 2050",
+  "Elle ne concerne pas la santé environnementale",
+  "Elle se propage jusque dans des zones reculées"],
+ 2,
+ "FAUX : l'antibiorésistance est au cœur du One Health et de l'écotoxicité — elle concerne directement la santé environnementale.");
+
+Q("onehealth",
+ "À propos du profil des dispositifs d'inhalation, laquelle est FAUSSE ?",
+ ["En Belgique, environ 45 % de pMDI",
+  "En Suède, environ 10 % de pMDI",
+  "Au Royaume-Uni, environ 70 % de pMDI",
+  "En Belgique, les pMDI ne représentent qu'environ 5 %"],
+ 3,
+ "FAUX : en Belgique les pMDI représentent ~45 % (les ~5 % correspondent aux SMI / soft mist).");
+// ========== "LAQUELLE EST FAUSSE" — ORGANISATION DES SOINS ==========
+Q("orga",
+ "Concernant l'incapacité et l'invalidité, laquelle est FAUSSE ?",
+ ["L'incapacité primaire suppose une perte de capacité de gain ≥ 66 %",
+  "L'invalidité correspond à une incapacité de plus de 12 mois",
+  "L'invalidité est contrôlée par le Conseil médical de l'invalidité (INAMI)",
+  "L'invalidité débute après 6 mois d'incapacité"],
+ 3,
+ "FAUX : l'invalidité débute après 12 MOIS (1 an), pas 6 mois. Les 6 premiers mois, l'évaluation se fait par rapport au métier habituel.");
+
+Q("orga",
+ "À propos des certificats d'incapacité, laquelle est FAUSSE ?",
+ ["Le certificat à la mutuelle (médecin conseil) comporte le diagnostic",
+  "Le certificat à l'employeur ne comporte pas de diagnostic",
+  "Le certificat à l'employeur comporte le diagnostic",
+  "Durant les 6 premiers mois, on évalue par rapport au métier habituel"],
+ 2,
+ "FAUX : le certificat à l'EMPLOYEUR ne porte JAMAIS de diagnostic (secret médical). Seul celui à la mutuelle le mentionne.");
+
+Q("orga",
+ "Concernant la réforme du retour au travail (2026), laquelle est FAUSSE ?",
+ ["Le certificat électronique (Mult-eMediatt) à la mutuelle est obligatoire dès 14 jours",
+  "L'évaluation du potentiel de travail par la médecine du travail est obligatoire dès 8 semaines d'incapacité",
+  "La durée d'incapacité prescrite par le MG est de 3 mois maximum, renouvelable",
+  "L'évaluation du potentiel de travail devient obligatoire dès 6 mois d'incapacité"],
+ 3,
+ "FAUX : l'évaluation du potentiel de travail est obligatoire dès 8 SEMAINES (≈ 2 mois), pas 6 mois.");
+
+Q("orga",
+ "À propos des délais d'envoi du certificat à la mutuelle, laquelle est FAUSSE ?",
+ ["Indépendant ou chômeur : 7 jours",
+  "Ouvrier : 14 jours",
+  "Employé : 28 jours",
+  "Employé : 7 jours"],
+ 3,
+ "FAUX : l'employé dispose de 28 jours (pas 7). 7 j = indépendant/chômeur ; 14 j = ouvrier ; 28 j = employé.");
+
+Q("orga",
+ "Concernant les modèles de sécurité sociale, laquelle est FAUSSE ?",
+ ["La Belgique est un système mixte à dominante assurantielle",
+  "Bismarck = cotisations liées au travail",
+  "Beveridge = financement par l'impôt et couverture universelle",
+  "Beveridge = droits proportionnels aux cotisations versées"],
+ 3,
+ "FAUX : les droits proportionnels aux cotisations caractérisent BISMARCK. Beveridge = universel, redistributif, financé par l'impôt.");
+
+Q("orga",
+ "À propos des branches et de l'aide sociale, laquelle est FAUSSE ?",
+ ["La sécurité sociale compte 7 branches",
+  "L'allocation de chômage est une aide sociale (régime résiduaire)",
+  "RIS, GRAPA et allocations aux personnes handicapées sont des aides sociales",
+  "Les prestations familiales relèvent des entités fédérées depuis 2019"],
+ 1,
+ "FAUX : l'allocation de chômage est une BRANCHE de la sécurité sociale (ONEM), pas une aide sociale.");
+
+Q("orga",
+ "Concernant le financement et les dépenses, laquelle est FAUSSE ?",
+ ["Les cotisations sociales sont la principale source de financement (~57,5 %)",
+  "Les pensions sont le 1er poste de dépenses (~42 %)",
+  "La maladie (soins de santé) est le 1er poste de dépenses, devant les pensions",
+  "Vieillesse + maladie + invalidité représentent ~80 % des dépenses"],
+ 2,
+ "FAUX : le 1er poste de dépenses, ce sont les PENSIONS (~42 %), devant la maladie (~29 %).");
+
+Q("orga",
+ "À propos du BIM et du MAF, laquelle est FAUSSE ?",
+ ["Le MAF « statut social » (BIM) a un plafond de 450 €",
+  "Le MAF « enfants < 19 ans » a un plafond de 650 €",
+  "Le statut d'affection chronique suppose > 400 €/trimestre durant ≥ 8 trimestres",
+  "Le MAF « enfants < 19 ans » a un plafond de 450 €"],
+ 3,
+ "FAUX : le MAF « enfants < 19 ans » a un plafond de 650 € (le 450 € correspond au MAF « statut social » / BIM).");
+
+Q("orga",
+ "Concernant la e-Santé, laquelle est FAUSSE ?",
+ ["La plateforme eHealth relie les prestataires ayant un lien thérapeutique",
+  "Le médecin du travail accède au réseau de santé sans condition",
+  "MyCareNet sert à vérifier l'assurabilité du patient",
+  "Recip-e est un message non adressé, crypté, via eHealth"],
+ 1,
+ "FAUX : le médecin du travail n'a PAS de lien thérapeutique → pas d'accès au réseau de santé (sauf via TRIO, avec consentement).");
+
+Q("orga",
+ "À propos du financement hospitalier et de la 1re ligne, laquelle est FAUSSE ?",
+ ["Le BMF couvre l'infrastructure et le fonctionnement (~36 %)",
+  "Les honoraires médicaux représentent ~41 % du financement hospitalier",
+  "La 1re ligne représente plus de 90 % des contacts",
+  "La 1re ligne est centrée sur la maladie (approche par organe)"],
+ 3,
+ "FAUX : la 1re ligne est centrée sur la PERSONNE (approche globale). C'est la 2e/3e ligne qui est « axée sur la maladie ».");
+
+// ========== DATES & SEUILS — ORGANISATION DES SOINS ==========
+Q("orga",
+ "À partir de quelle durée d'incapacité l'évaluation du potentiel de travail (par la médecine du travail) devient-elle obligatoire dans la réforme 2026 ?",
+ ["Dès 14 jours", "Dès 4 semaines", "Dès 8 semaines", "Dès 6 mois"],
+ 2,
+ "Dès 8 SEMAINES d'incapacité, l'évaluation du potentiel de travail est obligatoire (sous peine d'amendes pour l'employeur). À ne pas confondre avec les 14 jours (certificat à la mutuelle).");
+
+Q("orga",
+ "À partir de combien de jours le médecin généraliste doit-il transmettre le certificat électronique d'incapacité (Mult-eMediatt) à la mutuelle (2026) ?",
+ ["7 jours", "10 jours", "14 jours", "28 jours"],
+ 2,
+ "Dès 14 jours : certificat électronique Mult-eMediatt obligatoire vers la mutuelle. (7/14/28 j = délais d'envoi classiques selon le statut indépendant/ouvrier/employé.)");
+
+Q("orga",
+ "Quelle est la durée maximale d'incapacité que le MG peut prescrire en une fois (réforme 2026) ?",
+ ["1 mois", "3 mois, renouvelable par 3 mois", "6 mois", "1 an"],
+ 1,
+ "La durée d'incapacité prescrite est de 3 mois MAXIMUM, renouvelable par périodes de 3 mois.");
+
+Q("orga",
+ "À partir de quelle durée parle-t-on d'INVALIDITÉ (et non plus d'incapacité primaire) ?",
+ ["3 mois", "6 mois", "12 mois (1 an)", "24 mois"],
+ 2,
+ "Invalidité = incapacité de travail de plus de 12 mois (1 an), contrôlée par le Conseil médical de l'invalidité (INAMI).");
+
+Q("orga",
+ "Un EMPLOYÉ dispose de combien de jours pour envoyer son certificat d'incapacité à la mutuelle ?",
+ ["7 jours", "14 jours", "21 jours", "28 jours"],
+ 3,
+ "Employé = 28 jours. (Indépendant/chômeur = 7 j ; ouvrier = 14 j.) Discrimination de dates fréquente à l'examen.");
+
+Q("orga",
+ "À partir de quel jour l'indépendant en incapacité perçoit-il son indemnité (montant fixe) ?",
+ ["Dès le 1er jour", "Dès le 8e jour", "Dès le 15e jour", "Après 1 mois"],
+ 1,
+ "L'indépendant est indemnisé par la mutuelle dès le 8e jour, par un montant fixe (sans lien avec les revenus). L'ouvrier subit une dégressivité après 7 j ; le salarié ~60 % après le mois de salaire garanti.");
+
+Q("orga",
+ "Depuis quelle date les suppléments d'honoraires sont-ils interdits pour les BIM « revenus » ?",
+ ["01/01/2024", "01/01/2025", "01/01/2026", "Ils restent autorisés"],
+ 2,
+ "Suppléments interdits pour les BIM « avantages » depuis le 01/01/2025, et pour les BIM « revenus » depuis le 01/01/2026.");
+
+Q("orga",
+ "À partir de combien de lits un hôpital GÉNÉRAL doit-il disposer (avec accueil 24h/24 et au moins un médecin sur place) ?",
+ ["50 lits", "100 lits", "150 lits", "250 lits"],
+ 2,
+ "Hôpital général : minimum 150 lits, accueil 24h/24, au moins un médecin sur place.");
+
+Q("orga",
+ "Le statut « affection chronique » suppose des dépenses de santé dépassant un seuil sur plusieurs trimestres. Lequel ?",
+ ["> 200 €/trimestre durant 4 trimestres",
+  "> 400 €/trimestre durant ≥ 8 trimestres consécutifs",
+  "> 650 €/trimestre durant 2 trimestres",
+  "> 1 000 €/an, une seule fois"],
+ 1,
+ "Affection chronique : dépenses > 400 €/trimestre durant ≥ 8 trimestres consécutifs (effet : MAF facilité, seuil abaissé de 100 €).");
+
+Q("orga",
+ "Quel est le montant du forfait annuel du DMG versé au MG pour un patient standard ?",
+ ["38 € (71 € si malade chronique de 30-85 ans)", "80 €", "150 €", "450 €"],
+ 0,
+ "Forfait DMG : 38 € (71 € si malade chronique 30-85 ans). Le ~80 € correspond au forfait de suivi d'un trajet de soins ; 450 € au MAF statut social.");
+// ========== "LAQUELLE EST FAUSSE" — PATIENT ÂGÉ ==========
+Q("age",
+ "Concernant la fragilité, laquelle est FAUSSE ?",
+ ["C'est un processus réversible si repéré",
+  "Elle se confond avec la dépendance",
+  "Elle altère l'adaptation au stress (baisse des réserves)",
+  "Elle est distincte de la polypathologie"],
+ 1,
+ "FAUX : la fragilité est DISTINCTE de la dépendance (et de l'âge, et de la polypathologie). C'est un état de risque réversible.");
+
+Q("age",
+ "À propos des critères de Fried, laquelle est FAUSSE ?",
+ ["La perte de poids involontaire est un critère",
+  "La vitesse de marche ralentie est un critère",
+  "La vitesse de marche accélérée est un critère",
+  "La sédentarité est un critère"],
+ 2,
+ "FAUX : c'est la vitesse de marche RALENTIE (pas accélérée). Les 5 critères : perte de poids, épuisement, marche ralentie, baisse de force, sédentarité.");
+
+Q("age",
+ "Concernant les états de fragilité (Fried), laquelle est FAUSSE ?",
+ ["0 critère = robuste",
+  "1-2 critères = pré-fragile",
+  "≥ 3 critères = fragile",
+  "5 critères = robuste"],
+ 3,
+ "FAUX : plus le nombre de critères est élevé, plus le patient est fragile. 5 critères = très fragile (et non robuste).");
+
+Q("age",
+ "À propos du dépistage de la fragilité, laquelle est FAUSSE ?",
+ ["Il est systématique dès 70 ans (hors maladie grave)",
+  "Il peut être initié par tout soignant",
+  "Il n'est fiable que s'il est réalisé par un médecin",
+  "Il prédit chutes et institutionnalisation à 3 ans"],
+ 2,
+ "FAUX (piège récurrent) : le dépistage n'est PAS réservé au médecin — tout soignant peut l'initier.");
+
+Q("age",
+ "Concernant les échelles gériatriques, laquelle est FAUSSE ?",
+ ["Katz évalue l'autonomie (activités de la vie quotidienne)",
+  "MNA évalue l'état nutritionnel",
+  "MMSE évalue la cognition",
+  "Finegan est une échelle gériatrique validée"],
+ 3,
+ "FAUX : « Finegan » est un score de sevrage du NOUVEAU-NÉ (intrus). Échelles valides : Katz, MNA, MMSE, Tinetti, Timed Up & Go, GDS.");
+
+Q("age",
+ "À propos des seuils des tests, laquelle est FAUSSE ?",
+ ["Le Timed Up & Go est normal en dessous de 14 s",
+  "Un Tinetti < 20/28 indique un risque de chute accru",
+  "Un trouble de la marche multiplie par 3 le risque de chute",
+  "Le Timed Up & Go est normal en dessous de 30 s"],
+ 3,
+ "FAUX : le Timed Up & Go est normal < 14 s (et non < 30 s) ; au-delà, le risque de chute augmente.");
+
+Q("age",
+ "Concernant la polymédication, laquelle est FAUSSE ?",
+ ["Le seuil de vigilance est de 6 médicaments par jour",
+  "Le nombre de médicaments est un facteur pronostique",
+  "Start & Stopp est un outil de révision médicamenteuse",
+  "« Maximum 6 médicaments par jour » est un outil validé de déprescription"],
+ 3,
+ "FAUX : « max 6/jour » est un simple SEUIL, pas un outil. Les outils sont Start & Stopp, GheOP3S, la révision pluridisciplinaire.");
+
+Q("age",
+ "À propos des médicaments et interactions chez la personne âgée, laquelle est FAUSSE ?",
+ ["Les benzodiazépines augmentent le risque de chute",
+  "Le jus de pamplemousse inhibe le CYP3A4",
+  "Les benzodiazépines diminuent le risque de chute",
+  "Il faut surveiller l'alcool et les OTC non déclarés"],
+ 2,
+ "FAUX : les benzodiazépines AUGMENTENT le risque de chute (sédation, troubles de l'équilibre).");
+
+Q("age",
+ "Concernant le PICT, laquelle est FAUSSE ?",
+ ["Le PICT identifie le patient palliatif",
+  "Il inclut la « question surprise » (décès dans 6-12 mois ?)",
+  "Il combine indicateurs de fragilité et critère d'incurabilité",
+  "Le PICT évalue l'état nutritionnel du patient"],
+ 3,
+ "FAUX : le PICT n'évalue pas la nutrition (c'est le MNA). Il identifie le patient palliatif via 3 éléments (question surprise + fragilité + incurabilité).");
+
+Q("age",
+ "À propos de la coordination des soins, laquelle est FAUSSE ?",
+ ["La coordinatrice (ASD) est la personne de référence",
+  "L'outil SBAR structure la communication hôpital-domicile",
+  "Les soins infirmiers démarrent souvent dès J+1 au retour à domicile",
+  "L'horaire du lever et du coucher est l'élément prioritaire de l'évaluation"],
+ 3,
+ "FAUX (piège classique) : l'horaire du lever/coucher n'est PAS prioritaire. Priorités : chutes, nutrition, isolement social, soutien aux aidants.");
+
+// ========== "LAQUELLE EST FAUSSE" — DEMANDEURS D'ASILE & PRÉCARITÉ ==========
+Q("asile",
+ "Concernant les acteurs de la procédure d'asile, laquelle est FAUSSE ?",
+ ["L'Office des étrangers enregistre la demande",
+  "Le CGRA examine la demande et prend la décision",
+  "FEDASIL organise l'accueil et l'aide matérielle",
+  "L'Office des étrangers prend la décision finale sur la protection"],
+ 3,
+ "FAUX : la décision revient au CGRA (recours = CCE). L'Office des étrangers ne fait qu'ENREGISTRER la demande.");
+
+Q("asile",
+ "À propos de l'Aide Médicale Urgente (AMU), laquelle est FAUSSE ?",
+ ["Elle est octroyée par le CPAS",
+  "Elle concerne les personnes en séjour irrégulier",
+  "Elle couvre uniquement les urgences vitales",
+  "Elle couvre aussi les soins préventifs et le suivi"],
+ 2,
+ "FAUX : malgré son nom, l'AMU ne se limite PAS à l'urgence — elle couvre le curatif, le préventif et le suivi.");
+
+Q("asile",
+ "Concernant les conditions d'octroi de l'AMU, laquelle est FAUSSE ?",
+ ["La territorialité (résider sur la commune)",
+  "Une enquête sociale établissant l'indigence",
+  "Un certificat médical d'AMU",
+  "La possession d'un titre de séjour valide"],
+ 3,
+ "FAUX : l'AMU vise justement les personnes SANS titre de séjour. Les 3 conditions sont territorialité, enquête sociale (indigence) et certificat médical.");
+
+Q("asile",
+ "À propos de la régularisation, laquelle est FAUSSE ?",
+ ["Le 9ter concerne la raison médicale",
+  "Le 9bis concerne la raison humanitaire",
+  "Le 9ter concerne la raison humanitaire",
+  "La régularisation est distincte de la procédure d'asile"],
+ 2,
+ "FAUX : 9ter = raison MÉDICALE ; 9bis = raison humanitaire. La proposition inverse le 9ter.");
+
+Q("asile",
+ "Concernant la précarité, laquelle est FAUSSE ?",
+ ["C'est l'absence d'une ou plusieurs sécurités (emploi, revenus, logement, liens)",
+  "C'est une notion subjective et un processus",
+  "Précarité et pauvreté sont synonymes",
+  "« La précarité ne touche pas que les pauvres »"],
+ 2,
+ "FAUX : la précarité n'est PAS la pauvreté (définie, elle, par une norme monétaire). C'est une notion subjective, un processus de précarisation.");
+
+Q("asile",
+ "À propos des parasitoses, laquelle est FAUSSE ?",
+ ["Origine subsaharienne + symptômes digestifs → rechercher une éosinophilie",
+  "La schistosomiase se traite par praziquantel",
+  "La strongyloïdose se traite par ivermectine",
+  "La schistosomiase se traite par ivermectine"],
+ 3,
+ "FAUX : la schistosomiase → PRAZIQUANTEL. C'est la strongyloïdose qui se traite par ivermectine.");
+
+Q("asile",
+ "Concernant les pathologies infectieuses chez les demandeurs d'asile, laquelle est FAUSSE ?",
+ ["La tuberculose fait l'objet d'un dépistage systématique (FARES)",
+  "Pour le VIH : I = I (Indétectable = Intransmissible)",
+  "La (re)vaccination RRO contre la rougeole est systématique",
+  "Le paludisme fait l'objet d'un dépistage systématique de tous les arrivants"],
+ 3,
+ "FAUX : pas de dépistage systématique du paludisme ; en cas de suspicion → goutte épaisse (gold standard) ou test rapide.");
+
+Q("asile",
+ "Face à un patient présentant un possible PTSD, laquelle est FAUSSE ?",
+ ["On ne demande pas de détails pour éviter une réexposition",
+  "Les lésions physiques de torture peuvent perdurer des années",
+  "Il faut exiger un récit détaillé et chronologique des faits",
+  "La prise en charge est pluridisciplinaire"],
+ 2,
+ "FAUX : on NE force PAS le récit (risque de réexposition traumatique) ; on laisse la personne dire ce qu'elle veut, à son rythme.");
+
+Q("asile",
+ "À propos du rapport médical circonstancié (Constats), laquelle est FAUSSE ?",
+ ["Il établit la compatibilité entre le récit et les séquelles",
+  "Il suit le Protocole d'Istanbul",
+  "Il est rédigé au conditionnel",
+  "Il prouve la véracité du récit du demandeur"],
+ 3,
+ "FAUX : le rapport établit un degré de COMPATIBILITÉ (élément de preuve), il ne « prouve » pas la véracité ; les incohérences ≠ mensonge (la torture altère la mémoire).");
+
+Q("asile",
+ "Concernant les MGF et la démédicalisation, laquelle est FAUSSE ?",
+ ["Un certificat de non-excision peut fonder une reconnaissance comme réfugiée",
+  "Ce certificat est à ré-attester tous les 3 ans",
+  "Démédicaliser des diagnostics posés au pays peut être une mission essentielle",
+  "Le certificat de non-excision est délivré une seule fois, définitivement"],
+ 3,
+ "FAUX : le certificat de non-excision est à RÉ-attester tous les 3 ans (médecins formés par le GAMS).");
+
+// ========== "LAQUELLE EST FAUSSE" — TRIO (MG / TRAVAIL / CONSEIL) ==========
+Q("trio",
+ "Concernant les trois médecins, laquelle est FAUSSE ?",
+ ["Le médecin du travail évalue l'aptitude",
+  "Le médecin conseil évalue l'incapacité",
+  "Le médecin de contrôle vérifie l'absentéisme",
+  "Le médecin du travail contrôle l'absentéisme"],
+ 3,
+ "FAUX : le contrôle de l'absentéisme est le rôle du médecin de CONTRÔLE (payé par l'employeur), pas du médecin du travail (prévention/aptitude).");
+
+Q("trio",
+ "À propos de l'aptitude et du cadre légal, laquelle est FAUSSE ?",
+ ["L'aptitude vérifie que les risques du travail ne majorent pas la santé",
+  "Et que l'état de santé ne majore pas les risques (pour lui ou autrui)",
+  "Le cadre légal est le Code du Bien-Être au Travail (1996)",
+  "Le médecin du travail prodigue des soins curatifs"],
+ 3,
+ "FAUX : le médecin du travail fait de la PRÉVENTION — il ne prodigue pas de soins curatifs.");
+
+Q("trio",
+ "Concernant la visite de reprise, laquelle est FAUSSE ?",
+ ["Elle est obligatoire si l'incapacité a duré ≥ 4 semaines",
+  "Elle a lieu dans les 10 jours ouvrables suivant la reprise",
+  "La visite de pré-reprise est facultative, à l'initiative du travailleur",
+  "La visite de reprise est obligatoire dès une semaine d'arrêt"],
+ 3,
+ "FAUX : la visite de reprise n'est obligatoire que si l'incapacité a duré ≥ 4 SEMAINES (et dans les 10 jours ouvrables de la reprise).");
+
+Q("trio",
+ "À propos des délais de la réintégration, laquelle est FAUSSE ?",
+ ["Le médecin du travail dispose de 49 jours pour sa décision",
+  "L'employeur répond en 63 jours en cas d'inaptitude temporaire",
+  "L'évaluation de l'inaptitude définitive est possible après 6 mois d'ITT",
+  "Le médecin du travail dispose de 6 mois pour sa décision"],
+ 3,
+ "FAUX : le médecin du travail dispose de 49 JOURS (pas 6 mois). L'employeur, lui, répond en 63 jours (temporaire) ou 6 mois (définitive).");
+
+Q("trio",
+ "Concernant la protection de la maternité, laquelle est FAUSSE ?",
+ ["En cas de risque : mutation de poste ou écartement",
+  "L'indemnité est versée par la mutuelle (~78 % du brut)",
+  "L'écartement pour allaitement est possible jusqu'aux 5 mois de l'enfant",
+  "La travailleuse reçoit un certificat d'incapacité de travail"],
+ 3,
+ "FAUX : la maternité donne lieu à une ATTESTATION (mutation/écartement), pas à un certificat d'incapacité de travail.");
+
+Q("trio",
+ "À propos de la plateforme TRIO, laquelle est FAUSSE ?",
+ ["Elle relie médecin traitant, médecin conseil et médecin du travail",
+  "Elle requiert l'accord préalable du patient",
+  "Le médecin du travail a un lien thérapeutique avec le patient",
+  "Hors TRIO, le médecin du travail n'accède pas au réseau de santé"],
+ 2,
+ "FAUX : le médecin du travail n'a PAS de lien thérapeutique → pas d'accès direct au réseau de santé (sauf via TRIO, avec consentement).");
+
+Q("trio",
+ "Concernant les voies de recours, laquelle est FAUSSE ?",
+ ["Médecin du travail → Direction régionale du Contrôle du Bien-Être",
+  "Médecin conseil → Tribunal du travail",
+  "Médecin de contrôle → médecin-arbitre",
+  "Médecin du travail → médecin-arbitre"],
+ 3,
+ "FAUX : le recours contre le médecin du travail va à la Direction régionale du Contrôle du Bien-Être. Le médecin-arbitre concerne le médecin de CONTRÔLE.");
+
+Q("trio",
+ "À propos de l'embauche, de la formation et du cadre d'exercice, laquelle est FAUSSE ?",
+ ["Si inapte à l'embauche (poste à risque) → pas de recours",
+  "La formation du médecin du travail dure 4 ans (spécialisation)",
+  "Le médecin du travail exerce en SEPP ou SIPP",
+  "Le médecin du travail est employé et payé par la mutuelle"],
+ 3,
+ "FAUX : le médecin du travail relève d'un SEPP (externe) ou SIPP (interne), pas de la mutuelle (qui emploie le médecin conseil).");
+
+Q("trio",
+ "Concernant le secret et les certificats, laquelle est FAUSSE ?",
+ ["Le certificat à l'employeur ne porte jamais de diagnostic",
+  "Le médecin conseil est tenu au secret vis-à-vis de l'employeur",
+  "Le médecin conseil peut proposer la reprise et contacter le médecin du travail",
+  "Le certificat à l'employeur comporte le diagnostic"],
+ 3,
+ "FAUX : le certificat à l'employeur ne comporte JAMAIS de diagnostic (secret médical).");
+
+Q("trio",
+ "À propos du risque professionnel et des sanctions, laquelle est FAUSSE ?",
+ ["Risque = Danger × Exposition → Dommage",
+  "La prévention agit prioritairement sur l'exposition",
+  "L'absence aux rendez-vous de réintégration entraîne une sanction sur les indemnités",
+  "Le médecin du travail évalue l'état d'incapacité pour le compte de la mutuelle"],
+ 3,
+ "FAUX : évaluer l'incapacité pour la mutuelle est le rôle du médecin CONSEIL, pas du médecin du travail (qui évalue l'aptitude).");
