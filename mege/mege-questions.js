@@ -2796,3 +2796,504 @@ Q("trio",
   "Le médecin du travail évalue l'état d'incapacité pour le compte de la mutuelle"],
  3,
  "FAUX : évaluer l'incapacité pour la mutuelle est le rôle du médecin CONSEIL, pas du médecin du travail (qui évalue l'aptitude).");
+// ========== LISTES (intrus / fait partie) — ASSUÉTUDES ==========
+Q("assuetudes",
+ "La qualité de l'accompagnement dépend de plusieurs facteurs. Lequel NE figure PAS parmi eux ?",
+ ["La qualité de la relation",
+  "Les facteurs extra-thérapeutiques",
+  "Les attentes et motivations du patient",
+  "Le coût du traitement de substitution"],
+ 3,
+ "Les 4 déterminants : qualité de la relation, facteurs extra-thérapeutiques, attentes/motivations du patient, technique utilisée. Le coût n'en fait pas partie.");
+
+Q("assuetudes",
+ "Parmi ces attitudes, laquelle N'EST PAS une attitude fondamentale de Carl Rogers ?",
+ ["L'empathie", "Le regard positif inconditionnel", "La congruence", "La neutralité distante"],
+ 3,
+ "Rogers : empathie, regard positif inconditionnel, congruence. La « neutralité distante » est l'intrus (elle s'oppose même à l'empathie).");
+
+Q("assuetudes",
+ "Lequel de ces éléments est le MOINS important pour la relation thérapeutique (donc l'intrus parmi les leviers du lien) ?",
+ ["Les mots utilisés", "L'entretien motivationnel", "Le triangle d'Olivenstein", "Évaluer précisément les doses consommées"],
+ 3,
+ "Évaluer les doses est le moins important pour le LIEN (intrus). Les mots, l'entretien motivationnel, Olivenstein et Di Clemente sont les leviers de la relation.");
+
+Q("assuetudes",
+ "Laquelle de ces propositions EST l'une des 4 étapes de l'intervention brève (OMS) ?",
+ ["Restituer les résultats", "Hospitaliser le patient", "Poser un diagnostic psychiatrique", "Sevrer immédiatement"],
+ 0,
+ "Les 4 étapes : Restituer les résultats, Informer, Conseiller, Encourager. Les 3 autres n'en font pas partie.");
+
+Q("assuetudes",
+ "Parmi ces conseils de réduction des risques, lequel est FAUX (l'intrus) ?",
+ ["Utiliser du matériel neuf et propre",
+  "Tester de petites quantités",
+  "Consommer à jeun pour mieux ressentir l'effet",
+  "Rester accompagné et prévoir le 112"],
+ 2,
+ "Intrus : il faut au contraire MANGER et BOIRE avant/pendant (ne pas consommer à jeun). Les autres conseils sont corrects.");
+
+Q("assuetudes",
+ "Lequel de ces éléments NE fait PAS partie du « cadre de travail » de l'accompagnement ?",
+ ["Des règles protégeant patient et soignant",
+  "Un accord sur le mode de délivrance du traitement",
+  "Un suivi psycho-social en parallèle",
+  "Une analyse d'urines à chaque consultation"],
+ 3,
+ "Le cadre = règles, accord sur la délivrance, suivi psycho-social, objectifs réalistes, secret. L'analyse d'urines systématique est l'intrus (et nuit même au lien).");
+
+Q("assuetudes",
+ "Lequel correspond à l'un des 3 styles décrits dans l'entretien motivationnel ?",
+ ["Confronter", "Guider", "Persuader", "Interpréter"],
+ 1,
+ "Les 3 styles : diriger, GUIDER, suivre. L'entretien motivationnel privilégie « guider ». Confronter/persuader/interpréter ne sont pas ces styles.");
+
+// ========== LISTES (intrus / fait partie) — PHARMACIEN ==========
+Q("pharmacien",
+ "Lequel NE fait PAS partie des étapes de la démarche du pharmacien (QUIDAM – ANALYSE – DÉCISION – INFORMATION) ?",
+ ["QUIDAM (identification, vulnérabilité)",
+  "ANALYSE (validation de la prescription)",
+  "FACTURATION (tiers payant)",
+  "INFORMATION (objectif, modalités, effets indésirables)"],
+ 2,
+ "La démarche : QUIDAM, ANALYSE, DÉCISION, INFORMATION. La facturation n'en est pas une étape (intrus).");
+
+Q("pharmacien",
+ "Lequel de ces éléments N'EST PAS couvert par le Dossier Pharmaceutique Partagé (DPP) ?",
+ ["Les médicaments prescrits ou non",
+  "Les compléments alimentaires encodés au nom du patient",
+  "Les préparations magistrales",
+  "Les honoraires du médecin traitant"],
+ 3,
+ "Le DPP couvre médicaments (prescrits ou non), compléments encodés et magistrales. Les honoraires (comme dans le SUMEHR) n'y figurent pas.");
+
+Q("pharmacien",
+ "Lequel est un service de soins pharmaceutiques structuré proposé par le pharmacien ?",
+ ["L'entretien Bon Usage du Médicament (BUM) asthme/BPCO",
+  "La pose d'un diagnostic médical",
+  "La prescription d'une IRM",
+  "La rédaction d'un certificat d'incapacité"],
+ 0,
+ "Services du pharmacien : pharmacien de référence, BUM (asthme/BPCO), bilan de médication, vaccination, sevrage benzo, substitution. Diagnostic/IRM/certificat relèvent du médecin.");
+
+Q("pharmacien",
+ "Parmi les facteurs de risque d'allongement du QT, lequel est l'INTRUS ?",
+ ["Sexe féminin et âge > 65 ans", "Hypokaliémie", "Bradycardie", "Hyperthyroïdie"],
+ 3,
+ "Intrus : c'est l'HYPOthyroïdie (pas l'hyper) qui est un facteur de risque, avec femme/> 65 ans/hypoK-Mg-Ca/bradycardie/QT long.");
+
+Q("pharmacien",
+ "Lors de l'étape ANALYSE, lequel de ces points N'EST PAS vérifié ?",
+ ["L'indication et les contre-indications",
+  "La posologie et les interactions",
+  "Les doublons et la cascade médicamenteuse",
+  "Le prix public du médicament"],
+ 3,
+ "L'ANALYSE valide : problème médical, indication, CI, posologie, durée, interactions, cascade, doublons. Le prix public n'est pas un critère de validation pharmaceutique.");
+
+Q("pharmacien",
+ "Qui N'EST PAS habilité à notifier un effet indésirable en pharmacovigilance ?",
+ ["Le médecin", "Le pharmacien", "Le patient", "L'assureur privé du patient"],
+ 3,
+ "Peuvent notifier : médecin, pharmacien, infirmier, patient. L'assureur privé est l'intrus.");
+
+Q("pharmacien",
+ "Lequel de ces médicaments figure sur la « liste 1 » (risque connu d'allongement du QT) ?",
+ ["La clarithromycine", "L'amoxicilline", "Le paracétamol", "Le ramipril"],
+ 0,
+ "Liste 1 (crediblemeds) : amiodarone, azithro/clarithromycine, ciprofloxacine, dompéridone, (es)citalopram, fluconazole, hydroxychloroquine, méthadone, sotalol... La clarithromycine en fait partie.");
+
+// ========== LISTES (intrus / fait partie) — RECHERCHE ==========
+Q("recherche",
+ "Lequel NE fait PAS partie des 6 compétences fondamentales du médecin généraliste (WONCA) ?",
+ ["La gestion des soins de santé primaires",
+  "L'aptitude à la résolution de problèmes",
+  "La recherche fondamentale en laboratoire",
+  "L'orientation communautaire"],
+ 2,
+ "Les 6 compétences : soins primaires, centrés personne, résolution de problèmes, approche globale, orientation communautaire, modèle holistique. La recherche fondamentale en labo est l'intrus.");
+
+Q("recherche",
+ "Laquelle NE fait PAS partie des 3 dimensions fondamentales de la médecine générale ?",
+ ["Contextuelle", "Comportementale", "Scientifique", "Économique"],
+ 3,
+ "Les 3 dimensions : contextuelle, comportementale, scientifique. La dimension « économique » est l'intrus.");
+
+Q("recherche",
+ "Laquelle est une approche épistémologique citée dans le cours ?",
+ ["L'approche positiviste", "L'approche déductiviste", "L'approche normative", "L'approche pragmatiste"],
+ 0,
+ "Approches : empirique, positiviste (→ quantitatif), interprétative (→ qualitatif), constructiviste. Le positivisme en fait partie.");
+
+Q("recherche",
+ "Parmi les critères d'un dépistage utile, lequel est l'INTRUS ?",
+ ["Maladie fréquente et grave",
+  "Traitement d'efficacité démontrée disponible",
+  "Test acceptable et fiable",
+  "Maladie rare pour limiter les coûts"],
+ 3,
+ "Intrus : un dépistage vise une maladie FRÉQUENTE et grave (pas rare). Autres critères : traitement efficace, moyens disponibles, coût acceptable, test fiable, phase latente détectable.");
+
+Q("recherche",
+ "Laquelle de ces méthodes est une étude QUALITATIVE ?",
+ ["Le focus group", "L'étude de cohorte", "L'essai clinique randomisé", "L'étude cas-témoins"],
+ 0,
+ "Qualitatives : observation, analyse documentaire, entretiens, focus group. Cohorte, ECR et cas-témoins sont quantitatives.");
+
+Q("recherche",
+ "Quelle association médecin–apport est CORRECTE ?",
+ ["Archie Cochrane → père de l'EBM et essai randomisé",
+  "Robert Koch → anémie falciforme",
+  "James Herrick → nature du zona",
+  "Edgar Hope-Simpson → microbiologie clinique"],
+ 0,
+ "Cochrane = EBM/essai randomisé. Koch = microbiologie ; Herrick = anémie falciforme ; Hope-Simpson = nature du zona (cohorte 16 ans). Les 3 autres sont mal attribuées.");
+
+Q("recherche",
+ "Lequel NE fait PAS partie de la méthode expérimentale (hypothético-déductive) ?",
+ ["L'observation", "L'hypothèse", "Le financement de l'étude", "La conclusion"],
+ 2,
+ "Les 8 étapes : observation, problème, hypothèse, conséquence, expérience, résultat, interprétation, conclusion. Le financement n'en fait pas partie.");
+// ========== LISTES (intrus / fait partie) — SPORT ==========
+Q("sport",
+ "Parmi ces contre-indications à l'activité physique chez le patient cancéreux, laquelle est l'INTRUS ?",
+ ["Neutropénie sévère < 500/mm³",
+  "Anémie (Hb < 9,5 g/dl)",
+  "Thrombopénie < 20 000/mm³",
+  "Hypertension artérielle légère contrôlée"],
+ 3,
+ "CI : neutropénie < 500, Hb < 9,5, plaquettes < 20 000, fièvre > 38 °C, métastases osseuses. Une HTA légère contrôlée n'est pas une CI (intrus).");
+
+Q("sport",
+ "Lequel NE fait PAS partie des symptômes d'alarme cardiaques à rechercher chez le sportif ?",
+ ["Douleur thoracique à l'effort",
+  "Syncope ou malaise",
+  "Palpitations",
+  "Courbatures après l'effort"],
+ 3,
+ "Symptômes d'alarme : douleur thoracique d'effort, palpitations, malaise/syncope, essoufflement anormal, rythme anormal. Les courbatures sont banales (intrus).");
+
+Q("sport",
+ "À quelle classe de substances dopantes appartient l'acétazolamide (Diamox) ?",
+ ["S5 — diurétiques et agents masquants",
+  "S3 — bêta-2 agonistes",
+  "S9 — glucocorticoïdes",
+  "S6 — stimulants"],
+ 0,
+ "Acétazolamide = S5 (diurétiques/agents masquants), interdit en permanence. Salbutamol = S3 ; corticoïdes = S9 ; amphétamines = S6.");
+
+Q("sport",
+ "Laquelle de ces substances est interdite EN PERMANENCE (et hors compétition) ?",
+ ["Les anabolisants (S1)",
+  "Les stimulants (S6)",
+  "Les narcotiques (S7)",
+  "Les cannabinoïdes (S8)"],
+ 0,
+ "Interdits en permanence : S1 anabolisants, S2 hormones, S3 bêta-2, S4 modulateurs, S5 diurétiques. S6/S7/S8/S9 sont interdits seulement EN COMPÉTITION.");
+
+Q("sport",
+ "Parmi les causes de dyspnée d'effort chez l'adolescent, laquelle est l'INTRUS ?",
+ ["Le déconditionnement", "L'anxiété", "L'asthme d'effort", "La BPCO"],
+ 3,
+ "Causes chez l'ado (par fréquence) : déconditionnement, anxiété, asthme d'effort, obstruction laryngée induite par l'effort. La BPCO (pathologie du fumeur âgé) est l'intrus.");
+
+Q("sport",
+ "Quelle association pathologie–description est CORRECTE ?",
+ ["Syndrome de l'essuie-glace → douleur de la face latérale du genou chez le coureur",
+  "Syndrome fémoropatellaire → douleur latérale du genou",
+  "Osgood-Schlatter → pathologie de l'adulte de plus de 50 ans",
+  "Entorse de cheville → se traite par immobilisation prolongée"],
+ 0,
+ "Essuie-glace = douleur LATÉRALE (coureur). Fémoropatellaire = douleur ANTÉRIEURE ; Osgood-Schlatter = enfant sportif ; entorse = rééducation proprioceptive (pas immobilisation prolongée).");
+
+Q("sport",
+ "Parmi les règles de l'activité physique chez le diabétique, laquelle est l'INTRUS (fausse) ?",
+ ["Programmer l'activité",
+  "Augmenter l'insuline couvrant la période d'effort",
+  "Autosurveiller la glycémie pendant et après l'effort",
+  "Prendre ≥ 15 g de glucides si la glycémie est basse avant l'effort"],
+ 1,
+ "Intrus : on DIMINUE l'insuline (50-75 %) couvrant la période d'effort (pas l'augmenter). Les autres règles sont correctes.");
+
+// ========== LISTES (intrus / fait partie) — ONE HEALTH ==========
+Q("onehealth",
+ "Décider d'une prescription, c'est mettre en balance plusieurs enjeux. Lequel NE fait PAS partie de cette liste ?",
+ ["Le coût et les préférences du patient",
+  "L'empreinte carbone et l'écotoxicité",
+  "Le grade de recommandation et les interactions",
+  "La marque commerciale préférée du prescripteur"],
+ 3,
+ "Enjeux d'une prescription : coût, préférences, empreinte carbone, écotoxicité, éthique, grade de reco, interactions, alternatives (médicamenteuses ou non). La « marque préférée » est l'intrus.");
+
+Q("onehealth",
+ "Parmi les classes de médicaments les plus à risque pour l'environnement, laquelle est l'INTRUS ?",
+ ["Les hormones", "Les antibiotiques", "Les anticancéreux", "Les solutés de réhydratation"],
+ 3,
+ "Classes à risque : hormones, antalgiques, antibiotiques, anticancéreux, antidépresseurs. Les solutés de réhydratation sont l'intrus.");
+
+Q("onehealth",
+ "Lequel correspond à la PRIORITÉ n°1 parmi les « 4R » de la santé durable ?",
+ ["Réduire", "Recycler", "Remplacer", "Réutiliser"],
+ 0,
+ "Ordre de priorité : RÉDUIRE (besoins/demandes/réponses) > Remplacer > Recycler (et Repenser).");
+
+Q("onehealth",
+ "Lequel NE fait PAS partie des « 3 P » du développement durable ?",
+ ["People", "Planet", "Profit", "Power"],
+ 3,
+ "Les 3 P : People, Planet, Profit. « Power » est l'intrus.");
+
+Q("onehealth",
+ "Lequel est l'un des concepts « emboîtés » de la santé environnementale ?",
+ ["La santé planétaire", "La santé sélective", "La santé verticale", "La santé résiduaire"],
+ 0,
+ "Concepts emboîtés : One Health, santé planétaire, santé globale, santé publique. Les 3 autres sont inventés.");
+
+Q("onehealth",
+ "Lequel est un véritable dispositif d'inhalation cité dans le cours ?",
+ ["Le SMI (soft mist inhaler)", "Le NMI", "Le pDPI", "Le SDI"],
+ 0,
+ "Dispositifs : pMDI (aérosols-doseurs), DPI (poudre sèche), SMI (soft mist). Les 3 autres n'existent pas.");
+
+Q("onehealth",
+ "Lequel est un exemple typique de « discours de l'inaction » ?",
+ ["« On est là pour soigner, pas pour s'occuper du climat »",
+  "« La déprescription rejoint la prévention quaternaire »",
+  "« La décision partagée respecte le patient »",
+  "« Le score PBT évalue l'écotoxicité »"],
+ 0,
+ "Discours de l'inaction : « on est là pour soigner », « on manque de temps/d'argent », « on a toujours fait comme ça »… Les 3 autres sont des affirmations justes du cours.");
+
+// ========== LISTES (intrus / fait partie) — ORGANISATION DES SOINS ==========
+Q("orga",
+ "Lequel NE fait PAS partie des 7 branches de la sécurité sociale ?",
+ ["Les pensions", "Le chômage", "Les soins de santé et l'invalidité", "L'aide médicale urgente (AMU)"],
+ 3,
+ "Les 7 branches : pensions, chômage, accidents du travail, maladies prof., prestations familiales, soins de santé & invalidité, vacances annuelles. L'AMU est une aide sociale (CPAS), pas une branche.");
+
+Q("orga",
+ "Laquelle de ces prestations N'EST PAS une aide sociale (régime résiduaire) ?",
+ ["Le RIS", "La GRAPA", "L'allocation de chômage", "Les allocations aux personnes handicapées"],
+ 2,
+ "Aides sociales : RIS, GRAPA, allocations handicapés, prestations familiales garanties. L'allocation de chômage est une branche (ONEM).");
+
+Q("orga",
+ "Lequel NE fait PAS partie des services/missions de l'INAMI ?",
+ ["Les soins de santé (remboursements)",
+  "Les indemnités (incapacité, invalidité)",
+  "L'évaluation et le contrôle médicaux (SECM)",
+  "Le paiement des pensions de retraite"],
+ 3,
+ "Services INAMI : soins de santé, indemnités, SECM, contrôle administratif, fonds des accidents médicaux, support. Les pensions relèvent du SFP (intrus).");
+
+Q("orga",
+ "Laquelle N'EST PAS une mission des mutuelles (organismes assureurs) ?",
+ ["Rembourser les soins et verser les indemnités",
+  "Informer et accompagner les affiliés",
+  "Collecter les cotisations sociales des travailleurs",
+  "Représenter les patients"],
+ 2,
+ "La collecte des cotisations revient à l'ONSS (intrus). La mutuelle rembourse, indemnise, informe/accompagne, propose une complémentaire, représente les patients.");
+
+Q("orga",
+ "Quel médicament correspond à la catégorie A (remboursement total, importance vitale) ?",
+ ["L'insuline", "Un somnifère", "Un contraceptif (Cx)", "Un antihypertenseur (B)"],
+ 0,
+ "Catégorie A = total (insuline). Somnifères = D (aucun remboursement) ; contraceptifs = Cx ; antihypertenseurs ≈ B (~75 %).");
+
+Q("orga",
+ "Lequel est bénéficiaire de l'intervention majorée (BIM) D'OFFICE, et donc l'intrus parmi les « sur demande » ?",
+ ["Le bénéficiaire du RIS",
+  "Le chômeur (sous condition de revenus)",
+  "Le pensionné (sous condition de revenus)",
+  "La famille monoparentale (sous condition de revenus)"],
+ 0,
+ "BIM d'office : RIS, GRAPA, revenu personne handicapée, MENA, orphelins. Chômeurs/pensionnés/familles monoparentales = BIM SUR DEMANDE (selon revenus).");
+
+Q("orga",
+ "Lequel NE fait PAS partie des 4 types de Maximum à Facturer (MAF) ?",
+ ["MAF revenus", "MAF statut social (BIM)", "MAF enfants (< 19 ans)", "MAF hospitalisation longue durée"],
+ 3,
+ "Les 4 MAF : revenus, statut social (450 €), enfants < 19 ans (650 €), maladie chronique (−100 €). « MAF hospitalisation » est l'intrus.");
+
+Q("orga",
+ "Lequel correspond à l'un des « 6 C » de Starfield (soins de 1re ligne) ?",
+ ["La Continuité", "La Concurrence", "La Capitalisation", "Le Cloisonnement"],
+ 0,
+ "6 C : premier Contact, Centrés personne, Continuité, Complets, Communauté, Coordination. Continuité en fait partie ; les 3 autres sont des intrus.");
+
+Q("orga",
+ "Qui A accès au dossier de santé partagé du patient (et constitue donc l'exception parmi ces 4) ?",
+ ["Le médecin généraliste traitant",
+  "Le médecin du travail",
+  "Le médecin conseil de la mutuelle",
+  "Le médecin d'une assurance privée"],
+ 0,
+ "Seul le MG traitant (lien thérapeutique) a accès. Médecin du travail/conseil/assurance/contrôle n'ont PAS de lien thérapeutique → pas d'accès (sauf TRIO avec consentement).");
+
+Q("orga",
+ "Lequel NE fait PAS partie des 4 sources de financement des hôpitaux ?",
+ ["Le Budget des Moyens Financiers (BMF)",
+  "Les honoraires médicaux",
+  "Les produits pharmaceutiques",
+  "Les dons privés et le mécénat"],
+ 3,
+ "Financement hospitalier : BMF (~36 %), honoraires (~41 %), produits pharma (~17 %), forfaits/conventions INAMI (~4 %). Les dons privés ne sont pas une source structurelle (intrus).");
+// ========== LISTES (intrus / fait partie) — PATIENT ÂGÉ ==========
+Q("age",
+ "Parmi les critères de Fried, lequel est l'INTRUS ?",
+ ["Perte de poids involontaire", "Épuisement ressenti", "Désorientation temporo-spatiale", "Baisse de la force musculaire"],
+ 2,
+ "Critères de Fried : perte de poids, épuisement, vitesse de marche ralentie, baisse de force, sédentarité. La désorientation (cognition) n'en fait pas partie (intrus).");
+
+Q("age",
+ "Laquelle de ces échelles est l'INTRUS (sans rapport avec l'évaluation gériatrique) ?",
+ ["Katz", "Tinetti", "Finegan", "MNA"],
+ 2,
+ "Finegan = score de sevrage du nouveau-né (intrus). Valides : Katz (autonomie), MNA (nutrition), MMSE (cognition), Tinetti, Timed Up & Go, GDS.");
+
+Q("age",
+ "Parmi les acteurs intervenant à domicile autour de la personne âgée, lequel est l'INTRUS ?",
+ ["L'aide familiale", "L'ergothérapeute", "Le médecin du travail", "L'assistant social"],
+ 2,
+ "À domicile : aide familiale, aide ménagère, ergothérapeute, assistant social, livraison de repas, aidant proche. Le médecin du travail (sphère professionnelle) est l'intrus.");
+
+Q("age",
+ "Lequel NE fait PAS partie des 3 composantes du PICT (identification du patient palliatif) ?",
+ ["La « question surprise » (décès dans 6-12 mois ?)",
+  "Plus de 2 indicateurs de fragilité",
+  "Au moins un critère d'incurabilité",
+  "Un score MMSE inférieur à 18"],
+ 3,
+ "PICT = question surprise + > 2 indicateurs de fragilité + ≥ 1 critère d'incurabilité. Le MMSE (cognition) n'en fait pas partie.");
+
+Q("age",
+ "Dans l'évaluation de la personne âgée, lequel N'EST PAS un élément prioritaire (l'intrus) ?",
+ ["La prévention des chutes", "L'état nutritionnel", "L'horaire du lever et du coucher", "L'isolement social"],
+ 2,
+ "Priorités : chutes, nutrition, isolement social, soutien aux aidants. L'horaire du lever/coucher est l'intrus (piège classique).");
+
+Q("age",
+ "Quelle échelle évalue la NUTRITION chez la personne âgée ?",
+ ["Le MNA", "Le MMSE", "La Tinetti", "Le Timed Up & Go"],
+ 0,
+ "MNA (Mini Nutritional Assessment) = nutrition. MMSE = cognition ; Tinetti/TUG = équilibre/marche.");
+
+Q("age",
+ "Lequel est un véritable outil de révision/déprescription chez la personne âgée polymédiquée ?",
+ ["START & STOPP", "Le score de Glasgow", "La règle des 6 médicaments maximum", "L'échelle de Tinetti"],
+ 0,
+ "Outils : START & STOPP, GheOP3S, révision pluridisciplinaire. « Max 6/jour » n'est pas un outil ; Glasgow (conscience) et Tinetti (équilibre) sont hors sujet.");
+
+// ========== LISTES (intrus / fait partie) — DEMANDEURS D'ASILE ==========
+Q("asile",
+ "Quel organisme correspond à l'ENREGISTREMENT de la demande de protection internationale ?",
+ ["L'Office des étrangers", "Le CGRA", "Le CCE", "FEDASIL"],
+ 0,
+ "Office des étrangers = enregistrement. CGRA = examen/décision ; CCE = recours ; FEDASIL = accueil.");
+
+Q("asile",
+ "Lequel NE fait PAS partie des 3 conditions d'octroi de l'AMU ?",
+ ["La territorialité (résider sur la commune)",
+  "Une enquête sociale établissant l'indigence",
+  "Un certificat médical d'AMU",
+  "L'inscription préalable à une mutuelle"],
+ 3,
+ "Les 3 conditions : territorialité, enquête sociale (indigence), certificat médical. L'inscription à une mutuelle est l'intrus (l'AMU vise justement les personnes sans couverture).");
+
+Q("asile",
+ "Parmi les composantes de l'aide matérielle (loi Accueil 2017), laquelle est l'INTRUS ?",
+ ["L'hébergement et les repas",
+  "L'accompagnement social, médical et psychologique",
+  "L'interprétariat et la scolarité",
+  "Une allocation de chômage"],
+ 3,
+ "Aide matérielle : hébergement, repas, habillement, accompagnement, aide juridique, interprétariat, scolarité, allocations, droit au travail après 4 mois. L'allocation de chômage est l'intrus.");
+
+Q("asile",
+ "Quelle pathologie fait l'objet d'un dépistage SYSTÉMATIQUE chez tous les demandeurs d'asile ?",
+ ["La tuberculose (FARES)", "Le paludisme", "La schistosomiase", "La strongyloïdose"],
+ 0,
+ "TB = dépistage systématique (FARES) + (re)vaccination RRO. Paludisme : pas de dépistage systématique ; parasitoses : selon l'origine/l'éosinophilie.");
+
+Q("asile",
+ "Quelle association parasitose–traitement est CORRECTE ?",
+ ["Schistosomiase → praziquantel",
+  "Schistosomiase → ivermectine",
+  "Strongyloïdose → metformine",
+  "Strongyloïdose → praziquantel"],
+ 0,
+ "Schistosomiase → praziquantel ; strongyloïdose → ivermectine. Les autres associations sont fausses.");
+
+Q("asile",
+ "Lequel NE fait PAS partie des signes évocateurs d'un PTSD ?",
+ ["Reviviscences et hypervigilance",
+  "Évitement et troubles du sommeil",
+  "Plaintes psychosomatiques et irritabilité",
+  "Hypersociabilité et euphorie persistante"],
+ 3,
+ "PTSD : reviviscences, hypervigilance, évitement, troubles du sommeil/alimentation, déréalisation, irritabilité, plaintes psychosomatiques. L'hypersociabilité euphorique est l'intrus.");
+
+Q("asile",
+ "Quelle régularisation correspond à la raison MÉDICALE ?",
+ ["Le 9ter", "Le 9bis", "Le statut de réfugié", "La protection subsidiaire"],
+ 0,
+ "9ter = raison médicale ; 9bis = raison humanitaire. Le statut de réfugié et la protection subsidiaire relèvent de la procédure d'asile (CGRA).");
+
+// ========== LISTES (intrus / fait partie) — TRIO ==========
+Q("trio",
+ "Lequel NE fait PAS partie des examens de la médecine du travail ?",
+ ["L'examen d'embauche", "La visite de reprise", "La visite de pré-reprise", "La visite de complaisance"],
+ 3,
+ "Examens : embauche, périodique, reprise, pré-reprise, consultation spontanée. La « visite de complaisance » n'existe pas (intrus).");
+
+Q("trio",
+ "Lequel NE fait PAS partie des rôles du médecin du travail ?",
+ ["L'analyse des risques professionnels",
+  "La surveillance de la santé et le poste adapté",
+  "Le contrôle de l'absentéisme",
+  "La participation au CPPT"],
+ 2,
+ "Le contrôle de l'absentéisme est le rôle du médecin de CONTRÔLE (intrus). Le médecin du travail fait de la prévention (risques, surveillance, poste adapté, CPPT).");
+
+Q("trio",
+ "Quelle association médecin–mission est CORRECTE ?",
+ ["Médecin du travail → aptitude",
+  "Médecin conseil → absentéisme",
+  "Médecin de contrôle → incapacité (mutuelle)",
+  "Médecin du travail → soins curatifs"],
+ 0,
+ "Médecin du travail = aptitude ; médecin conseil = incapacité (mutuelle) ; médecin de contrôle = absentéisme. Les 3 autres associations sont fausses.");
+
+Q("trio",
+ "Quelle association recours–médecin est CORRECTE ?",
+ ["Médecin du travail → Direction régionale du Contrôle du Bien-Être",
+  "Médecin conseil → médecin-arbitre",
+  "Médecin de contrôle → Tribunal du travail",
+  "Médecin du travail → médecin-arbitre"],
+ 0,
+ "Recours : médecin du travail → Direction régionale du Contrôle du Bien-Être ; médecin conseil → Tribunal du travail ; médecin de contrôle → médecin-arbitre.");
+
+Q("trio",
+ "Parmi les domaines des conseillers en prévention, lequel est l'INTRUS ?",
+ ["L'ergonomie", "Les aspects psychosociaux", "La sécurité et l'hygiène", "La facturation des soins"],
+ 3,
+ "Conseillers en prévention : ergonomie, psychosocial, sécurité, hygiène. La facturation des soins est l'intrus.");
+
+Q("trio",
+ "Concernant les délais de la réintégration, laquelle est CORRECTE ?",
+ ["Le médecin du travail dispose de 49 jours pour sa décision",
+  "Le médecin du travail dispose de 10 jours",
+  "L'employeur répond en 49 jours",
+  "L'évaluation de l'inaptitude définitive est possible dès 49 jours"],
+ 0,
+ "Médecin du travail = 49 jours. L'employeur répond en 63 jours (temporaire) ou 6 mois (définitive) ; l'EID est possible après 6 mois d'ITT.");
+
+Q("trio",
+ "Dans quel cadre le médecin du travail exerce-t-il ?",
+ ["Un SEPP (externe) ou un SIPP (interne)",
+  "Un cabinet de mutuelle",
+  "Le service du médecin-arbitre",
+  "Un service hospitalier de soins"],
+ 0,
+ "Le médecin du travail exerce en SEPP (service externe) ou SIPP (service interne) de prévention et de protection au travail.");
